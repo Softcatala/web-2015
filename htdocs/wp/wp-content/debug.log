@@ -1,6 +1,0 @@
-[30-Aug-2015 05:08:31 UTC] PHP Fatal error:  Cannot redeclare class Timber in /var/www/softcatala.local/htdocs/plugins/timber-library/timber.php on line 41
-[30-Aug-2015 05:08:32 UTC] PHP Fatal error:  Cannot redeclare class Timber in /var/www/softcatala.local/htdocs/plugins/timber-library/timber.php on line 41
-[30-Aug-2015 05:08:32 UTC] PHP Fatal error:  Cannot redeclare class Timber in /var/www/softcatala.local/htdocs/plugins/timber-library/timber.php on line 41
-[30-Aug-2015 05:11:23 UTC] PHP Parse error:  syntax error, unexpected end of file in /var/www/softcatala.local/htdocs/plugins/theme-mover.php on line 15
-[30-Aug-2015 05:11:23 UTC] PHP Parse error:  syntax error, unexpected end of file in /var/www/softcatala.local/htdocs/plugins/theme-mover.php on line 15
-[30-Aug-2015 05:11:23 UTC] PHP Parse error:  syntax error, unexpected end of file in /var/www/softcatala.local/htdocs/plugins/theme-mover.php on line 15
