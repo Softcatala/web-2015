@@ -1,0 +1,569 @@
+
+/* --------------------------------
+
+Main components
+
+-------------------------------- */
+
+.cd-main-content, .cd-main-header {
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+}
+.cd-main-content, .cd-main-header {
+  position: relative;
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+}
+.cd-main-content.nav-is-visible, .cd-main-header.nav-is-visible {
+  -webkit-transform: translateX(-260px);
+  -moz-transform: translateX(-260px);
+  -ms-transform: translateX(-260px);
+  -o-transform: translateX(-260px);
+  transform: translateX(-260px);
+
+  border-right:1px solid #D67171;
+}
+.cd-main-content {
+  min-height: 100vh;
+  z-index: 2;
+}
+.cd-main-header {
+  z-index: 3;
+}
+.cd-main-header::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+
+
+
+.cd-nav-trigger {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  white-space: nowrap;
+  /* hide text */
+  color: transparent;
+  z-index: 3;
+  &:focus,
+  &:active{
+    span,
+    span::before,
+    span::after{
+      background: #ffffff;
+    }
+  }
+}
+.cd-nav-trigger span,
+.cd-nav-trigger span::before,
+.cd-nav-trigger span::after {
+  /* hamburger icon in CSS */
+  position: absolute;
+  display: inline-block;
+  height: 3px;
+  width: 24px;
+  background: #ffffff;
+}
+.cd-nav-trigger span {
+  /* line in the center */
+  position: absolute;
+  top: 50%;
+  right: 7px;
+  margin-top: -1px;
+  -webkit-transition: background 0.3s 0.3s;
+  -moz-transition: background 0.3s 0.3s;
+  transition: background 0.3s 0.3s;
+}
+.cd-nav-trigger span::before,
+.cd-nav-trigger span::after {
+  /* other 2 lines */
+  content: '';
+  right: 0;
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-origin: 0% 50%;
+  -moz-transform-origin: 0% 50%;
+  -ms-transform-origin: 0% 50%;
+  -o-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  -webkit-transition: -webkit-transform 0.3s 0.3s;
+  -moz-transition: -moz-transform 0.3s 0.3s;
+  transition: transform 0.3s 0.3s;
+}
+.cd-nav-trigger span::before {
+  /* menu icon top line */
+  top: -6px;
+}
+.cd-nav-trigger span::after {
+  /* menu icon bottom line */
+  top: 6px;
+}
+.cd-nav-trigger.nav-is-visible{
+  background-color: #ffffff;
+}
+
+.cd-nav-trigger.nav-is-visible span {
+  /* hide line in the center */
+  background: rgba(46, 50, 51, 0);
+}
+.cd-nav-trigger.nav-is-visible span::before, .cd-nav-trigger.nav-is-visible span::after {
+  /* keep visible other 2 lines */
+  background: #C43434;
+}
+.cd-nav-trigger.nav-is-visible span::before {
+  -webkit-transform: translateX(4px) translateY(-3px) rotate(45deg);
+  -moz-transform: translateX(4px) translateY(-3px) rotate(45deg);
+  -ms-transform: translateX(4px) translateY(-3px) rotate(45deg);
+  -o-transform: translateX(4px) translateY(-3px) rotate(45deg);
+  transform: translateX(4px) translateY(-3px) rotate(45deg);
+}
+.cd-nav-trigger.nav-is-visible span::after {
+  -webkit-transform: translateX(4px) translateY(2px) rotate(-45deg);
+  -moz-transform: translateX(4px) translateY(2px) rotate(-45deg);
+  -ms-transform: translateX(4px) translateY(2px) rotate(-45deg);
+  -o-transform: translateX(4px) translateY(2px) rotate(-45deg);
+  transform: translateX(4px) translateY(2px) rotate(-45deg);
+}
+@media only screen and (min-width: 769px) {
+  .cd-nav-trigger {
+    display: none;
+  }
+}
+
+
+
+
+.cd-primary-nav ul {
+  background-color: #C43434;
+}
+.cd-primary-nav, .cd-primary-nav ul {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 260px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: 1;
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+}
+.cd-primary-nav a, .cd-primary-nav ul a {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  /* text-overflow: ellipsis;
+  white-space: nowrap;*/
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform, opacity;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.cd-primary-nav.is-hidden, .cd-primary-nav ul.is-hidden {
+  /* secondary navigations hidden by default */
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+}
+.cd-primary-nav.moves-out > li > a, .cd-primary-nav ul.moves-out > li > a {
+  /* push the navigation items to the left - and lower down opacity - when secondary nav slides in */
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .cd-primary-nav {
+    /* by default .cd-primary-nav is hidden - trick for iOS devices where you can see the navigation if you pull down */
+    visibility: hidden;
+    -webkit-transition: visibility 0s 0.3s;
+    -moz-transition: visibility 0s 0.3s;
+    transition: visibility 0s 0.3s;
+  }
+  .cd-primary-nav.nav-is-visible {
+    visibility: visible;
+    -webkit-transition: visibility 0s 0s;
+    -moz-transition: visibility 0s 0s;
+    transition: visibility 0s 0s;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .cd-primary-nav {
+    position: static;
+    padding: 0 150px 0 0;
+    height: auto;
+    width: auto;
+    float: right;
+    overflow: visible;
+    background: transparent;
+  }
+  .cd-primary-nav::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+  .cd-primary-nav.moves-out > li > a {
+    /* reset mobile style */
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .cd-primary-nav ul {
+    position: static;
+    height: auto;
+    width: auto;
+    background: transparent;
+    overflow: visible;
+    z-index: 3;
+
+  }
+  .cd-primary-nav ul.is-hidden {
+    /* reset mobile style */
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+  .cd-primary-nav ul.moves-out > li > a {
+    /* reset mobile style */
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .cd-primary-nav > li {
+    float: left;
+    margin-left: 3em;
+  }
+  .cd-primary-nav > li > a {
+    /* main navigation buttons style */
+    position: relative;
+    display: inline-block;
+    height: 80px;
+    line-height: 80px;
+    padding: 0 10px;
+    color: #2e3233;
+    overflow: visible;
+    border-bottom: none;
+    -webkit-transition: color 0.3s, box-shadow 0.3s;
+    -moz-transition: color 0.3s, box-shadow 0.3s;
+    transition: color 0.3s, box-shadow 0.3s;
+  }
+  .cd-primary-nav > li > a:hover {
+    color: #69aa6f;
+  }
+  .cd-primary-nav > li > a.selected {
+    color: #69aa6f;
+    box-shadow: inset 0 -2px 0 #69aa6f;
+  }
+  .cd-primary-nav .go-back {
+    display: none;
+  }
+  .cd-primary-nav .cd-secondary-nav{
+    /* dropdown menu style */
+    position: absolute;
+    top: 80px;
+    width: 100vw;
+    background: #ffffff;
+    padding: 48px 64px 130px;
+    box-shadow: inset 0 1px 0 #e2e3df, 0 3px 6px rgba(0, 0, 0, 0.05);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s;
+  }
+  .cd-primary-nav .cd-secondary-nav::after{
+    clear: both;
+    content: "";
+    display: table;
+  }
+  .cd-primary-nav .cd-secondary-nav.is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+    -moz-transition: opacity .3s 0s, visibility 0s .3s;
+    transition: opacity .3s 0s, visibility 0s .3s;
+  }
+  .cd-primary-nav .cd-secondary-nav > li {
+    /* change the height according to your needs - you can even set height: auto */
+    height: 340px;
+    /* here you set the number of columns - use width percentage */
+    width: 23%;
+    float: left;
+    margin-right: 2.66%;
+    border-right: 1px solid #e2e3df;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .cd-primary-nav .cd-secondary-nav > li:nth-child(4n+2) {
+    /* +2 because we have 2 list items with display:none */
+    margin-right: 0;
+    border-right: none;
+  }
+  .cd-primary-nav .cd-secondary-nav > li > a {
+    /* secondary nav title */
+    color: #69aa6f;
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin-bottom: .6em;
+  }
+  .cd-primary-nav .cd-secondary-nav a {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 18% 0 0;
+    color: #2e3233;
+    border-bottom: none;
+    font-size: 1.4rem;
+  }
+  .cd-primary-nav .cd-secondary-nav a:hover {
+    color: #69aa6f;
+  }
+  .cd-primary-nav .cd-secondary-nav ul {
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  .cd-primary-nav .cd-secondary-nav ul ul {
+    /* tertiary navigation */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .cd-primary-nav .cd-secondary-nav ul ul.is-hidden {
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  .cd-primary-nav .cd-secondary-nav ul ul .go-back {
+    display: block;
+  }
+  .cd-primary-nav .cd-secondary-nav ul ul .go-back a {
+    color: transparent;
+  }
+  .cd-primary-nav .cd-secondary-nav .moves-out > li > a {
+    /* push the navigation items to the left - and lower down opacity - when tertiary nav slides in */
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+
+.has-children > a, .go-back a {
+  position: relative;
+}
+
+@media only screen and (min-width: 769px) {
+  .has-children > a::before, .has-children > a::after{
+    background: #c9cbc4;
+  }
+  .has-children > a:hover::before, .has-children > a:hover::after{
+    background: #69aa6f;
+  }
+}
+
+.has-children > a {
+  padding-right: 40px;
+}
+.has-children > a::before, .has-children > a::after {
+  /* arrow goes on the right side - children navigation */
+  right: 20px;
+  -webkit-transform-origin: 9px 50%;
+  -moz-transform-origin: 9px 50%;
+  -ms-transform-origin: 9px 50%;
+  -o-transform-origin: 9px 50%;
+  transform-origin: 9px 50%;
+}
+
+
+
+@media only screen and (min-width: 769px) {
+  .has-children > a::before, .has-children > a::after {
+    right: 15%;
+  }
+
+  .cd-primary-nav > .has-children > a {
+    /* main navigation arrows on larger devices */
+    padding-right: 30px !important;
+  }
+  .cd-primary-nav > .has-children > a::before, .cd-primary-nav > .has-children > a::after {
+    width: 9px;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    background: #c9cbc4;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: width 0.3s, -webkit-transform 0.3s;
+    -moz-transition: width 0.3s, -moz-transform 0.3s;
+    transition: width 0.3s, transform 0.3s;
+  }
+  .cd-primary-nav > .has-children > a::before {
+    right: 12px;
+  }
+  .cd-primary-nav > .has-children > a::after {
+    right: 7px;
+  }
+  .cd-primary-nav > .has-children > a.selected::before, .cd-primary-nav > .has-children > a.selected::after {
+    width: 14px;
+  }
+  .cd-primary-nav > .has-children > a.selected::before {
+    -webkit-transform: translateX(5px) rotate(-45deg);
+    -moz-transform: translateX(5px) rotate(-45deg);
+    -ms-transform: translateX(5px) rotate(-45deg);
+    -o-transform: translateX(5px) rotate(-45deg);
+    transform: translateX(5px) rotate(-45deg);
+  }
+  .cd-primary-nav > .has-children > a.selected::after {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .cd-secondary-nav > .has-children > a::before, .cd-secondary-nav > .has-children > a::after {
+    /* remove arrows on secondary nav titles */
+    display: none;
+  }
+
+  .cd-primary-nav .go-back a {
+    padding-left: 20px;
+  }
+
+}
+
+
+.cd-overlay {
+  /* shadow layer visible when navigation is active */
+  position: fixed;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s, -webkit-transform 0.3s 0s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s, -moz-transform 0.3s 0s;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s, transform 0.3s 0s;
+}
+.cd-overlay.is-visible {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0s, -webkit-transform 0.3s 0s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0s, -moz-transform 0.3s 0s;
+  transition: opacity 0.3s 0s, visibility 0s 0s, transform 0.3s 0s;
+}
+
+
+@media only screen and (max-width: 769px) {
+  .cd-overlay.is-visible {
+    -webkit-transform: translateX(-260px);
+    -moz-transform: translateX(-260px);
+    -ms-transform: translateX(-260px);
+    -o-transform: translateX(-260px);
+    transform: translateX(-260px);
+  }
+
+  .cd-overlay.is-visible.search-is-visible{
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+/* --------------------------------
+
+support for no js
+
+-------------------------------- */
+.no-js .cd-primary-nav {
+  position: relative;
+  height: auto;
+  width: 100%;
+  overflow: visible;
+  visibility: visible;
+  z-index: 2;
+}
+
+@media only screen and (min-width: 769px) {
+  .no-js .cd-primary-nav {
+    position: absolute;
+    z-index: 3;
+    display: inline-block;
+    width: auto;
+    top: 0;
+    right: 150px;
+    padding: 0;
+  }
+}

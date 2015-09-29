@@ -1,0 +1,217 @@
+
+
+/* ---------------------
+
+LAYOUT - blog
+
+--------------------- */
+
+
+/* ---------------------
+
+09-plantilla-llista-noticies
+10-plantilla-noticia
+11-plantilla-esdeveniment
+12-plantilla-blocs
+13-plantilla-llista-esdeveniments
+14-plantilla-llista-grups-esdeveniments
+
+--------------------- */
+
+
+
+.blog{
+
+	.main-header{
+		h2,
+		span{
+			color:#a0a0a0;
+			font-weight:300;
+			margin-top: 20px;
+			font-size: 36px;
+			display: inline-block;
+		}
+		@media (max-width: @screen-sm) {
+			h2{
+				margin-top: 0px;
+			}
+		}
+
+		@media (max-width: @screen-xs) {
+			h2,
+			span{
+				font-size: 24px;
+				margin-top: -10px;
+			}
+		}
+	}
+
+	.contingut-header{
+		margin-bottom: 40px;
+		p{
+			margin-bottom: 30px;
+		}
+		em{
+			font-size: 12px;
+			font-weight: 600;
+		}
+		img{
+			width: 100%;
+		}
+		.bt-grup{
+			margin:30px 0px 25px 0px;
+			.bt-basic{
+				padding:7px 10px;
+				letter-spacing: normal;
+				margin-right: 8px;
+				margin-bottom: 8px;
+			}
+		}
+		.data{
+			color:#5f5f5f;
+			span{
+				padding:0px 20px;
+			}
+		}
+	}
+
+	.contingut-article{
+		h2{
+			font-weight: 300;
+			font-size:24px;
+			color: @gray-base;
+			line-height: 1.4;
+			margin-top: 0px;
+			a{
+				color: @gray-base;
+				&:hover,
+				&:focus{
+					color: @gray-base;
+					text-decoration: none;
+				}
+			}
+		}
+		p{
+			margin-bottom: 30px;
+		}
+		.article-cont{
+			font-size: 16px;
+			line-height: 1.4;
+			p{
+				margin-bottom: 10px;
+			}
+			img{
+				width: 100%;
+				float: right;
+				margin: 30px 0px;
+			}
+		}
+		.article-footer{
+			color:#5f5f5f;
+			.data-temps{
+				display: block;
+			}
+			.info-usuari{
+				padding:5px 10px 10px 68px;
+				margin-top: 20px;
+			}
+			img{
+				margin: 10px 0px;
+				width: auto;
+				float: left;
+				margin-right: 10px;
+			}
+		}
+	}
+}
+
+
+.llista-noticies,
+.llista-esdeveniments{
+	>.contingut-article{
+		img{
+			float: right;
+			margin: 10px 0px;
+			@media (max-width: @screen-sm) {
+				display: none;
+			}
+		}
+	}
+}
+
+
+.llista-esdeveniments{
+	h2.any{
+		font-weight: bold;
+		font-size: 28px;
+		margin-top: 0px;
+		position: absolute;
+		@media (max-width: @screen-xs) {
+				position: relative;
+			}
+	}
+	.contingut-article{
+		h2,
+		.article-footer{
+			padding-left: 195px;
+			@media (max-width: @screen-xs) {
+				padding-left: 95px;
+			}
+		}
+		i{
+			width: 70px;
+			height: 70px;
+			background-color: @link-hover-color;
+			color:@blanc;
+			padding:18px 10px;
+			display: block;
+			font-family: @font-family-secondary;
+			font-weight: normal;
+			font-style: normal;
+			line-height: 1;
+			float: left;
+			margin-right: 25px;
+			margin-top: 8px;
+			margin-left: 100px;
+			@media (max-width: @screen-xs) {
+				margin-left: 0px;
+			}
+			span{
+				text-align: center;
+				display: block;
+				font-size: 13px;
+			}
+			strong{
+				text-align: center;
+				display: block;
+				font-size: 20px;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+
+.info-esdeveniment{
+	font-size: 16px;
+	font-weight: 300;
+	margin-bottom: 30px;
+
+	.row div{
+		padding-top:2px;
+		padding-bottom:2px;
+	}
+
+	.row div:first-child{
+		font-weight: 600;
+	}
+}
+
+/* end noticies + esdeveniments */
+
+
+
+
+
+
+

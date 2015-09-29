@@ -1,0 +1,104 @@
+
+/* ---------------------
+
+LLISTES
+
+--------------------- */
+
+
+
+
+/*  Cont llista
+	-- Llista amb icona triangle --
+----------------------------------- */
+.cont-llista{
+	padding:0px;
+	li{
+		font-size: 16px;
+		font-weight: 300;
+		padding:6px;
+		> i{
+			font-weight: normal;
+			color: @link-hover-color;
+			font-size: 13px;
+			margin-right: 15px;
+		}
+		a{
+			color:@gray-dark;
+			&:hover{
+				text-decoration: underline;
+				color: @link-hover-color;
+			}
+		}
+	}
+}
+
+
+
+/*  Llista check
+	20-plantilla-membre
+----------------------------------- */
+.llista-check{
+	margin:10px 0px 10px 0px;
+	li{
+		font-size: 15px;
+		font-weight: bold;
+		a{
+			color:@gray-base;
+			background-color: #eae8e8;
+			margin-bottom: 10px;
+			display: block;
+			padding:10px 15px 10px 20px;
+			i{
+				font-weight: normal;
+				color: #727272;
+				font-size: 36px;
+				margin-right: 15px;
+				float: left;
+			}
+			span{
+				padding:15px;
+				display: block;
+				padding:6px 15px 6px 50px;
+			}
+			&:hover{
+				text-decoration: none;
+				color: @blanc;
+				background-color: @link-hover-color;
+				i{
+					color: @blanc;
+				}
+			}
+		}
+	}
+}
+
+
+
+/*  Llista gran
+	06-plantilla-distribuidora-02
+----------------------------------- */
+.llista-gran{
+	li{
+		border-bottom: 1px solid #d2cfc5;
+		> a{
+			color:@gray-dark;
+			font-size: 18px;
+			font-weight: normal;
+			padding:17px;
+			display: block;
+			&:hover{
+				color:@link-hover-color;
+				text-decoration: none;
+				i{
+					color:@link-hover-color;
+				}
+			}
+			> i{
+				font-size: 22px;
+				color:@gray-dark;
+				margin-right: 20px;
+			}
+		}
+	}
+}

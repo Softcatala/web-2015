@@ -1,0 +1,123 @@
+
+/* ------------------------------
+
+VARIABLES BOOTSTRAP - MODIFICADES
+
+------------------------------ */
+
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+
+
+@gray-light:             #eae8e8; 
+@gray-lighter:           transparent; // --- tranparent perque el coloca a background-color on .open a:focus, .open a:hover -- estalvio css
+
+@gray-base:              #000;
+@gray-dark:              lighten(@gray-base, 20%);   // #333 --  text base
+@gray:                   #7b7b7b;
+@blanc:                  #ffffff;
+
+@brand-primary:          #c43434;
+
+
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+@body-bg:               #fff;
+//** Global text color on `<body>`.
+@text-color:            @gray-dark;
+
+//** Global textual link color.
+@link-color:            @brand-primary;
+//** Link hover color set via `darken()` function.
+@link-hover-color:      #e64b3c;
+//** Link hover decoration.
+@link-hover-decoration: underline;
+
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+@font-family-sans-serif:  "Open Sans", Helvetica, Arial, sans-serif;
+@font-family-secondary:   "Ubuntu", "Open Sans", Helvetica, Arial, sans-serif;
+
+
+
+
+//== Container sizes
+//
+//## Define the maximum width of `.container` for different screen sizes.
+
+// Small screen / tablet
+@container-tablet:             (920px + @grid-gutter-width);     // 720px
+//** For `@screen-sm-min` and up.
+@container-sm:                 @container-tablet;
+
+// Medium screen / desktop
+@container-desktop:            (1170px + @grid-gutter-width);  	 // 940px
+//** For `@screen-md-min` and up.
+@container-md:                 @container-desktop;
+
+// Large screen / wide desktop
+@container-large-desktop:      (1170px + @grid-gutter-width);
+//** For `@screen-lg-min` and up.
+@container-lg:                 @container-large-desktop;
+
+
+
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `@screen-xs` as of v3.0.1
+@screen-xs:                  480px;
+//** Deprecated `@screen-xs-min` as of v3.2.0
+@screen-xs-min:              @screen-xs;
+//** Deprecated `@screen-phone` as of v3.0.1
+@screen-phone:               @screen-xs-min;
+
+// Small screen / tablet
+//** Deprecated `@screen-sm` as of v3.0.1
+@screen-sm:                  769px;
+@screen-sm-min:              @screen-sm;
+//** Deprecated `@screen-tablet` as of v3.0.1
+@screen-tablet:              @screen-sm-min;
+
+// Medium screen / desktop
+//** Deprecated `@screen-md` as of v3.0.1
+@screen-md:                  1025px; 								// 992px
+@screen-md-min:              @screen-md;
+//** Deprecated `@screen-desktop` as of v3.0.1
+@screen-desktop:             @screen-md-min;
+
+// Large screen / wide desktop
+//** Deprecated `@screen-lg` as of v3.0.1
+@screen-lg:                  1200px;
+@screen-lg-min:              @screen-lg;
+//** Deprecated `@screen-lg-desktop` as of v3.0.1
+@screen-lg-desktop:          @screen-lg-min;
+
+// So media queries don't overlap when required, provide a maximum
+
+@screen-xxs-max:             (@screen-xs-min - 1); 					// softcatala
+
+@screen-xs-max:              (@screen-sm-min - 1);
+@screen-sm-max:              (@screen-md-min - 1);
+@screen-md-max:              (@screen-lg-min - 1);
+
+
+
+
+//== Modals
+//
+@modal-backdrop-opacity:      .8;

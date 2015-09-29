@@ -1,0 +1,261 @@
+
+
+/* ---------------------
+
+BOTONS
+
+--------------------- */
+
+
+
+.bt-basic{
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	background-color: transparent;
+	border: 1px solid @gray-dark;
+	color:@gray-dark;
+	font-size: 13px;
+	padding: 10px 26px;
+	border-radius: 0px;
+	text-align: center;
+}
+
+.bt-basic-petit{
+	font-size: 11px;
+	padding:8px 5px;
+}
+
+.bt-basic-vermell{
+	background-color: @link-hover-color;
+	border-color: @link-hover-color;
+	color:@blanc;
+	&:hover,
+	&:focus{
+		background-color: #ed7f74;
+		border-color: #ed7f74;
+	}
+}
+
+.bt-basic-gris{
+	background-color: #cccccc;
+	border-color: #cccccc;
+	color:@blanc;
+}
+
+.bt-basic-vermell-fosc{
+	background-color: @brand-primary;
+	border-color: @brand-primary;
+	color:@blanc;
+}
+
+.bt-basic-vermell-blanc{
+	background-color: @link-hover-color;
+	border-color: @blanc;
+	color:@blanc;
+}
+
+.bt-blanc{
+	border-color:@blanc;
+	color:@blanc;
+}
+
+.bt-download{
+	font-size: 18px;
+	color: @link-hover-color;
+	border: 1px solid @link-hover-color;
+	background-color: transparent;
+	padding: 8px 36px 8px 12px;
+	margin: 30px 0px;
+	text-align: left;
+	border-radius: 0px;
+	i{
+		font-size: 24px;
+		margin-right: 10px;
+		float: left;
+	}
+	span{
+		display: block;
+		padding-left: 35px;
+	}
+}
+
+.bt-download-invers{
+	font-size: 16px;
+	border: 1px solid @link-hover-color;
+	background-color: @link-hover-color;
+	color: @blanc;
+	letter-spacing: 2px;
+	text-align: left;
+	font-weight: normal;
+	padding: 5px 50px 5px 12px;
+	margin: 20px 0px;
+	i{
+		font-size: 32px;
+		margin-right: 10px;
+		margin-top: 6px;
+		float: left;
+	}
+	span,
+	img{
+		float: left;
+		text-transform: uppercase;
+	}
+	em{
+		display: block;
+		letter-spacing: normal;
+		font-style: normal;
+		font-size: 12px;
+		text-transform: none;
+	}
+}
+
+.desactivat{
+	opacity: 0.5;
+}
+
+.bt-collaboreu{
+	padding: 8px 12px;
+	span{
+		padding:8px 10px 5px 0px;
+	}
+}
+
+.bt-gris{
+	font-size: 15px;
+	font-weight: bold;
+	border-radius: 0px;
+	text-align: left;
+	background-color: #eae8e8;
+	border-color: #eae8e8;
+	padding:2px 26px;
+	text-transform: none;
+	letter-spacing: normal;
+	i{
+		font-size: 24px;
+		color:#727272;
+		float: left;
+		margin-top: 10px;
+	}
+	span{
+		padding: 12px 25px 12px 35px;
+		display: block;
+	}
+}
+
+
+.bt-seguent{
+	margin-top:60px;
+	padding:10px 56px;
+}
+
+
+.pagination > li > a,
+.pagination > li > span{
+	color:@gray-dark;
+}
+
+
+.bt-grup{
+	margin-bottom: 25px;
+	.steps{
+		width: 100%;
+		padding:20px 10px 15px 15px;
+		height: 90px;
+		background-color: @link-hover-color;
+		color:@blanc;
+		border-color:@blanc;
+		margin-bottom: 20px;
+		font-size: 24px;
+		font-weight: 300;
+		p{
+			font-size: 22px;
+			text-transform: none;
+			letter-spacing: normal;
+			text-align: left;
+			line-height: 2.2;
+		}
+		span{
+			height: 75px;
+			display: block;
+		}
+		i{
+			border-radius: 100px;
+			background-color: transparent;
+			float: left;
+			border: 1px solid @blanc;
+			width: 50px;
+			height: 50px;
+			padding:7px 8px;
+			margin-right: 10px;
+			line-height: 1.3;
+			font-style: normal;
+		}
+	}
+
+	.segon{
+		p{
+			line-height: 1.1;
+		}
+	}
+
+	.titol-xxs{
+		text-align: center;
+		color:#E64B3C;
+		font-size: 18px;
+	}
+
+	@media (max-width: @screen-xs-max) {
+
+		.steps{
+			padding:15px 10px 20px 10px;
+			height: 120px;
+			i{
+				margin:0px auto;
+				float: none;
+				font-size: 20px;
+				width: 30px;
+				height: 30px;
+			}
+			span{
+				height: 110px;
+			}
+			p{
+				font-size: 18px;
+				text-align: center;
+				display: block;
+				margin-top: 12px;
+				line-height: 1.1;
+			}
+		}
+	}
+	@media (max-width: @screen-xs) {
+		.steps{
+			height: 75px;
+			padding:12px;
+			p{
+				display: none;
+			}
+			span{
+				height:68px;
+			}
+			i{
+				display: block;
+				width: 50px;
+				height: 50px;
+				padding: 12px 8px;
+			}
+		}
+	}
+
+	.active{
+		background-color: #fff;
+		border:1px solid @link-hover-color;
+		color: @link-hover-color;
+		i{
+			border-color: @link-hover-color;
+		}
+		span{
+			background: url(../img/content/bt-fletxa.jpg) no-repeat center bottom;
+		}
+	}
+}

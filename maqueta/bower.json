@@ -1,0 +1,14 @@
+{
+  "name": "Softcatala",
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "fontawesome": "~4.3.0",
+    "ubuntu-font": "*",
+    "open-sans-fontface": "~1.4.2",
+    "responsive-toolkit": "~2.5.0",
+    "bootstrap-star-rating": "~3.5.3",
+    "bootstrap-select": "~1.7.3",
+    "expanding-search-bar": "*",
+    "Mega-site-navigation": "*"
+  }
+}

@@ -1,0 +1,302 @@
+
+
+/* ---------------------
+
+LAYOUT - eines
+
+--------------------- */
+
+
+/* ---------------------
+
+28 plantilla formulari traductor
+29 plantilla formulari corrector
+30 plantilla formulari diccionari
+
+--------------------- */
+
+
+
+.formulari-eines {
+	margin-top: -10px;
+
+	/* traductor */
+	.btns-llengues{
+		margin-bottom: 20px;
+		.btn{
+			height: 42px;
+			border-radius: 0px;
+			background-color: #f8f8f8;
+			color:#777777;
+			border:1px solid #e7e7e7;
+			.caret{
+				margin-left: 5px;
+			}
+
+			.fa-long-arrow-left{
+				display: block;
+				font-size: 24px;
+				margin-top: -3px;
+			}
+			.fa-long-arrow-right{
+				display: block;
+				font-size: 24px;
+				margin-top: -13px;
+			}
+		}
+
+		.select{
+			background-color: #e7e7e7;
+		}
+
+		.btns-llengues-origen{
+			float: left;
+			margin-right: 10px;
+			margin-top: 10px;
+		}
+
+		.btn-right{
+			float: right;
+			.btns-llengues-desti{
+				margin-right: 10px;
+				margin-top: 10px;
+			}
+			.bt-basic-vermell{
+				margin-top: 10px;
+				vertical-align: middle;
+			}
+			.direccio{
+				background-color: #ffffff;
+				padding:6px 10px;
+				margin-right: 10px;
+				margin-top: 10px;
+			}
+			@media (max-width: 1160px) {
+				float: none;
+			}
+		}
+
+		@media (max-width: @screen-xs-max) {
+			.btn-right .btns-llengues-desti{
+				margin-top: 2px;
+			}
+			.bt{
+				display: none;
+			}
+		}
+
+		.dropdown-menu{
+			margin-top: 0px;
+			border-radius: 0px;
+			box-shadow: none;
+			border-color:#e7e7e7;
+			top:41px;
+			li {
+
+				a{
+					color:#777777;
+					&:hover,
+					&:focus{
+						color:@gray-dark;
+						background-color: #ffffff;
+					}
+				}
+			}
+		}
+
+		.btn-group.open .dropdown-toggle{
+			box-shadow: none;
+		}
+
+	}
+
+	.bt-extra{
+		float: left;
+		position: relative;
+		width: 100%;
+		.bt-basic{
+			margin:20px auto 10px auto;
+			width: 130px;
+			display: block;
+		}
+	}
+
+
+	/* corrector */
+	.btns-corrector{
+		margin-bottom: 20px;
+
+		.formes{
+			color: #777777;
+			margin-top: 10px;
+			background-color: #f8f8f8;
+			float: left;
+			padding:7px 25px 7px 15px;
+			p{
+				float: left;
+				font-weight: bold;
+				margin: 0px 20px 0px 0px;
+				font-size: 14px;
+			}
+			.radio-inline{
+				margin-right: 10px;
+				margin-top: 5px;
+			}
+		}
+
+		@media (max-width: @screen-xs-max) {
+			.formes{
+				padding:7px 25px 14px 15px;
+				p{
+					float: none;
+				}
+				.radio-inline{
+					display: block;
+					margin-left: 0px;
+				}
+			}
+		}
+
+		.btn-right{
+			float: right;
+			margin-top: 10px;
+		}
+
+	}
+
+	/* plantilla diccionari */
+	.btns-diccionari{
+		margin-bottom: 20px;
+		p{
+			font-weight: bold;
+			font-size: 14px;
+			color:#777777;
+			margin-bottom: 20px;
+		}
+		.input-group .form-control{
+			height: 40px;
+		}
+		a{
+			color:#ffffff;
+		}
+		a:hover,
+		a:focus{
+			color:#ffffff;
+			text-decoration: none;
+		}
+	}
+
+	.diccionari-resultat{
+		border: 1px solid #cccccc;
+		border-radius: 0px;
+		resize: none;
+		padding:15px;
+		h1{
+			margin-top: 0px;
+			font-size: 28px;
+			font-weight: 300;
+
+		}
+		ol{
+			padding:0px 20px 0px 20px;
+			li{
+				font-weight: 300;
+				line-height: 2;
+				font-size: 16px;
+				margin-top: 10px;
+			}
+		}
+	}
+
+	.formulari{
+		.traductor-textarea,
+		.corrector-textarea{
+			textarea.form-control{
+				font-size: 16px;
+				font-weight: 300;
+				line-height: 1.7;
+				color:@gray-dark;
+				resize: none;
+			}
+			textarea.form-control::selection {
+			  background: #ffcccc; /* WebKit/Blink Browsers */
+			}
+			textarea.form-control::-moz-selection {
+			  background: #ffcccc; /* Gecko Browsers */
+			}
+			.textarea-origen{
+				padding-right: 0px;
+				textarea.form-control{
+					border-bottom-right-radius: 0px;
+					border-top-right-radius: 0px;
+				}
+			}
+			.textarea-desti{
+				padding-left: 0px;
+				textarea.form-control{
+					border-bottom-left-radius: 0px;
+					border-top-left-radius: 0px;
+				}
+			}
+
+			@media (max-width: @screen-sm) {
+				.textarea-desti{
+					padding-left: 15px;
+					textarea.form-control{
+						border-top-left-radius: 0px;
+						border-top-right-radius: 0px;
+						border-bottom-left-radius: 4px;
+					}
+				}
+				.textarea-origen{
+					padding-right: 15px;
+					textarea.form-control{
+						border-top-right-radius: 4px;
+						border-top-left-radius: 4px;
+						border-bottom-left-radius: 0px;
+					}
+				}
+
+			}
+		}
+
+		.traductor-checkbox{
+			margin-top:15px;
+			margin-bottom: 15px;
+			.checkbox{
+				background-color: #f8f8f8;
+				padding:8px 8px 14px 8px;
+				float: left;
+				min-width: 100%;
+				a{
+					color: @brand-primary;
+					text-decoration: underline;
+					font-size: 13px;
+					padding:6px 8px 6px 15px;
+					float: left;
+				}
+				.checkbox-inline{
+					font-weight: 600;
+					font-size: 13px;
+					float: right;
+					margin-right: 40px;
+					@media (max-width: @screen-sm-max) {
+						float: left;
+						margin-left: 6px;
+					}
+				}
+			}
+		}
+	}
+
+	p.fons-gris{
+		background-color: @gray-light;
+		display: block;
+		font-size: 14px;
+		line-height: 1.5;
+		padding:20px;
+		margin-top: 50px;
+		margin-bottom: 60px;
+		font-weight: normal;
+	}
+}

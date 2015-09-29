@@ -1,0 +1,145 @@
+
+
+/* ---------------------
+
+COMENTARIS
+
+--------------------- */
+
+
+
+.comentaris{
+	hr{
+		border-color:#aba9a9;
+		margin:40px 0px 20px 0px;
+	}
+
+	img{
+		float: left;
+		margin-right: 20px;
+		margin-top: 5px;
+		width: auto;
+	}
+
+	.comentari-header{
+		margin-bottom: 30px;
+		h2{
+			font-size: 28px;
+			margin-bottom: 10px;
+			margin-top: 0px;
+			font-weight: 300;
+		}
+		.bt-basic{
+			float: right;
+			padding:12px 36px;
+			@media (max-width: @screen-xs) {
+				float:none;
+			}
+		}
+	}
+
+	.cont-rating{
+		display: inline-block;
+	}
+
+ 	.bt-mes{
+		font-size: 11px;
+		padding:10px 20px;
+		margin-bottom: 20px;
+		i{
+			padding:0px 0px 0px 20px;
+		}
+ 	}
+
+ 	.bt-mes-disabled{
+ 		border-color: @gray-light;
+ 		color: @gray-light;
+ 	}
+
+	.respondre{
+
+		i{
+			font-size: 33px;
+			background-color:#e2e7ea;
+			color: #797979;
+			padding:10px;
+			width: 48px;
+			height: 48px;
+			float: left;
+		}
+		@media (max-width: @screen-xs) {
+			margin-left: 0px !important;
+		}
+	}
+
+	.cont-respondre{
+		padding:0px 10px 35px 68px;
+		.form-botons{
+			.bt-basic-vermell-fosc,
+			.bt-basic-gris{
+				float: right;
+				font-size: 11px;
+				padding:6px 20px;
+				margin-left: 10px;
+				margin-bottom: 10px;
+			}
+			.sessio{
+				float: right;
+				font-size: 13px;
+				color:#797979;
+				padding: 5px 10px;
+				&:hover{
+					color:@link-hover-color;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	.article-comentari .article-comentari{
+		margin-left: 68px;
+	  margin-bottom: 20px;
+	}
+
+	.cont-comentari{
+		padding:0px 10px 15px 68px;
+		h3{
+			display: inline-block;
+			font-size: 13px;
+			font-weight: bold;
+			color:@gray-dark;
+			margin:0px;
+		}
+		.data{
+			display: inline-block;
+			font-size: 13px;
+			font-weight: normal;
+			color:#797979;
+			margin-left: 5px;
+		}
+		p{
+			margin:5px 0px 0px 0px !important;
+			line-height: 1.5;
+			font-size: 13px;
+			font-weight: normal;
+		}
+		a{
+			font-size: 13px;
+			color:#797979;
+			&:hover,
+			&:focus{
+				color:@link-hover-color;
+				text-decoration: none;
+			}
+		}
+
+		.active{
+			color:@link-hover-color;
+			text-decoration: none;
+		}
+	}
+}
+
+
+
+

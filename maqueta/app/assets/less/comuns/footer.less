@@ -1,0 +1,163 @@
+
+/* ---------------------
+
+FOOTER
+
+--------------------- */
+
+
+.pag-footer{
+
+	.footer-gris{
+		padding-bottom: 40px;
+		color:@blanc;
+		.copy{
+			padding: 40px 15px 0px 15px;
+			img
+			{
+				float: left;
+				margin-right: 20px;
+			}
+			p{
+				margin-top: 26px;
+			}
+		}
+		.cc{
+			padding: 40px 15px 0px 15px;
+			font-size: 12px;
+			a{
+				color:@blanc;
+				text-decoration: underline;
+				&:hover{
+					color:@blanc;
+					text-decoration: underline;
+				}
+			}
+		}
+		.contacte{
+			padding: 40px 15px 0px 15px;
+			font-size: 13px;
+			.nav{
+				li{
+					border-bottom: 1px solid #575555;
+					&:last-child{
+						border:none;
+					}
+					a{
+						padding:4px;
+						color:@blanc;
+					}
+				}
+			}
+		}
+		.seguiunos{
+			padding: 40px 15px 0px 15px;
+			color:@gray;
+			font-size: 13px;
+			.footer-media{
+				float: left;
+				li{
+					display: inline-block;
+				}
+				a{
+					padding:0px;
+					font-size: 18px;
+					width: 41px;
+					height: 40px;
+					i{
+						padding: 6px 5px;
+						background-color: #111111;
+						border-radius: 100px;
+						-moz-border-radius: 100px;
+						-webkit-border-radius: 100px;
+						width: 40px;
+					  height: 40px;
+					  color:#d6d5d5;
+					}
+				}
+			}
+		}
+
+		@media (max-width: @screen-md) {
+			.seguiunos{
+				padding:40px 0px 0px 15px;
+			}
+		}
+
+		@media (max-width: @screen-xs-max) {
+			.seguiunos{
+				padding:40px 15px 0px 15px;
+				p,
+				.footer-media{
+					text-align: center;
+					float: none;
+				}
+			}
+			.copy p{
+				margin-top: 18px;
+			}
+		}
+
+		@media (max-width: @screen-xs) {
+			.contacte,
+			.copy,
+			.cc{
+				width: 100%;
+			}
+			.copy p {
+				margin-top: 26px;
+			}
+			.seguiunos{
+				p,
+				.footer-media{
+					text-align: left;
+				}
+			}
+		}
+	}
+
+
+	.wrap-blanc {
+
+		p{
+			font-size: 12px;
+			float: left;
+			margin:9px 0px 0px 0px;
+		}
+
+		img{
+			margin: 0px 6px;
+		}
+
+		.col-1-img{
+			float: left;
+		}
+
+		.col-1{
+			display: inline-block;
+			overflow:auto;
+			margin:40px 0px 40px 0px;
+		}
+
+		.col-2{
+			display: inline-block;
+			overflow:auto;
+			margin:0px 0px 32px 0px;
+		}
+
+		@media (max-width: @screen-xs-max) {
+			.col-1{
+				margin:20px 0px 40px 0px;
+				p,
+				.col-1-img{
+					width: 100%;
+					text-align: center;
+				}
+			}
+			.col-2{
+				display: block;
+			}
+		}
+
+	}
+}

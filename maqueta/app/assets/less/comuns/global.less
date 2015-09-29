@@ -1,0 +1,116 @@
+
+
+/* ---------------------
+
+GLOBAL
+
+--------------------- */
+
+
+body{
+	font-weight: normal;
+  	font-style: normal;
+}
+
+.container-fluid{
+	max-width: 1200px;
+}
+
+
+
+/* Backgrounds
+-------------- */
+.wrap-gris{
+	background-color: #bdbdbd;
+}
+.wrap-vermell-header{
+	background-color: @brand-primary;
+}
+.wrap-vermell{
+	background-color: @link-hover-color;
+}
+.wrap-gris-home{
+	background-color: #3f3b3a;
+}
+.wrap-gris-fosc{
+	background-color: #332f2e;
+}
+.wrap-blanc{
+	background-color: #ffffff;
+}
+
+
+
+/* Estils generics
+------------------- */
+
+hr{
+	border-color:#aba9a9;
+	margin:0px 0px 50px 0px;
+}
+
+hr.clara{
+	border-color: #e4e4e4;
+	margin:40px 0px;
+}
+
+h4{
+	font-size: 28px;
+	font-weight: 300;
+	color:@gray-dark;
+}
+
+ul{
+	list-style: none;
+	padding:0px;
+}
+
+
+
+/* Centrar contingut
+-------------------- */
+.intern{
+	float: right;
+	right:50%;
+	position: relative;
+	pading:0px 15px;
+	.intern-center{
+		float: right;
+		right: -50%;
+		position: relative;
+	}
+}
+
+
+
+/* Mapa - Open Street map
+-------------------- */
+.mapa{
+	iframe{
+		border:none !important;
+	}
+	small a{
+		display: none;
+	}
+}
+
+
+
+/* Media Queries
+---------------- */
+
+.visible-xxs-block{
+	display: none !important;
+}
+
+@media (max-width: @screen-xs) {
+	.col-xxs-6{
+		width:50%;
+	}
+	.col-xxs-12{
+		width:100%;
+	}
+	.visible-xxs-block{
+		display: block !important;
+	}
+}

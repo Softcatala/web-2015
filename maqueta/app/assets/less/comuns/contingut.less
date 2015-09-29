@@ -1,0 +1,353 @@
+
+/* ---------------------
+
+CONTINGUT - main header i main contigut
+
+--------------------- */
+
+
+
+/* capcalera de les pagines
+--------------------------- */
+.main-header{
+	border-bottom: 1px solid #c7c5c5;
+	margin-bottom: 30px;
+
+	h1{
+		font-weight: 300;
+		margin-top: 30px;
+		display: inline-block;
+	}
+
+	.compartiu{
+		p{
+			float: left;
+			color:#999999;
+			font-size: 11px;
+			font-weight: 300;
+			margin:4px 5px 0px 0px;
+		}
+		.compartiu-media{
+			margin:0px 0px 14px 0px;
+			float: left;
+			padding:0px;
+			li{
+				float: left;
+				a{
+					color:#404040;
+					padding:3px;
+					font-size: 11px;
+					i{
+						padding: 4px 5px;
+						display: inline-block;
+						border:1px solid #767676;
+						border-radius: 100px;
+						-moz-border-radius: 100px;
+						-webkit-border-radius: 100px;
+						width: 20px;
+					  height: 20px;
+					}
+				}
+			}
+		}
+	}
+
+	.bt-basic-vermell{
+		float: right;
+		margin:37px 0px;
+	}
+
+	@media (max-width: @screen-xs-max) {
+		border-top: 1px solid #c7c5c5;
+		margin-bottom: 0px;
+	}
+
+	@media (max-width: @screen-xs) {
+		.bt-basic-vermell{
+			float: left;
+			margin:0px 0px 20px 0px;
+		}
+		.compartiu{
+			/*margin-top: 10px;*/
+			display: none;
+		}
+		h1{
+			font-size: 24px;
+		}
+	}
+}
+
+
+
+/*  capcalera de la pagina
+	06-plantilla-distribuidora-02
+--------------------------------- */
+.main-header-back-img{
+	background:url(../img/content/img-distribuidora-02.jpg) no-repeat center center;
+	border:none !important;
+	padding:30px 0px;
+	height: 462px;
+	.fa-book{
+		color:@brand-primary;
+		border: 3px @blanc solid;
+		border-radius: 200px;
+		padding:35px;
+		font-size: 52px;
+		background-color: @gray-light;
+		width: 120px;
+		height: 120px;
+	}
+	h1{
+		color:@blanc;
+		text-align: center;
+		float: right;
+		width: 100%;
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+	h2{
+		color:@blanc;
+		font-size: 20px;
+		font-weight: 300;
+		text-align: center;
+		line-height: 1.6;
+		float: right;
+		width: 100%;
+		margin-top: 20px;
+	}
+	p{
+		color:@blanc;
+	}
+	.compartiu-media li{
+		p{
+			color:@blanc;
+		}
+		a{
+			color:@blanc !important;
+			i{
+				border-color: @blanc !important;
+			}
+		}
+	}
+	.bt-basic-vermell{
+		margin: 23px 0px 0px 0px !important;
+	}
+
+	@media (max-width: @screen-xs-max) {
+		h2{
+			margin-top: 0px;
+			line-height: 1.4;
+			font-size: 18px;
+		}
+		.bt-basic-vermell{
+			margin-top:8px !important;
+		}
+	}
+	@media (max-width: @screen-xs) {
+		h2{
+			margin-top: 20px;
+		}
+
+		h1{
+			margin-bottom: 5px;
+		}
+
+		.compartiu .compartiu-media{
+			margin-bottom: 0px;
+		}
+	}
+}
+
+
+
+
+/* contingut de les pagines - principal
+--------------------------------------- */
+.contingut{
+	padding-bottom: 70px;
+
+	@media (max-width: @screen-xs-max) {
+		margin-top: 40px;
+	}
+}
+
+
+
+
+/* header dins .contingut
+------------------------- */
+.contingut-header{
+	h1{
+		font-weight: 600;
+		font-size: 22px;
+		margin-top: 10px;
+		margin-bottom: 20px;
+		color:@gray-base;
+	}
+	p{
+		font-size: 20px;
+		font-weight: 300;
+		margin-bottom: 0px;
+	}
+}
+
+
+
+
+/* section dins .contingut
+-------------------------- */
+.contingut-section{
+	margin:30px 0px;
+	h2{
+		font-size: 28px;
+		font-weight: 300;
+		margin-top: 35px;
+		margin-bottom: 14px;
+	}
+	h3{
+		font-size: 18px;
+		font-weight: 600;
+		color:@gray-base;
+		margin-top: 10px;
+	}
+	p{
+		font-weight: 300;
+		line-height: 2;
+		font-size: 16px;
+		margin-top: 10px;
+	}
+	strong{
+		font-weight: 600;
+	}
+	a{
+		color:@gray-dark;
+		text-decoration: none;
+		&:hover{
+			color:@brand-primary;
+			text-decoration: none;
+		}
+	}
+}
+
+
+
+
+/* footer dins .contingut
+------------------------- */
+.contingut-footer{
+	margin-top:50px;
+
+	.alerta{
+		background-color: @gray-light;
+		padding:15px 15px 5px 15px;
+		margin:15px 0px;
+		p{
+			strong{
+				text-transform: uppercase;
+				font-weight: bold;
+			}
+		}
+	}
+	.caixa-gris{
+		&:first-child{
+			margin-top: 0px;
+		}
+		p{
+			font-size: 14px;
+		}
+		.sobre{
+			span{
+				padding-top: 0px;
+			}
+		}
+		a{
+			padding:3px;
+			font-size: 14px;
+			span{
+				padding-top: 4px;
+				em{
+					display: block;
+					color: @link-hover-color;
+					font-style: normal;
+				}
+			}
+		}
+	}
+}
+
+
+
+/* part inferior vermella
+------------------------- */
+.seccio-vermella{
+	padding:50px 0px 40px 0px;
+	p{
+		font-size: 18px;
+		color:@blanc;
+		text-align: center;
+		margin-bottom: 0px;
+		strong{
+			font-weight: bold;
+		}
+	}
+	.bt-basic{
+		text-align: center;
+		margin:30px 0px 10px 0px;
+	}
+}
+
+
+
+/* part inferior blanca (logos)
+28-plantilla-formulari-traductor
+-------------------------------- */
+.seccio-blanca{
+	padding:70px 0px 90px 0px;
+	p{
+		font-size: 18px;
+		color:@gray-dark;
+		text-align: center;
+		margin-bottom: 0px;
+		strong{
+			font-weight: bold;
+		}
+	}
+	.logos{
+		margin-top: 45px;
+		div{
+			padding:30px;
+			border-left:1px solid #c1c0c0;
+			border-bottom:1px solid #c1c0c0;
+			height: 160px;
+			img{
+				position: relative;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+		@media (max-width: @screen-xs-max) {
+			padding:0px 60px;
+			div{
+				border-left: none;
+			}
+
+		}
+	}
+	.logos:last-child{
+		margin-top: 0px;
+		div{
+			border-bottom: none;
+			@media (max-width: @screen-xs-max) {
+				border-bottom:1px solid #c1c0c0;
+				&:last-child{
+					border-bottom: none;
+				}
+			}
+		}
+	}
+	.logos div:first-child{
+		border-left: none;
+	}
+
+}
+

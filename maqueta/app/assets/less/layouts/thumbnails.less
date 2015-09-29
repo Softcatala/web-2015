@@ -1,0 +1,328 @@
+
+/* ---------------------
+
+THUMBNAILS
+
+--------------------- */
+
+
+
+
+.thumbnail{
+	padding:0px;
+	margin-top: 10px;
+	border-radius: 0px;
+	border:none;
+	float: left;
+	position: relative;
+
+	a:hover,
+	a:focus{
+		text-decoration: none;
+	}
+
+	img{
+		float: left;
+	}
+
+	.caption{
+		h3{
+			font-size: 16px;
+			font-weight: bold;
+			margin-top:0px;
+			margin-bottom: 0px;
+		}
+		p{
+			font-size: 14px;
+			line-height: 22px;
+			margin-top: 5px;
+		}
+	}
+
+	/* boto simulat <span> */
+	.bt-aneu{
+		background-color: @link-hover-color;
+		padding:7px 15px;
+		font-size: 11px;
+		color:@blanc;
+		border: 1px solid @link-hover-color;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		position: absolute;
+		bottom: 17px;
+		i{
+			font-size: 13px;
+			padding:0px 5px 0px 30px;
+		}
+	}
+}
+
+
+.thumbnail-blanc{
+	min-height: 90px;
+	> i,
+	a > i{
+		background-color: @link-hover-color;
+		color:@blanc;
+
+		width: 70px;
+		min-height: 70px;
+		float: left;
+		font-size: 36px;
+		padding:18px;
+	}
+	.caption{
+		margin-left: 95px;
+		padding: 0px;
+	}
+}
+
+
+.thumbnail-gris{
+	padding:17px 8px 17px 0px;
+	background-color: @gray-light;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	width: 100%;
+	.caption{
+		margin-left: 70px;
+		padding: 0px;
+		p{
+			margin-bottom: 0px;
+		}
+	}
+	> i,
+	a > i{
+		color: @brand-primary;
+		background-color: @gray-light;
+		width: 70px;
+		min-height: 70px;
+		float: left;
+		font-size: 36px;
+		padding:18px;
+	}
+}
+
+/* 05
+------ */
+.thumbnail-vertical{
+	min-height: 360px;
+	img{
+		width: 100%;
+	}
+	a{
+		background-color: @gray-light;
+		display: block;
+		float: left;
+		min-height: 360px;
+		&:hover,
+		&:focus{
+			background-color: #c7c5c5;
+			.bt-aneu{
+				border-color: #cccccc;
+				background-color: #cccccc;
+				color:#797979;
+			}
+		}
+	}
+	.bt-aneu{
+		bottom: 24px;
+	}
+	.caption{
+		float: left;
+		padding:18px 15px 55px 15px;
+		/*height: 190px;*/
+		width: 100%;
+		h3{
+			font-size: 16px;
+			font-weight: normal;
+			line-height: 1.4;
+		}
+		p{
+			color:#797979;
+			font-size: 13px;
+			font-weight: normal;
+			line-height: 1.4;
+		}
+	}
+}
+
+
+.thumbnail-programes{
+	min-height: 290px;
+	a{
+		background-color: @gray-light;
+		min-height: 290px;
+		@media (max-width: @screen-md) {
+			min-height: 305px;
+		}
+	}
+
+	.caption{
+		padding:0px 15px 15px 15px;
+		/*min-height: 84px;*/
+		height: auto;
+		h3{
+			font-size: 14px;
+			color:@gray-dark;
+			margin-bottom: 20px;
+		}
+
+		.cont-rating{
+			position: absolute;
+			bottom: 10px;
+			.star-rating{
+				display: inline-block;
+				margin-right: 10px;
+			}
+			em{
+				font-size: 12px;
+				font-weight: 300;
+				font-style: normal;
+				display: inline-block;
+			}
+		}
+	}
+}
+
+
+
+
+
+.star-rating{
+	font-size: 14px;
+	.rating-container{
+		color: #545252;
+		.rating-stars{
+			color:@link-hover-color;
+			&:before{
+				content: "\f005 \f005 \f005 \f005 \f005";
+				text-shadow:none;
+				color:@link-hover-color;
+			}
+		}
+	}
+}
+
+
+.thumbnail-invers{
+	i{
+		background-color:  @gray-light;
+		color:@brand-primary;
+	}
+}
+
+
+/* 03 - 04
+----------------------------------- */
+.thumbnail-gris-img{
+	width: 100%;
+	a{
+		background-color: @gray-light;
+		display: block;
+		float: left;
+		width: 100%;
+		img{
+			margin-right: 3px;
+		}
+		.caption{
+			padding:17px 17px 17px 0px;
+			position: relative;
+			min-height: 170px;
+			margin-left: 0px;
+			h3{
+				font-size: 20px;
+				font-weight: normal;
+			}
+			p{
+				color:#797979;
+				font-size: 13px;
+				font-weight: normal;
+			}
+		}
+
+		&:hover,
+		&:focus{
+			background-color: #c7c5c5;
+			.bt-aneu{
+				border-color: #cccccc;
+				background-color: #cccccc;
+				color:#797979;
+			}
+		}
+
+		@media (max-width:850px) {
+			img{
+				width:120px;
+			}
+			.bt-aneu{
+				left:120px;
+			}
+		}
+
+		@media (max-width: @screen-xs) {
+			.bt-aneu{
+				display: none;
+			}
+			img{
+				width:110px;
+			}
+			.caption{
+				min-height: 0px;
+				padding:17px 17px 17px 115px;
+				h3{
+					font-size: 16px;
+				}
+			}
+
+		}
+	}
+}
+
+
+
+.thumbnail-gris-img-petit{
+	a{
+		img{
+			margin-right: 20px;
+			width: 127px;
+		}
+		.caption{
+			min-height: 127px;
+			.bt-aneu{
+				left:147px !important;
+			}
+		}
+	}
+}
+
+/*  Llista galeria
+	00-home
+	01-plantilla-text
+----------------------------------- */
+
+.thumbnail-galeria{
+	margin-bottom: 0px;
+	margin-top: 5px;
+	img{
+		width: 100%;
+		float: none;
+	}
+	p.peu-foto{
+		font-size: 13px;
+		font-weight: 600;
+		color:@gray-dark;
+		line-height: 18px;
+		float: left;
+	}
+}
+
+
+
+
+
+
+
+
+
+
