@@ -7,6 +7,7 @@
 require "wp-config.php";
 require_once('../plugins/types/wpcf.php');
 require_once('../plugins/types/admin.php');
+require_once('../plugins/types/embedded/admin.php');
 
 require_once WPCF_INC_ABSPATH . '/fields.php';
 require_once WPCF_INC_ABSPATH . '/import-export.php';
@@ -66,6 +67,28 @@ class WordPress_Shell_SC_Functions
         echo $fieldsxml;
     }
     
+    private function import_fields()
+    {
+        $_POST['overwrite-settings'] = true;
+        $_POST['overwrite-groups'] = true;
+        $_POST['overwrite-fields'] = true;
+        $_POST['overwrite-types'] = true;
+        $_POST['overwrite-tax'] = true;
+        $_POST['delete-groups'] = true;
+        $_POST['delete-fields'] = true;
+        $_POST['delete-types'] = true;
+        $_POST['delete-tax'] = true;
+        
+        if( ! $this->getArg('file') ) {
+            echo $this->usageHelp();
+        } else {
+            $source_file = $this->getArg('file');
+            $data = file_get_contents($source_file);
+            //This function has to be used this way only when installed from scratch
+            //wpcf_admin_import_data_from_xmlstring( $data );
+        }
+    }
+    
     /**
      * Retrieve Usage Help Message
      *
@@ -123,4 +146,3 @@ USAGE;
 
 $shell = new WordPress_Shell_SC_Functions();
 $shell->run();
-
