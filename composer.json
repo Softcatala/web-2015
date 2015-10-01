@@ -1,0 +1,33 @@
+{
+    "name": "softcatala/web2015",
+    "description": "Softcatalà Website",
+    "repositories":[
+        {
+            "type":"composer",
+            "url":"http://wpackagist.org"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/xavivars/types-timber-integration/"
+        }
+    ],
+    "require": {
+        "wpackagist-plugin/wordpress-seo":"dev-trunk",
+        "wpackagist-plugin/akismet":"dev-trunk",
+        "wpackagist-plugin/nginx-helper":"dev-trunk",
+        "afragen/github-updater": "^5.1.2",
+        "wpackagist-plugin/timber-library":"dev-trunk",
+        "wpackagist-plugin/types":"dev-trunk",
+        "xavivars/types-timber-integration":"dev-master"
+    },
+    "extra": {
+        "installer-paths": {
+            "plugins/{$name}/": ["type:wordpress-plugin"]
+        }
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "#php htdocs/wp/sc_functions_wp.php --action mergejscss"
+        ]
+    },
+}
