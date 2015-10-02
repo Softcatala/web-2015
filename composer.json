@@ -18,7 +18,9 @@
         "afragen/github-updater": "^5.1.2",
         "wpackagist-plugin/timber-library":"dev-trunk",
         "wpackagist-plugin/types":"dev-trunk",
-        "xavivars/types-timber-integration":"dev-master"
+        "xavivars/types-timber-integration":"dev-master",
+        "softcatala/wp-theme-mover":"dev-master"
+
     },
     "extra": {
         "installer-paths": {
@@ -29,5 +31,5 @@
         "post-update-cmd": [
             "#php htdocs/wp/sc_functions_wp.php --action mergejscss"
         ]
-    },
+    }
 }
