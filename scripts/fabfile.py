@@ -1,5 +1,11 @@
 # Fabfile to:
 #    - initialize site based on a new WordPress installation (git, svn, curl need to be installed)
+#    - IMPORTANT: before starting, make a copy of the wp directory and database, the script move files and directories and doesn't put them back if something fails
+#    - this scripts requires:
+#      - a working wordpress installation
+#      - possibility to write on the website root path and the directory above
+#      - need to provide: base_path where the wordpress installation is, base_url of the site and a path to the sql file
+#    - You will need to add the parameter «ssi on;» to your nginx conf file for your site
 
 # Import Fabric's API module
 from fabric.api import local
@@ -68,8 +74,6 @@ def initialize_site(base_path='',base_url='',sc_database_path=''):
             local("mysql -u "+db_user+" "+db_pass+" "+db_name+" < "+sc_database_path)
             local("mysql -u "+db_user+" "+db_pass+" "+db_name+" -e 'SET FOREIGN_KEY_CHECKS = 1; UPDATE wp_options SET option_value=\"%s/wp\" where option_name=\"siteurl\"'" % base_url)
             local("mysql -u "+db_user+" "+db_pass+" "+db_name+" -e 'UPDATE wp_options SET option_value=\"%s\" where option_name=\"home\"'" % base_url)
-
-
 
         else:
             print("The path you have provided doesn't contain a wp-config.php file. Is it correct?")
