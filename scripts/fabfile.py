@@ -4,14 +4,34 @@
 # Import Fabric's API module
 from fabric.api import local
 import os.path
+import re
 
-def initialize_site(base_path='',base_url=''):
-    if base_path and base_url:
+def initialize_site(base_path='',base_url='',sc_database_path=''):
+    if base_path and base_url and sc_database_path:
         #wp_config_url = 'https://raw.githubusercontent.com/Softcatala/web-2015/master/wp-config.php';
         config_path = base_path + '/wp-config.php'
         web2015_path = base_path + '/../../web-2015'
         if os.path.isfile(config_path):
             print('Found wp-config.php file. Proceeding...')
+
+            #Store database parameters
+            f = open(config_path, 'r')
+            db_name_ar = re.findall(r'DB_NAME\', \'(\w+)', f.read())
+            db_name = db_name_ar[0]
+            f.close()
+
+            f = open(config_path, 'r')
+            db_user_ar = re.findall(r'DB_USER\', \'(\w+)', f.read())
+            db_user = db_user_ar[0]
+            f.close()
+
+            f = open(config_path, 'r')
+            db_pass_ar = re.findall(r'DB_PASSWORD\', \'(\w+)', f.read())
+            if db_pass_ar:
+                db_pass = "-p"+db_pass_ar[0]
+            else:
+                db_pass = ''
+            f.close()
 
             #Create directory structure
             local('mkdir %s/.wp' % base_path)
@@ -32,8 +52,6 @@ def initialize_site(base_path='',base_url=''):
             local('cd %s/wp && ln -s ../../../web-2015/wp-config.php wp-config.php' % base_path)
             local('cd %s && cp ../../web-2015/index.php index.php' % base_path)
 
-
-
             #Download theme
             local('cd %s/themes && git clone https://github.com/Softcatala/wp-softcatala.git' % base_path)
 
@@ -45,9 +63,14 @@ def initialize_site(base_path='',base_url=''):
             #Create ssi symbolic link
             local('cd %s && ln -s ../../web-2015/ssi ssi' % base_path)
 
-            #Define website url
-            local("cd %s/wp && echo \"update_option('siteurl','%s/wp');\" >> wp-config.php" % (base_path, base_url))
-            local("cd %s/wp && echo \"update_option('home','%s');\" >> wp-config.php" % (base_path, base_url))
+            #Import Database
+            local("mysql -u "+db_user+" "+db_pass+" --silent --skip-column-names -e \"SHOW TABLES\" "+db_name+" | xargs -L1 -I% echo 'SET FOREIGN_KEY_CHECKS = 0; DROP TABLE %;' | mysql -u "+db_user+" "+db_pass+" -v "+db_name)
+            local("mysql -u "+db_user+" "+db_pass+" "+db_name+" < "+sc_database_path)
+            local("mysql -u "+db_user+" "+db_pass+" "+db_name+" -e 'SET FOREIGN_KEY_CHECKS = 1; UPDATE wp_options SET option_value=\"%s/wp\" where option_name=\"siteurl\"'" % base_url)
+            local("mysql -u "+db_user+" "+db_pass+" "+db_name+" -e 'UPDATE wp_options SET option_value=\"%s\" where option_name=\"home\"'" % base_url)
+
+
+
         else:
             print("The path you have provided doesn't contain a wp-config.php file. Is it correct?")
     else:
