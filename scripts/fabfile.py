@@ -5,7 +5,7 @@
 #      - a working wordpress installation
 #      - possibility to write on the website root path and the directory above
 #      - need to provide: base_path where the wordpress installation is, base_url of the site and a path to the sql file
-#    - You will need to add the parameter «ssi on;» to your nginx conf file for your site
+#    - You will need to add the parameter "ssi on;" to your nginx conf file for your site
 
 # Import Fabric's API module
 from fabric.api import local
