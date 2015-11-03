@@ -16,9 +16,9 @@
         "wpackagist-plugin/akismet":"dev-trunk",
         "wpackagist-plugin/nginx-helper":"dev-trunk",
         "afragen/github-updater": "^5.1.2",
-        "wpackagist-plugin/timber-library":"dev-trunk",
-        "wpackagist-plugin/types":"dev-trunk",
-        "xavivars/types-timber-integration":"dev-master",
+        "wpackagist-plugin/timber-library":"^0.22",
+        "wpackagist-plugin/types":"^1.8",
+        "xavivars/types-timber-integration":"^0.4", 
         "softcatala/wp-theme-mover":"dev-master"
 
     },
