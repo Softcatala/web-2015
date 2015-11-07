@@ -5,26 +5,22 @@
         {
             "type":"composer",
             "url":"http://wpackagist.org"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/xavivars/types-timber-integration/"
         }
     ],
     "require": {
-        "wpackagist-plugin/wordpress-seo":"dev-trunk",
-        "wpackagist-plugin/akismet":"dev-trunk",
-        "wpackagist-plugin/nginx-helper":"dev-trunk",
+        "wpackagist-plugin/wordpress-seo":"^2.3",
+        "wpackagist-plugin/akismet":"^3.1",
         "afragen/github-updater": "^5.1.2",
         "wpackagist-plugin/timber-library":"^0.22",
         "wpackagist-plugin/types":"^1.8",
         "xavivars/types-timber-integration":"^0.4", 
-        "softcatala/wp-theme-mover":"dev-master"
-
+        "softcatala/wp-theme-mover":"^0.1.0",
+        "softcatala/wp-softcatala":"^0.0.1"
     },
     "extra": {
         "installer-paths": {
-            "plugins/{$name}/": ["type:wordpress-plugin"]
+            "plugins/{$name}/": ["type:wordpress-plugin"],
+            "themes/{$name}/": ["type:wordpress-theme"]
         }
     },
     "scripts": {
