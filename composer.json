@@ -24,8 +24,11 @@
         }
     },
     "scripts": {
+        "pre-update-cmd": [
+            "cd wp && wp plugin deactivate --all"
+        ],
         "post-update-cmd": [
-            "#php htdocs/wp/sc_functions_wp.php --action mergejscss"
+            "cd wp && wp plugin activate --all"
         ]
     }
 }
