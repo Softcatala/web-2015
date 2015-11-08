@@ -8,9 +8,56 @@
 #    - You will need to add the parameter "ssi on;" to your nginx conf file for your site
 
 # Import Fabric's API module
-from fabric.api import local
+from __future__ import with_statement
+from fabric.api import *
+from fabric.contrib.console import confirm
 import os.path
 import re
+
+lxc_server = "softcatala.local"
+staging_server = "pirineus.softcatala.org:4222"
+production_server = "pirineus.softcatala.org:4222"
+
+def lxc():
+    """
+    setup for local development environment
+    """
+    env.hosts = [lxc_server]
+    env.user = "ubuntu"
+    env.dir = "/var/www/softcatala.local/htdocs/"
+    env.wordpressdir = "/var/www/softcatala.local/htdocs/wp"
+    env.confdir = "/var/www/softcatala.local/web-2015"
+    env.branch = "master"
+    env.tmp_path = "/tmp/"
+
+def staging():
+    """
+    setup for staging
+    """
+    env.hosts = [staging_server]
+    env.user = "piranzo"
+    env.dir = "/var/www/web2015.softcatala.org/htdocs"
+    env.wordpressdir = "/var/www/web2015.softcatala.org/htdocs/wp"
+    env.confdir = "/var/www/web2015.softcatala.org/web-2015"
+    env.branch = "master"
+    env.tmp_path = "/tmp/"
+
+def update_environment():
+    """
+    makes a backup server-side
+    """
+    with cd('%s' % env.confdir):
+        run('git pull')
+    with cd('%s' % env.dir):
+        run('php composer.phar update')
+
+def deploy():
+    """
+    usage: fab [lxc|staging|production] deploy
+    clones the repo in a separate folder, packs it in a tar.gz, makes a remote backup, and enables it
+    """
+    update_environment()
+
 
 def initialize_site(base_path='',base_url='',sc_database_path=''):
     if base_path and base_url and sc_database_path:
@@ -55,19 +102,19 @@ def initialize_site(base_path='',base_url='',sc_database_path=''):
             local('cd %s/wp && head -n -3 wp-config.php > wp-config-temp.php && mv wp-config-temp.php wp-config.php' % base_path)
             local("cd %s/wp && echo \"\n/** Plugin, Uploads and Theme directories **/\ndefine( 'WP_PLUGIN_DIR', ABSPATH . '../../htdocs/plugins' );\ndefine( 'WP_PLUGIN_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/plugins' );\ndefine( 'UPLOADS', '../uploads' );\ndefine( 'PLUGINDIR', ABSPATH . '../../htdocs/plugins' );\n\n/** Sets up WordPress vars and included files. */\nrequire_once(ABSPATH . 'wp-settings.php');  \" >> wp-config.php" % base_path)
             local('cd %s/wp && mv wp-config.php ../../conf/wordpress' % base_path)
-            local('cd %s/wp && ln -s ../../../web-2015/wp-config.php wp-config.php' % base_path)
-            local('cd %s && cp ../../web-2015/index.php index.php' % base_path)
+            local('cd %s/wp && ln -s ../../web-2015/wp-config.php wp-config.php' % base_path)
+            local('cd %s && cp ../web-2015/index.php index.php' % base_path)
 
             #Download theme
             local('cd %s/themes && git clone https://github.com/Softcatala/wp-softcatala.git' % base_path)
 
             #Donwload composer and install plugins
             local('cd %s && curl -sS https://getcomposer.org/installer | php' % base_path)
-            local('cd %s && ln -s ../../web-2015/composer.json' % base_path)
+            local('cd %s && ln -s ../web-2015/composer.json' % base_path)
             local('cd %s && ./composer.phar install' % base_path)
 
             #Create ssi symbolic link
-            local('cd %s && ln -s ../../web-2015/ssi ssi' % base_path)
+            local('cd %s && ln -s ../web-2015/ssi ssi' % base_path)
 
             #Import Database
             local("mysql -u "+db_user+" "+db_pass+" --silent --skip-column-names -e \"SHOW TABLES\" "+db_name+" | xargs -L1 -I% echo 'SET FOREIGN_KEY_CHECKS = 0; DROP TABLE %;' | mysql -u "+db_user+" "+db_pass+" -v "+db_name)
