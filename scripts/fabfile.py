@@ -89,10 +89,10 @@ def initialize_site(base_path='',base_url='',db_name='',db_user='',db_pass=''):
 
         ##Import Database
         sc_database_path = base_path + '/web_privat/bd/softcatala_local_sample.sql'
-        run("mysql -u "+db_user+" "+db_pass+" --silent --skip-column-names -e \"SHOW TABLES\" "+db_name+" | xargs -L1 -I% echo 'SET FOREIGN_KEY_CHECKS = 0; DROP TABLE %;' | mysql -u "+db_user+" "+db_pass+" -v "+db_name)
-        run("mysql -u "+db_user+" "+db_pass+" "+db_name+" < "+sc_database_path)
-        run("mysql -u "+db_user+" "+db_pass+" "+db_name+" -e 'SET FOREIGN_KEY_CHECKS = 1; UPDATE wp_options SET option_value=\"%s/wp\" where option_name=\"siteurl\"'" % base_url)
-        run("mysql -u "+db_user+" "+db_pass+" "+db_name+" -e 'UPDATE wp_options SET option_value=\"%s\" where option_name=\"home\"'" % base_url)
+        run("mysql -u "+db_user+" -p"+db_pass+" --silent --skip-column-names -e \"SHOW TABLES\" "+db_name+" | xargs -L1 -I% echo 'SET FOREIGN_KEY_CHECKS = 0; DROP TABLE %;' | mysql -u "+db_user+" -p"+db_pass+" -v "+db_name)
+        run("mysql -u "+db_user+" -p"+db_pass+" "+db_name+" < "+sc_database_path)
+        run("mysql -u "+db_user+" -p"+db_pass+" "+db_name+" -e 'SET FOREIGN_KEY_CHECKS = 1; UPDATE wp_options SET option_value=\"%s/wp\" where option_name=\"siteurl\"'" % base_url)
+        run("mysql -u "+db_user+" -p"+db_pass+" "+db_name+" -e 'UPDATE wp_options SET option_value=\"%s\" where option_name=\"home\"'" % base_url)
 
     else:
         print("Please provide an absolute path to the website root directory and url")
