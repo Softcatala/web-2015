@@ -31,7 +31,7 @@
         ],
         "post-update-cmd": [
             "cd wp && wp plugin activate --all",
-            "cd wp && ln -s ../../web-2015/wp-config.php"
+            "cd wp && rm -rf wp-config.php && ln -s ../../web-2015/wp-config.php"
         ]
     }
 }
