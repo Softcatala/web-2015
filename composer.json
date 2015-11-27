@@ -19,11 +19,11 @@
         "softcatala/wp-softcatala":"^0.0.2"
     },
     "extra": {
+        "wordpress-install-dir": "wp",
         "installer-paths": {
             "plugins/{$name}/": ["type:wordpress-plugin"],
-            "themes/{$name}/": ["type:wordpress-theme"],
-        },
-        "wordpress-install-dir": "wp"
+            "themes/{$name}/": ["type:wordpress-theme"]
+        }
     },
     "scripts": {
         "pre-update-cmd": [
