@@ -16,7 +16,7 @@
         "wpackagist-plugin/types":"^1.8",
         "xavivars/types-timber-integration":"^0.4", 
         "softcatala/wp-theme-mover":"^0.1.0",
-        "softcatala/wp-softcatala":"^0.0.2"
+        "softcatala/wp-softcatala":"^0.0.3"
     },
     "extra": {
         "wordpress-install-dir": "wp",
