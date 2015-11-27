@@ -101,5 +101,9 @@ def initialize_site(base_path='',base_url='',db_name='',db_user='',db_pass=''):
             run("mysql -u "+db_user+" -p"+db_pass+" "+db_name+" -e 'SET FOREIGN_KEY_CHECKS = 1; UPDATE wp_options SET option_value=\"%s/wp\" where option_name=\"siteurl\"'" % base_url)
             run("mysql -u "+db_user+" -p"+db_pass+" "+db_name+" -e 'UPDATE wp_options SET option_value=\"%s\" where option_name=\"home\"'" % base_url)
 
+        #Remove unused themes and update database if necessary
+        with cd('%s/htdocs/wp' % base_path):
+            run('wp core update-db && wp theme delete twentyten && wp theme delete twentyeleven && wp theme delete twentytwelve && wp theme delete twentythirteen && wp theme delete twentyfourteen')
+
     else:
         print("Please provide an absolute path to the website root directory and url")
