@@ -27,7 +27,7 @@ def lxc():
     env.dir = "/var/www/softcatala.local/htdocs/"
     env.wordpressdir = "/var/www/softcatala.local/htdocs/wp"
     env.confdir = "/var/www/softcatala.local/web-2015"
-    env.branch = "master"
+    env.confprivatedir = "/var/www/softcatala.local/web-privat"
     env.tmp_path = "/tmp/"
 
 def staging():
@@ -39,17 +39,23 @@ def staging():
     env.dir = "/var/www/web2015.softcatala.org/htdocs"
     env.wordpressdir = "/var/www/web2015.softcatala.org/htdocs/wp"
     env.confdir = "/var/www/web2015.softcatala.org/web-2015"
-    env.branch = "master"
+    env.confprivatedir = ""
     env.tmp_path = "/tmp/"
 
 def update_environment():
     """
-    makes a backup server-side
+    updates the application on server side using composer
     """
+    with cd('%s' % env.dir):
+        run('sudo chown $USER:$USER -R .')
     with cd('%s' % env.confdir):
-        run('git pull')
+        run('sudo git pull')
+    if env.confprivatedir != '':
+        with cd('%s' % env.confprivatedir):
+            run('git pull')
     with cd('%s' % env.dir):
         run('php composer.phar update')
+        run('sudo chown www-data:www-data -R .')
 
 def deploy():
     """
