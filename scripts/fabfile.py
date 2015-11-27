@@ -56,73 +56,43 @@ def deploy():
     usage: fab [lxc|staging|production] deploy
     clones the repo in a separate folder, packs it in a tar.gz, makes a remote backup, and enables it
     """
-    update_environment()
+    
 
 
-def initialize_site(base_path='',base_url='',sc_database_path=''):
-    if base_path and base_url and sc_database_path:
-        #wp_config_url = 'https://raw.githubusercontent.com/Softcatala/web-2015/master/wp-config.php';
-        config_path = base_path + '/wp-config.php'
-        web2015_path = base_path + '/../../web-2015'
-        if os.path.isfile(config_path):
-            print('Found wp-config.php file. Proceeding...')
+def initialize_site(base_path='',base_url='',db_name='',db_user='',db_pass=''):
+    if base_path and base_url and db_name and db_user and db_pass:
+        print('Starting SC website initizalization...')
 
-            #Store database parameters
-            f = open(config_path, 'r')
-            db_name_ar = re.findall(r'DB_NAME\', \'(\w+)', f.read())
-            db_name = db_name_ar[0]
-            f.close()
-
-            f = open(config_path, 'r')
-            db_user_ar = re.findall(r'DB_USER\', \'(\w+)', f.read())
-            db_user = db_user_ar[0]
-            f.close()
-
-            f = open(config_path, 'r')
-            db_pass_ar = re.findall(r'DB_PASSWORD\', \'(\w+)', f.read())
-            if db_pass_ar:
-                db_pass = "-p"+db_pass_ar[0]
-            else:
-                db_pass = ''
-            f.close()
-
+        with cd('%s' % base_path):
             #Create directory structure
-            local('mkdir %s/.wp' % base_path)
-            local('cd %s && cd .. && mkdir -p conf/wordpress' % base_path)
-            local('cd %s && mv * .wp/' % base_path)
-            local('cd %s && mv .wp wp' % base_path)
-            local('mkdir %s/plugins' % base_path)
-            local('mkdir %s/themes' % base_path)
+            run('mkdir -p conf/wordpress')
+            run('git clone https://github.com/Softcatala/web-2015.git')
+            run('git clone ssh://git@softcatala.org:3332/web-privat web-privat')
+            run('cp web-privat/conf/wordpress/wp-config.php conf/wordpress/')
+            
+        with cd('%s/htdocs' % base_path):
+            #Download WordPress and plugins/theme
+            run('curl -sS https://getcomposer.org/installer | php')
+            run('ln -s ../web-2015/composer.json')
+            run('./composer.phar install')
+            run('ln -s ../web-2015/ssi')
+            run('ln -s ../web-2015/index.php')
+            run('mkdir uploads')
 
-            #Donwload basic conf files from web-2015 repo, they will be placed in a directory under ../../base_path
-            if not os.path.isfile(web2015_path):
-                local('cd %s && cd ../.. && git clone https://github.com/Softcatala/web-2015.git' % base_path)
+        with cd('%s/htdocs/wp' % base_path):
+            run('ln -s ../../web-2015/wp-config.php')
 
-            #Set up the config file location and index.php
-            local('cd %s/wp && head -n -3 wp-config.php > wp-config-temp.php && mv wp-config-temp.php wp-config.php' % base_path)
-            local("cd %s/wp && echo \"\n/** Plugin, Uploads and Theme directories **/\ndefine( 'WP_PLUGIN_DIR', ABSPATH . '../../htdocs/plugins' );\ndefine( 'WP_PLUGIN_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/plugins' );\ndefine( 'UPLOADS', '../uploads' );\ndefine( 'PLUGINDIR', ABSPATH . '../../htdocs/plugins' );\n\n/** Sets up WordPress vars and included files. */\nrequire_once(ABSPATH . 'wp-settings.php');  \" >> wp-config.php" % base_path)
-            local('cd %s/wp && mv wp-config.php ../../conf/wordpress' % base_path)
-            local('cd %s/wp && ln -s ../../web-2015/wp-config.php wp-config.php' % base_path)
-            local('cd %s && cp ../web-2015/index.php index.php' % base_path)
+        with cd('%s/conf/wordpress' % base_path):
+            run('sed -i -- \'s/db_name/%s/g\' wp-config.php' % db_name)
+            run('sed -i -- \'s/db_user/%s/g\' wp-config.php' % db_user)
+            run('sed -i -- \'s/db_pass/%s/g\' wp-config.php' % db_pass)
 
-            #Download theme
-            local('cd %s/themes && git clone https://github.com/Softcatala/wp-softcatala.git' % base_path)
+        ##Import Database
+        sc_database_path = base_path + '/web_privat/bd/softcatala_local_sample.sql'
+        run("mysql -u "+db_user+" "+db_pass+" --silent --skip-column-names -e \"SHOW TABLES\" "+db_name+" | xargs -L1 -I% echo 'SET FOREIGN_KEY_CHECKS = 0; DROP TABLE %;' | mysql -u "+db_user+" "+db_pass+" -v "+db_name)
+        run("mysql -u "+db_user+" "+db_pass+" "+db_name+" < "+sc_database_path)
+        run("mysql -u "+db_user+" "+db_pass+" "+db_name+" -e 'SET FOREIGN_KEY_CHECKS = 1; UPDATE wp_options SET option_value=\"%s/wp\" where option_name=\"siteurl\"'" % base_url)
+        run("mysql -u "+db_user+" "+db_pass+" "+db_name+" -e 'UPDATE wp_options SET option_value=\"%s\" where option_name=\"home\"'" % base_url)
 
-            #Donwload composer and install plugins
-            local('cd %s && curl -sS https://getcomposer.org/installer | php' % base_path)
-            local('cd %s && ln -s ../web-2015/composer.json' % base_path)
-            local('cd %s && ./composer.phar install' % base_path)
-
-            #Create ssi symbolic link
-            local('cd %s && ln -s ../web-2015/ssi ssi' % base_path)
-
-            #Import Database
-            local("mysql -u "+db_user+" "+db_pass+" --silent --skip-column-names -e \"SHOW TABLES\" "+db_name+" | xargs -L1 -I% echo 'SET FOREIGN_KEY_CHECKS = 0; DROP TABLE %;' | mysql -u "+db_user+" "+db_pass+" -v "+db_name)
-            local("mysql -u "+db_user+" "+db_pass+" "+db_name+" < "+sc_database_path)
-            local("mysql -u "+db_user+" "+db_pass+" "+db_name+" -e 'SET FOREIGN_KEY_CHECKS = 1; UPDATE wp_options SET option_value=\"%s/wp\" where option_name=\"siteurl\"'" % base_url)
-            local("mysql -u "+db_user+" "+db_pass+" "+db_name+" -e 'UPDATE wp_options SET option_value=\"%s\" where option_name=\"home\"'" % base_url)
-
-        else:
-            print("The path you have provided doesn't contain a wp-config.php file. Is it correct?")
     else:
         print("Please provide an absolute path to the website root directory and url")

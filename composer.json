@@ -8,6 +8,7 @@
         }
     ],
     "require": {
+        "johnpbloch/wordpress": "^4.3",
         "wpackagist-plugin/wordpress-seo":"^3.0",
         "wpackagist-plugin/akismet":"^3.1",
         "afragen/github-updater": "^5.1.2",
@@ -20,8 +21,9 @@
     "extra": {
         "installer-paths": {
             "plugins/{$name}/": ["type:wordpress-plugin"],
-            "themes/{$name}/": ["type:wordpress-theme"]
-        }
+            "themes/{$name}/": ["type:wordpress-theme"],
+        },
+        "wordpress-install-dir": "wp"
     },
     "scripts": {
         "pre-update-cmd": [
