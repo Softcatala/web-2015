@@ -5,10 +5,15 @@
         {
             "type":"composer",
             "url":"http://wpackagist.org"
+        },
+        {
+            "type": "composer",
+            "url": "http://languages.koodimonni.fi"
         }
     ],
     "require": {
         "johnpbloch/wordpress": "^4.3.1",
+        "koodimonni-language/ca": "^4.3.1",
         "wpackagist-plugin/wordpress-seo":"^3.0",
         "wpackagist-plugin/akismet":"^3.1",
         "afragen/github-updater": "^5.1.2",
@@ -23,6 +28,11 @@
         "installer-paths": {
             "plugins/{$name}/": ["type:wordpress-plugin"],
             "themes/{$name}/": ["type:wordpress-theme"]
+        },
+        "dropin-paths": {
+            "htdocs/wp/wp-content/languages/": ["vendor:koodimonni-language"],
+            "plugins/": ["vendor:koodimonni-plugin-language"],
+            "themes/": ["vendor:koodimonni-theme-language"]
         }
     },
     "scripts": {
