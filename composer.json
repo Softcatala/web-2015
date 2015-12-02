@@ -30,9 +30,9 @@
             "themes/{$name}/": ["type:wordpress-theme"]
         },
         "dropin-paths": {
-            "htdocs/wp/wp-content/languages/": ["vendor:koodimonni-language"],
-            "plugins/": ["vendor:koodimonni-plugin-language"],
-            "themes/": ["vendor:koodimonni-theme-language"]
+            "wp/wp-content/languages/": ["vendor:koodimonni-language"],
+            "wp/wp-content/languages/plugins/": ["vendor:koodimonni-plugin-language"],
+            "wp/wp-content/languages/themes/": ["vendor:koodimonni-theme-language"]
         }
     },
     "scripts": {
