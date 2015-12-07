@@ -33,3 +33,50 @@
 	border-left: none;
  }
 }
+
+section table {
+	border: 1px solid #ddd;
+	max-width: 100%;
+	width: 100%;
+	margin: 35px 0;
+}
+
+section table > caption + thead > tr:first-child > th,
+section table > colgroup + thead > tr:first-child > th,
+section table > thead:first-child > tr:first-child > th,
+section table > caption + thead > tr:first-child > td,
+section table > colgroup + thead > tr:first-child > td,
+section table > thead:first-child > tr:first-child > td {
+	border-top: 0 none;
+}
+
+section table > thead > tr > th,
+section table > tbody > tr > th,
+section table > tfoot > tr > th,
+section table > thead > tr > td,
+section table > tbody > tr > td,
+section table > tfoot > tr > td {
+	padding: 10px 8px 10px 20px;
+}
+
+section table > thead > tr > th,
+section table > thead > tr > td {
+	background-color: #cfcfcf;
+	padding: 10px 8px 10px 20px;
+	vertical-align: bottom;
+	border: 2px solid #ffffff;
+}
+
+section table > tbody > tr > th,
+section table > tfoot > tr > th,
+section table > tbody > tr > td,
+section table > tfoot > tr > td {
+	border-top: 1px solid #ddd;
+    line-height: 1.42857;
+    vertical-align: top;
+}
+
+section table > tbody > tr > td {
+	background-color: #eae8e8;
+    border: 2px solid #ffffff;
+}
