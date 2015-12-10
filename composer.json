@@ -12,15 +12,17 @@
         }
     ],
     "require": {
-        "johnpbloch/wordpress": "^4.3.1",
-        "koodimonni-language/ca": "^4.3.1",
+        "johnpbloch/wordpress": "^4.4.0",
+        "koodimonni-language/ca": "^4.4.0",
         "wpackagist-plugin/wordpress-seo":"^3.0",
         "wpackagist-plugin/akismet":"^3.1",
         "afragen/github-updater": "^5.1.2",
         "wpackagist-plugin/timber-library":"^0.22",
         "wpackagist-plugin/types":"^1.8",
         "xavivars/types-timber-integration":"^0.4", 
+        "wpackagist-plugin/mce-table-buttons":"^3.2.0",
         "softcatala/wp-theme-mover":"^0.1.0",
+        "softcatala/mce-table-buttons-class":"^0.0.1",
         "softcatala/wp-softcatala":"^0.0.3"
     },
     "extra": {
@@ -40,9 +42,9 @@
             "cd wp && wp plugin deactivate --all"
         ],
         "post-update-cmd": [
+            "cd wp && rm -rf wp-config.php && ln -s ../../web-2015/wp-config.php",
             "cd wp && wp core update-db && wp theme delete twentyten && wp theme delete twentyeleven && wp theme delete twentytwelve && wp theme delete twentythirteen && wp theme delete twentyfourteen",
-            "cd wp && wp plugin activate --all",
-            "cd wp && rm -rf wp-config.php && ln -s ../../web-2015/wp-config.php"
+            "cd wp && wp plugin activate --all"
         ]
     }
 }
