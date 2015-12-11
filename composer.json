@@ -21,6 +21,7 @@
         "wpackagist-plugin/types":"^1.8",
         "xavivars/types-timber-integration":"^0.4", 
         "wpackagist-plugin/mce-table-buttons":"^3.2.0",
+        "softcatala/sc-footnotes":"^0.0.1",
         "softcatala/wp-theme-mover":"^0.1.0",
         "softcatala/mce-table-buttons-class":"^0.0.1",
         "softcatala/wp-softcatala":"^0.0.3"
