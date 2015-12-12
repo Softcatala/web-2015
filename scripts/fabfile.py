@@ -2,16 +2,17 @@
 #    - initialize site based on a new WordPress installation (git, svn, curl need to be installed)
 #    - IMPORTANT: before starting, make a copy of the wp directory and database, the script move files and directories and doesn't put them back if something fails
 #    - this scripts requires:
-#      - a working wordpress installation
-#      - possibility to write on the website root path and the directory above
-#      - need to provide: base_path where the wordpress installation is, base_url of the site and a path to the sql file
-#    - You will need to add the parameter "ssi on;" to your nginx conf file for your site
+#      - set up website with nginx (use easyengine for the creation)
+#      - root access to the server (so the permissions can be changed according to the operation)
+#      - a database which has been already set up
+#      - more information on the internal wiki
 
 # Import Fabric's API module
 from __future__ import with_statement
 from fabric.api import *
 from fabric.contrib.console import confirm
 from fabric.colors import green
+from StringIO import StringIO
 import os.path
 import re
 
@@ -48,7 +49,7 @@ def prod(username=''):
     """
     setup for prod
     """
-    env.hosts = [prod_server]
+    env.hosts = [production_server]
     env.id = 'prod'
     env.user = username
     env.dir = "/var/www/web2016.softcatala.org/htdocs"
@@ -127,6 +128,22 @@ def initialize_site(base_path='',base_url='',db_name='',db_user='',db_pass=''):
                 run('sed -i -- \'s/db_name/%s/g\' db.php' % db_name)
                 run('sed -i -- \'s/db_user/%s/g\' db.php' % db_user)
                 run('sed -i -- \'s/db_pass/%s/g\' db.php' % db_pass)
+        else:
+            #Store database parameters
+            config_path = '%s/conf/wordpress/db.php' % base_path
+            fd = StringIO()
+            get(config_path, fd)
+            content = fd.getvalue()
+            
+            db_name_ar = re.findall(r'DB_NAME\', \'(\w+)', content)
+            db_name = db_name_ar[0]
+
+            db_user_ar = re.findall(r'DB_USER\', \'(\w+)', content)
+            db_user = db_user_ar[0]
+
+            db_pass_ar = re.findall(r'DB_PASSWORD\', \'(\w+)', content)
+            db_pass = db_pass_ar[0]
+
 
         ##Import Database
         with cd('%s' % base_path):
