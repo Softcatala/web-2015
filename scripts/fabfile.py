@@ -11,36 +11,58 @@
 from __future__ import with_statement
 from fabric.api import *
 from fabric.contrib.console import confirm
+from fabric.colors import green
 import os.path
 import re
 
-lxc_server = "softcatala.local"
+lxc_server = "fabric.local"
 staging_server = "pirineus.softcatala.org:4222"
-production_server = "pirineus.softcatala.org:4222"
+production_server = "pirineus.softcatala.org:4422"
 
-def lxc():
+def lxc(username=''):
     """
     setup for local development environment
     """
     env.hosts = [lxc_server]
-    env.user = "ubuntu"
-    env.dir = "/var/www/softcatala.local/htdocs/"
-    env.wordpressdir = "/var/www/softcatala.local/htdocs/wp"
-    env.confdir = "/var/www/softcatala.local/web-2015"
-    env.confprivatedir = "/var/www/softcatala.local/web-privat"
+    env.user = username
+    env.dir = "/var/www/fabric.local/htdocs/"
+    env.wordpressdir = "/var/www/fabric.local/htdocs/wp"
+    env.confdir = "/var/www/fabric.local/web-2015"
+    env.confprivatedir = "/var/www/fabric.local/web-privat"
     env.tmp_path = "/tmp/"
 
-def staging():
+def staging(username=''):
     """
     setup for staging
     """
     env.hosts = [staging_server]
-    env.user = "piranzo"
+    env.id = 'staging'
+    env.user = username
     env.dir = "/var/www/web2015.softcatala.org/htdocs"
     env.wordpressdir = "/var/www/web2015.softcatala.org/htdocs/wp"
     env.confdir = "/var/www/web2015.softcatala.org/web-2015"
     env.confprivatedir = ""
     env.tmp_path = "/tmp/"
+
+def prod(username=''):
+    """
+    setup for prod
+    """
+    env.hosts = [staging_server]
+    env.id = 'prod'
+    env.user = username
+    env.dir = "/var/www/web2015.softcatala.org/htdocs"
+    env.wordpressdir = "/var/www/web2016.softcatala.org/htdocs/wp"
+    env.confdir = "/var/www/web2016.softcatala.org/web-2015"
+    env.confprivatedir = ""
+    env.tmp_path = "/tmp/"
+
+def check_connection():
+    """
+    use this function to verify that the connection with the environment is successful
+    example: fab lxc:ubuntu check_connection
+    """
+    run('echo "Congrats! You are now in the remote server!"')
 
 def update_environment():
     """
@@ -61,7 +83,7 @@ def update_environment():
 
     ##Run the environment update and set the permissions back to apache
     with cd('%s' % env.dir):
-        run('php composer.phar update')
+        run(' ')
         run('sudo chown www-data:www-data -R .')
 
 def deploy():
@@ -73,7 +95,7 @@ def deploy():
 
 
 def initialize_site(base_path='',base_url='',db_name='',db_user='',db_pass=''):
-    if base_path and base_url and db_name and db_user and db_pass:
+    if base_path and base_url:
         print('Starting SC website initizalization...')
 
         ##Change directory permissions to current user and create directory structure
@@ -82,8 +104,11 @@ def initialize_site(base_path='',base_url='',db_name='',db_user='',db_pass=''):
             run('mkdir -p conf/wordpress')
             run('git clone https://github.com/Softcatala/web-2015.git')
             run('git clone ssh://git@softcatala.org:3332/web-privat web-privat')
-            run('cp web-privat/conf/wordpress/wp-config.php conf/wordpress/')
-            
+            if not db_user:
+                run('cp web-privat/conf/wordpress/db_%s.php conf/wordpress/db.php' % env.id)
+            else:
+                run('cp web-2015/conf/wordpress/db.php conf/wordpress/db.php')
+
         ##Download WordPress and plugins/theme
         with cd('%s/htdocs' % base_path):
             run('curl -sS https://getcomposer.org/installer | php')
@@ -94,13 +119,14 @@ def initialize_site(base_path='',base_url='',db_name='',db_user='',db_pass=''):
             run('mkdir uploads')
 
         with cd('%s/htdocs/wp' % base_path):
-            run('ln -s ../../web-2015/wp-config.php')
+            run('ln -s ../../web-2015/conf/wordpress/wp-config.php')
 
         ##Set the user/pass/db for wordpress with the provided parameters
-        with cd('%s/conf/wordpress' % base_path):
-            run('sed -i -- \'s/db_name/%s/g\' wp-config.php' % db_name)
-            run('sed -i -- \'s/db_user/%s/g\' wp-config.php' % db_user)
-            run('sed -i -- \'s/db_pass/%s/g\' wp-config.php' % db_pass)
+        if db_name and db_user and db_pass:
+            with cd('%s/conf/wordpress' % base_path):
+                run('sed -i -- \'s/db_name/%s/g\' db.php' % db_name)
+                run('sed -i -- \'s/db_user/%s/g\' db.php' % db_user)
+                run('sed -i -- \'s/db_pass/%s/g\' db.php' % db_pass)
 
         ##Import Database
         with cd('%s' % base_path):
