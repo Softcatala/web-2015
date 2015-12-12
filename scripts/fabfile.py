@@ -48,10 +48,10 @@ def prod(username=''):
     """
     setup for prod
     """
-    env.hosts = [staging_server]
+    env.hosts = [prod_server]
     env.id = 'prod'
     env.user = username
-    env.dir = "/var/www/web2015.softcatala.org/htdocs"
+    env.dir = "/var/www/web2016.softcatala.org/htdocs"
     env.wordpressdir = "/var/www/web2016.softcatala.org/htdocs/wp"
     env.confdir = "/var/www/web2016.softcatala.org/web-2015"
     env.confprivatedir = ""
