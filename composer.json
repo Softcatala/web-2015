@@ -14,7 +14,7 @@
     "require": {
         "johnpbloch/wordpress": "4.4.*",
         "koodimonni-language/ca": "4.4.*",
-        "wpackagist-plugin/wordpress-seo":"3.*",
+        "wpackagist-plugin/wordpress-seo":"^3.0.6",
         "wpackagist-plugin/akismet":"^3.1",
         "wpackagist-plugin/timber-library":"^0.22",
         "wpackagist-plugin/types":"^1.8",
@@ -24,6 +24,7 @@
         "softcatala/sc-footnotes":"^0.0.1",
         "softcatala/wp-theme-mover":"^0.1.0",
         "softcatala/mce-table-buttons-class":"^0.0.1",
+        "softcatala/sc-normalize-upload-dir":"^0.0.1",
         "softcatala/wp-softcatala":"^0.0.3"
     },
     "extra": {
@@ -43,7 +44,7 @@
             "cd wp && wp plugin deactivate --all"
         ],
         "post-update-cmd": [
-            "cd wp && rm -rf wp-config.php && ln -s ../../web-2015/wp-config.php",
+            "cd wp && rm -rf wp-config.php && ln -s ../../web-2015/conf/wordpress/wp-config.php",
             "cd wp && wp core update-db && wp theme delete twentyten && wp theme delete twentyeleven && wp theme delete twentytwelve && wp theme delete twentythirteen && wp theme delete twentyfourteen",
             "cd wp && wp plugin activate --all"
         ]

@@ -16,7 +16,7 @@ from StringIO import StringIO
 import os.path
 import re
 
-lxc_server = "fabric.local"
+lxc_server = "softcatala.local"
 staging_server = "pirineus.softcatala.org:4222"
 production_server = "pirineus.softcatala.org:4422"
 
@@ -26,10 +26,10 @@ def lxc(username=''):
     """
     env.hosts = [lxc_server]
     env.user = username
-    env.dir = "/var/www/fabric.local/htdocs/"
-    env.wordpressdir = "/var/www/fabric.local/htdocs/wp"
-    env.confdir = "/var/www/fabric.local/web-2015"
-    env.confprivatedir = "/var/www/fabric.local/web-privat"
+    env.dir = "/var/www/softcatala.local/htdocs/"
+    env.wordpressdir = "/var/www/softcatala.local/htdocs/wp"
+    env.confdir = "/var/www/softcatala.local/web-2015"
+    env.confprivatedir = "/var/www/softcatala.local/web-privat"
     env.tmp_path = "/tmp/"
 
 def staging(username=''):
@@ -80,11 +80,13 @@ def update_environment():
     ##In local environments, it might be necessary to update the web-privat repository as well (not mandatory if it doesn't exist)
     if env.confprivatedir != '':
         with cd('%s' % env.confprivatedir):
+            run('sudo chown $USER:$USER -R .')
             run('git pull')
+            run('sudo chown www-data:www-data -R .')
 
     ##Run the environment update and set the permissions back to apache
     with cd('%s' % env.dir):
-        run(' ')
+        run('composer.phar self-update && php composer.phar update')
         run('sudo chown www-data:www-data -R .')
 
 def deploy():
