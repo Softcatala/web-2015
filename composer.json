@@ -47,7 +47,7 @@
             "cd wp && rm -rf wp-config.php && ln -s ../../web-2015/conf/wordpress/wp-config.php",
             "testca=\"$(php -r 'include \"wp/wp-includes/version.php\"; if(isset($wp_local_package)) echo $wp_local_package; else echo \"-\";')\" && if [ \"$testca\" != \"ca\" ]; then echo -e '\n$wp_local_package = \"ca\"'; >> ./wp/wp-includes/version.php; fi",
             "cd wp && wp core update-db && wp theme delete twentyten && wp theme delete twentyeleven && wp theme delete twentytwelve && wp theme delete twentythirteen && wp theme delete twentyfourteen",
-            "cd wp && wp plugin activate --all"
+            "cd wp && wp plugin activate --all && wp rewrite flush"
         ]
     }
 }
