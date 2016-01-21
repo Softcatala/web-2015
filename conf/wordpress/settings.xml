@@ -1,0 +1,1615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<types>
+    <settings>
+        <add_resized_images_to_library>0</add_resized_images_to_library>
+        <register_translations_on_import>1</register_translations_on_import>
+        <images_remote>0</images_remote>
+        <images_remote_cache_time>36</images_remote_cache_time>
+        <help_box>by_types</help_box>
+        <hide_standard_custom_fields_metabox>show</hide_standard_custom_fields_metabox>
+        <postmeta_unfiltered_html>on</postmeta_unfiltered_html>
+        <usermeta_unfiltered_html>on</usermeta_unfiltered_html>
+    </settings>
+    <groups>
+        <group>
+            <ID>266</ID>
+            <post_content></post_content>
+            <post_title>Page specific</post_title>
+            <post_excerpt></post_excerpt>
+            <post_type>wp-types-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
+                <_wp_types_group_fields>,text_baixada_principal,baixada_principal,</_wp_types_group_fields>
+                <_wp_types_group_post_types>,page,</_wp_types_group_post_types>
+                <_wp_types_group_terms>all</_wp_types_group_terms>
+                <_wp_types_group_templates>all</_wp_types_group_templates>
+                <_wpcf_conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </_wpcf_conditional_display>
+            </meta>
+            <hash>5216a1f802aa90ea44dbb013b3a256f7</hash>
+            <checksum>5216a1f802aa90ea44dbb013b3a256f7</checksum>
+            <__types_id>page-specific</__types_id>
+            <__types_title>Page specific</__types_title>
+        </group>
+        <group>
+            <ID>227</ID>
+            <post_content></post_content>
+            <post_title>Aparells</post_title>
+            <post_excerpt></post_excerpt>
+            <post_type>wp-types-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
+                <_wp_types_group_fields>,versio,conf_cat,correccio_cat,fabricant,</_wp_types_group_fields>
+                <_wp_types_group_post_types>,aparell,</_wp_types_group_post_types>
+                <_wp_types_group_terms>all</_wp_types_group_terms>
+                <_wp_types_group_templates>all</_wp_types_group_templates>
+                <_wpcf_conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </_wpcf_conditional_display>
+            </meta>
+            <hash>1d6c6aad1c7971add2b63ae58739e208</hash>
+            <checksum>1d6c6aad1c7971add2b63ae58739e208</checksum>
+            <__types_id>aparells</__types_id>
+            <__types_title>Aparells</__types_title>
+        </group>
+        <group>
+            <ID>123</ID>
+            <post_content>Custom fields for events</post_content>
+            <post_title>Esdeveniments</post_title>
+            <post_excerpt></post_excerpt>
+            <post_type>wp-types-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
+                <_wp_types_group_fields>,data_inici,data_fi,horari,ciutat,lloc,cost,inscripcions,mapa,destacat,</_wp_types_group_fields>
+                <_wp_types_group_post_types>,esdeveniment,</_wp_types_group_post_types>
+                <_wp_types_group_terms>all</_wp_types_group_terms>
+                <_wp_types_group_templates>all</_wp_types_group_templates>
+                <_wpcf_conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </_wpcf_conditional_display>
+            </meta>
+            <hash>cd67fd184a51894d1650429f4bbbb17f</hash>
+            <checksum>cd67fd184a51894d1650429f4bbbb17f</checksum>
+            <__types_id>esdeveniments</__types_id>
+            <__types_title>Esdeveniments</__types_title>
+        </group>
+        <group>
+            <ID>98</ID>
+            <post_content>Links related to post and pages</post_content>
+            <post_title>Links</post_title>
+            <post_excerpt></post_excerpt>
+            <post_type>wp-types-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
+                <_wp_types_group_fields>,link_title,link_description,link_url,</_wp_types_group_fields>
+                <_wp_types_group_post_types>,link,</_wp_types_group_post_types>
+                <_wp_types_group_terms>all</_wp_types_group_terms>
+                <_wp_types_group_templates>all</_wp_types_group_templates>
+                <_wpcf_conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </_wpcf_conditional_display>
+            </meta>
+            <hash>67ea3c84a02353cfe0ffcf519e1a87fc</hash>
+            <checksum>67ea3c84a02353cfe0ffcf519e1a87fc</checksum>
+            <__types_id>links</__types_id>
+            <__types_title>Links</__types_title>
+        </group>
+        <group>
+            <ID>78</ID>
+            <post_content>Custom fields for &#039;post&#039; type</post_content>
+            <post_title>Post</post_title>
+            <post_excerpt></post_excerpt>
+            <post_type>wp-types-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
+                <_wp_types_group_fields>,main_image_post,baixades_relacionades_noticia,call_to_action_top_url,call_to_action_top_text,call_to_action_bottom_url,call_to_action_bottom_text,call_to_action_bottom_button_text,</_wp_types_group_fields>
+                <_wp_types_group_post_types>,post,page,esdeveniment,</_wp_types_group_post_types>
+                <_wp_types_group_terms>all</_wp_types_group_terms>
+                <_wp_types_group_templates>all</_wp_types_group_templates>
+                <_wpcf_conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </_wpcf_conditional_display>
+            </meta>
+            <hash>c7974a4f5479513252145dcb84ebd9e8</hash>
+            <checksum>c7974a4f5479513252145dcb84ebd9e8</checksum>
+            <__types_id>post</__types_id>
+            <__types_title>Post</__types_title>
+        </group>
+        <group>
+            <ID>33</ID>
+            <post_content>Custom fields for Slides</post_content>
+            <post_title>Slide</post_title>
+            <post_excerpt></post_excerpt>
+            <post_type>wp-types-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
+                <_wp_types_group_fields>,slide_image,button_title,image_credits,slide_link,</_wp_types_group_fields>
+                <_wp_types_group_post_types>,slide,</_wp_types_group_post_types>
+                <_wp_types_group_terms>all</_wp_types_group_terms>
+                <_wp_types_group_templates>all</_wp_types_group_templates>
+                <_wpcf_conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </_wpcf_conditional_display>
+            </meta>
+            <hash>054da6d0d73ec4618e3bd8833bcccf63</hash>
+            <checksum>054da6d0d73ec4618e3bd8833bcccf63</checksum>
+            <__types_id>slide</__types_id>
+            <__types_title>Slide</__types_title>
+        </group>
+    </groups>
+    <fields>
+        <field>
+            <description>Slide image</description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <validate>
+                    <required>
+                        <active>1</active>
+                        <value>true</value>
+                        <message>This field is required.</message>
+                    </required>
+                </validate>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>slide_image</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <id>slide_image</id>
+            <name>Image</name>
+            <type>image</type>
+            <slug>slide_image</slug>
+            <meta_key>wpcf-slide_image</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>slide_image</__types_id>
+            <__types_title>Image</__types_title>
+            <hash>331a66573cad199f5e3576d8eb8ccf6f</hash>
+            <checksum>331a66573cad199f5e3576d8eb8ccf6f</checksum>
+        </field>
+        <field>
+            <description>Slide Link</description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>slide_link</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <id>slide_link</id>
+            <name>Slide Link</name>
+            <type>url</type>
+            <slug>slide_link</slug>
+            <meta_key>wpcf-slide_link</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>slide_link</__types_id>
+            <__types_title>Slide Link</__types_title>
+            <hash>e3c1b0bf3bfc27df97c0ecd8bf50cbf3</hash>
+            <checksum>e3c1b0bf3bfc27df97c0ecd8bf50cbf3</checksum>
+        </field>
+        <field>
+            <description>Button title</description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>button-title</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <id>button_title</id>
+            <name>Button Title</name>
+            <type>textfield</type>
+            <slug>button_title</slug>
+            <meta_key>wpcf-button_title</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>button_title</__types_id>
+            <__types_title>Button Title</__types_title>
+            <hash>9e297d13a767f8d991126c1c200ff1dc</hash>
+            <checksum>9e297d13a767f8d991126c1c200ff1dc</checksum>
+        </field>
+        <field>
+            <description>Image credits (in case it has)</description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>image-credits</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <id>image_credits</id>
+            <name>Image credits</name>
+            <type>textfield</type>
+            <slug>image_credits</slug>
+            <meta_key>wpcf-image_credits</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>image_credits</__types_id>
+            <__types_title>Image credits</__types_title>
+            <hash>16802180883fe30a68374491cf6883c3</hash>
+            <checksum>16802180883fe30a68374491cf6883c3</checksum>
+        </field>
+        <field>
+            <id>main_image_post</id>
+            <slug>main_image_post</slug>
+            <type>image</type>
+            <name>main_image_post</name>
+            <description>Post main image</description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>main_image_post</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-main_image_post</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>main_image_post</__types_id>
+            <__types_title>main_image_post</__types_title>
+            <hash>439851bc03ebf066cb9da2a6564f2139</hash>
+            <checksum>439851bc03ebf066cb9da2a6564f2139</checksum>
+        </field>
+        <field>
+            <id>baixades_relacionades_noticia</id>
+            <slug>baixades_relacionades_noticia</slug>
+            <type>file</type>
+            <name>Baixades relacionades</name>
+            <description>Baixades relacionades amb la notícia.</description>
+            <data>
+                <placeholder>Test</placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>1</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>baixades_relacionades_noticia</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-baixades_relacionades_noticia</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>baixades_relacionades_noticia</__types_id>
+            <__types_title>Baixades relacionades</__types_title>
+            <hash>625bd53bf128ade16e7c07f8892431ee</hash>
+            <checksum>625bd53bf128ade16e7c07f8892431ee</checksum>
+        </field>
+        <field>
+            <id>call_to_action_top_url</id>
+            <slug>call_to_action_top_url</slug>
+            <type>url</type>
+            <name>Call to action [Top][URL]</name>
+            <description>URL de l\&#039;acció superior dreta de la notícia</description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <validate>
+                    <url>
+                        <active>1</active>
+                        <message>Please enter a valid URL address.</message>
+                    </url>
+                </validate>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>call_to_action_top_url</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-call_to_action_top_url</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>call_to_action_top_url</__types_id>
+            <__types_title>Call to action [Top][URL]</__types_title>
+            <hash>928b301d7380a4ce8fff81cc37e008b8</hash>
+            <checksum>928b301d7380a4ce8fff81cc37e008b8</checksum>
+        </field>
+        <field>
+            <id>call_to_action_top_text</id>
+            <slug>call_to_action_top_text</slug>
+            <type>textfield</type>
+            <name>Call to action [Top][Text]</name>
+            <description>Text de l\&#039;acció superior dreta de la notícia</description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>call_to_action_top_text</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-call_to_action_top_text</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>call_to_action_top_text</__types_id>
+            <__types_title>Call to action [Top][Text]</__types_title>
+            <hash>c2363bc702e5cf93271916683c2cfb80</hash>
+            <checksum>c2363bc702e5cf93271916683c2cfb80</checksum>
+        </field>
+        <field>
+            <id>call_to_action_bottom_url</id>
+            <slug>call_to_action_bottom_url</slug>
+            <type>url</type>
+            <name>Call to action [Bottom][URL]</name>
+            <description>URL de l\&#039;acció inferior de la notícia</description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>call_to_action_bottom_url</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-call_to_action_bottom_url</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>call_to_action_bottom_url</__types_id>
+            <__types_title>Call to action [Bottom][URL]</__types_title>
+            <hash>0bf313a8033d2cbf9c68eb787817bd93</hash>
+            <checksum>0bf313a8033d2cbf9c68eb787817bd93</checksum>
+        </field>
+        <field>
+            <id>call_to_action_bottom_text</id>
+            <slug>call_to_action_bottom_text</slug>
+            <type>textarea</type>
+            <name>Call to action [Bottom][Text]</name>
+            <description>Text de l\&#039;acció inferior dreta de la notícia</description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>call_to_action_bottom_text</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-call_to_action_bottom_text</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>call_to_action_bottom_text</__types_id>
+            <__types_title>Call to action [Bottom][Text]</__types_title>
+            <hash>06f7c5cc60782137bd1268ba8d24b1e1</hash>
+            <checksum>06f7c5cc60782137bd1268ba8d24b1e1</checksum>
+        </field>
+        <field>
+            <id>call_to_action_bottom_button_text</id>
+            <slug>call_to_action_bottom_button_text</slug>
+            <type>textfield</type>
+            <name>Call to action [Bottom][Button][Text]</name>
+            <description>Text del botó de l\&#039;acció inferior de la notícia</description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>call_to_action_bottom_button_text</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-call_to_action_bottom_button_text</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>call_to_action_bottom_button_text</__types_id>
+            <__types_title>Call to action [Bottom][Button][Text]</__types_title>
+            <hash>1e7ff19a02003e3b5c887eb1ff3bc8af</hash>
+            <checksum>1e7ff19a02003e3b5c887eb1ff3bc8af</checksum>
+        </field>
+        <field>
+            <description>External/Internal links related to post</description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>1</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>post_links</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <id>post_links</id>
+            <name>Post links</name>
+            <type>textfield</type>
+            <slug>post_links</slug>
+            <meta_key>wpcf-post_links</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>post_links</__types_id>
+            <__types_title>Post links</__types_title>
+            <hash>fe7f5b4487ef7898c53b3b216462e64e</hash>
+            <checksum>fe7f5b4487ef7898c53b3b216462e64e</checksum>
+        </field>
+        <field>
+            <description>Related links</description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <is_new>1</is_new>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>url-1483432281</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <id>related_links</id>
+            <name>Related links</name>
+            <type>url</type>
+            <slug>related_links</slug>
+            <meta_key>wpcf-related_links</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>related_links</__types_id>
+            <__types_title>Related links</__types_title>
+            <hash>d96c974b624db3dd35bf4b07e840ade7</hash>
+            <checksum>d96c974b624db3dd35bf4b07e840ade7</checksum>
+        </field>
+        <field>
+            <id>link_title</id>
+            <slug>link_title</slug>
+            <type>textfield</type>
+            <name>Link title</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <validate>
+                    <required>
+                        <active>1</active>
+                        <value>true</value>
+                        <message>This field is required.</message>
+                    </required>
+                </validate>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>link_title</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-link_title</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>link_title</__types_id>
+            <__types_title>Link title</__types_title>
+            <hash>61cd9f6f0834d9f3467ca425e8f0a6de</hash>
+            <checksum>61cd9f6f0834d9f3467ca425e8f0a6de</checksum>
+        </field>
+        <field>
+            <id>link_url</id>
+            <slug>link_url</slug>
+            <type>url</type>
+            <name>Link URL</name>
+            <description>Link URL</description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>link_url</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-link_url</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>link_url</__types_id>
+            <__types_title>Link URL</__types_title>
+            <hash>562b164585adc07e9a44b86cca39e7a9</hash>
+            <checksum>562b164585adc07e9a44b86cca39e7a9</checksum>
+        </field>
+        <field>
+            <id>link_description</id>
+            <slug>link_description</slug>
+            <type>textfield</type>
+            <name>Link description</name>
+            <description>Link description</description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>link_description</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-link_description</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>link_description</__types_id>
+            <__types_title>Link description</__types_title>
+            <hash>09d26d11eda1a33ecd1b8cbd8ef869ae</hash>
+            <checksum>09d26d11eda1a33ecd1b8cbd8ef869ae</checksum>
+        </field>
+        <field>
+            <id>data</id>
+            <slug>data</slug>
+            <type>date</type>
+            <name>Data</name>
+            <description>Data de l\&#039;esdeveniment</description>
+            <data>
+                <date_and_time>and_time</date_and_time>
+                <placeholder></placeholder>
+                <repetitive>0</repetitive>
+                <validate>
+                    <required>
+                        <active>1</active>
+                        <value>true</value>
+                        <message>This field is required.</message>
+                    </required>
+                    <date>
+                        <active>1</active>
+                        <format>mdy</format>
+                        <pattern>check.format</pattern>
+                        <message>Please enter a valid date.</message>
+                    </date>
+                </validate>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>data</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-data</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>data</__types_id>
+            <__types_title>Data</__types_title>
+            <hash>b8d51debbfda6cac3185a22eaa118502</hash>
+            <checksum>b8d51debbfda6cac3185a22eaa118502</checksum>
+        </field>
+        <field>
+            <id>ciutat</id>
+            <slug>ciutat</slug>
+            <type>textfield</type>
+            <name>Ciutat</name>
+            <description>Ciutat</description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>ciutat</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-ciutat</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>ciutat</__types_id>
+            <__types_title>Ciutat</__types_title>
+            <hash>e4d7d20f0ea3dc51c01e005f09f315eb</hash>
+            <checksum>e4d7d20f0ea3dc51c01e005f09f315eb</checksum>
+        </field>
+        <field>
+            <id>cost</id>
+            <slug>cost</slug>
+            <type>textfield</type>
+            <name>Cost</name>
+            <description>Cost en € (deixeu buit o \&#039;0\&#039; si és gratuït)</description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>cost</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-cost</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>cost</__types_id>
+            <__types_title>Cost</__types_title>
+            <hash>c319adbc80c2b6eb1018080fdd08a356</hash>
+            <checksum>c319adbc80c2b6eb1018080fdd08a356</checksum>
+        </field>
+        <field>
+            <id>inscripcions</id>
+            <slug>inscripcions</slug>
+            <type>select</type>
+            <name>Inscripcions</name>
+            <description>Requereix inscripció</description>
+            <data>
+                <options>
+                    <wpcf-fields-select-option-eb9a516c5b3f108f34eb60d475c21738-1>
+                        <title>No</title>
+                        <value>0</value>
+                    </wpcf-fields-select-option-eb9a516c5b3f108f34eb60d475c21738-1>
+                    <default>wpcf-fields-select-option-eb9a516c5b3f108f34eb60d475c21738-1</default>
+                    <wpcf-fields-select-option-f8bac2669c7d4a3397374b5fdaf2439a-1>
+                        <title>Sí</title>
+                        <value>1</value>
+                    </wpcf-fields-select-option-f8bac2669c7d4a3397374b5fdaf2439a-1>
+                </options>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>inscripcions</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-inscripcions</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>inscripcions</__types_id>
+            <__types_title>Inscripcions</__types_title>
+            <hash>54e38dccba1eabf143226506f940bb42</hash>
+            <checksum>54e38dccba1eabf143226506f940bb42</checksum>
+        </field>
+        <field>
+            <id>data_inici</id>
+            <slug>data_inici</slug>
+            <type>date</type>
+            <name>Data d\&#039;inici</name>
+            <description>Data de l\&#039;esdeveniment</description>
+            <data>
+                <date_and_time>date</date_and_time>
+                <placeholder></placeholder>
+                <repetitive>0</repetitive>
+                <validate>
+                    <required>
+                        <active>1</active>
+                        <value>true</value>
+                        <message>This field is required.</message>
+                    </required>
+                    <date>
+                        <active>1</active>
+                        <format>mdy</format>
+                        <pattern>check.format</pattern>
+                        <message>Please enter a valid date.</message>
+                    </date>
+                </validate>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>data_inici</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-data_inici</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>data_inici</__types_id>
+            <__types_title>Data d\&#039;inici</__types_title>
+            <hash>9e874e66b5ea5d346f74b3c88082a32e</hash>
+            <checksum>9e874e66b5ea5d346f74b3c88082a32e</checksum>
+        </field>
+        <field>
+            <id>data_fi</id>
+            <slug>data_fi</slug>
+            <type>date</type>
+            <name>Data de fi</name>
+            <description>Data de finalització de l\&#039;esdeveniment</description>
+            <data>
+                <date_and_time>date</date_and_time>
+                <placeholder></placeholder>
+                <repetitive>0</repetitive>
+                <validate>
+                    <required>
+                        <active>1</active>
+                        <value>true</value>
+                        <message>This field is required.</message>
+                    </required>
+                    <date>
+                        <active>1</active>
+                        <format>mdy</format>
+                        <pattern>check.format</pattern>
+                        <message>Please enter a valid date.</message>
+                    </date>
+                </validate>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>data_fi</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-data_fi</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>data_fi</__types_id>
+            <__types_title>Data de fi</__types_title>
+            <hash>6b9c17a1bb104a391f6721b72df3bb71</hash>
+            <checksum>6b9c17a1bb104a391f6721b72df3bb71</checksum>
+        </field>
+        <field>
+            <id>horari</id>
+            <slug>horari</slug>
+            <type>textfield</type>
+            <name>Horari</name>
+            <description>Hora d\&#039;inici de l\&#039;esdeveniment (o rang d\&#039;hores)</description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>horari</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-horari</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>horari</__types_id>
+            <__types_title>Horari</__types_title>
+            <hash>f4a705e5e7b596d158473a575339224f</hash>
+            <checksum>f4a705e5e7b596d158473a575339224f</checksum>
+        </field>
+        <field>
+            <id>lloc</id>
+            <slug>lloc</slug>
+            <type>textarea</type>
+            <name>Lloc</name>
+            <description>Lloc on es desenvolupa l\&#039;esdeveniment. Podeu posar múltiples línies per facilitar la lectura.</description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>lloc</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-lloc</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>lloc</__types_id>
+            <__types_title>Lloc</__types_title>
+            <hash>790547c6ec3549b3e8dd67ea2df87567</hash>
+            <checksum>790547c6ec3549b3e8dd67ea2df87567</checksum>
+        </field>
+        <field>
+            <id>mapa</id>
+            <slug>mapa</slug>
+            <type>textarea</type>
+            <name>Mapa</name>
+            <description>Visiteu https://www.openstreetmap.org i cerqueu l\&#039;adreça. Feu clic a la dreta al botó de compartir i copieu el codi html. Enganxeu el codi aquí (assegureu-vos que l\&#039;iframe té width=\&quot;100%\&quot; height=\&quot;375\&quot;)</description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>mapa</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-mapa</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>mapa</__types_id>
+            <__types_title>Mapa</__types_title>
+            <hash>b18c51d00202ea104fe114e75f5ee6ad</hash>
+            <checksum>b18c51d00202ea104fe114e75f5ee6ad</checksum>
+        </field>
+        <field>
+            <id>destacat</id>
+            <slug>destacat</slug>
+            <type>checkbox</type>
+            <name>Destacat a portada</name>
+            <description></description>
+            <data>
+                <set_value>1</set_value>
+                <save_empty>yes</save_empty>
+                <display>db</display>
+                <display_value_not_selected></display_value_not_selected>
+                <display_value_selected></display_value_selected>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>destacat</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-destacat</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>destacat</__types_id>
+            <__types_title>Destacat a portada</__types_title>
+            <hash>c44c3b3b80cc9f7066f498e4ae394b72</hash>
+            <checksum>c44c3b3b80cc9f7066f498e4ae394b72</checksum>
+        </field>
+        <field>
+            <id>sistema_operatiu</id>
+            <slug>sistema_operatiu</slug>
+            <type>select</type>
+            <name>Sistema operatiu</name>
+            <description></description>
+            <data>
+                <options>
+                    <wpcf-fields-select-option-efb7a75c2720805ac69121da11a9c303-1>
+                        <title>Android</title>
+                        <value>android</value>
+                    </wpcf-fields-select-option-efb7a75c2720805ac69121da11a9c303-1>
+                    <wpcf-fields-select-option-b24a7406d332b59517afcf05434c5f95-1>
+                        <title>iOS</title>
+                        <value>ios</value>
+                    </wpcf-fields-select-option-b24a7406d332b59517afcf05434c5f95-1>
+                    <wpcf-fields-select-option-05b45fa15593467003fdfbbd8f7b8793-1>
+                        <title>BlackBerry</title>
+                        <value>blackberry</value>
+                    </wpcf-fields-select-option-05b45fa15593467003fdfbbd8f7b8793-1>
+                    <wpcf-fields-select-option-b1aaa3486112d6b2ae4f10b2af3ff990-1>
+                        <title>Firefox OS</title>
+                        <value>firefoxos</value>
+                    </wpcf-fields-select-option-b1aaa3486112d6b2ae4f10b2af3ff990-1>
+                    <wpcf-fields-select-option-01ffe500a9a3e026ab48f9da261ac7c2-1>
+                        <title>Windows Phone</title>
+                        <value>windowsphone</value>
+                    </wpcf-fields-select-option-01ffe500a9a3e026ab48f9da261ac7c2-1>
+                </options>
+                <validate>
+                    <required>
+                        <active>1</active>
+                        <value>true</value>
+                        <message>This field is required.</message>
+                    </required>
+                </validate>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>sistema_operatiu</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-sistema_operatiu</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>sistema_operatiu</__types_id>
+            <__types_title>Sistema operatiu</__types_title>
+            <hash>b065eb41fe767aa9773502eacb4749d4</hash>
+            <checksum>b065eb41fe767aa9773502eacb4749d4</checksum>
+        </field>
+        <field>
+            <id>versio</id>
+            <slug>versio</slug>
+            <type>textfield</type>
+            <name>Versió</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>versio</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-versio</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>versio</__types_id>
+            <__types_title>Versió</__types_title>
+            <hash>24c4140912e6e5d7ae825a95f37aea8d</hash>
+            <checksum>24c4140912e6e5d7ae825a95f37aea8d</checksum>
+        </field>
+        <field>
+            <id>conf_cat</id>
+            <slug>conf_cat</slug>
+            <type>checkbox</type>
+            <name>Configuració en català</name>
+            <description></description>
+            <data>
+                <set_value>1</set_value>
+                <save_empty>yes</save_empty>
+                <display>db</display>
+                <display_value_not_selected></display_value_not_selected>
+                <display_value_selected></display_value_selected>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>conf_cat</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-conf_cat</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>conf_cat</__types_id>
+            <__types_title>Configuració en català</__types_title>
+            <hash>70bdad162218f4c397f0f072878fad81</hash>
+            <checksum>70bdad162218f4c397f0f072878fad81</checksum>
+        </field>
+        <field>
+            <id>correccio_cat</id>
+            <slug>correccio_cat</slug>
+            <type>checkbox</type>
+            <name>Correcció ortogràfica en català</name>
+            <description></description>
+            <data>
+                <set_value>1</set_value>
+                <save_empty>yes</save_empty>
+                <display>db</display>
+                <display_value_not_selected></display_value_not_selected>
+                <display_value_selected></display_value_selected>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>correccio_cat</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-correccio_cat</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>correccio_cat</__types_id>
+            <__types_title>Correcció ortogràfica en català</__types_title>
+            <hash>ce1c40ed1cc3fc7f5d92a243f7d63b13</hash>
+            <checksum>ce1c40ed1cc3fc7f5d92a243f7d63b13</checksum>
+        </field>
+        <field>
+            <id>tipus</id>
+            <slug>tipus</slug>
+            <type>select</type>
+            <name>Tipus d\&#039;aparell</name>
+            <description></description>
+            <data>
+                <options>
+                    <wpcf-fields-select-option-28775ac3a8c647c5608a606b6279bb17-1>
+                        <title>Mòbil</title>
+                        <value>mobil</value>
+                    </wpcf-fields-select-option-28775ac3a8c647c5608a606b6279bb17-1>
+                    <wpcf-fields-select-option-be54f8cd7a3a8df1b3eef0acdb2a1dd4-1>
+                        <title>Tauletes</title>
+                        <value>tauleta</value>
+                    </wpcf-fields-select-option-be54f8cd7a3a8df1b3eef0acdb2a1dd4-1>
+                    <wpcf-fields-select-option-acde0267c2f1d533cd765a82e09c3265-1>
+                        <title>Lector de llibres</title>
+                        <value>lector</value>
+                    </wpcf-fields-select-option-acde0267c2f1d533cd765a82e09c3265-1>
+                    <wpcf-fields-select-option-b0df04a8aa36814ad01d91876f4138b0-1>
+                        <title>Portables</title>
+                        <value>portables</value>
+                    </wpcf-fields-select-option-b0df04a8aa36814ad01d91876f4138b0-1>
+                </options>
+                <validate>
+                    <required>
+                        <active>1</active>
+                        <value>true</value>
+                        <message>This field is required.</message>
+                    </required>
+                </validate>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>tipus</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-tipus</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>tipus</__types_id>
+            <__types_title>Tipus d\&#039;aparell</__types_title>
+            <hash>fb7800d180933c7da91a5d8845a9d92c</hash>
+            <checksum>fb7800d180933c7da91a5d8845a9d92c</checksum>
+        </field>
+        <field>
+            <id>fabricant</id>
+            <slug>fabricant</slug>
+            <type>textfield</type>
+            <name>Fabricant</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>fabricant</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-fabricant</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>fabricant</__types_id>
+            <__types_title>Fabricant</__types_title>
+            <hash>741ba2b83520c93d1c4b239f654e1b57</hash>
+            <checksum>741ba2b83520c93d1c4b239f654e1b57</checksum>
+        </field>
+        <field>
+            <id>text_baixada_principal</id>
+            <slug>text_baixada_principal</slug>
+            <type>textfield</type>
+            <name>Text del botó de l\&#039;enllaç de baixada</name>
+            <description>Text que es mostra a dintre del botó de baixada associada a la notícia.</description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>text_baixada_principal</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-text_baixada_principal</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>text_baixada_principal</__types_id>
+            <__types_title>Text del botó de l\&#039;enllaç de baixada</__types_title>
+            <hash>21da4119d5356eedc64a7f2b03b25c64</hash>
+            <checksum>21da4119d5356eedc64a7f2b03b25c64</checksum>
+        </field>
+        <field>
+            <id>baixada_principal</id>
+            <slug>baixada_principal</slug>
+            <type>url</type>
+            <name>Enllaç de baixada</name>
+            <description>Aquest camp conté l\&#039;url de baixada associada a la notícia.</description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>baixada_principal</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-baixada_principal</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>baixada_principal</__types_id>
+            <__types_title>Enllaç de baixada</__types_title>
+            <hash>6667d87d0f28f9607a7a536b2756cbcf</hash>
+            <checksum>6667d87d0f28f9607a7a536b2756cbcf</checksum>
+        </field>
+    </fields>
+    <types>
+        <type>
+            <_builtin></_builtin>
+            <_toolset_edit_last>1441258795</_toolset_edit_last>
+            <_wpcf_author_id>1</_wpcf_author_id>
+            <wpcf-post-type>slide</wpcf-post-type>
+            <labels>
+                <name>Sliders</name>
+                <singular_name>Slider</singular_name>
+                <add_new>Add New</add_new>
+                <add_new_item>Add New %s</add_new_item>
+                <edit_item>Edit %s</edit_item>
+                <new_item>New %s</new_item>
+                <view_item>View %s</view_item>
+                <search_items>Search %s</search_items>
+                <not_found>No %s found</not_found>
+                <not_found_in_trash>No %s found in Trash</not_found_in_trash>
+                <parent_item_colon>Parent text</parent_item_colon>
+                <all_items>All items</all_items>
+            </labels>
+            <slug>slide</slug>
+            <description>Sliders</description>
+            <icon>admin-media</icon>
+            <public>public</public>
+            <menu_position></menu_position>
+            <menu_icon></menu_icon>
+            <taxonomies>
+                <section>1</section>
+            </taxonomies>
+            <custom_fields>
+                <wpcf-slide_image>1</wpcf-slide_image>
+                <wpcf-slide_link>1</wpcf-slide_link>
+            </custom_fields>
+            <supports>
+                <title>1</title>
+                <excerpt>1</excerpt>
+            </supports>
+            <rewrite>
+                <custom>normal</custom>
+                <slug></slug>
+            </rewrite>
+            <has_archive_slug></has_archive_slug>
+            <show_in_menu>1</show_in_menu>
+            <show_in_menu_page></show_in_menu_page>
+            <show_ui>1</show_ui>
+            <publicly_queryable>1</publicly_queryable>
+            <can_export>1</can_export>
+            <query_var_enabled>1</query_var_enabled>
+            <query_var></query_var>
+            <permalink_epmask>EP_PERMALINK</permalink_epmask>
+            <id>slide</id>
+            <__types_id>slide</__types_id>
+            <__types_title>Sliders</__types_title>
+            <hash>b1924dd6d54d89f6d0d84557d5ad5145</hash>
+            <checksum>b1924dd6d54d89f6d0d84557d5ad5145</checksum>
+        </type>
+        <type>
+            <_builtin></_builtin>
+            <_toolset_edit_last>1445501470</_toolset_edit_last>
+            <_wpcf_author_id>1</_wpcf_author_id>
+            <__types_id>link</__types_id>
+            <__types_title>Links</__types_title>
+            <wpcf-post-type>link</wpcf-post-type>
+            <labels>
+                <name>Links</name>
+                <singular_name>Link</singular_name>
+                <add_new>Add New</add_new>
+                <add_new_item>Add New %s</add_new_item>
+                <edit_item>Edit %s</edit_item>
+                <new_item>New %s</new_item>
+                <view_item>View %s</view_item>
+                <search_items>Search %s</search_items>
+                <not_found>No %s found</not_found>
+                <not_found_in_trash>No %s found in Trash</not_found_in_trash>
+                <parent_item_colon>Parent text</parent_item_colon>
+                <all_items>All items</all_items>
+            </labels>
+            <slug>link</slug>
+            <description>Links related to post and pages</description>
+            <icon>format-links</icon>
+            <public>public</public>
+            <menu_position></menu_position>
+            <menu_icon></menu_icon>
+            <rewrite>
+                <enabled>1</enabled>
+                <custom>normal</custom>
+                <slug></slug>
+                <with_front>1</with_front>
+                <feeds>1</feeds>
+                <pages>1</pages>
+            </rewrite>
+            <has_archive>1</has_archive>
+            <has_archive_slug></has_archive_slug>
+            <show_in_menu>1</show_in_menu>
+            <show_in_menu_page></show_in_menu_page>
+            <show_ui>1</show_ui>
+            <publicly_queryable>1</publicly_queryable>
+            <can_export>1</can_export>
+            <show_in_nav_menus>1</show_in_nav_menus>
+            <query_var_enabled>1</query_var_enabled>
+            <query_var></query_var>
+            <permalink_epmask>EP_PERMALINK</permalink_epmask>
+            <post_relationship>
+                <belongs>
+                    <post>1</post>
+                    <page>1</page>
+                    <esdeveniment>1</esdeveniment>
+                </belongs>
+            </post_relationship>
+            <id>link</id>
+            <hash>162952666700f9f0435e2f804f5f977d</hash>
+            <checksum>162952666700f9f0435e2f804f5f977d</checksum>
+        </type>
+        <type>
+            <_builtin></_builtin>
+            <_toolset_edit_last>1450884250</_toolset_edit_last>
+            <_wpcf_author_id>1</_wpcf_author_id>
+            <wpcf-post-type>esdeveniment</wpcf-post-type>
+            <labels>
+                <name>Esdeveniments</name>
+                <singular_name>Esdeveniment</singular_name>
+                <add_new>Add New</add_new>
+                <add_new_item>Add New %s</add_new_item>
+                <edit_item>Edit %s</edit_item>
+                <new_item>New %s</new_item>
+                <view_item>View %s</view_item>
+                <search_items>Search %s</search_items>
+                <not_found>No %s found</not_found>
+                <not_found_in_trash>No %s found in Trash</not_found_in_trash>
+                <parent_item_colon>Parent text</parent_item_colon>
+                <all_items>All items</all_items>
+            </labels>
+            <slug>esdeveniment</slug>
+            <description>Esdeveniments</description>
+            <icon>clock</icon>
+            <public>public</public>
+            <menu_position></menu_position>
+            <menu_icon></menu_icon>
+            <taxonomies>
+                <esdeveniment_cat>1</esdeveniment_cat>
+                <esdeveniment_tag>1</esdeveniment_tag>
+            </taxonomies>
+            <custom_fields>
+                <wpcf-data_inici>1</wpcf-data_inici>
+                <wpcf-data_fi>1</wpcf-data_fi>
+                <wpcf-destacat>1</wpcf-destacat>
+            </custom_fields>
+            <supports>
+                <title>1</title>
+                <editor>1</editor>
+                <thumbnail>1</thumbnail>
+            </supports>
+            <rewrite>
+                <enabled>1</enabled>
+                <custom>custom</custom>
+                <slug>esdeveniments</slug>
+                <feeds>1</feeds>
+                <pages>1</pages>
+            </rewrite>
+            <has_archive>1</has_archive>
+            <has_archive_slug></has_archive_slug>
+            <show_in_menu>1</show_in_menu>
+            <show_in_menu_page></show_in_menu_page>
+            <show_ui>1</show_ui>
+            <publicly_queryable>1</publicly_queryable>
+            <can_export>1</can_export>
+            <show_in_nav_menus>1</show_in_nav_menus>
+            <query_var_enabled>1</query_var_enabled>
+            <query_var></query_var>
+            <permalink_epmask>EP_PERMALINK</permalink_epmask>
+            <post_relationship>
+                <has>
+                    <link>1</link>
+                </has>
+            </post_relationship>
+            <id>esdeveniment</id>
+            <__types_id>esdeveniment</__types_id>
+            <__types_title>Esdeveniments</__types_title>
+            <hash>e084e77f3fac975c1c22f8b178d59bf2</hash>
+            <checksum>e084e77f3fac975c1c22f8b178d59bf2</checksum>
+        </type>
+        <type>
+            <_builtin></_builtin>
+            <_toolset_edit_last>1452616981</_toolset_edit_last>
+            <_wpcf_author_id>1</_wpcf_author_id>
+            <wpcf-post-type>aparell</wpcf-post-type>
+            <labels>
+                <name>Aparells</name>
+                <singular_name>Aparell</singular_name>
+                <add_new>Afegeix</add_new>
+                <add_new_item>Afegeix %s</add_new_item>
+                <edit_item>Edita %s</edit_item>
+                <new_item>Nou %s</new_item>
+                <view_item>Mostra %s</view_item>
+                <search_items>Cerca %s</search_items>
+                <not_found>No s\&#039;ha trobat cap %s</not_found>
+                <not_found_in_trash>No s\&#039;ha trobat cap %s a la paperera</not_found_in_trash>
+                <parent_item_colon>Text del pare</parent_item_colon>
+                <all_items>Tots els elements</all_items>
+            </labels>
+            <slug>aparell</slug>
+            <description>Llistat d\&#039;aparells</description>
+            <icon>art</icon>
+            <public>public</public>
+            <menu_position></menu_position>
+            <menu_icon></menu_icon>
+            <custom_fields>
+                <wpcf-tipus>1</wpcf-tipus>
+                <wpcf-sistema_operatiu>1</wpcf-sistema_operatiu>
+                <wpcf-versio>1</wpcf-versio>
+                <wpcf-conf_cat>1</wpcf-conf_cat>
+                <wpcf-correccio_cat>1</wpcf-correccio_cat>
+                <wpcf-fabricant>1</wpcf-fabricant>
+            </custom_fields>
+            <supports>
+                <title>1</title>
+                <comments>1</comments>
+                <thumbnail>1</thumbnail>
+            </supports>
+            <rewrite>
+                <custom>normal</custom>
+                <slug></slug>
+                <with_front>1</with_front>
+                <feeds>1</feeds>
+                <pages>1</pages>
+            </rewrite>
+            <has_archive>1</has_archive>
+            <has_archive_slug></has_archive_slug>
+            <show_in_menu>1</show_in_menu>
+            <show_in_menu_page></show_in_menu_page>
+            <show_ui>1</show_ui>
+            <publicly_queryable>1</publicly_queryable>
+            <can_export>1</can_export>
+            <show_in_nav_menus>1</show_in_nav_menus>
+            <query_var_enabled>1</query_var_enabled>
+            <query_var></query_var>
+            <permalink_epmask>EP_PERMALINK</permalink_epmask>
+            <taxonomies>
+                <tipus-aparell>1</tipus-aparell>
+                <sistema-operatiu-aparell>1</sistema-operatiu-aparell>
+                <sistema_operatiu_aparell>1</sistema_operatiu_aparell>
+                <tipus_aparell>1</tipus_aparell>
+            </taxonomies>
+            <id>aparell</id>
+            <__types_id>aparell</__types_id>
+            <__types_title>Aparells</__types_title>
+            <hash>6406c39836ae69fe2990ec7e8d8c8357</hash>
+            <checksum>6406c39836ae69fe2990ec7e8d8c8357</checksum>
+        </type>
+    </types>
+    <post_relationships>
+        <data>{&quot;post&quot;:{&quot;link&quot;:[]},&quot;page&quot;:{&quot;link&quot;:[]},&quot;esdeveniment&quot;:{&quot;link&quot;:[]}}</data>
+    </post_relationships>
+    <taxonomies>
+        <taxonomy>
+            <wpcf-tax>section</wpcf-tax>
+            <labels>
+                <name>Sections</name>
+                <singular_name>Section</singular_name>
+                <search_items>Search %s</search_items>
+                <popular_items>Popular %s</popular_items>
+                <all_items>All %s</all_items>
+                <parent_item>Parent %s</parent_item>
+                <parent_item_colon>Parent %s:</parent_item_colon>
+                <edit_item>Edit %s</edit_item>
+                <update_item>Update %s</update_item>
+                <add_new_item>Add New %s</add_new_item>
+                <new_item_name>New %s Name</new_item_name>
+                <separate_items_with_commas>Separate %s with commas</separate_items_with_commas>
+                <add_or_remove_items>Add or remove %s</add_or_remove_items>
+                <choose_from_most_used>Choose from the most used %s</choose_from_most_used>
+                <menu_name>%s</menu_name>
+            </labels>
+            <slug>section</slug>
+            <description>Sections related to the website to classify content that should be displayed only in that section.</description>
+            <public>public</public>
+            <supports>
+                <slide>1</slide>
+            </supports>
+            <hierarchical>flat</hierarchical>
+            <rewrite>
+                <slug></slug>
+                <with_front>1</with_front>
+                <hierarchical>1</hierarchical>
+            </rewrite>
+            <show_ui>1</show_ui>
+            <show_in_nav_menus>1</show_in_nav_menus>
+            <show_tagcloud>1</show_tagcloud>
+            <show_admin_column>1</show_admin_column>
+            <query_var_enabled>1</query_var_enabled>
+            <query_var></query_var>
+            <update_count_callback></update_count_callback>
+            <meta_box_cb>
+                <callback></callback>
+            </meta_box_cb>
+            <_toolset_edit_last>1441180265</_toolset_edit_last>
+            <_wpcf_author_id>1</_wpcf_author_id>
+            <id>section</id>
+            <__types_id>section</__types_id>
+            <__types_title>Sections</__types_title>
+            <checksum>25553eb95e19dd584d7964deba632ef2</checksum>
+        </taxonomy>
+        <taxonomy>
+            <wpcf-tax>category-esdeveniment</wpcf-tax>
+            <labels>
+                <name>Categories Esdeveniments</name>
+                <singular_name>Categoria esdeveniment</singular_name>
+                <search_items>Search %s</search_items>
+                <popular_items>Popular %s</popular_items>
+                <all_items>All %s</all_items>
+                <parent_item>Parent %s</parent_item>
+                <parent_item_colon>Parent %s:</parent_item_colon>
+                <edit_item>Edit %s</edit_item>
+                <update_item>Update %s</update_item>
+                <add_new_item>Add New %s</add_new_item>
+                <new_item_name>New %s Name</new_item_name>
+                <separate_items_with_commas>Separate %s with commas</separate_items_with_commas>
+                <add_or_remove_items>Add or remove %s</add_or_remove_items>
+                <choose_from_most_used>Choose from the most used %s</choose_from_most_used>
+                <menu_name>%s</menu_name>
+            </labels>
+            <slug>esdeveniment_cat</slug>
+            <description></description>
+            <public>public</public>
+            <supports>
+                <esdeveniment>1</esdeveniment>
+            </supports>
+            <hierarchical>hierarchical</hierarchical>
+            <rewrite>
+                <enabled>1</enabled>
+                <slug>esdeveniments/categoria</slug>
+                <hierarchical>1</hierarchical>
+            </rewrite>
+            <show_ui>1</show_ui>
+            <show_in_nav_menus>1</show_in_nav_menus>
+            <show_tagcloud>1</show_tagcloud>
+            <query_var_enabled>1</query_var_enabled>
+            <query_var>order=asc</query_var>
+            <update_count_callback></update_count_callback>
+            <meta_box_cb>
+                <callback></callback>
+            </meta_box_cb>
+            <_toolset_edit_last>1445963702</_toolset_edit_last>
+            <_wpcf_author_id>1</_wpcf_author_id>
+            <id>esdeveniment_cat</id>
+            <__types_id>esdeveniment_cat</__types_id>
+            <__types_title>Categories Esdeveniments</__types_title>
+            <checksum>8434b55522d8ca5dc311c4a84b211853</checksum>
+        </taxonomy>
+        <taxonomy>
+            <labels>
+                <name>Etiquetes esdeveniments</name>
+                <singular_name>Etiqueta esdeveniment</singular_name>
+                <search_items>Search %s</search_items>
+                <popular_items>Popular %s</popular_items>
+                <all_items>All %s</all_items>
+                <parent_item>Parent %s</parent_item>
+                <parent_item_colon>Parent %s:</parent_item_colon>
+                <edit_item>Edit %s</edit_item>
+                <update_item>Update %s</update_item>
+                <add_new_item>Add New %s</add_new_item>
+                <new_item_name>New %s Name</new_item_name>
+                <separate_items_with_commas>Separate %s with commas</separate_items_with_commas>
+                <add_or_remove_items>Add or remove %s</add_or_remove_items>
+                <choose_from_most_used>Choose from the most used %s</choose_from_most_used>
+                <menu_name>%s</menu_name>
+            </labels>
+            <slug>esdeveniment_tag</slug>
+            <description></description>
+            <public>public</public>
+            <supports>
+                <esdeveniment>1</esdeveniment>
+            </supports>
+            <hierarchical>flat</hierarchical>
+            <rewrite>
+                <enabled>1</enabled>
+                <slug>esdeveniments/etiqueta</slug>
+                <hierarchical>1</hierarchical>
+            </rewrite>
+            <show_ui>1</show_ui>
+            <show_in_nav_menus>1</show_in_nav_menus>
+            <show_tagcloud>1</show_tagcloud>
+            <query_var_enabled>1</query_var_enabled>
+            <query_var></query_var>
+            <update_count_callback></update_count_callback>
+            <meta_box_cb>
+                <callback></callback>
+            </meta_box_cb>
+            <_toolset_edit_last>1445964711</_toolset_edit_last>
+            <_wpcf_author_id>1</_wpcf_author_id>
+            <id>esdeveniment_tag</id>
+            <__types_id>esdeveniment_tag</__types_id>
+            <__types_title>Etiquetes esdeveniments</__types_title>
+            <checksum>20265e014860a21479e9bb891de87a06</checksum>
+        </taxonomy>
+        <taxonomy>
+            <wpcf-tax>sistema-operatiu-aparell</wpcf-tax>
+            <labels>
+                <name>Sistemes Operatius (aparells)</name>
+                <singular_name>Sistema Operatiu (aparell)</singular_name>
+                <search_items>Search %s</search_items>
+                <popular_items>Popular %s</popular_items>
+                <all_items>All %s</all_items>
+                <parent_item>Parent %s</parent_item>
+                <parent_item_colon>Parent %s:</parent_item_colon>
+                <edit_item>Edit %s</edit_item>
+                <update_item>Update %s</update_item>
+                <add_new_item>Add New %s</add_new_item>
+                <new_item_name>New %s Name</new_item_name>
+                <separate_items_with_commas>Separate %s with commas</separate_items_with_commas>
+                <add_or_remove_items>Add or remove %s</add_or_remove_items>
+                <choose_from_most_used>Choose from the most used %s</choose_from_most_used>
+                <menu_name>%s</menu_name>
+            </labels>
+            <slug>sistema_operatiu_aparell</slug>
+            <description></description>
+            <public>public</public>
+            <supports>
+                <aparell>1</aparell>
+            </supports>
+            <hierarchical>hierarchical</hierarchical>
+            <rewrite>
+                <slug></slug>
+            </rewrite>
+            <show_ui>1</show_ui>
+            <query_var_enabled>1</query_var_enabled>
+            <query_var></query_var>
+            <update_count_callback></update_count_callback>
+            <meta_box_cb>
+                <callback></callback>
+            </meta_box_cb>
+            <_toolset_edit_last>1452616956</_toolset_edit_last>
+            <_wpcf_author_id>1</_wpcf_author_id>
+            <id>sistema_operatiu_aparell</id>
+            <__types_id>sistema_operatiu_aparell</__types_id>
+            <__types_title>Sistemes Operatius (aparells)</__types_title>
+            <checksum>bde145e8e0fec63aab85d745414cb457</checksum>
+        </taxonomy>
+        <taxonomy>
+            <wpcf-tax>tipus-aparell</wpcf-tax>
+            <labels>
+                <name>Tipus Aparells</name>
+                <singular_name>Tipus aparell</singular_name>
+                <search_items>Search %s</search_items>
+                <popular_items>Popular %s</popular_items>
+                <all_items>All %s</all_items>
+                <parent_item>Parent %s</parent_item>
+                <parent_item_colon>Parent %s:</parent_item_colon>
+                <edit_item>Edit %s</edit_item>
+                <update_item>Update %s</update_item>
+                <add_new_item>Add New %s</add_new_item>
+                <new_item_name>New %s Name</new_item_name>
+                <separate_items_with_commas>Separate %s with commas</separate_items_with_commas>
+                <add_or_remove_items>Add or remove %s</add_or_remove_items>
+                <choose_from_most_used>Choose from the most used %s</choose_from_most_used>
+                <menu_name>%s</menu_name>
+            </labels>
+            <slug>tipus_aparell</slug>
+            <description></description>
+            <public>public</public>
+            <supports>
+                <aparell>1</aparell>
+            </supports>
+            <hierarchical>hierarchical</hierarchical>
+            <rewrite>
+                <slug></slug>
+            </rewrite>
+            <show_ui>1</show_ui>
+            <query_var_enabled>1</query_var_enabled>
+            <query_var></query_var>
+            <update_count_callback></update_count_callback>
+            <meta_box_cb>
+                <callback></callback>
+            </meta_box_cb>
+            <_toolset_edit_last>1452616982</_toolset_edit_last>
+            <_wpcf_author_id>1</_wpcf_author_id>
+            <id>tipus_aparell</id>
+            <__types_id>tipus_aparell</__types_id>
+            <__types_title>Tipus Aparells</__types_title>
+            <checksum>06379a9d65060a268ab158b112c085ed</checksum>
+        </taxonomy>
+    </taxonomies>
+</types>
