@@ -33,7 +33,17 @@ LLISTES
 	}
 }
 
-section.contingut-section ul{
+section.contingut-section ul.aparells_detail{
+	li {
+		padding: 0px !important;
+	}
+	li:before {
+		content: '' !important;
+		margin: 0 !important;
+	}
+}
+
+div.contingut section.contingut-section ul{
     padding:0px;
     list-style: outside none none;
     li {
@@ -49,17 +59,6 @@ section.contingut-section ul{
         margin: 0 15px 0 0;
     }
 }
-
-section.contingut-section ul.aparells_detail{
-	li {
-		padding: 0px;
-	}
-	li:before {
-		content: '';
-		margin: 0;
-	}
-}
-
 
 
 /*  Llista check
