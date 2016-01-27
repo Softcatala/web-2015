@@ -12,6 +12,102 @@
     </settings>
     <groups>
         <group>
+            <ID>496</ID>
+            <post_content></post_content>
+            <post_title>Crédits</post_title>
+            <post_excerpt></post_excerpt>
+            <post_type>wp-types-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
+                <_wp_types_group_fields>,imatge_credit,enllac_credit,</_wp_types_group_fields>
+                <_wp_types_group_post_types>,credit,</_wp_types_group_post_types>
+                <_wp_types_group_terms>all</_wp_types_group_terms>
+                <_wp_types_group_templates>all</_wp_types_group_templates>
+                <_wpcf_conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </_wpcf_conditional_display>
+            </meta>
+            <hash>17592ca98eb3659689165277d0f95ef0</hash>
+            <checksum>17592ca98eb3659689165277d0f95ef0</checksum>
+            <__types_id>credits</__types_id>
+            <__types_title>Crédits</__types_title>
+        </group>
+        <group>
+            <ID>479</ID>
+            <post_content></post_content>
+            <post_title>Baixades programa</post_title>
+            <post_excerpt></post_excerpt>
+            <post_type>wp-types-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
+                <_wp_types_group_fields>,url_baixada,versio_baixada,mida_baixada,versio_estesa_baixada,arquitectura_baixada,</_wp_types_group_fields>
+                <_wp_types_group_post_types>,baixada,</_wp_types_group_post_types>
+                <_wp_types_group_terms>all</_wp_types_group_terms>
+                <_wp_types_group_templates>all</_wp_types_group_templates>
+                <_wpcf_conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </_wpcf_conditional_display>
+            </meta>
+            <hash>d814e821f4238473c71dcb823fe46996</hash>
+            <checksum>d814e821f4238473c71dcb823fe46996</checksum>
+            <__types_id>baixades-programa</__types_id>
+            <__types_title>Baixades programa</__types_title>
+        </group>
+        <group>
+            <ID>478</ID>
+            <post_content></post_content>
+            <post_title>Vídeo</post_title>
+            <post_excerpt></post_excerpt>
+            <post_type>wp-types-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
+                <_wp_types_group_fields>,video_title,video_subtitle,video_description,video_url,call_to_action_bottom_url,call_to_action_bottom_text,call_to_action_bottom_button_text,</_wp_types_group_fields>
+                <_wp_types_group_post_types>,programa,</_wp_types_group_post_types>
+                <_wp_types_group_terms>all</_wp_types_group_terms>
+                <_wp_types_group_templates>all</_wp_types_group_templates>
+                <_wpcf_conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </_wpcf_conditional_display>
+            </meta>
+            <hash>d9df15014dcfadfd4038da2a42c765cb</hash>
+            <checksum>d9df15014dcfadfd4038da2a42c765cb</checksum>
+            <__types_id>video</__types_id>
+            <__types_title>Vídeo</__types_title>
+        </group>
+        <group>
+            <ID>471</ID>
+            <post_content>Camps específics dels programes</post_content>
+            <post_title>Programes</post_title>
+            <post_excerpt></post_excerpt>
+            <post_type>wp-types-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
+                <_wp_types_group_fields>,subtitle_programa,autor_programa,logotip_programa,lloc_web_programa,total_baixades_programa,arxivat,imatge_destacada_1,imatge_destacada_2,imatge_destacada_3,valoracio,vots,</_wp_types_group_fields>
+                <_wp_types_group_post_types>,programa,</_wp_types_group_post_types>
+                <_wp_types_group_terms>all</_wp_types_group_terms>
+                <_wp_types_group_templates>all</_wp_types_group_templates>
+                <_wpcf_conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </_wpcf_conditional_display>
+            </meta>
+            <hash>7b50ffcdbec02893b11dc6a8a2dfab55</hash>
+            <checksum>7b50ffcdbec02893b11dc6a8a2dfab55</checksum>
+            <__types_id>programes</__types_id>
+            <__types_title>Programes</__types_title>
+        </group>
+        <group>
             <ID>266</ID>
             <post_content></post_content>
             <post_title>Page specific</post_title>
@@ -1129,6 +1225,921 @@
             <hash>6667d87d0f28f9607a7a536b2756cbcf</hash>
             <checksum>6667d87d0f28f9607a7a536b2756cbcf</checksum>
         </field>
+        <field>
+            <id>subtitol</id>
+            <slug>subtitol</slug>
+            <type>textfield</type>
+            <name>Subtítol</name>
+            <description></description>
+            <data>
+                <placeholder>Subtítol del programa que es mostra sota el títol</placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>subtitol</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-subtitol</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>subtitol</__types_id>
+            <__types_title>Subtítol</__types_title>
+            <hash>bcd10040a9fac0887e6974d25af2418a</hash>
+            <checksum>bcd10040a9fac0887e6974d25af2418a</checksum>
+        </field>
+        <field>
+            <id>autor</id>
+            <slug>autor</slug>
+            <type>textfield</type>
+            <name>Autor</name>
+            <description></description>
+            <data>
+                <placeholder>Autor del programa</placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>autor</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-autor</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>autor</__types_id>
+            <__types_title>Autor</__types_title>
+            <hash>e7b74a21cd5a47cd8e082634c2a8d950</hash>
+            <checksum>e7b74a21cd5a47cd8e082634c2a8d950</checksum>
+        </field>
+        <field>
+            <id>logotip</id>
+            <slug>logotip</slug>
+            <type>image</type>
+            <name>Logotip</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <validate>
+                    <required>
+                        <active>1</active>
+                        <value>true</value>
+                        <message>This field is required.</message>
+                    </required>
+                </validate>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>logotip</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-logotip</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>logotip</__types_id>
+            <__types_title>Logotip</__types_title>
+            <hash>789de2442af60719ee1af9e8035758de</hash>
+            <checksum>789de2442af60719ee1af9e8035758de</checksum>
+        </field>
+        <field>
+            <id>video</id>
+            <slug>video</slug>
+            <type>video</type>
+            <name>Vídeo</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <is_new>1</is_new>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>video-1889007634</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+                <removed_from_history>1</removed_from_history>
+            </data>
+            <meta_key>wpcf-video</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>video</__types_id>
+            <__types_title>Vídeo</__types_title>
+            <hash>e8603693a0aef3768178b5d7afdd7d76</hash>
+            <checksum>e8603693a0aef3768178b5d7afdd7d76</checksum>
+        </field>
+        <field>
+            <id>video-programa</id>
+            <slug>video-programa</slug>
+            <type>embed</type>
+            <name>Vídeo del programa</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <validate>
+                    <url>
+                        <active>1</active>
+                        <message>Please enter a valid URL address.</message>
+                    </url>
+                </validate>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>video-programa</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-video-programa</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>video-programa</__types_id>
+            <__types_title>Vídeo del programa</__types_title>
+            <hash>82ce3a679cf2f125ce49ede722c9b541</hash>
+            <checksum>82ce3a679cf2f125ce49ede722c9b541</checksum>
+        </field>
+        <field>
+            <id>lloc-web</id>
+            <slug>lloc-web</slug>
+            <type>url</type>
+            <name>Lloc web</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <validate>
+                    <url>
+                        <active>1</active>
+                        <message>Please enter a valid URL address.</message>
+                    </url>
+                </validate>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>lloc-web</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-lloc-web</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>lloc-web</__types_id>
+            <__types_title>Lloc web</__types_title>
+            <hash>53a381aca28c25026ff71fbf2a387469</hash>
+            <checksum>53a381aca28c25026ff71fbf2a387469</checksum>
+        </field>
+        <field>
+            <id>total-baixades</id>
+            <slug>total-baixades</slug>
+            <type>numeric</type>
+            <name>Total baixades</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <validate>
+                    <number>
+                        <active>1</active>
+                        <message>Please enter numeric data.</message>
+                    </number>
+                </validate>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>total-baixades</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-total-baixades</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>total-baixades</__types_id>
+            <__types_title>Total baixades</__types_title>
+            <hash>36df24d2073999a63a27e8b2114d4721</hash>
+            <checksum>36df24d2073999a63a27e8b2114d4721</checksum>
+        </field>
+        <field>
+            <id>descatalogat</id>
+            <slug>descatalogat</slug>
+            <type>radio</type>
+            <name>Descatalogat</name>
+            <description></description>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-ba652e9f1fdd587f7d14c92588eda74c-1>
+                        <title>No</title>
+                        <value>0</value>
+                        <display_value>0</display_value>
+                    </wpcf-fields-radio-option-ba652e9f1fdd587f7d14c92588eda74c-1>
+                    <default>wpcf-fields-radio-option-ba652e9f1fdd587f7d14c92588eda74c-1</default>
+                    <wpcf-fields-radio-option-15e03316358a40e2887c9e51147b3568-1>
+                        <title>Sí</title>
+                        <value>1</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-15e03316358a40e2887c9e51147b3568-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>descatalogat</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-descatalogat</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>descatalogat</__types_id>
+            <__types_title>Descatalogat</__types_title>
+            <hash>f92f6a4282c2038db8c333aa17d4a798</hash>
+            <checksum>f92f6a4282c2038db8c333aa17d4a798</checksum>
+        </field>
+        <field>
+            <id>test-video</id>
+            <slug>test-video</slug>
+            <type>video</type>
+            <name>Test video</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>test-video</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-test-video</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>test-video</__types_id>
+            <__types_title>Test video</__types_title>
+            <hash>7a59c40776e698b4873c1ea459f5395a</hash>
+            <checksum>7a59c40776e698b4873c1ea459f5395a</checksum>
+        </field>
+        <field>
+            <id>video_title</id>
+            <slug>video_title</slug>
+            <type>textfield</type>
+            <name>Títol del vídeo</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>video_title</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-video_title</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>video_title</__types_id>
+            <__types_title>Títol del vídeo</__types_title>
+            <hash>b0c760611d339657a06fa5a68d50d66f</hash>
+            <checksum>b0c760611d339657a06fa5a68d50d66f</checksum>
+        </field>
+        <field>
+            <id>video_subtitle</id>
+            <slug>video_subtitle</slug>
+            <type>textfield</type>
+            <name>Subtítol del vídeo</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>video_subtitle</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-video_subtitle</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>video_subtitle</__types_id>
+            <__types_title>Subtítol del vídeo</__types_title>
+            <hash>034eef7fceda43a1e822b3f6ee2e3152</hash>
+            <checksum>034eef7fceda43a1e822b3f6ee2e3152</checksum>
+        </field>
+        <field>
+            <id>video_description</id>
+            <slug>video_description</slug>
+            <type>textarea</type>
+            <name>Descripció del vídeo</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>video_description</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-video_description</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>video_description</__types_id>
+            <__types_title>Descripció del vídeo</__types_title>
+            <hash>090f4cab68cce148d5293f4260b2b522</hash>
+            <checksum>090f4cab68cce148d5293f4260b2b522</checksum>
+        </field>
+        <field>
+            <id>video_url</id>
+            <slug>video_url</slug>
+            <type>url</type>
+            <name>URL del vídeo</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <validate>
+                    <url>
+                        <active>1</active>
+                        <message>Please enter a valid URL address.</message>
+                    </url>
+                </validate>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>video_url</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-video_url</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>video_url</__types_id>
+            <__types_title>URL del vídeo</__types_title>
+            <hash>b90111b8d103a5550e88cb3a7cd069e4</hash>
+            <checksum>b90111b8d103a5550e88cb3a7cd069e4</checksum>
+        </field>
+        <field>
+            <id>url_baixada</id>
+            <slug>url_baixada</slug>
+            <type>url</type>
+            <name>URL baixada</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <validate>
+                    <url>
+                        <active>1</active>
+                        <message>Please enter a valid URL address.</message>
+                    </url>
+                </validate>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>url_baixada</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-url_baixada</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>url_baixada</__types_id>
+            <__types_title>URL baixada</__types_title>
+            <hash>1dd74ec4d17312bc518bc79ed49c2544</hash>
+            <checksum>1dd74ec4d17312bc518bc79ed49c2544</checksum>
+        </field>
+        <field>
+            <id>versio_baixada</id>
+            <slug>versio_baixada</slug>
+            <type>textfield</type>
+            <name>Versió baixada</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>versio_baixada</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-versio_baixada</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>versio_baixada</__types_id>
+            <__types_title>Versió baixada</__types_title>
+            <hash>2fd0a7b2914edcd4aec41b66847b9fed</hash>
+            <checksum>2fd0a7b2914edcd4aec41b66847b9fed</checksum>
+        </field>
+        <field>
+            <id>subtitle_programa</id>
+            <slug>subtitle_programa</slug>
+            <type>textfield</type>
+            <name>Subtítol</name>
+            <description></description>
+            <data>
+                <placeholder>Subtítol del programa que es mostra sota el títol</placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>subtitle_programa</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-subtitle_programa</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>subtitle_programa</__types_id>
+            <__types_title>Subtítol</__types_title>
+            <hash>d740905188407652600d0dc1f8a15367</hash>
+            <checksum>d740905188407652600d0dc1f8a15367</checksum>
+        </field>
+        <field>
+            <id>autor_programa</id>
+            <slug>autor_programa</slug>
+            <type>textfield</type>
+            <name>Autor</name>
+            <description></description>
+            <data>
+                <placeholder>Autor del programa</placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>autor_programa</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-autor_programa</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>autor_programa</__types_id>
+            <__types_title>Autor</__types_title>
+            <hash>9f9e333a536bf9641368ec3347153cb0</hash>
+            <checksum>9f9e333a536bf9641368ec3347153cb0</checksum>
+        </field>
+        <field>
+            <id>lloc_web_programa</id>
+            <slug>lloc_web_programa</slug>
+            <type>url</type>
+            <name>Lloc web</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <validate>
+                    <url>
+                        <active>1</active>
+                        <message>Please enter a valid URL address.</message>
+                    </url>
+                </validate>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>lloc_web_programa</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-lloc_web_programa</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>lloc_web_programa</__types_id>
+            <__types_title>Lloc web</__types_title>
+            <hash>855b25744d4a2a3ac6bd4b3bf2b840d5</hash>
+            <checksum>855b25744d4a2a3ac6bd4b3bf2b840d5</checksum>
+        </field>
+        <field>
+            <id>total_baixades_programa</id>
+            <slug>total_baixades_programa</slug>
+            <type>numeric</type>
+            <name>Total baixades</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <validate>
+                    <number>
+                        <active>1</active>
+                        <message>Please enter numeric data.</message>
+                    </number>
+                </validate>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>total_baixades_programa</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-total_baixades_programa</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>total_baixades_programa</__types_id>
+            <__types_title>Total baixades</__types_title>
+            <hash>4e1f75db9bc4e94eb7e543bbd20b3ec2</hash>
+            <checksum>4e1f75db9bc4e94eb7e543bbd20b3ec2</checksum>
+        </field>
+        <field>
+            <id>logotip_programa</id>
+            <slug>logotip_programa</slug>
+            <type>image</type>
+            <name>Logotip</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <validate>
+                    <required>
+                        <active>1</active>
+                        <value>true</value>
+                        <message>This field is required.</message>
+                    </required>
+                </validate>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>logotip_programa</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-logotip_programa</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>logotip_programa</__types_id>
+            <__types_title>Logotip</__types_title>
+            <hash>74bb6e50d8883dbee7afddfc61799100</hash>
+            <checksum>74bb6e50d8883dbee7afddfc61799100</checksum>
+        </field>
+        <field>
+            <id>imatge_destacada_1</id>
+            <slug>imatge_destacada_1</slug>
+            <type>image</type>
+            <name>Imatge destacada 1</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>imatge_destacada_1</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-imatge_destacada_1</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>imatge_destacada_1</__types_id>
+            <__types_title>Imatge destacada 1</__types_title>
+            <hash>744808b827555bc53df3c0c640dc8dab</hash>
+            <checksum>744808b827555bc53df3c0c640dc8dab</checksum>
+        </field>
+        <field>
+            <id>imatge_destacada_2</id>
+            <slug>imatge_destacada_2</slug>
+            <type>image</type>
+            <name>Imatge destacada 2</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>imatge_destacada_2</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-imatge_destacada_2</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>imatge_destacada_2</__types_id>
+            <__types_title>Imatge destacada 2</__types_title>
+            <hash>48006472dd6682f183eec5ceae709188</hash>
+            <checksum>48006472dd6682f183eec5ceae709188</checksum>
+        </field>
+        <field>
+            <id>imatge_destacada_3</id>
+            <slug>imatge_destacada_3</slug>
+            <type>image</type>
+            <name>Imatge destacada 3</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>imatge_destacada_3</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-imatge_destacada_3</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>imatge_destacada_3</__types_id>
+            <__types_title>Imatge destacada 3</__types_title>
+            <hash>62defafd1f4c1b2a2d6f50ef9b199fd3</hash>
+            <checksum>62defafd1f4c1b2a2d6f50ef9b199fd3</checksum>
+        </field>
+        <field>
+            <id>mida_baixada</id>
+            <slug>mida_baixada</slug>
+            <type>textfield</type>
+            <name>Mida baixada (en MB)</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>mida_baixada</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-mida_baixada</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>mida_baixada</__types_id>
+            <__types_title>Mida baixada (en MB)</__types_title>
+            <hash>a95d086a14f0c9bcd40057dc650944b1</hash>
+            <checksum>a95d086a14f0c9bcd40057dc650944b1</checksum>
+        </field>
+        <field>
+            <id>versio_estesa_baixada</id>
+            <slug>versio_estesa_baixada</slug>
+            <type>textfield</type>
+            <name>Descripció estesa de la versió</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>versio_estesa_baixada</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-versio_estesa_baixada</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>versio_estesa_baixada</__types_id>
+            <__types_title>Descripció estesa de la versió</__types_title>
+            <hash>dbebd2268e83c2ff852ce2e0921f2562</hash>
+            <checksum>dbebd2268e83c2ff852ce2e0921f2562</checksum>
+        </field>
+        <field>
+            <id>arquitectura</id>
+            <slug>arquitectura</slug>
+            <type>select</type>
+            <name>Arquitectura</name>
+            <description></description>
+            <data>
+                <options>
+                    <wpcf-fields-select-option-e7da92f77d2480bee5942f292a534b6b-1>
+                        <title>32 bits</title>
+                        <value>1</value>
+                    </wpcf-fields-select-option-e7da92f77d2480bee5942f292a534b6b-1>
+                    <wpcf-fields-select-option-4ec84615934367e57c34e6100ac699f2-1>
+                        <title>64 bits</title>
+                        <value>2</value>
+                    </wpcf-fields-select-option-4ec84615934367e57c34e6100ac699f2-1>
+                </options>
+                <is_new>1</is_new>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>select-1906971197</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-arquitectura</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>arquitectura</__types_id>
+            <__types_title>Arquitectura</__types_title>
+            <hash>52bec75909d00822bd40c0be3c9098d9</hash>
+            <checksum>52bec75909d00822bd40c0be3c9098d9</checksum>
+        </field>
+        <field>
+            <id>arquitectura_baixada</id>
+            <slug>arquitectura_baixada</slug>
+            <type>select</type>
+            <name>Arquitectura</name>
+            <description></description>
+            <data>
+                <options>
+                    <wpcf-fields-select-option-e7da92f77d2480bee5942f292a534b6b-1>
+                        <title>32 bits</title>
+                        <value>1</value>
+                    </wpcf-fields-select-option-e7da92f77d2480bee5942f292a534b6b-1>
+                    <wpcf-fields-select-option-4ec84615934367e57c34e6100ac699f2-1>
+                        <title>64 bits</title>
+                        <value>2</value>
+                    </wpcf-fields-select-option-4ec84615934367e57c34e6100ac699f2-1>
+                </options>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>arquitectura_baixada</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-arquitectura_baixada</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>arquitectura_baixada</__types_id>
+            <__types_title>Arquitectura</__types_title>
+            <hash>89f15895703a21f29c7a699cd3d48bcc</hash>
+            <checksum>89f15895703a21f29c7a699cd3d48bcc</checksum>
+        </field>
+        <field>
+            <id>imatge_credit</id>
+            <slug>imatge_credit</slug>
+            <type>image</type>
+            <name>Imatge relacionada del crèdit</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <validate>
+                    <required>
+                        <active>1</active>
+                        <value>true</value>
+                        <message>This field is required.</message>
+                    </required>
+                </validate>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>imatge_credit</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-imatge_credit</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>imatge_credit</__types_id>
+            <__types_title>Imatge relacionada del crèdit</__types_title>
+            <hash>80c9954f6faa1422436ac4663faf688b</hash>
+            <checksum>80c9954f6faa1422436ac4663faf688b</checksum>
+        </field>
+        <field>
+            <id>enllac_credit</id>
+            <slug>enllac_credit</slug>
+            <type>url</type>
+            <name>Enllaç relacionat del crèdit</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>enllac_credit</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-enllac_credit</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>enllac_credit</__types_id>
+            <__types_title>Enllaç relacionat del crèdit</__types_title>
+            <hash>8301a1fcb6f78b47467187f7917b5d79</hash>
+            <checksum>8301a1fcb6f78b47467187f7917b5d79</checksum>
+        </field>
+        <field>
+            <id>arxivat</id>
+            <slug>arxivat</slug>
+            <type>radio</type>
+            <name>Arxivat</name>
+            <description></description>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-ba652e9f1fdd587f7d14c92588eda74c-1>
+                        <title>No</title>
+                        <value>0</value>
+                        <display_value>0</display_value>
+                    </wpcf-fields-radio-option-ba652e9f1fdd587f7d14c92588eda74c-1>
+                    <default>wpcf-fields-radio-option-ba652e9f1fdd587f7d14c92588eda74c-1</default>
+                    <wpcf-fields-radio-option-15e03316358a40e2887c9e51147b3568-1>
+                        <title>Sí</title>
+                        <value>1</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-15e03316358a40e2887c9e51147b3568-1>
+                </options>
+                <display>db</display>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>arxivat</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-arxivat</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>arxivat</__types_id>
+            <__types_title>Arxivat</__types_title>
+            <hash>38b3a1df6c75ee26ac397345f7b8e8a3</hash>
+            <checksum>38b3a1df6c75ee26ac397345f7b8e8a3</checksum>
+        </field>
+        <field>
+            <id>valoracio</id>
+            <slug>valoracio</slug>
+            <type>numeric</type>
+            <name>Valoració</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <validate>
+                    <number>
+                        <active>1</active>
+                        <message>Please enter numeric data.</message>
+                    </number>
+                </validate>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>valoracio</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-valoracio</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>valoracio</__types_id>
+            <__types_title>Valoració</__types_title>
+            <hash>c5d1d2f0ebc0471c09d7b3b84d9ee160</hash>
+            <checksum>c5d1d2f0ebc0471c09d7b3b84d9ee160</checksum>
+        </field>
+        <field>
+            <id>vots</id>
+            <slug>vots</slug>
+            <type>numeric</type>
+            <name>Nombre de vots</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <validate>
+                    <number>
+                        <active>1</active>
+                        <message>Please enter numeric data.</message>
+                    </number>
+                </validate>
+                <is_new>1</is_new>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>numeric-1618374779</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-vots</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>vots</__types_id>
+            <__types_title>Nombre de vots</__types_title>
+            <hash>8039a7b96984339d0cb9d746b23d3afb</hash>
+            <checksum>8039a7b96984339d0cb9d746b23d3afb</checksum>
+        </field>
     </fields>
     <types>
         <type>
@@ -1188,7 +2199,7 @@
         </type>
         <type>
             <_builtin></_builtin>
-            <_toolset_edit_last>1445501470</_toolset_edit_last>
+            <_toolset_edit_last>1453814091</_toolset_edit_last>
             <_wpcf_author_id>1</_wpcf_author_id>
             <__types_id>link</__types_id>
             <__types_title>Links</__types_title>
@@ -1208,7 +2219,7 @@
                 <all_items>All items</all_items>
             </labels>
             <slug>link</slug>
-            <description>Links related to post and pages</description>
+            <description>Enllaços relacionats amb pàgines i esdeveniments</description>
             <icon>format-links</icon>
             <public>public</public>
             <menu_position></menu_position>
@@ -1234,14 +2245,13 @@
             <permalink_epmask>EP_PERMALINK</permalink_epmask>
             <post_relationship>
                 <belongs>
-                    <post>1</post>
                     <page>1</page>
                     <esdeveniment>1</esdeveniment>
                 </belongs>
             </post_relationship>
             <id>link</id>
-            <hash>162952666700f9f0435e2f804f5f977d</hash>
-            <checksum>162952666700f9f0435e2f804f5f977d</checksum>
+            <hash>de02d1373e7b2577ae2835e47486a067</hash>
+            <checksum>de02d1373e7b2577ae2835e47486a067</checksum>
         </type>
         <type>
             <_builtin></_builtin>
@@ -1313,7 +2323,7 @@
         </type>
         <type>
             <_builtin></_builtin>
-            <_toolset_edit_last>1452616981</_toolset_edit_last>
+            <_toolset_edit_last>1453792457</_toolset_edit_last>
             <_wpcf_author_id>1</_wpcf_author_id>
             <wpcf-post-type>aparell</wpcf-post-type>
             <labels>
@@ -1336,9 +2346,11 @@
             <public>public</public>
             <menu_position></menu_position>
             <menu_icon></menu_icon>
+            <taxonomies>
+                <sistema_operatiu_aparell>1</sistema_operatiu_aparell>
+                <tipus_aparell>1</tipus_aparell>
+            </taxonomies>
             <custom_fields>
-                <wpcf-tipus>1</wpcf-tipus>
-                <wpcf-sistema_operatiu>1</wpcf-sistema_operatiu>
                 <wpcf-versio>1</wpcf-versio>
                 <wpcf-conf_cat>1</wpcf-conf_cat>
                 <wpcf-correccio_cat>1</wpcf-correccio_cat>
@@ -1367,21 +2379,202 @@
             <query_var_enabled>1</query_var_enabled>
             <query_var></query_var>
             <permalink_epmask>EP_PERMALINK</permalink_epmask>
-            <taxonomies>
-                <tipus-aparell>1</tipus-aparell>
-                <sistema-operatiu-aparell>1</sistema-operatiu-aparell>
-                <sistema_operatiu_aparell>1</sistema_operatiu_aparell>
-                <tipus_aparell>1</tipus_aparell>
-            </taxonomies>
             <id>aparell</id>
             <__types_id>aparell</__types_id>
             <__types_title>Aparells</__types_title>
-            <hash>6406c39836ae69fe2990ec7e8d8c8357</hash>
-            <checksum>6406c39836ae69fe2990ec7e8d8c8357</checksum>
+            <hash>7b98c7f4dba5f05170e9e4a8e69c5b09</hash>
+            <checksum>7b98c7f4dba5f05170e9e4a8e69c5b09</checksum>
+        </type>
+        <type>
+            <_builtin></_builtin>
+            <_toolset_edit_last>1453445734</_toolset_edit_last>
+            <_wpcf_author_id>1</_wpcf_author_id>
+            <wpcf-post-type>programa</wpcf-post-type>
+            <labels>
+                <name>Programes</name>
+                <singular_name>Programa</singular_name>
+                <add_new>Afegeix</add_new>
+                <add_new_item>Afegeix %s</add_new_item>
+                <edit_item>Edita %s</edit_item>
+                <new_item>%s nou</new_item>
+                <view_item>Mostra el %s</view_item>
+                <search_items>Cerca %s</search_items>
+                <not_found>No s\&#039;ha trobat cap %s</not_found>
+                <not_found_in_trash>No s\&#039;ha trobat cap %s a la paperera</not_found_in_trash>
+                <parent_item_colon>Text del pare</parent_item_colon>
+                <all_items>Tots els elements</all_items>
+            </labels>
+            <slug>programa</slug>
+            <description>Programa de la secció d\&#039;aplicacions del web</description>
+            <icon>share-alt</icon>
+            <public>public</public>
+            <menu_position></menu_position>
+            <menu_icon></menu_icon>
+            <taxonomies>
+                <llicencia>1</llicencia>
+                <categoria-programa>1</categoria-programa>
+            </taxonomies>
+            <supports>
+                <title>1</title>
+                <editor>1</editor>
+                <comments>1</comments>
+                <excerpt>1</excerpt>
+                <thumbnail>1</thumbnail>
+            </supports>
+            <rewrite>
+                <enabled>1</enabled>
+                <custom>custom</custom>
+                <slug>programes</slug>
+                <feeds>1</feeds>
+                <pages>1</pages>
+            </rewrite>
+            <has_archive>1</has_archive>
+            <has_archive_slug></has_archive_slug>
+            <show_in_menu>1</show_in_menu>
+            <show_in_menu_page></show_in_menu_page>
+            <show_ui>1</show_ui>
+            <publicly_queryable>1</publicly_queryable>
+            <can_export>1</can_export>
+            <show_in_nav_menus>1</show_in_nav_menus>
+            <query_var_enabled>1</query_var_enabled>
+            <query_var></query_var>
+            <permalink_epmask>EP_PERMALINK</permalink_epmask>
+            <post_relationship>
+                <has>
+                    <baixada>1</baixada>
+                </has>
+            </post_relationship>
+            <id>programa</id>
+            <__types_id>programa</__types_id>
+            <__types_title>Programes</__types_title>
+            <hash>ff6f08cc7cc85b2820aa16f1f43d2f75</hash>
+            <checksum>ff6f08cc7cc85b2820aa16f1f43d2f75</checksum>
+        </type>
+        <type>
+            <_builtin></_builtin>
+            <_toolset_edit_last>1453371620</_toolset_edit_last>
+            <_wpcf_author_id>1</_wpcf_author_id>
+            <wpcf-post-type>baixada</wpcf-post-type>
+            <labels>
+                <name>Baixades</name>
+                <singular_name>Baixada</singular_name>
+                <add_new>Add New</add_new>
+                <add_new_item>Add New %s</add_new_item>
+                <edit_item>Edit %s</edit_item>
+                <new_item>New %s</new_item>
+                <view_item>View %s</view_item>
+                <search_items>Search %s</search_items>
+                <not_found>No %s found</not_found>
+                <not_found_in_trash>No %s found in Trash</not_found_in_trash>
+                <parent_item_colon>Parent text</parent_item_colon>
+                <all_items>All items</all_items>
+            </labels>
+            <slug>baixada</slug>
+            <description></description>
+            <icon>building</icon>
+            <public>public</public>
+            <menu_position></menu_position>
+            <menu_icon></menu_icon>
+            <taxonomies>
+                <sistema-operatiu-programa>1</sistema-operatiu-programa>
+            </taxonomies>
+            <custom_fields>
+                <wpcf-url_baixada>1</wpcf-url_baixada>
+                <wpcf-versio_baixada>1</wpcf-versio_baixada>
+                <wpcf-mida_baixada>1</wpcf-mida_baixada>
+                <wpcf-versio_estesa_baixada>1</wpcf-versio_estesa_baixada>
+            </custom_fields>
+            <rewrite>
+                <enabled>1</enabled>
+                <custom>normal</custom>
+                <slug></slug>
+                <with_front>1</with_front>
+                <feeds>1</feeds>
+                <pages>1</pages>
+            </rewrite>
+            <has_archive>1</has_archive>
+            <has_archive_slug></has_archive_slug>
+            <show_in_menu>1</show_in_menu>
+            <show_in_menu_page></show_in_menu_page>
+            <show_ui>1</show_ui>
+            <publicly_queryable>1</publicly_queryable>
+            <can_export>1</can_export>
+            <show_in_nav_menus>1</show_in_nav_menus>
+            <query_var_enabled>1</query_var_enabled>
+            <query_var></query_var>
+            <permalink_epmask>EP_PERMALINK</permalink_epmask>
+            <post_relationship>
+                <belongs>
+                    <programa>1</programa>
+                </belongs>
+            </post_relationship>
+            <id>baixada</id>
+            <__types_id>baixada</__types_id>
+            <__types_title>Baixades</__types_title>
+            <hash>58f8f0e00447fe092d2c9099f97d97f5</hash>
+            <checksum>58f8f0e00447fe092d2c9099f97d97f5</checksum>
+        </type>
+        <type>
+            <_builtin></_builtin>
+            <_toolset_edit_last>1453455498</_toolset_edit_last>
+            <_wpcf_author_id>1</_wpcf_author_id>
+            <wpcf-post-type>credit</wpcf-post-type>
+            <labels>
+                <name>Crèdits</name>
+                <singular_name>Crèdit</singular_name>
+                <add_new>Add New</add_new>
+                <add_new_item>Add New %s</add_new_item>
+                <edit_item>Edit %s</edit_item>
+                <new_item>New %s</new_item>
+                <view_item>View %s</view_item>
+                <search_items>Search %s</search_items>
+                <not_found>No %s found</not_found>
+                <not_found_in_trash>No %s found in Trash</not_found_in_trash>
+                <parent_item_colon>Parent text</parent_item_colon>
+                <all_items>All items</all_items>
+            </labels>
+            <slug>credit</slug>
+            <description></description>
+            <icon>index-card</icon>
+            <public>public</public>
+            <menu_position></menu_position>
+            <menu_icon></menu_icon>
+            <supports>
+                <title>1</title>
+            </supports>
+            <rewrite>
+                <custom>normal</custom>
+                <slug></slug>
+                <with_front>1</with_front>
+                <feeds>1</feeds>
+                <pages>1</pages>
+            </rewrite>
+            <has_archive>1</has_archive>
+            <has_archive_slug></has_archive_slug>
+            <show_in_menu>1</show_in_menu>
+            <show_in_menu_page></show_in_menu_page>
+            <show_ui>1</show_ui>
+            <publicly_queryable>1</publicly_queryable>
+            <can_export>1</can_export>
+            <show_in_nav_menus>1</show_in_nav_menus>
+            <query_var_enabled>1</query_var_enabled>
+            <query_var></query_var>
+            <permalink_epmask>EP_PERMALINK</permalink_epmask>
+            <post_relationship>
+                <belongs>
+                    <page>1</page>
+                    <programa>1</programa>
+                </belongs>
+            </post_relationship>
+            <id>credit</id>
+            <__types_id>credit</__types_id>
+            <__types_title>Crèdits</__types_title>
+            <hash>9a000b49b911bd8aa435061998b0a1a7</hash>
+            <checksum>9a000b49b911bd8aa435061998b0a1a7</checksum>
         </type>
     </types>
     <post_relationships>
-        <data>{&quot;post&quot;:{&quot;link&quot;:[]},&quot;page&quot;:{&quot;link&quot;:[]},&quot;esdeveniment&quot;:{&quot;link&quot;:[]}}</data>
+        <data>{&quot;post&quot;:[],&quot;page&quot;:{&quot;link&quot;:[],&quot;credit&quot;:[]},&quot;esdeveniment&quot;:{&quot;link&quot;:[]},&quot;programa&quot;:{&quot;baixada&quot;:[],&quot;credit&quot;:[]}}</data>
     </post_relationships>
     <taxonomies>
         <taxonomy>
@@ -1566,7 +2759,7 @@
             <id>sistema_operatiu_aparell</id>
             <__types_id>sistema_operatiu_aparell</__types_id>
             <__types_title>Sistemes Operatius (aparells)</__types_title>
-            <checksum>bde145e8e0fec63aab85d745414cb457</checksum>
+            <checksum>253014c8f1c0c41831b60fee743afa6a</checksum>
         </taxonomy>
         <taxonomy>
             <wpcf-tax>tipus-aparell</wpcf-tax>
@@ -1609,7 +2802,150 @@
             <id>tipus_aparell</id>
             <__types_id>tipus_aparell</__types_id>
             <__types_title>Tipus Aparells</__types_title>
-            <checksum>06379a9d65060a268ab158b112c085ed</checksum>
+            <checksum>a197daf10bd2c10c50e96bc817d07326</checksum>
+        </taxonomy>
+        <taxonomy>
+            <wpcf-tax>llicencia</wpcf-tax>
+            <labels>
+                <name>Llicències</name>
+                <singular_name>Llicència</singular_name>
+                <search_items>Search %s</search_items>
+                <popular_items>Popular %s</popular_items>
+                <all_items>All %s</all_items>
+                <parent_item>Parent %s</parent_item>
+                <parent_item_colon>Parent %s:</parent_item_colon>
+                <edit_item>Edit %s</edit_item>
+                <update_item>Update %s</update_item>
+                <add_new_item>Add New %s</add_new_item>
+                <new_item_name>New %s Name</new_item_name>
+                <separate_items_with_commas>Separate %s with commas</separate_items_with_commas>
+                <add_or_remove_items>Add or remove %s</add_or_remove_items>
+                <choose_from_most_used>Choose from the most used %s</choose_from_most_used>
+                <menu_name>%s</menu_name>
+            </labels>
+            <slug>llicencia</slug>
+            <description>Llicències relacionades amb programari</description>
+            <public>public</public>
+            <supports>
+                <programa>1</programa>
+            </supports>
+            <hierarchical>hierarchical</hierarchical>
+            <rewrite>
+                <enabled>1</enabled>
+                <slug></slug>
+                <with_front>1</with_front>
+                <hierarchical>1</hierarchical>
+            </rewrite>
+            <show_ui>1</show_ui>
+            <show_in_nav_menus>1</show_in_nav_menus>
+            <show_tagcloud>1</show_tagcloud>
+            <query_var_enabled>1</query_var_enabled>
+            <query_var></query_var>
+            <update_count_callback></update_count_callback>
+            <meta_box_cb>
+                <callback></callback>
+            </meta_box_cb>
+            <_toolset_edit_last>1453366141</_toolset_edit_last>
+            <_wpcf_author_id>1</_wpcf_author_id>
+            <id>llicencia</id>
+            <__types_id>llicencia</__types_id>
+            <__types_title>Llicències</__types_title>
+            <checksum>0a249edceeb4d5cecf9971e4db9d3fcd</checksum>
+        </taxonomy>
+        <taxonomy>
+            <wpcf-tax>sistema-operatiu-programa</wpcf-tax>
+            <labels>
+                <name>Sistemes Operatius (rebost)</name>
+                <singular_name>Sistema Operatiu (rebost)</singular_name>
+                <search_items>Search %s</search_items>
+                <popular_items>Popular %s</popular_items>
+                <all_items>All %s</all_items>
+                <parent_item>Parent %s</parent_item>
+                <parent_item_colon>Parent %s:</parent_item_colon>
+                <edit_item>Edit %s</edit_item>
+                <update_item>Update %s</update_item>
+                <add_new_item>Add New %s</add_new_item>
+                <new_item_name>New %s Name</new_item_name>
+                <separate_items_with_commas>Separate %s with commas</separate_items_with_commas>
+                <add_or_remove_items>Add or remove %s</add_or_remove_items>
+                <choose_from_most_used>Choose from the most used %s</choose_from_most_used>
+                <menu_name>%s</menu_name>
+            </labels>
+            <slug>sistema-operatiu-programa</slug>
+            <description>Sistemes operatius relacionats amb programes</description>
+            <public>public</public>
+            <supports>
+                <baixada>1</baixada>
+            </supports>
+            <hierarchical>hierarchical</hierarchical>
+            <rewrite>
+                <enabled>1</enabled>
+                <slug></slug>
+                <with_front>1</with_front>
+                <hierarchical>1</hierarchical>
+            </rewrite>
+            <show_ui>1</show_ui>
+            <show_in_nav_menus>1</show_in_nav_menus>
+            <show_tagcloud>1</show_tagcloud>
+            <query_var_enabled>1</query_var_enabled>
+            <query_var></query_var>
+            <update_count_callback></update_count_callback>
+            <meta_box_cb>
+                <callback></callback>
+            </meta_box_cb>
+            <_toolset_edit_last>1453365990</_toolset_edit_last>
+            <_wpcf_author_id>1</_wpcf_author_id>
+            <id>sistema-operatiu-programa</id>
+            <__types_id>sistema-operatiu-programa</__types_id>
+            <__types_title>Sistemes Operatius (rebost)</__types_title>
+            <checksum>9d72284c2bfd580d095f63df6e84fcc3</checksum>
+        </taxonomy>
+        <taxonomy>
+            <labels>
+                <name>Categories programes</name>
+                <singular_name>Categoria programa</singular_name>
+                <search_items>Search %s</search_items>
+                <popular_items>Popular %s</popular_items>
+                <all_items>All %s</all_items>
+                <parent_item>Parent %s</parent_item>
+                <parent_item_colon>Parent %s:</parent_item_colon>
+                <edit_item>Edit %s</edit_item>
+                <update_item>Update %s</update_item>
+                <add_new_item>Add New %s</add_new_item>
+                <new_item_name>New %s Name</new_item_name>
+                <separate_items_with_commas>Separate %s with commas</separate_items_with_commas>
+                <add_or_remove_items>Add or remove %s</add_or_remove_items>
+                <choose_from_most_used>Choose from the most used %s</choose_from_most_used>
+                <menu_name>%s</menu_name>
+            </labels>
+            <slug>categoria-programa</slug>
+            <description></description>
+            <public>public</public>
+            <supports>
+                <programa>1</programa>
+            </supports>
+            <hierarchical>hierarchical</hierarchical>
+            <rewrite>
+                <enabled>1</enabled>
+                <slug></slug>
+                <with_front>1</with_front>
+                <hierarchical>1</hierarchical>
+            </rewrite>
+            <show_ui>1</show_ui>
+            <show_in_nav_menus>1</show_in_nav_menus>
+            <show_tagcloud>1</show_tagcloud>
+            <query_var_enabled>1</query_var_enabled>
+            <query_var></query_var>
+            <update_count_callback></update_count_callback>
+            <meta_box_cb>
+                <callback></callback>
+            </meta_box_cb>
+            <_toolset_edit_last>1453445734</_toolset_edit_last>
+            <_wpcf_author_id>1</_wpcf_author_id>
+            <id>categoria-programa</id>
+            <__types_id>categoria-programa</__types_id>
+            <__types_title>Categories programes</__types_title>
+            <checksum>61a74b72a0978e56c3bf33cdef897692</checksum>
         </taxonomy>
     </taxonomies>
 </types>
