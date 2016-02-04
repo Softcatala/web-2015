@@ -12,6 +12,54 @@
     </settings>
     <groups>
         <group>
+            <ID>661</ID>
+            <post_content></post_content>
+            <post_title>Programes pàgines</post_title>
+            <post_excerpt></post_excerpt>
+            <post_type>wp-types-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_filters_association>all</_wp_types_group_filters_association>
+                <_wp_types_group_fields>,programa,</_wp_types_group_fields>
+                <_wp_types_group_post_types>,page,</_wp_types_group_post_types>
+                <_wp_types_group_terms>all</_wp_types_group_terms>
+                <_wp_types_group_templates>,pmf-programa.php,</_wp_types_group_templates>
+                <_wpcf_conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </_wpcf_conditional_display>
+            </meta>
+            <hash>ddcbc8d09610162a1efc9113e9102f85</hash>
+            <checksum>ddcbc8d09610162a1efc9113e9102f85</checksum>
+            <__types_id>programes-pagines</__types_id>
+            <__types_title>Programes pàgines</__types_title>
+        </group>
+        <group>
+            <ID>571</ID>
+            <post_content></post_content>
+            <post_title>PMF</post_title>
+            <post_excerpt></post_excerpt>
+            <post_type>wp-types-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
+                <_wp_types_group_fields>,postid,</_wp_types_group_fields>
+                <_wp_types_group_post_types>,page,</_wp_types_group_post_types>
+                <_wp_types_group_terms>all</_wp_types_group_terms>
+                <_wp_types_group_templates>,pmf-programa.php,</_wp_types_group_templates>
+                <_wpcf_conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </_wpcf_conditional_display>
+            </meta>
+            <hash>6b98e8da9334c171939cc1a8432e2b91</hash>
+            <checksum>6b98e8da9334c171939cc1a8432e2b91</checksum>
+            <__types_id>pmf</__types_id>
+            <__types_title>PMF</__types_title>
+        </group>
+        <group>
             <ID>496</ID>
             <post_content></post_content>
             <post_title>Crédits</post_title>
@@ -44,7 +92,7 @@
             <post_status>publish</post_status>
             <meta>
                 <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
-                <_wp_types_group_fields>,url_baixada,versio_baixada,mida_baixada,versio_estesa_baixada,arquitectura_baixada,</_wp_types_group_fields>
+                <_wp_types_group_fields>,url_baixada,versio_baixada,mida_baixada,versio_estesa_baixada,arquitectura_baixada,total_baixades_baixada,</_wp_types_group_fields>
                 <_wp_types_group_post_types>,baixada,</_wp_types_group_post_types>
                 <_wp_types_group_terms>all</_wp_types_group_terms>
                 <_wp_types_group_templates>all</_wp_types_group_templates>
@@ -54,34 +102,10 @@
                     <custom></custom>
                 </_wpcf_conditional_display>
             </meta>
-            <hash>d814e821f4238473c71dcb823fe46996</hash>
-            <checksum>d814e821f4238473c71dcb823fe46996</checksum>
+            <hash>efa94889e61fa69cacb64f5a41861ae5</hash>
+            <checksum>efa94889e61fa69cacb64f5a41861ae5</checksum>
             <__types_id>baixades-programa</__types_id>
             <__types_title>Baixades programa</__types_title>
-        </group>
-        <group>
-            <ID>478</ID>
-            <post_content></post_content>
-            <post_title>Vídeo</post_title>
-            <post_excerpt></post_excerpt>
-            <post_type>wp-types-group</post_type>
-            <post_status>publish</post_status>
-            <meta>
-                <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
-                <_wp_types_group_fields>,video_title,video_subtitle,video_description,video_url,call_to_action_bottom_url,call_to_action_bottom_text,call_to_action_bottom_button_text,</_wp_types_group_fields>
-                <_wp_types_group_post_types>,programa,</_wp_types_group_post_types>
-                <_wp_types_group_terms>all</_wp_types_group_terms>
-                <_wp_types_group_templates>all</_wp_types_group_templates>
-                <_wpcf_conditional_display>
-                    <custom_use>0</custom_use>
-                    <relation>AND</relation>
-                    <custom></custom>
-                </_wpcf_conditional_display>
-            </meta>
-            <hash>d9df15014dcfadfd4038da2a42c765cb</hash>
-            <checksum>d9df15014dcfadfd4038da2a42c765cb</checksum>
-            <__types_id>video</__types_id>
-            <__types_title>Vídeo</__types_title>
         </group>
         <group>
             <ID>471</ID>
@@ -2140,6 +2164,97 @@
             <hash>8039a7b96984339d0cb9d746b23d3afb</hash>
             <checksum>8039a7b96984339d0cb9d746b23d3afb</checksum>
         </field>
+        <field>
+            <id>total_baixades_baixada</id>
+            <slug>total_baixades_baixada</slug>
+            <type>numeric</type>
+            <name>Total baixades (baixada)</name>
+            <description>Nombre total de vegades que s\&#039;ha baixat el programa</description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <validate>
+                    <number>
+                        <active>1</active>
+                        <message>Please enter numeric data.</message>
+                    </number>
+                </validate>
+                <is_new>1</is_new>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>numeric-583128315</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-total_baixades_baixada</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>total_baixades_baixada</__types_id>
+            <__types_title>Total baixades (baixada)</__types_title>
+            <hash>a1ba9a1c9d91839657917707b531ce08</hash>
+            <checksum>a1ba9a1c9d91839657917707b531ce08</checksum>
+        </field>
+        <field>
+            <id>postid</id>
+            <slug>postid</slug>
+            <type>numeric</type>
+            <name>Post ID</name>
+            <description>Introduïu aquí el post id al qual estarà relacionada esta pàgina de PMF</description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <validate>
+                    <number>
+                        <active>1</active>
+                        <message>Please enter numeric data.</message>
+                    </number>
+                </validate>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>postid</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-postid</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>postid</__types_id>
+            <__types_title>Post ID</__types_title>
+            <hash>610f0e942ab109905b59595248467db1</hash>
+            <checksum>610f0e942ab109905b59595248467db1</checksum>
+        </field>
+        <field>
+            <id>programa</id>
+            <slug>programa</slug>
+            <type>select</type>
+            <name>Programa</name>
+            <description></description>
+            <data>
+                <options>
+                    <wpcf-fields-select-option-c3d4a51cb1b48f77e5f6cb20893113d4-1>
+                        <title>Option title 1</title>
+                        <value>1</value>
+                    </wpcf-fields-select-option-c3d4a51cb1b48f77e5f6cb20893113d4-1>
+                </options>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>programa</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-programa</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>programa</__types_id>
+            <__types_title>Programa</__types_title>
+            <hash>a3fb749dc3d71737c773e45fb3f24ebc</hash>
+            <checksum>a3fb749dc3d71737c773e45fb3f24ebc</checksum>
+        </field>
     </fields>
     <types>
         <type>
@@ -2387,7 +2502,7 @@
         </type>
         <type>
             <_builtin></_builtin>
-            <_toolset_edit_last>1453445734</_toolset_edit_last>
+            <_toolset_edit_last>1454053744</_toolset_edit_last>
             <_wpcf_author_id>1</_wpcf_author_id>
             <wpcf-post-type>programa</wpcf-post-type>
             <labels>
@@ -2442,13 +2557,14 @@
             <post_relationship>
                 <has>
                     <baixada>1</baixada>
+                    <credit>1</credit>
                 </has>
             </post_relationship>
             <id>programa</id>
             <__types_id>programa</__types_id>
             <__types_title>Programes</__types_title>
-            <hash>ff6f08cc7cc85b2820aa16f1f43d2f75</hash>
-            <checksum>ff6f08cc7cc85b2820aa16f1f43d2f75</checksum>
+            <hash>a2f9f4d1087e532ec8e50b1593424505</hash>
+            <checksum>a2f9f4d1087e532ec8e50b1593424505</checksum>
         </type>
         <type>
             <_builtin></_builtin>
@@ -2945,7 +3061,7 @@
             <id>categoria-programa</id>
             <__types_id>categoria-programa</__types_id>
             <__types_title>Categories programes</__types_title>
-            <checksum>61a74b72a0978e56c3bf33cdef897692</checksum>
+            <checksum>a44c86d8db6271ed3a658a689fd017b3</checksum>
         </taxonomy>
     </taxonomies>
 </types>
