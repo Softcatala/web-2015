@@ -20,18 +20,18 @@
             <post_status>publish</post_status>
             <meta>
                 <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
-                <_wp_types_group_fields>,logotip,</_wp_types_group_fields>
-                <_wp_types_group_post_types>,projecte,</_wp_types_group_post_types>
+                <_wp_types_group_fields>,logotip,subtitle_projecte,lloc_web_projecte,imatge_destacada_1_p,imatge_destacada_2_p,imatge_destacada_3_p,</_wp_types_group_fields>
+                <_wp_types_group_post_types>,,projecte,</_wp_types_group_post_types>
                 <_wp_types_group_terms>all</_wp_types_group_terms>
-                <_wp_types_group_templates>all</_wp_types_group_templates>
+                <_wp_types_group_templates>,,,,,,,,,,,,</_wp_types_group_templates>
                 <_wpcf_conditional_display>
                     <custom_use>0</custom_use>
                     <relation>AND</relation>
                     <custom></custom>
                 </_wpcf_conditional_display>
             </meta>
-            <hash>a870a05bcf4fc3b127253293d020001a</hash>
-            <checksum>a870a05bcf4fc3b127253293d020001a</checksum>
+            <hash>ffb43606877728a45300145dfd2f83ec</hash>
+            <checksum>ffb43606877728a45300145dfd2f83ec</checksum>
             <__types_id>projectes</__types_id>
             <__types_title>Projectes</__types_title>
         </group>
@@ -58,30 +58,6 @@
             <checksum>8b37b08fc49cf3baa88772718edf6749</checksum>
             <__types_id>programes-pagines</__types_id>
             <__types_title>Programes pàgines</__types_title>
-        </group>
-        <group>
-            <ID>1826</ID>
-            <post_content></post_content>
-            <post_title>PMF</post_title>
-            <post_excerpt></post_excerpt>
-            <post_type>wp-types-group</post_type>
-            <post_status>publish</post_status>
-            <meta>
-                <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
-                <_wp_types_group_fields>,postid,</_wp_types_group_fields>
-                <_wp_types_group_post_types>,page,</_wp_types_group_post_types>
-                <_wp_types_group_terms>all</_wp_types_group_terms>
-                <_wp_types_group_templates>,pmf-programa.php,</_wp_types_group_templates>
-                <_wpcf_conditional_display>
-                    <custom_use>0</custom_use>
-                    <relation>AND</relation>
-                    <custom></custom>
-                </_wpcf_conditional_display>
-            </meta>
-            <hash>621951c7e8fe7c11de349eedad165d86</hash>
-            <checksum>621951c7e8fe7c11de349eedad165d86</checksum>
-            <__types_id>pmf</__types_id>
-            <__types_title>PMF</__types_title>
         </group>
         <group>
             <ID>1827</ID>
@@ -140,7 +116,7 @@
             <post_status>publish</post_status>
             <meta>
                 <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
-                <_wp_types_group_fields>,subtitle_programa,autor_programa,logotip_programa,lloc_web_programa,total_baixades_programa,arxivat,imatge_destacada_1,imatge_destacada_2,imatge_destacada_3,valoracio,vots,idrebost,</_wp_types_group_fields>
+                <_wp_types_group_fields>,subtitle_programa,autor_programa,logotip_programa,lloc_web_programa,total_baixades_programa,arxivat,imatge_destacada_1,imatge_destacada_2,imatge_destacada_3,valoracio,vots,idrebost,preu,hosted_in_sc,url_rebost,</_wp_types_group_fields>
                 <_wp_types_group_post_types>,programa,</_wp_types_group_post_types>
                 <_wp_types_group_terms>all</_wp_types_group_terms>
                 <_wp_types_group_templates>all</_wp_types_group_templates>
@@ -150,8 +126,8 @@
                     <custom></custom>
                 </_wpcf_conditional_display>
             </meta>
-            <hash>5728641f8d9fad038e66f7f9016ffb83</hash>
-            <checksum>5728641f8d9fad038e66f7f9016ffb83</checksum>
+            <hash>dfe5159783cb1ffac68a9fad1358e2b5</hash>
+            <checksum>dfe5159783cb1ffac68a9fad1358e2b5</checksum>
             <__types_id>programes</__types_id>
             <__types_title>Programes</__types_title>
         </group>
@@ -1340,15 +1316,16 @@
                         <message>This field is required.</message>
                     </required>
                 </validate>
-                <submit-key>image-1389087884</submit-key>
+                <custom_use></custom_use>
+                <submit-key>logotip</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
             <meta_key>wpcf-logotip</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>logotip</__types_id>
             <__types_title>Logotip</__types_title>
-            <hash>adb8ba3b9620c7a9253071aae53ea4a3</hash>
-            <checksum>adb8ba3b9620c7a9253071aae53ea4a3</checksum>
+            <hash>a68ca13ce04d83cca3a2f9256d9718e7</hash>
+            <checksum>a68ca13ce04d83cca3a2f9256d9718e7</checksum>
         </field>
         <field>
             <description></description>
@@ -2289,21 +2266,209 @@
                         <message>Please enter numeric data.</message>
                     </number>
                 </validate>
-                <is_new>1</is_new>
                 <conditional_display>
                     <custom_use>0</custom_use>
                     <relation>AND</relation>
                     <custom></custom>
                 </conditional_display>
-                <submit-key>numeric-725703078</submit-key>
+                <submit-key>idrebost</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
             <meta_key>wpcf-idrebost</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>idrebost</__types_id>
             <__types_title>ID Rebost</__types_title>
-            <hash>dc85416091f07abaacffe3f20146f061</hash>
-            <checksum>dc85416091f07abaacffe3f20146f061</checksum>
+            <hash>826185bc24d84de36e99c287c95352ce</hash>
+            <checksum>826185bc24d84de36e99c287c95352ce</checksum>
+        </field>
+        <field>
+            <id>preu</id>
+            <slug>preu</slug>
+            <type>textfield</type>
+            <name>Preu</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>preu</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-preu</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>preu</__types_id>
+            <__types_title>Preu</__types_title>
+            <hash>aae37d46af661fae72144042eb13f323</hash>
+            <checksum>aae37d46af661fae72144042eb13f323</checksum>
+        </field>
+        <field>
+            <id>hosted_in_sc</id>
+            <slug>hosted_in_sc</slug>
+            <type>select</type>
+            <name>Hosted in SC</name>
+            <description></description>
+            <data>
+                <options>
+                    <wpcf-fields-select-option-8007a9febe4f3168907aa19e69ddcffe-1>
+                        <title>Sí</title>
+                        <value>1</value>
+                    </wpcf-fields-select-option-8007a9febe4f3168907aa19e69ddcffe-1>
+                    <wpcf-fields-select-option-5106d1d7ee14dc82bb4339f853d9a35a-1>
+                        <title>No</title>
+                        <value>0</value>
+                    </wpcf-fields-select-option-5106d1d7ee14dc82bb4339f853d9a35a-1>
+                    <default>wpcf-fields-select-option-5106d1d7ee14dc82bb4339f853d9a35a-1</default>
+                </options>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>hosted_in_sc</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-hosted_in_sc</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>hosted_in_sc</__types_id>
+            <__types_title>Hosted in SC</__types_title>
+            <hash>2c8cb5b51ddb76d8088c8fa673d31512</hash>
+            <checksum>2c8cb5b51ddb76d8088c8fa673d31512</checksum>
+        </field>
+        <field>
+            <id>url_rebost</id>
+            <slug>url_rebost</slug>
+            <type>url</type>
+            <name>URL Rebost</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <is_new>1</is_new>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <submit-key>url-1291597513</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-url_rebost</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>url_rebost</__types_id>
+            <__types_title>URL Rebost</__types_title>
+            <hash>862228cfdbd2a42fc6d41c05a831381e</hash>
+            <checksum>862228cfdbd2a42fc6d41c05a831381e</checksum>
+        </field>
+        <field>
+            <id>subtitle_projecte</id>
+            <slug>subtitle_projecte</slug>
+            <type>textfield</type>
+            <name>Subtítol</name>
+            <description></description>
+            <data>
+                <placeholder>Subtítol del programa que es mostra sota el títol</placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <submit-key>textfield-12421213</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-subtitle_projecte</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>subtitle_projecte</__types_id>
+            <__types_title>Subtítol</__types_title>
+            <hash>04498787f3535e9fde601649e71f5ded</hash>
+            <checksum>04498787f3535e9fde601649e71f5ded</checksum>
+        </field>
+        <field>
+            <id>lloc_web_projecte</id>
+            <slug>lloc_web_projecte</slug>
+            <type>url</type>
+            <name>Lloc web</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <validate>
+                    <url>
+                        <active>1</active>
+                        <message>Please enter a valid URL address.</message>
+                    </url>
+                </validate>
+                <submit-key>url-1545086281</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-lloc_web_projecte</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>lloc_web_projecte</__types_id>
+            <__types_title>Lloc web</__types_title>
+            <hash>60b0ca54577309ff324a2493c9876c93</hash>
+            <checksum>60b0ca54577309ff324a2493c9876c93</checksum>
+        </field>
+        <field>
+            <id>imatge_destacada_1_p</id>
+            <slug>imatge_destacada_1_p</slug>
+            <type>image</type>
+            <name>Imatge destacada 1</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <submit-key>image-1784254682</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-imatge_destacada_1_p</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>imatge_destacada_1_p</__types_id>
+            <__types_title>Imatge destacada 1</__types_title>
+            <hash>6d8daad75380525dd93f8aa9d0ee3fcd</hash>
+            <checksum>6d8daad75380525dd93f8aa9d0ee3fcd</checksum>
+        </field>
+        <field>
+            <id>imatge_destacada_2_p</id>
+            <slug>imatge_destacada_2_p</slug>
+            <type>image</type>
+            <name>Imatge destacada 2</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <submit-key>image-12030556</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-imatge_destacada_2_p</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>imatge_destacada_2_p</__types_id>
+            <__types_title>Imatge destacada 2</__types_title>
+            <hash>2bb2b3140e556226f3cd448b3ada7511</hash>
+            <checksum>2bb2b3140e556226f3cd448b3ada7511</checksum>
+        </field>
+        <field>
+            <id>imatge_destacada_3_p</id>
+            <slug>imatge_destacada_3_p</slug>
+            <type>image</type>
+            <name>Imatge destacada 3</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <submit-key>image-1427981460</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-imatge_destacada_3_p</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>imatge_destacada_3_p</__types_id>
+            <__types_title>Imatge destacada 3</__types_title>
+            <hash>9ec2707a67d3c55df424c461f9c955fe</hash>
+            <checksum>9ec2707a67d3c55df424c461f9c955fe</checksum>
         </field>
     </fields>
     <types>
@@ -2739,35 +2904,45 @@
             <checksum>ee39fe88a5daf19b703f3dfa511aee34</checksum>
         </type>
         <type>
+            <_builtin></_builtin>
+            <_toolset_edit_last>1456128341</_toolset_edit_last>
+            <_wpcf_author_id>1</_wpcf_author_id>
+            <wpcf-post-type>projecte</wpcf-post-type>
+            <icon>media-default</icon>
             <labels>
                 <name>Projectes</name>
                 <singular_name>projecte</singular_name>
-                <add_new>Add New</add_new>
-                <add_new_item>Add New %s</add_new_item>
-                <edit_item>Edit %s</edit_item>
-                <new_item>New %s</new_item>
-                <view_item>View %s</view_item>
-                <search_items>Search %s</search_items>
-                <not_found>No %s found</not_found>
-                <not_found_in_trash>No %s found in Trash</not_found_in_trash>
-                <parent_item_colon>Parent text</parent_item_colon>
-                <all_items>All items</all_items>
+                <add_new>Afegeix un projecte nou</add_new>
+                <add_new_item>Afegeix un nou %s</add_new_item>
+                <edit_item>Edita el %s</edit_item>
+                <new_item>%s nou</new_item>
+                <view_item>Mostra el %s</view_item>
+                <search_items>Cerca un %s</search_items>
+                <not_found>No s\&#039;ha trobat cap %s</not_found>
+                <not_found_in_trash>No s\&#039;ha trobat cap %s a la paperera</not_found_in_trash>
+                <parent_item_colon>Text del pare</parent_item_colon>
+                <all_items>Tots els elements</all_items>
+                <enter_title_here>Introduïu el títol aquí</enter_title_here>
             </labels>
             <slug>projecte</slug>
             <description>Projectes de Softcatalà</description>
-            <icon>media-default</icon>
             <public>public</public>
             <menu_position></menu_position>
-            <menu_icon></menu_icon>
+            <taxonomies>
+                <categoria_projecte>1</categoria_projecte>
+            </taxonomies>
+            <custom-field-group>
+                <projectes>1839</projectes>
+            </custom-field-group>
             <supports>
                 <title>1</title>
                 <editor>1</editor>
+                <excerpt>1</excerpt>
             </supports>
             <rewrite>
                 <enabled>1</enabled>
                 <custom>custom</custom>
-                <slug>projectes</slug>
-                <with_front>1</with_front>
+                <slug>en-que-treballem/projecte</slug>
                 <feeds>1</feeds>
                 <pages>1</pages>
             </rewrite>
@@ -2782,23 +2957,17 @@
             <query_var_enabled>1</query_var_enabled>
             <query_var></query_var>
             <permalink_epmask>EP_PERMALINK</permalink_epmask>
+            <rest_base></rest_base>
             <post_relationship>
-                <belongs>
-                    <programa>1</programa>
-                </belongs>
                 <has>
                     <programa>1</programa>
                 </has>
             </post_relationship>
-            <wpcf-post-type></wpcf-post-type>
-            <_builtin></_builtin>
-            <_toolset_edit_last>1454605581</_toolset_edit_last>
-            <_wpcf_author_id>1</_wpcf_author_id>
             <id>projecte</id>
             <__types_id>projecte</__types_id>
             <__types_title>Projectes</__types_title>
-            <hash>a2286417f1f81277bd9083eb911e0a04</hash>
-            <checksum>a2286417f1f81277bd9083eb911e0a04</checksum>
+            <hash>5f7854c407575c014f2986d42a036f56</hash>
+            <checksum>5f7854c407575c014f2986d42a036f56</checksum>
         </type>
     </types>
     <post_relationships>
@@ -2828,7 +2997,7 @@
             <description>Sections related to the website to classify content that should be displayed only in that section.</description>
             <public>public</public>
             <supports>
-                <slide>1</slide>
+                <__types_cpt_supports_slide>1</__types_cpt_supports_slide>
             </supports>
             <hierarchical>flat</hierarchical>
             <rewrite>
@@ -2851,7 +3020,8 @@
             <id>section</id>
             <__types_id>section</__types_id>
             <__types_title>Sections</__types_title>
-            <checksum>25553eb95e19dd584d7964deba632ef2</checksum>
+            <checksum>4c7c033f3cbaaddad43e5c7720ff5092</checksum>
+            <name></name>
         </taxonomy>
         <taxonomy>
             <wpcf-tax>category-esdeveniment</wpcf-tax>
@@ -2876,7 +3046,7 @@
             <description></description>
             <public>public</public>
             <supports>
-                <esdeveniment>1</esdeveniment>
+                <__types_cpt_supports_esdeveniment>1</__types_cpt_supports_esdeveniment>
             </supports>
             <hierarchical>hierarchical</hierarchical>
             <rewrite>
@@ -2898,7 +3068,8 @@
             <id>esdeveniment_cat</id>
             <__types_id>esdeveniment_cat</__types_id>
             <__types_title>Categories Esdeveniments</__types_title>
-            <checksum>5c3eb7a93b8dfacdd784ba0c0d13b58e</checksum>
+            <checksum>a64822a685207cdd7e42861060d2ecf7</checksum>
+            <name></name>
         </taxonomy>
         <taxonomy>
             <labels>
@@ -2922,7 +3093,7 @@
             <description></description>
             <public>public</public>
             <supports>
-                <esdeveniment>1</esdeveniment>
+                <__types_cpt_supports_esdeveniment>1</__types_cpt_supports_esdeveniment>
             </supports>
             <hierarchical>flat</hierarchical>
             <rewrite>
@@ -2944,7 +3115,8 @@
             <id>esdeveniment_tag</id>
             <__types_id>esdeveniment_tag</__types_id>
             <__types_title>Etiquetes esdeveniments</__types_title>
-            <checksum>d675039013987019de82a892d30109ba</checksum>
+            <checksum>3c79a058db5efebc57a760e524ea5b93</checksum>
+            <name></name>
         </taxonomy>
         <taxonomy>
             <wpcf-tax>sistema-operatiu-aparell</wpcf-tax>
@@ -2969,7 +3141,7 @@
             <description></description>
             <public>public</public>
             <supports>
-                <aparell>1</aparell>
+                <__types_cpt_supports_aparell>1</__types_cpt_supports_aparell>
             </supports>
             <hierarchical>hierarchical</hierarchical>
             <rewrite>
@@ -2987,7 +3159,8 @@
             <id>sistema_operatiu_aparell</id>
             <__types_id>sistema_operatiu_aparell</__types_id>
             <__types_title>Sistemes Operatius (aparells)</__types_title>
-            <checksum>539a440f41e2a705b55977185a5b2701</checksum>
+            <checksum>81efea7b586930f90a763cd839027942</checksum>
+            <name></name>
         </taxonomy>
         <taxonomy>
             <wpcf-tax>tipus-aparell</wpcf-tax>
@@ -3012,7 +3185,7 @@
             <description></description>
             <public>public</public>
             <supports>
-                <aparell>1</aparell>
+                <__types_cpt_supports_aparell>1</__types_cpt_supports_aparell>
             </supports>
             <hierarchical>hierarchical</hierarchical>
             <rewrite>
@@ -3030,7 +3203,8 @@
             <id>tipus_aparell</id>
             <__types_id>tipus_aparell</__types_id>
             <__types_title>Tipus Aparells</__types_title>
-            <checksum>5ff9202b907bd0411a708704a72eb29a</checksum>
+            <checksum>61fceace97eefaaacef6431a50f602f6</checksum>
+            <name></name>
         </taxonomy>
         <taxonomy>
             <wpcf-tax>llicencia</wpcf-tax>
@@ -3055,7 +3229,7 @@
             <description>Llicències relacionades amb programari</description>
             <public>public</public>
             <supports>
-                <programa>1</programa>
+                <__types_cpt_supports_programa>1</__types_cpt_supports_programa>
             </supports>
             <hierarchical>hierarchical</hierarchical>
             <rewrite>
@@ -3078,7 +3252,8 @@
             <id>llicencia</id>
             <__types_id>llicencia</__types_id>
             <__types_title>Llicències</__types_title>
-            <checksum>cae86e04d34204681f63d9447f25bb2d</checksum>
+            <checksum>3f624b4ecff5dc1047a144353b56747f</checksum>
+            <name></name>
         </taxonomy>
         <taxonomy>
             <wpcf-tax>sistema-operatiu-programa</wpcf-tax>
@@ -3103,7 +3278,7 @@
             <description>Sistemes operatius relacionats amb programes</description>
             <public>public</public>
             <supports>
-                <baixada>1</baixada>
+                <__types_cpt_supports_baixada>1</__types_cpt_supports_baixada>
             </supports>
             <hierarchical>hierarchical</hierarchical>
             <rewrite>
@@ -3126,7 +3301,8 @@
             <id>sistema-operatiu-programa</id>
             <__types_id>sistema-operatiu-programa</__types_id>
             <__types_title>Sistemes Operatius (rebost)</__types_title>
-            <checksum>08499a36fd2ce60879bf4b955bf8d6d6</checksum>
+            <checksum>5e6f39eb9cdafc68a6f101d69d86563c</checksum>
+            <name></name>
         </taxonomy>
         <taxonomy>
             <labels>
@@ -3150,7 +3326,7 @@
             <description></description>
             <public>public</public>
             <supports>
-                <programa>1</programa>
+                <__types_cpt_supports_programa>1</__types_cpt_supports_programa>
             </supports>
             <hierarchical>hierarchical</hierarchical>
             <rewrite>
@@ -3173,7 +3349,175 @@
             <id>categoria-programa</id>
             <__types_id>categoria-programa</__types_id>
             <__types_title>Categories programes</__types_title>
-            <checksum>88e8ee40558b41c93d5a09a187108372</checksum>
+            <checksum>f140e15ba799c7aa59b6c0e6d3a38770</checksum>
+            <name></name>
+        </taxonomy>
+        <taxonomy>
+            <labels>
+                <name>Categories</name>
+                <singular_name>Categoria</singular_name>
+                <search_items>Cerca categories</search_items>
+                <popular_items></popular_items>
+                <all_items>Totes les categories</all_items>
+                <parent_item>Categoria pare</parent_item>
+                <parent_item_colon>Categoria pare:</parent_item_colon>
+                <edit_item>Edita la categoria</edit_item>
+                <view_item>Mostra la categoria</view_item>
+                <update_item>Actualitza la categoria</update_item>
+                <add_new_item>Afegeix</add_new_item>
+                <new_item_name>Nou nom de categoria</new_item_name>
+                <separate_items_with_commas></separate_items_with_commas>
+                <add_or_remove_items></add_or_remove_items>
+                <choose_from_most_used></choose_from_most_used>
+                <not_found>No s&#039;han trobat categories.</not_found>
+                <no_terms>No hi ha categories</no_terms>
+                <items_list_navigation>Navegació per la llista de categories.</items_list_navigation>
+                <items_list>Llista de categories</items_list>
+                <menu_name>Categories</menu_name>
+                <name_admin_bar>category</name_admin_bar>
+            </labels>
+            <description></description>
+            <public>1</public>
+            <hierarchical>1</hierarchical>
+            <show_ui>1</show_ui>
+            <show_in_menu>1</show_in_menu>
+            <show_in_nav_menus>1</show_in_nav_menus>
+            <show_tagcloud>1</show_tagcloud>
+            <show_in_quick_edit>1</show_in_quick_edit>
+            <show_admin_column>1</show_admin_column>
+            <meta_box_cb>post_categories_meta_box</meta_box_cb>
+            <rewrite>
+                <with_front>1</with_front>
+                <hierarchical>1</hierarchical>
+                <ep_mask>512</ep_mask>
+                <slug>category</slug>
+            </rewrite>
+            <query_var>category_name</query_var>
+            <update_count_callback></update_count_callback>
+            <_builtin>1</_builtin>
+            <cap>
+                <manage_terms>manage_categories</manage_terms>
+                <edit_terms>manage_categories</edit_terms>
+                <delete_terms>manage_categories</delete_terms>
+                <assign_terms>edit_posts</assign_terms>
+            </cap>
+            <name>category</name>
+            <label>Categories</label>
+            <slug>category</slug>
+            <supports>
+                <__types_cpt_supports_post>1</__types_cpt_supports_post>
+            </supports>
+            <id>category</id>
+            <__types_id>category</__types_id>
+            <__types_title>Categories</__types_title>
+            <checksum>5a304ebe98f627ae8288a58401cf08f7</checksum>
+        </taxonomy>
+        <taxonomy>
+            <labels>
+                <name>Etiquetes</name>
+                <singular_name>Etiqueta</singular_name>
+                <search_items>Cerca etiquetes</search_items>
+                <popular_items>Etiquetes més comunes</popular_items>
+                <all_items>Totes les etiquetes</all_items>
+                <parent_item></parent_item>
+                <parent_item_colon></parent_item_colon>
+                <edit_item>Edita l&#039;etiqueta</edit_item>
+                <view_item>Mostra l&#039;etiqueta</view_item>
+                <update_item>Actualitza l&#039;etiqueta</update_item>
+                <add_new_item>Afegeix una etiqueta nova</add_new_item>
+                <new_item_name>Nou nom d&#039;etiqueta</new_item_name>
+                <separate_items_with_commas>Separa les etiquetes amb comes</separate_items_with_commas>
+                <add_or_remove_items>Afegeix o suprimeix etiquetes</add_or_remove_items>
+                <choose_from_most_used>Trieu una de les etiquetes més usades</choose_from_most_used>
+                <not_found>No s&#039;han trobat etiquetes.</not_found>
+                <no_terms>Cap etiqueta</no_terms>
+                <items_list_navigation>Navegació per la llista d&#039;etiquetes</items_list_navigation>
+                <items_list>Llista d&#039;etiquetes</items_list>
+                <menu_name>Etiquetes</menu_name>
+                <name_admin_bar>post_tag</name_admin_bar>
+            </labels>
+            <description></description>
+            <public>1</public>
+            <hierarchical></hierarchical>
+            <show_ui>1</show_ui>
+            <show_in_menu>1</show_in_menu>
+            <show_in_nav_menus>1</show_in_nav_menus>
+            <show_tagcloud>1</show_tagcloud>
+            <show_in_quick_edit>1</show_in_quick_edit>
+            <show_admin_column>1</show_admin_column>
+            <meta_box_cb>post_tags_meta_box</meta_box_cb>
+            <rewrite>
+                <with_front>1</with_front>
+                <hierarchical></hierarchical>
+                <ep_mask>1024</ep_mask>
+                <slug>tag</slug>
+            </rewrite>
+            <query_var>tag</query_var>
+            <update_count_callback></update_count_callback>
+            <_builtin>1</_builtin>
+            <cap>
+                <manage_terms>manage_categories</manage_terms>
+                <edit_terms>manage_categories</edit_terms>
+                <delete_terms>manage_categories</delete_terms>
+                <assign_terms>edit_posts</assign_terms>
+            </cap>
+            <name>post_tag</name>
+            <label>Etiquetes</label>
+            <slug>post_tag</slug>
+            <supports>
+                <__types_cpt_supports_post>1</__types_cpt_supports_post>
+            </supports>
+            <id>post_tag</id>
+            <__types_id>post_tag</__types_id>
+            <__types_title>Etiquetes</__types_title>
+            <checksum>97f01af865a44cc5c2a6bd25613bbbcf</checksum>
+        </taxonomy>
+        <taxonomy>
+            <wpcf-tax>categoria_projecte</wpcf-tax>
+            <icon>admin-post</icon>
+            <labels>
+                <name>Categories projectes</name>
+                <singular_name>Categoria projecte</singular_name>
+                <search_items>Search %s</search_items>
+                <popular_items>Popular %s</popular_items>
+                <all_items>All %s</all_items>
+                <parent_item>Parent %s</parent_item>
+                <parent_item_colon>Parent %s:</parent_item_colon>
+                <edit_item>Edit %s</edit_item>
+                <update_item>Update %s</update_item>
+                <add_new_item>Add New %s</add_new_item>
+                <new_item_name>New %s Name</new_item_name>
+                <separate_items_with_commas>Separate %s with commas</separate_items_with_commas>
+                <add_or_remove_items>Add or remove %s</add_or_remove_items>
+                <choose_from_most_used>Choose from the most used %s</choose_from_most_used>
+                <menu_name>%s</menu_name>
+            </labels>
+            <slug>categoria_projecte</slug>
+            <description></description>
+            <public>public</public>
+            <hierarchical>hierarchical</hierarchical>
+            <supports>
+                <__types_cpt_supports_projecte>1</__types_cpt_supports_projecte>
+            </supports>
+            <rewrite>
+                <enabled>1</enabled>
+                <slug>en-que-treballem</slug>
+                <hierarchical>1</hierarchical>
+            </rewrite>
+            <show_ui>1</show_ui>
+            <query_var_enabled>1</query_var_enabled>
+            <query_var></query_var>
+            <update_count_callback></update_count_callback>
+            <meta_box_cb>
+                <callback></callback>
+            </meta_box_cb>
+            <_toolset_edit_last>1456129602</_toolset_edit_last>
+            <_wpcf_author_id>1</_wpcf_author_id>
+            <name></name>
+            <id>categoria_projecte</id>
+            <__types_id>categoria_projecte</__types_id>
+            <__types_title>Categories projectes</__types_title>
+            <checksum>27c3579f794010f2141b0d3dc3e7e8bb</checksum>
         </taxonomy>
     </taxonomies>
 </types>
