@@ -20,18 +20,18 @@
             <post_status>publish</post_status>
             <meta>
                 <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
-                <_wp_types_group_fields>,logotip,subtitle_projecte,lloc_web_projecte,imatge_destacada_1_p,imatge_destacada_2_p,imatge_destacada_3_p,</_wp_types_group_fields>
+                <_wp_types_group_fields>,llista_de_correu,logotip,subtitle_projecte,responsable,lloc_web_projecte,imatge_destacada_1_p,imatge_destacada_2_p,imatge_destacada_3_p,arxivat_pr,url_rebost_pr,project_requirements,lectures_recomanades,</_wp_types_group_fields>
                 <_wp_types_group_post_types>,,projecte,</_wp_types_group_post_types>
                 <_wp_types_group_terms>all</_wp_types_group_terms>
-                <_wp_types_group_templates>,,,,,,,,,,,,</_wp_types_group_templates>
+                <_wp_types_group_templates>,,,,,,,,,,,,,</_wp_types_group_templates>
                 <_wpcf_conditional_display>
                     <custom_use>0</custom_use>
                     <relation>AND</relation>
                     <custom></custom>
                 </_wpcf_conditional_display>
             </meta>
-            <hash>ffb43606877728a45300145dfd2f83ec</hash>
-            <checksum>ffb43606877728a45300145dfd2f83ec</checksum>
+            <hash>8907285f76174ff40469b4f5a3894c4f</hash>
+            <checksum>8907285f76174ff40469b4f5a3894c4f</checksum>
             <__types_id>projectes</__types_id>
             <__types_title>Projectes</__types_title>
         </group>
@@ -2375,15 +2375,16 @@
                 <placeholder>Subtítol del programa que es mostra sota el títol</placeholder>
                 <user_default_value></user_default_value>
                 <repetitive>0</repetitive>
-                <submit-key>textfield-12421213</submit-key>
+                <custom_use></custom_use>
+                <submit-key>subtitle_projecte</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
             <meta_key>wpcf-subtitle_projecte</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>subtitle_projecte</__types_id>
             <__types_title>Subtítol</__types_title>
-            <hash>04498787f3535e9fde601649e71f5ded</hash>
-            <checksum>04498787f3535e9fde601649e71f5ded</checksum>
+            <hash>d26cc948bfb5a1b050decfc8af09f838</hash>
+            <checksum>d26cc948bfb5a1b050decfc8af09f838</checksum>
         </field>
         <field>
             <id>lloc_web_projecte</id>
@@ -2401,15 +2402,16 @@
                         <message>Please enter a valid URL address.</message>
                     </url>
                 </validate>
-                <submit-key>url-1545086281</submit-key>
+                <custom_use></custom_use>
+                <submit-key>lloc_web_projecte</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
             <meta_key>wpcf-lloc_web_projecte</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>lloc_web_projecte</__types_id>
             <__types_title>Lloc web</__types_title>
-            <hash>60b0ca54577309ff324a2493c9876c93</hash>
-            <checksum>60b0ca54577309ff324a2493c9876c93</checksum>
+            <hash>35b73c204a48a37fe1e2645f86c31001</hash>
+            <checksum>35b73c204a48a37fe1e2645f86c31001</checksum>
         </field>
         <field>
             <id>imatge_destacada_1_p</id>
@@ -2421,15 +2423,16 @@
                 <placeholder></placeholder>
                 <user_default_value></user_default_value>
                 <repetitive>0</repetitive>
-                <submit-key>image-1784254682</submit-key>
+                <custom_use></custom_use>
+                <submit-key>imatge_destacada_1_p</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
             <meta_key>wpcf-imatge_destacada_1_p</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>imatge_destacada_1_p</__types_id>
             <__types_title>Imatge destacada 1</__types_title>
-            <hash>6d8daad75380525dd93f8aa9d0ee3fcd</hash>
-            <checksum>6d8daad75380525dd93f8aa9d0ee3fcd</checksum>
+            <hash>06cf78d9e1308fe6d3e31001c85f1c4e</hash>
+            <checksum>06cf78d9e1308fe6d3e31001c85f1c4e</checksum>
         </field>
         <field>
             <id>imatge_destacada_2_p</id>
@@ -2440,15 +2443,17 @@
             <data>
                 <placeholder></placeholder>
                 <user_default_value></user_default_value>
-                <submit-key>image-12030556</submit-key>
+                <repetitive>0</repetitive>
+                <custom_use></custom_use>
+                <submit-key>imatge_destacada_2_p</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
             <meta_key>wpcf-imatge_destacada_2_p</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>imatge_destacada_2_p</__types_id>
             <__types_title>Imatge destacada 2</__types_title>
-            <hash>2bb2b3140e556226f3cd448b3ada7511</hash>
-            <checksum>2bb2b3140e556226f3cd448b3ada7511</checksum>
+            <hash>543bef911066aba47a3ce598537eaf4c</hash>
+            <checksum>543bef911066aba47a3ce598537eaf4c</checksum>
         </field>
         <field>
             <id>imatge_destacada_3_p</id>
@@ -2460,15 +2465,147 @@
                 <placeholder></placeholder>
                 <user_default_value></user_default_value>
                 <repetitive>0</repetitive>
-                <submit-key>image-1427981460</submit-key>
+                <custom_use></custom_use>
+                <submit-key>imatge_destacada_3_p</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
             <meta_key>wpcf-imatge_destacada_3_p</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>imatge_destacada_3_p</__types_id>
             <__types_title>Imatge destacada 3</__types_title>
-            <hash>9ec2707a67d3c55df424c461f9c955fe</hash>
-            <checksum>9ec2707a67d3c55df424c461f9c955fe</checksum>
+            <hash>a00ea85baa08a2e89ab7a04086a2eb60</hash>
+            <checksum>a00ea85baa08a2e89ab7a04086a2eb60</checksum>
+        </field>
+        <field>
+            <id>responsable</id>
+            <slug>responsable</slug>
+            <type>textfield</type>
+            <name>Responsable</name>
+            <description></description>
+            <data>
+                <placeholder>User ID del responsable del projecte</placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <custom_use></custom_use>
+                <submit-key>responsable</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-responsable</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>responsable</__types_id>
+            <__types_title>Responsable</__types_title>
+            <hash>a6a8abffa36798d1bfe403d5c0e30496</hash>
+            <checksum>a6a8abffa36798d1bfe403d5c0e30496</checksum>
+        </field>
+        <field>
+            <id>llista_de_correu</id>
+            <slug>llista_de_correu</slug>
+            <type>url</type>
+            <name>Llista de correu</name>
+            <description></description>
+            <data>
+                <placeholder>URL de la llista de correu de SC</placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <custom_use></custom_use>
+                <submit-key>llista_de_correu</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-llista_de_correu</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>llista_de_correu</__types_id>
+            <__types_title>Llista de correu</__types_title>
+            <hash>6ec920221ee2a78ee54449b1611f2294</hash>
+            <checksum>6ec920221ee2a78ee54449b1611f2294</checksum>
+        </field>
+        <field>
+            <id>arxivat_pr</id>
+            <slug>arxivat_pr</slug>
+            <type>radio</type>
+            <name>Arxivat</name>
+            <description></description>
+            <data>
+                <options>
+                    <wpcf-fields-radio-option-ba652e9f1fdd587f7d14c92588eda74c-1>
+                        <title>No</title>
+                        <value>0</value>
+                        <display_value>0</display_value>
+                    </wpcf-fields-radio-option-ba652e9f1fdd587f7d14c92588eda74c-1>
+                    <default>wpcf-fields-radio-option-ba652e9f1fdd587f7d14c92588eda74c-1</default>
+                    <wpcf-fields-radio-option-15e03316358a40e2887c9e51147b3568-1>
+                        <title>Sí</title>
+                        <value>1</value>
+                        <display_value>1</display_value>
+                    </wpcf-fields-radio-option-15e03316358a40e2887c9e51147b3568-1>
+                </options>
+                <display>db</display>
+                <custom_use></custom_use>
+                <submit-key>arxivat_pr</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-arxivat_pr</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>arxivat_pr</__types_id>
+            <__types_title>Arxivat</__types_title>
+            <hash>e184191d711c0a3ba7e9af58f42a11dc</hash>
+            <checksum>e184191d711c0a3ba7e9af58f42a11dc</checksum>
+        </field>
+        <field>
+            <id>url_rebost_pr</id>
+            <slug>url_rebost_pr</slug>
+            <type>url</type>
+            <name>URL Rebost</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <custom_use></custom_use>
+                <submit-key>url_rebost_pr</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-url_rebost_pr</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>url_rebost_pr</__types_id>
+            <__types_title>URL Rebost</__types_title>
+            <hash>0440b903ff9b0eb13b7dc5fea6eae268</hash>
+            <checksum>0440b903ff9b0eb13b7dc5fea6eae268</checksum>
+        </field>
+        <field>
+            <id>project_requirements</id>
+            <slug>project_requirements</slug>
+            <type>wysiwyg</type>
+            <name>Requeriments del projecte</name>
+            <description>Requisits del projecte</description>
+            <data>
+                <user_default_value></user_default_value>
+                <submit-key>wysiwyg-1126591448</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-project_requirements</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>project_requirements</__types_id>
+            <__types_title>Requeriments del projecte</__types_title>
+            <hash>944d1085de7559b7f41efb59379969ed</hash>
+            <checksum>944d1085de7559b7f41efb59379969ed</checksum>
+        </field>
+        <field>
+            <id>lectures_recomanades</id>
+            <slug>lectures_recomanades</slug>
+            <type>wysiwyg</type>
+            <name>Lectures recomanades</name>
+            <description></description>
+            <data>
+                <user_default_value></user_default_value>
+                <submit-key>wysiwyg-1493362728</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-lectures_recomanades</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>lectures_recomanades</__types_id>
+            <__types_title>Lectures recomanades</__types_title>
+            <hash>22ebe8a9e773a672eff41be615726168</hash>
+            <checksum>22ebe8a9e773a672eff41be615726168</checksum>
         </field>
     </fields>
     <types>
