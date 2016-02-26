@@ -4481,7 +4481,6 @@ if ( typeof define === 'function' && define.amd ) {
       */
       new UISearch(document.getElementById('sb-search'));
 
-
    }); // end executes once whole document has been loaded
 
 
@@ -4496,5 +4495,27 @@ if ( typeof define === 'function' && define.amd ) {
       })
    );// end executes on resize window
 
+    //Top search
+    var $cerca_top_form = jQuery('#searchform_top_2');
+
+    $cerca_top_form.on('submit', function(ev){
+        ev.preventDefault();
+
+        var cerca = jQuery('#cerca_top_2').val();
+        window.location.href = '/cerca/'+cerca+'/';
+
+        return true;
+    });
+
+    var $cerca_top_form = jQuery('#searchform_top_1');
+
+    $cerca_top_form.on('submit', function(ev){
+        ev.preventDefault();
+
+        var cerca = jQuery('#cerca_top_1').val();
+        window.location.href = '/cerca/'+cerca+'/';
+
+        return true;
+    });
 
 })(jQuery, document, window, ResponsiveBootstrapToolkit);
