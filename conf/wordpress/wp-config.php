@@ -10,8 +10,7 @@ include_once ABSPATH . "../../conf/wordpress/db.php";
 
 $table_prefix = 'wp_';
 
-define('WP_DEBUG', true);
-
+define( 'WP_CACHE_KEY_SALT', 'softcatala.local:' );
 
 /* That's all, stop editing! Happy blogging. */
 
