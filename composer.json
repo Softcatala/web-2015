@@ -4,14 +4,15 @@
     "repositories":[
         {
             "type":"composer",
-            "url":"http://wpackagist.org"
+            "url":"https://wpackagist.org"
         },
         {
             "type": "composer",
-            "url": "http://languages.koodimonni.fi"
+            "url": "https://languages.koodimonni.fi"
         }
     ],
     "require": {
+        "composer-plugin-api":"^1.0",
         "johnpbloch/wordpress": "4.4.*",
         "koodimonni-language/ca": "4.4.*",
         "wpackagist-plugin/wordpress-seo":"^3.0.6",
@@ -27,7 +28,8 @@
         "softcatala/mce-table-buttons-class":"^0.0.1",
         "softcatala/sc-normalize-upload-dir":"^0.2",
         "softcatala/wp-softcatala":"^0.0.15",
-        "softcatala/sc-importer":"^0.3.0"
+        "softcatala/sc-importer":"^0.3.0",
+        "wpackagist-plugin/wp-redis": "^0.3.0"
     },
     "extra": {
         "wordpress-install-dir": "wp",
