@@ -2,15 +2,165 @@
 <types>
     <settings>
         <add_resized_images_to_library>0</add_resized_images_to_library>
-        <register_translations_on_import>1</register_translations_on_import>
+        <register_translations_on_import>0</register_translations_on_import>
         <images_remote>0</images_remote>
         <images_remote_cache_time>36</images_remote_cache_time>
-        <help_box>by_types</help_box>
-        <hide_standard_custom_fields_metabox>show</hide_standard_custom_fields_metabox>
+        <help_box>no</help_box>
+        <hide_standard_custom_fields_metabox>hide</hide_standard_custom_fields_metabox>
         <postmeta_unfiltered_html>on</postmeta_unfiltered_html>
         <usermeta_unfiltered_html>on</usermeta_unfiltered_html>
+        <toolset_messages>0</toolset_messages>
     </settings>
+    <user_groups>
+        <group>
+            <ID>14450</ID>
+            <post_content></post_content>
+            <post_title>Informació del membre</post_title>
+            <post_excerpt></post_excerpt>
+            <post_type>wp-types-user-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_fields>,status_membre,ubicacio,descripcio_activitat,llocs_web,</_wp_types_group_fields>
+                <_wp_types_group_showfor>all</_wp_types_group_showfor>
+            </meta>
+            <hash>40cd750bba9870f18aada2478b24840a</hash>
+            <checksum>40cd750bba9870f18aada2478b24840a</checksum>
+            <__types_id>informacio-del-membre</__types_id>
+            <__types_title>Informació del membre</__types_title>
+        </group>
+    </user_groups>
+    <user_fields>
+        <field>
+            <id>status_membre</id>
+            <slug>status_membre</slug>
+            <type>checkboxes</type>
+            <name>Estat</name>
+            <description></description>
+            <data>
+                <save_empty>no</save_empty>
+                <options>
+                    <wpcf-fields-checkboxes-option-ae884be87b60f946a7c51354b5ed001e-1>
+                        <title>Actiu</title>
+                        <set_value>1</set_value>
+                        <display>db</display>
+                        <display_value_not_selected>0</display_value_not_selected>
+                        <display_value_selected>1</display_value_selected>
+                    </wpcf-fields-checkboxes-option-ae884be87b60f946a7c51354b5ed001e-1>
+                </options>
+                <custom_use></custom_use>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-status_membre</meta_key>
+            <meta_type>usermeta</meta_type>
+            <__types_id>status_membre</__types_id>
+            <__types_title>Estat</__types_title>
+            <hash>40cd750bba9870f18aada2478b24840a</hash>
+            <checksum>40cd750bba9870f18aada2478b24840a</checksum>
+        </field>
+        <field>
+            <id>ubicacio</id>
+            <slug>ubicacio</slug>
+            <type>textarea</type>
+            <name>Ubicació</name>
+            <description>Introduïu ací el codi embed del mapa</description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <custom_use></custom_use>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-ubicacio</meta_key>
+            <meta_type>usermeta</meta_type>
+            <__types_id>ubicacio</__types_id>
+            <__types_title>Ubicació</__types_title>
+            <hash>40cd750bba9870f18aada2478b24840a</hash>
+            <checksum>40cd750bba9870f18aada2478b24840a</checksum>
+        </field>
+        <field>
+            <id>descripcio_activitat</id>
+            <slug>descripcio_activitat</slug>
+            <type>wysiwyg</type>
+            <name>Descripció de l\&#039;activitat de l\&#039;usuari</name>
+            <description></description>
+            <data>
+                <user_default_value></user_default_value>
+                <custom_use></custom_use>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-descripcio_activitat</meta_key>
+            <meta_type>usermeta</meta_type>
+            <__types_id>descripcio_activitat</__types_id>
+            <__types_title>Descripció de l\&#039;activitat de l\&#039;usuari</__types_title>
+            <hash>40cd750bba9870f18aada2478b24840a</hash>
+            <checksum>40cd750bba9870f18aada2478b24840a</checksum>
+        </field>
+        <field>
+            <id>llocs_web</id>
+            <slug>llocs_web</slug>
+            <type>url</type>
+            <name>Llocs web</name>
+            <description>Llocs web de l\&#039;usuari</description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>1</repetitive>
+                <validate>
+                    <url>
+                        <active>1</active>
+                        <message>Please enter a valid URL address.</message>
+                    </url>
+                </validate>
+                <custom_use></custom_use>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-llocs_web</meta_key>
+            <meta_type>usermeta</meta_type>
+            <__types_id>llocs_web</__types_id>
+            <__types_title>Llocs web</__types_title>
+            <hash>40cd750bba9870f18aada2478b24840a</hash>
+            <checksum>40cd750bba9870f18aada2478b24840a</checksum>
+        </field>
+    </user_fields>
     <groups>
+        <group>
+            <ID>15672</ID>
+            <post_content></post_content>
+            <post_title>Subpàgines projectes</post_title>
+            <post_excerpt></post_excerpt>
+            <post_type>wp-types-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_fields>,projecte,</_wp_types_group_fields>
+                <_wp_types_group_post_types>,,page,</_wp_types_group_post_types>
+                <_wp_types_group_templates>,,,,,,,,,,,,,subpagina-programa.php,,</_wp_types_group_templates>
+                <_wp_types_group_terms>all</_wp_types_group_terms>
+                <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
+            </meta>
+            <hash>aa2ebfc1ecbeb370c2c5bce1a94fc69e</hash>
+            <checksum>aa2ebfc1ecbeb370c2c5bce1a94fc69e</checksum>
+            <__types_id>subpagines-projectes</__types_id>
+            <__types_title>Subpàgines projectes</__types_title>
+        </group>
+        <group>
+            <ID>14439</ID>
+            <post_content></post_content>
+            <post_title>Llista de correu</post_title>
+            <post_excerpt></post_excerpt>
+            <post_type>wp-types-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_fields>,url_llista,password,</_wp_types_group_fields>
+                <_wp_types_group_post_types>,,llista,</_wp_types_group_post_types>
+                <_wp_types_group_templates>,,,,,,,,,,,,,</_wp_types_group_templates>
+                <_wp_types_group_terms>all</_wp_types_group_terms>
+                <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
+            </meta>
+            <hash>a6ba6c405b6a6fd83a59c8b466c1c5f7</hash>
+            <checksum>a6ba6c405b6a6fd83a59c8b466c1c5f7</checksum>
+            <__types_id>llista-de-correu</__types_id>
+            <__types_title>Llista de correu</__types_title>
+        </group>
         <group>
             <ID>1839</ID>
             <post_content>Projectes de Softcatalà</post_content>
@@ -24,40 +174,30 @@
                 <_wp_types_group_post_types>,,projecte,</_wp_types_group_post_types>
                 <_wp_types_group_terms>all</_wp_types_group_terms>
                 <_wp_types_group_templates>,,,,,,,,,,,,,</_wp_types_group_templates>
-                <_wpcf_conditional_display>
-                    <custom_use>0</custom_use>
-                    <relation>AND</relation>
-                    <custom></custom>
-                </_wpcf_conditional_display>
             </meta>
-            <hash>8907285f76174ff40469b4f5a3894c4f</hash>
-            <checksum>8907285f76174ff40469b4f5a3894c4f</checksum>
+            <hash>8e12df17e835d118efdf658871206138</hash>
+            <checksum>8e12df17e835d118efdf658871206138</checksum>
             <__types_id>projectes</__types_id>
             <__types_title>Projectes</__types_title>
         </group>
         <group>
             <ID>1825</ID>
             <post_content></post_content>
-            <post_title>Programes pàgines</post_title>
+            <post_title>Subpàgines Programes</post_title>
             <post_excerpt></post_excerpt>
             <post_type>wp-types-group</post_type>
             <post_status>publish</post_status>
             <meta>
                 <_wp_types_group_filters_association>all</_wp_types_group_filters_association>
                 <_wp_types_group_fields>,programa,</_wp_types_group_fields>
-                <_wp_types_group_post_types>,page,</_wp_types_group_post_types>
+                <_wp_types_group_post_types>,,page,</_wp_types_group_post_types>
                 <_wp_types_group_terms>all</_wp_types_group_terms>
-                <_wp_types_group_templates>,pmf-programa.php,</_wp_types_group_templates>
-                <_wpcf_conditional_display>
-                    <custom_use>0</custom_use>
-                    <relation>AND</relation>
-                    <custom></custom>
-                </_wpcf_conditional_display>
+                <_wp_types_group_templates>,,,,,,,,,,,,,subpagina-programa.php,,,</_wp_types_group_templates>
             </meta>
-            <hash>8b37b08fc49cf3baa88772718edf6749</hash>
-            <checksum>8b37b08fc49cf3baa88772718edf6749</checksum>
-            <__types_id>programes-pagines</__types_id>
-            <__types_title>Programes pàgines</__types_title>
+            <hash>6126be52c1286606236c94ebc6bbc976</hash>
+            <checksum>6126be52c1286606236c94ebc6bbc976</checksum>
+            <__types_id>subpagines-programes</__types_id>
+            <__types_title>Subpàgines Programes</__types_title>
         </group>
         <group>
             <ID>1827</ID>
@@ -2223,6 +2363,10 @@
             <checksum>2372cab54476839d99d939f676d9b321</checksum>
         </field>
         <field>
+            <id>programa</id>
+            <slug>programa</slug>
+            <type>select</type>
+            <name>Programa</name>
             <description></description>
             <data>
                 <options>
@@ -2230,7 +2374,9 @@
                         <title>Option title 1</title>
                         <value>1</value>
                     </wpcf-fields-select-option-c3d4a51cb1b48f77e5f6cb20893113d4-1>
+                    <default>no-default</default>
                 </options>
+                <custom_use></custom_use>
                 <conditional_display>
                     <custom_use>0</custom_use>
                     <relation>AND</relation>
@@ -2239,16 +2385,12 @@
                 <submit-key>programa</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
-            <id>programa</id>
-            <name>Programa</name>
-            <type>select</type>
-            <slug>programa</slug>
             <meta_key>wpcf-programa</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>programa</__types_id>
             <__types_title>Programa</__types_title>
-            <hash>d277d7fdc80e8c324b1c29a67046e374</hash>
-            <checksum>d277d7fdc80e8c324b1c29a67046e374</checksum>
+            <hash>be32d39789947b7c93392ec30c7cd8b7</hash>
+            <checksum>be32d39789947b7c93392ec30c7cd8b7</checksum>
         </field>
         <field>
             <id>idrebost</id>
@@ -2606,6 +2748,73 @@
             <__types_title>Lectures recomanades</__types_title>
             <hash>22ebe8a9e773a672eff41be615726168</hash>
             <checksum>22ebe8a9e773a672eff41be615726168</checksum>
+        </field>
+        <field>
+            <id>url_llista</id>
+            <slug>url_llista</slug>
+            <type>url</type>
+            <name>URL de la llista</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <custom_use></custom_use>
+                <submit-key>url_llista</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-url_llista</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>url_llista</__types_id>
+            <__types_title>URL de la llista</__types_title>
+            <hash>3fd0f0768802250aa5c9f4e121f01801</hash>
+            <checksum>3fd0f0768802250aa5c9f4e121f01801</checksum>
+        </field>
+        <field>
+            <id>password</id>
+            <slug>password</slug>
+            <type>textfield</type>
+            <name>Password Llista</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <custom_use></custom_use>
+                <submit-key>password</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-password</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>password</__types_id>
+            <__types_title>Password Llista</__types_title>
+            <hash>21badebc23805ab1475374cf33a520a5</hash>
+            <checksum>21badebc23805ab1475374cf33a520a5</checksum>
+        </field>
+        <field>
+            <id>projecte</id>
+            <slug>projecte</slug>
+            <type>select</type>
+            <name>Projecte</name>
+            <description></description>
+            <data>
+                <options>
+                    <wpcf-fields-select-option-05f2e830a3ffaa812d49ba28964de31e-1>
+                        <title>Option title 1</title>
+                        <value>1</value>
+                    </wpcf-fields-select-option-05f2e830a3ffaa812d49ba28964de31e-1>
+                    <default>no-default</default>
+                </options>
+                <custom_use></custom_use>
+                <submit-key>projecte</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-projecte</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>projecte</__types_id>
+            <__types_title>Projecte</__types_title>
+            <hash>cd29188de95318352f1c64d44d23d1d9</hash>
+            <checksum>cd29188de95318352f1c64d44d23d1d9</checksum>
         </field>
     </fields>
     <types>
@@ -3042,7 +3251,7 @@
         </type>
         <type>
             <_builtin></_builtin>
-            <_toolset_edit_last>1456128341</_toolset_edit_last>
+            <_toolset_edit_last>1457384435</_toolset_edit_last>
             <_wpcf_author_id>1</_wpcf_author_id>
             <wpcf-post-type>projecte</wpcf-post-type>
             <icon>media-default</icon>
@@ -3079,7 +3288,7 @@
             <rewrite>
                 <enabled>1</enabled>
                 <custom>custom</custom>
-                <slug>en-que-treballem/projecte</slug>
+                <slug>projectes</slug>
                 <feeds>1</feeds>
                 <pages>1</pages>
             </rewrite>
@@ -3103,8 +3312,57 @@
             <id>projecte</id>
             <__types_id>projecte</__types_id>
             <__types_title>Projectes</__types_title>
-            <hash>5f7854c407575c014f2986d42a036f56</hash>
-            <checksum>5f7854c407575c014f2986d42a036f56</checksum>
+            <hash>3c5858515977bf6a5cc5fa8b51bc7afb</hash>
+            <checksum>3c5858515977bf6a5cc5fa8b51bc7afb</checksum>
+        </type>
+        <type>
+            <icon>admin-post</icon>
+            <labels>
+                <name>Llistes de correu</name>
+                <singular_name>Llista de correu</singular_name>
+                <add_new>Add New</add_new>
+                <add_new_item>Add New %s</add_new_item>
+                <edit_item>Edit %s</edit_item>
+                <new_item>New %s</new_item>
+                <view_item>View %s</view_item>
+                <search_items>Search %s</search_items>
+                <not_found>No %s found</not_found>
+                <not_found_in_trash>No %s found in Trash</not_found_in_trash>
+                <parent_item_colon>Parent text</parent_item_colon>
+                <all_items>All items</all_items>
+                <enter_title_here>Enter title here</enter_title_here>
+            </labels>
+            <slug>llista</slug>
+            <description></description>
+            <public>public</public>
+            <menu_position></menu_position>
+            <supports>
+                <title>1</title>
+            </supports>
+            <rewrite>
+                <custom>normal</custom>
+                <slug></slug>
+            </rewrite>
+            <has_archive_slug></has_archive_slug>
+            <show_in_menu>1</show_in_menu>
+            <show_in_menu_page></show_in_menu_page>
+            <show_ui>1</show_ui>
+            <publicly_queryable>1</publicly_queryable>
+            <can_export>1</can_export>
+            <show_in_nav_menus>1</show_in_nav_menus>
+            <query_var_enabled>1</query_var_enabled>
+            <query_var></query_var>
+            <permalink_epmask>EP_PERMALINK</permalink_epmask>
+            <rest_base></rest_base>
+            <wpcf-post-type></wpcf-post-type>
+            <_builtin></_builtin>
+            <_toolset_edit_last>1456415619</_toolset_edit_last>
+            <_wpcf_author_id>1</_wpcf_author_id>
+            <id>llista</id>
+            <__types_id>llista</__types_id>
+            <__types_title>Llistes de correu</__types_title>
+            <hash>9cca4a254f57c62f1ec4dd70959a90d4</hash>
+            <checksum>9cca4a254f57c62f1ec4dd70959a90d4</checksum>
         </type>
     </types>
     <post_relationships>
@@ -3654,7 +3912,7 @@
             <id>categoria_projecte</id>
             <__types_id>categoria_projecte</__types_id>
             <__types_title>Categories projectes</__types_title>
-            <checksum>27c3579f794010f2141b0d3dc3e7e8bb</checksum>
+            <checksum>74fffa86cb38f1de899cce94769f7319</checksum>
         </taxonomy>
     </taxonomies>
 </types>
