@@ -87,7 +87,7 @@ def update_environment():
     ##Run the environment update and set the permissions back to apache
     with cd('%s' % env.dir):
         run('php composer.phar self-update && php composer.phar update')
-        run('sudo chown www-data:www-data -R . && sudo service nginx restart && sudo service redis-server restart')
+        run('sudo chown www-data:www-data -R . && sudo service nginx restart && sudo service redis-server restart && sudo redis-cli flushall')
 
 def deploy():
     """
