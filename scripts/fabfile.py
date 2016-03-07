@@ -30,6 +30,7 @@ def lxc(username=''):
     env.wordpressdir = "/var/www/softcatala.local/htdocs/wp"
     env.confdir = "/var/www/softcatala.local/web-2015"
     env.confprivatedir = "/var/www/softcatala.local/web-privat"
+    env.backupdir = "/var/www/softcatala.local/backup"
     env.tmp_path = "/tmp/"
 
 def staging(username=''):
@@ -42,8 +43,10 @@ def staging(username=''):
     env.dir = "/var/www/web2015.softcatala.org/htdocs"
     env.wordpressdir = "/var/www/web2015.softcatala.org/htdocs/wp"
     env.confdir = "/var/www/web2015.softcatala.org/web-2015"
+    env.backupdir = "/var/www/web2015.softcatala.org/backup"
     env.confprivatedir = ""
     env.tmp_path = "/tmp/"
+    env.db_name = "web2015_softcatala_org"
 
 def prod(username=''):
     """
@@ -55,8 +58,10 @@ def prod(username=''):
     env.dir = "/var/www/web2016.softcatala.org/htdocs"
     env.wordpressdir = "/var/www/web2016.softcatala.org/htdocs/wp"
     env.confdir = "/var/www/web2016.softcatala.org/web-2015"
+    env.backupdir = "/var/www/web2016.softcatala.org/backup"
     env.confprivatedir = ""
     env.tmp_path = "/tmp/"
+    env.db_name = "web2016_softcatala_org"
 
 def check_connection():
     """
@@ -69,25 +74,26 @@ def update_environment():
     """
     updates the application on server side using composer
     """
-    ##Set the directory permissions to the active user
+    ##Backup DB and files
+    with cd('%s' % env.backupdir):
+        sudo('mkdir -p $(date \'+%Y%b%d\') && cd $_ && mysqldump '+env.db_name+' > '+env.db_name+'.sql')
+
     with cd('%s' % env.dir):
-        run('sudo chown $USER:$USER -R .')
+        sudo('mkdir -p ../../.composer && chown www-data:www-data -R ../../.composer')
 
     ##Update composer.json
     with cd('%s' % env.confdir):
-        run('sudo git pull')
+        sudo('git pull', user='www-data')
 
     ##In local environments, it might be necessary to update the web-privat repository as well (not mandatory if it doesn't exist)
     if env.confprivatedir != '':
         with cd('%s' % env.confprivatedir):
-            run('sudo chown $USER:$USER -R .')
-            run('git pull')
-            run('sudo chown www-data:www-data -R .')
+            sudo('git pull', user='www-data')
 
     ##Run the environment update and set the permissions back to apache
     with cd('%s' % env.dir):
-        run('php composer.phar self-update && php composer.phar update')
-        run('sudo chown www-data:www-data -R . && sudo service nginx restart && sudo service redis-server restart && sudo redis-cli flushall')
+        sudo('php composer.phar self-update && php composer.phar update', user='www-data')
+        sudo('service nginx restart && service redis-server restart && redis-cli flushall')
 
 def deploy():
     """
