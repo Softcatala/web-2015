@@ -4520,27 +4520,29 @@ if ( typeof define === 'function' && define.amd ) {
 
     //Top menu
     jQuery(function() {
-        var element = 'nav a[href^="' + window.location.pathname + '"]';
+        if(window.location.pathname != '/') {
+            var element = 'nav a[href^="' + window.location.pathname + '"]';
 
-        if(jQuery(element).parentsUntil('.navbar').parent('#recursos').length) {
-            var elements = jQuery("body").find("[aria-controls='recursos']");
-            elements.trigger('click');
-        }
+            if(jQuery(element).parentsUntil('.navbar').parent('#recursos').length) {
+                var elements = jQuery("body").find("[aria-controls='recursos']");
+                elements.trigger('click');
+            }
 
-        if(jQuery(element).parentsUntil('.navbar').parent('#coneixeu').length) {
-            var elements = jQuery("body").find("[aria-controls='coneixeu']");
-            elements.trigger('click');
-        }
+            if(jQuery(element).parentsUntil('.navbar').parent('#coneixeu').length) {
+                var elements = jQuery("body").find("[aria-controls='coneixeu']");
+                elements.trigger('click');
+            }
 
-        if(jQuery(element).parentsUntil('.navbar').parent('#collaboreu').length) {
-            var elements = jQuery("body").find("[aria-controls='collaboreu']");
-            elements.trigger('click');
-        }
+            if(jQuery(element).parentsUntil('.navbar').parent('#collaboreu').length) {
+                var elements = jQuery("body").find("[aria-controls='collaboreu']");
+                elements.trigger('click');
+            }
 
-        if(jQuery(element).parentsUntil('.nav-tabs').siblings('.dropdown-toggle').length) {
-            jQuery(element).parentsUntil('.nav-tabs').siblings('.dropdown-toggle').addClass('active');
-        } else {
-            jQuery(element).addClass('active');
+            if(jQuery(element).parentsUntil('.nav-tabs').siblings('.dropdown-toggle').length) {
+                jQuery(element).parentsUntil('.nav-tabs').siblings('.dropdown-toggle').addClass('active');
+            } else {
+                jQuery(element).addClass('active');
+            }
         }
     });
 
