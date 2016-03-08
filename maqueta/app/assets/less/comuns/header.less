@@ -55,7 +55,7 @@ HEADER
 		> li{
 			height: 90px;
 			display: table;
-			> a{
+			> a {
 				display: table-cell;
 				vertical-align: middle;
 				width: 160px;
@@ -68,21 +68,30 @@ HEADER
 				text-align: center;
 				font-size: 16px;
 				line-height: 1.3;
-				padding:10px 0px;
+				padding: 10px 0px;
 				&:hover,
 				&:focus,
-				&:active{
+				&:active {
 					color: @brand-primary;
 					font-weight: 600;
-				  	background-color: @blanc;
-				  	padding-top: -5px;
+					background-color: @blanc;
+					padding-top: -5px;
 					border-radius: 0px;
 					border-top: 5px #c43434 solid;
 					background: url(../images/header/nav-tabs-fletxa.jpg) 50% 100% no-repeat;
 				}
-				@media (max-width: @screen-sm-max){
-					width:135px;
+				@media (max-width: @screen-sm-max) {
+					width: 135px;
 				}
+			}
+			> a.active {
+				color: @brand-primary;
+				font-weight: 600;
+				background-color: @blanc;
+				padding-top: -5px;
+				border-radius: 0px;
+				border-top: 5px #c43434 solid;
+				background: url(../images/header/nav-tabs-fletxa.jpg) 50% 100% no-repeat;
 			}
 		}
 		> li.active > a{
@@ -138,6 +147,10 @@ HEADER
 						color: @gray-dark;
 						background-color:#ffffff;
 			  		}
+				}
+				> a.active {
+					color: @gray-dark;
+					background-color:#ffffff;
 				}
 				.seleccionat{
 					color: @gray-dark;
@@ -500,6 +513,16 @@ HEADER
 					color:@gray-dark;
 					background-color: transparent;
 				}
+			}
+
+			> a.active {
+				color: @brand-primary;
+				font-weight: 600;
+				background-color: @blanc;
+				padding-top: -5px;
+				border-radius: 0px;
+				border-top: 5px #c43434 solid;
+				background: url(../images/header/nav-tabs-fletxa.jpg) 50% 100% no-repeat;
 			}
 
 			> .dropdown-menu{
