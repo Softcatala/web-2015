@@ -28,7 +28,7 @@
         "softcatala/mce-table-buttons-class":"^0.0.1",
         "softcatala/sc-normalize-upload-dir":"^0.2",
         "softcatala/wp-softcatala":"^0.0.23",
-        "softcatala/sc-importer":"^0.4.0"
+        "softcatala/sc-importer":"^0.4.1"
     },
     "extra": {
         "wordpress-install-dir": "wp",
