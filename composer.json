@@ -27,8 +27,8 @@
         "softcatala/wp-theme-mover":"^0.1.0",
         "softcatala/mce-table-buttons-class":"^0.0.1",
         "softcatala/sc-normalize-upload-dir":"^0.2",
-        "softcatala/wp-softcatala":"^0.0.22",
-        "softcatala/sc-importer":"^0.3.0"
+        "softcatala/wp-softcatala":"^0.0.23",
+        "softcatala/sc-importer":"^0.4.0"
     },
     "extra": {
         "wordpress-install-dir": "wp",
