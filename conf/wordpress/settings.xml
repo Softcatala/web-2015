@@ -3088,9 +3088,12 @@
         </type>
         <type>
             <_builtin></_builtin>
-            <_toolset_edit_last>1454053744</_toolset_edit_last>
+            <_toolset_edit_last>1457679967</_toolset_edit_last>
             <_wpcf_author_id>1</_wpcf_author_id>
+            <__types_id>programa</__types_id>
+            <__types_title>Programes</__types_title>
             <wpcf-post-type>programa</wpcf-post-type>
+            <icon>share-alt</icon>
             <labels>
                 <name>Programes</name>
                 <singular_name>Programa</singular_name>
@@ -3104,17 +3107,19 @@
                 <not_found_in_trash>No s\&#039;ha trobat cap %s a la paperera</not_found_in_trash>
                 <parent_item_colon>Text del pare</parent_item_colon>
                 <all_items>Tots els elements</all_items>
+                <enter_title_here>Enter title here</enter_title_here>
             </labels>
             <slug>programa</slug>
             <description>Programa de la secció d\&#039;aplicacions del web</description>
-            <icon>share-alt</icon>
             <public>public</public>
             <menu_position></menu_position>
-            <menu_icon></menu_icon>
             <taxonomies>
                 <llicencia>1</llicencia>
                 <categoria-programa>1</categoria-programa>
             </taxonomies>
+            <custom-field-group>
+                <programes>1829</programes>
+            </custom-field-group>
             <supports>
                 <title>1</title>
                 <editor>1</editor>
@@ -3140,23 +3145,28 @@
             <query_var_enabled>1</query_var_enabled>
             <query_var></query_var>
             <permalink_epmask>EP_PERMALINK</permalink_epmask>
+            <rest_base></rest_base>
             <post_relationship>
+                <belongs>
+                    <projecte>1</projecte>
+                </belongs>
                 <has>
                     <baixada>1</baixada>
                     <credit>1</credit>
                 </has>
             </post_relationship>
             <id>programa</id>
-            <__types_id>programa</__types_id>
-            <__types_title>Programes</__types_title>
-            <hash>b0ac9bec16f6d0431af31f3714d71c14</hash>
-            <checksum>b0ac9bec16f6d0431af31f3714d71c14</checksum>
+            <hash>8e7623885cbd1afc10ba77baca5bafe1</hash>
+            <checksum>8e7623885cbd1afc10ba77baca5bafe1</checksum>
         </type>
         <type>
             <_builtin></_builtin>
-            <_toolset_edit_last>1453371620</_toolset_edit_last>
+            <_toolset_edit_last>1457708325</_toolset_edit_last>
             <_wpcf_author_id>1</_wpcf_author_id>
+            <__types_id>baixada</__types_id>
+            <__types_title>Baixades</__types_title>
             <wpcf-post-type>baixada</wpcf-post-type>
+            <icon>building</icon>
             <labels>
                 <name>Baixades</name>
                 <singular_name>Baixada</singular_name>
@@ -3170,16 +3180,18 @@
                 <not_found_in_trash>No %s found in Trash</not_found_in_trash>
                 <parent_item_colon>Parent text</parent_item_colon>
                 <all_items>All items</all_items>
+                <enter_title_here>Enter title here</enter_title_here>
             </labels>
             <slug>baixada</slug>
             <description></description>
-            <icon>building</icon>
             <public>public</public>
             <menu_position></menu_position>
-            <menu_icon></menu_icon>
             <taxonomies>
                 <sistema-operatiu-programa>1</sistema-operatiu-programa>
             </taxonomies>
+            <custom-field-group>
+                <baixades-programa>1828</baixades-programa>
+            </custom-field-group>
             <custom_fields>
                 <wpcf-url_baixada>1</wpcf-url_baixada>
                 <wpcf-versio_baixada>1</wpcf-versio_baixada>
@@ -3187,7 +3199,6 @@
                 <wpcf-versio_estesa_baixada>1</wpcf-versio_estesa_baixada>
             </custom_fields>
             <rewrite>
-                <enabled>1</enabled>
                 <custom>normal</custom>
                 <slug></slug>
                 <with_front>1</with_front>
@@ -3205,16 +3216,15 @@
             <query_var_enabled>1</query_var_enabled>
             <query_var></query_var>
             <permalink_epmask>EP_PERMALINK</permalink_epmask>
+            <rest_base></rest_base>
             <post_relationship>
                 <belongs>
                     <programa>1</programa>
                 </belongs>
             </post_relationship>
             <id>baixada</id>
-            <__types_id>baixada</__types_id>
-            <__types_title>Baixades</__types_title>
-            <hash>48ec367e5e7d95474a17c710a8a80a83</hash>
-            <checksum>48ec367e5e7d95474a17c710a8a80a83</checksum>
+            <hash>d8b08658ab3aabfdee7616bb3c77c5d4</hash>
+            <checksum>d8b08658ab3aabfdee7616bb3c77c5d4</checksum>
         </type>
         <type>
             <_builtin></_builtin>
@@ -3396,6 +3406,7 @@
     <taxonomies>
         <taxonomy>
             <wpcf-tax>section</wpcf-tax>
+            <icon>admin-post</icon>
             <labels>
                 <name>Sections</name>
                 <singular_name>Section</singular_name>
@@ -3416,13 +3427,12 @@
             <slug>section</slug>
             <description>Sections related to the website to classify content that should be displayed only in that section.</description>
             <public>public</public>
+            <hierarchical>flat</hierarchical>
             <supports>
                 <__types_cpt_supports_slide>1</__types_cpt_supports_slide>
             </supports>
-            <hierarchical>flat</hierarchical>
             <rewrite>
                 <slug></slug>
-                <with_front>1</with_front>
                 <hierarchical>1</hierarchical>
             </rewrite>
             <show_ui>1</show_ui>
@@ -3435,13 +3445,13 @@
             <meta_box_cb>
                 <callback></callback>
             </meta_box_cb>
-            <_toolset_edit_last>1441180265</_toolset_edit_last>
+            <_toolset_edit_last>1457708300</_toolset_edit_last>
             <_wpcf_author_id>1</_wpcf_author_id>
+            <name></name>
             <id>section</id>
             <__types_id>section</__types_id>
             <__types_title>Sections</__types_title>
-            <checksum>4c7c033f3cbaaddad43e5c7720ff5092</checksum>
-            <name></name>
+            <checksum>467df4a234be48aab800b320c980ec71</checksum>
         </taxonomy>
         <taxonomy>
             <wpcf-tax>category-esdeveniment</wpcf-tax>
@@ -3584,6 +3594,7 @@
         </taxonomy>
         <taxonomy>
             <wpcf-tax>llicencia</wpcf-tax>
+            <icon>admin-post</icon>
             <labels>
                 <name>Llicències</name>
                 <singular_name>Llicència</singular_name>
@@ -3604,12 +3615,11 @@
             <slug>llicencia</slug>
             <description>Llicències relacionades amb programari</description>
             <public>public</public>
+            <hierarchical>hierarchical</hierarchical>
             <supports>
                 <__types_cpt_supports_programa>1</__types_cpt_supports_programa>
             </supports>
-            <hierarchical>hierarchical</hierarchical>
             <rewrite>
-                <enabled>1</enabled>
                 <slug></slug>
                 <with_front>1</with_front>
                 <hierarchical>1</hierarchical>
@@ -3623,16 +3633,17 @@
             <meta_box_cb>
                 <callback></callback>
             </meta_box_cb>
-            <_toolset_edit_last>1453366141</_toolset_edit_last>
+            <_toolset_edit_last>1457708273</_toolset_edit_last>
             <_wpcf_author_id>1</_wpcf_author_id>
+            <name></name>
             <id>llicencia</id>
             <__types_id>llicencia</__types_id>
             <__types_title>Llicències</__types_title>
-            <checksum>3f624b4ecff5dc1047a144353b56747f</checksum>
-            <name></name>
+            <checksum>b3e67426465b07aa28e326141b257620</checksum>
         </taxonomy>
         <taxonomy>
             <wpcf-tax>sistema-operatiu-programa</wpcf-tax>
+            <icon>admin-post</icon>
             <labels>
                 <name>Sistemes Operatius (rebost)</name>
                 <singular_name>Sistema Operatiu (rebost)</singular_name>
@@ -3653,12 +3664,11 @@
             <slug>sistema-operatiu-programa</slug>
             <description>Sistemes operatius relacionats amb programes</description>
             <public>public</public>
+            <hierarchical>hierarchical</hierarchical>
             <supports>
                 <__types_cpt_supports_baixada>1</__types_cpt_supports_baixada>
             </supports>
-            <hierarchical>hierarchical</hierarchical>
             <rewrite>
-                <enabled>1</enabled>
                 <slug></slug>
                 <with_front>1</with_front>
                 <hierarchical>1</hierarchical>
@@ -3672,15 +3682,17 @@
             <meta_box_cb>
                 <callback></callback>
             </meta_box_cb>
-            <_toolset_edit_last>1453365990</_toolset_edit_last>
+            <_toolset_edit_last>1457708252</_toolset_edit_last>
             <_wpcf_author_id>1</_wpcf_author_id>
+            <name></name>
             <id>sistema-operatiu-programa</id>
             <__types_id>sistema-operatiu-programa</__types_id>
             <__types_title>Sistemes Operatius (rebost)</__types_title>
-            <checksum>5e6f39eb9cdafc68a6f101d69d86563c</checksum>
-            <name></name>
+            <checksum>5b7e093d1734eba290cb6b9725c67118</checksum>
         </taxonomy>
         <taxonomy>
+            <wpcf-tax>categoria-programa</wpcf-tax>
+            <icon>admin-post</icon>
             <labels>
                 <name>Categories programes</name>
                 <singular_name>Categoria programa</singular_name>
@@ -3701,14 +3713,12 @@
             <slug>categoria-programa</slug>
             <description></description>
             <public>public</public>
+            <hierarchical>hierarchical</hierarchical>
             <supports>
                 <__types_cpt_supports_programa>1</__types_cpt_supports_programa>
             </supports>
-            <hierarchical>hierarchical</hierarchical>
             <rewrite>
-                <enabled>1</enabled>
-                <slug></slug>
-                <with_front>1</with_front>
+                <slug>/programes/cat</slug>
                 <hierarchical>1</hierarchical>
             </rewrite>
             <show_ui>1</show_ui>
@@ -3720,13 +3730,13 @@
             <meta_box_cb>
                 <callback></callback>
             </meta_box_cb>
-            <_toolset_edit_last>1453445734</_toolset_edit_last>
+            <_toolset_edit_last>1457708122</_toolset_edit_last>
             <_wpcf_author_id>1</_wpcf_author_id>
+            <name></name>
             <id>categoria-programa</id>
             <__types_id>categoria-programa</__types_id>
             <__types_title>Categories programes</__types_title>
-            <checksum>f140e15ba799c7aa59b6c0e6d3a38770</checksum>
-            <name></name>
+            <checksum>d8b7b848905172b1833890565181d4c0</checksum>
         </taxonomy>
         <taxonomy>
             <labels>
