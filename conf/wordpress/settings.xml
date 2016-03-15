@@ -352,18 +352,18 @@
             <post_status>publish</post_status>
             <meta>
                 <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
-                <_wp_types_group_fields>,link_title,link_description,link_url,</_wp_types_group_fields>
-                <_wp_types_group_post_types>,link,</_wp_types_group_post_types>
+                <_wp_types_group_fields>,link_title,link_description,link_url,link_image,</_wp_types_group_fields>
+                <_wp_types_group_post_types>,,link,</_wp_types_group_post_types>
                 <_wp_types_group_terms>all</_wp_types_group_terms>
-                <_wp_types_group_templates>all</_wp_types_group_templates>
+                <_wp_types_group_templates>,,,,,,,,,,,,,,,,,</_wp_types_group_templates>
                 <_wpcf_conditional_display>
                     <custom_use>0</custom_use>
                     <relation>AND</relation>
                     <custom></custom>
                 </_wpcf_conditional_display>
             </meta>
-            <hash>20435e4e4ce3aef351410aa571bceda7</hash>
-            <checksum>20435e4e4ce3aef351410aa571bceda7</checksum>
+            <hash>c0b94c3f293a001565a14e18235f898f</hash>
+            <checksum>c0b94c3f293a001565a14e18235f898f</checksum>
             <__types_id>links</__types_id>
             <__types_title>Links</__types_title>
         </group>
@@ -757,6 +757,10 @@
             <checksum>d96c974b624db3dd35bf4b07e840ade7</checksum>
         </field>
         <field>
+            <id>link_title</id>
+            <slug>link_title</slug>
+            <type>textfield</type>
+            <name>Link title</name>
             <description></description>
             <data>
                 <placeholder></placeholder>
@@ -769,6 +773,7 @@
                         <message>This field is required.</message>
                     </required>
                 </validate>
+                <custom_use></custom_use>
                 <conditional_display>
                     <custom_use>0</custom_use>
                     <relation>AND</relation>
@@ -777,23 +782,24 @@
                 <submit-key>link_title</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
-            <id>link_title</id>
-            <name>Link title</name>
-            <type>textfield</type>
-            <slug>link_title</slug>
             <meta_key>wpcf-link_title</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>link_title</__types_id>
             <__types_title>Link title</__types_title>
-            <hash>694164ecf1c6299608ee77c68f4c3269</hash>
-            <checksum>694164ecf1c6299608ee77c68f4c3269</checksum>
+            <hash>1cf18e59b8c86ceb63aece74e5b4be55</hash>
+            <checksum>1cf18e59b8c86ceb63aece74e5b4be55</checksum>
         </field>
         <field>
+            <id>link_url</id>
+            <slug>link_url</slug>
+            <type>url</type>
+            <name>Link URL</name>
             <description>Link URL</description>
             <data>
                 <placeholder></placeholder>
                 <user_default_value></user_default_value>
                 <repetitive>0</repetitive>
+                <custom_use></custom_use>
                 <conditional_display>
                     <custom_use>0</custom_use>
                     <relation>AND</relation>
@@ -802,23 +808,24 @@
                 <submit-key>link_url</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
-            <id>link_url</id>
-            <name>Link URL</name>
-            <type>url</type>
-            <slug>link_url</slug>
             <meta_key>wpcf-link_url</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>link_url</__types_id>
             <__types_title>Link URL</__types_title>
-            <hash>b1c83a1e421835a9a4cd7d13a256e31f</hash>
-            <checksum>b1c83a1e421835a9a4cd7d13a256e31f</checksum>
+            <hash>c59daab6402637d412d91a4a1280b357</hash>
+            <checksum>c59daab6402637d412d91a4a1280b357</checksum>
         </field>
         <field>
+            <id>link_description</id>
+            <slug>link_description</slug>
+            <type>textfield</type>
+            <name>Link description</name>
             <description>Link description</description>
             <data>
                 <placeholder></placeholder>
                 <user_default_value></user_default_value>
                 <repetitive>0</repetitive>
+                <custom_use></custom_use>
                 <conditional_display>
                     <custom_use>0</custom_use>
                     <relation>AND</relation>
@@ -827,16 +834,12 @@
                 <submit-key>link_description</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
-            <id>link_description</id>
-            <name>Link description</name>
-            <type>textfield</type>
-            <slug>link_description</slug>
             <meta_key>wpcf-link_description</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>link_description</__types_id>
             <__types_title>Link description</__types_title>
-            <hash>59edb1c0d5c4ea9bfaad40b17b8f658a</hash>
-            <checksum>59edb1c0d5c4ea9bfaad40b17b8f658a</checksum>
+            <hash>1d0ef630ee104cea6f75f31b1d82f242</hash>
+            <checksum>1d0ef630ee104cea6f75f31b1d82f242</checksum>
         </field>
         <field>
             <description>Data de l\&#039;esdeveniment</description>
@@ -2840,6 +2843,26 @@
             <hash>cd29188de95318352f1c64d44d23d1d9</hash>
             <checksum>cd29188de95318352f1c64d44d23d1d9</checksum>
         </field>
+        <field>
+            <id>link_image</id>
+            <slug>link_image</slug>
+            <type>image</type>
+            <name>Link image</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <submit-key>image-1081388008</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-link_image</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>link_image</__types_id>
+            <__types_title>Link image</__types_title>
+            <hash>969965eccf9809454947f62b6111fa73</hash>
+            <checksum>969965eccf9809454947f62b6111fa73</checksum>
+        </field>
     </fields>
     <types>
         <type>
@@ -3286,7 +3309,7 @@
         </type>
         <type>
             <_builtin></_builtin>
-            <_toolset_edit_last>1457384435</_toolset_edit_last>
+            <_toolset_edit_last>1458031145</_toolset_edit_last>
             <_wpcf_author_id>1</_wpcf_author_id>
             <wpcf-post-type>projecte</wpcf-post-type>
             <icon>media-default</icon>
@@ -3347,10 +3370,14 @@
             <id>projecte</id>
             <__types_id>projecte</__types_id>
             <__types_title>Projectes</__types_title>
-            <hash>3c5858515977bf6a5cc5fa8b51bc7afb</hash>
-            <checksum>3c5858515977bf6a5cc5fa8b51bc7afb</checksum>
+            <hash>7976a16e606e2ceca6b258fa8c8e1192</hash>
+            <checksum>7976a16e606e2ceca6b258fa8c8e1192</checksum>
         </type>
         <type>
+            <_builtin></_builtin>
+            <_toolset_edit_last>1457857338</_toolset_edit_last>
+            <_wpcf_author_id>1</_wpcf_author_id>
+            <wpcf-post-type>llista</wpcf-post-type>
             <icon>admin-post</icon>
             <labels>
                 <name>Llistes de correu</name>
@@ -3371,13 +3398,20 @@
             <description></description>
             <public>public</public>
             <menu_position></menu_position>
+            <custom-field-group>
+                <llista-de-correu>14439</llista-de-correu>
+            </custom-field-group>
             <supports>
                 <title>1</title>
             </supports>
             <rewrite>
-                <custom>normal</custom>
-                <slug></slug>
+                <enabled>1</enabled>
+                <custom>custom</custom>
+                <slug>llistes-de-correu</slug>
+                <feeds>1</feeds>
+                <pages>1</pages>
             </rewrite>
+            <has_archive>1</has_archive>
             <has_archive_slug></has_archive_slug>
             <show_in_menu>1</show_in_menu>
             <show_in_menu_page></show_in_menu_page>
@@ -3389,15 +3423,11 @@
             <query_var></query_var>
             <permalink_epmask>EP_PERMALINK</permalink_epmask>
             <rest_base></rest_base>
-            <wpcf-post-type></wpcf-post-type>
-            <_builtin></_builtin>
-            <_toolset_edit_last>1456415619</_toolset_edit_last>
-            <_wpcf_author_id>1</_wpcf_author_id>
             <id>llista</id>
             <__types_id>llista</__types_id>
             <__types_title>Llistes de correu</__types_title>
-            <hash>9cca4a254f57c62f1ec4dd70959a90d4</hash>
-            <checksum>9cca4a254f57c62f1ec4dd70959a90d4</checksum>
+            <hash>4bbec9c237602541cbbeb6921579bbd6</hash>
+            <checksum>4bbec9c237602541cbbeb6921579bbd6</checksum>
         </type>
     </types>
     <post_relationships>
@@ -3897,13 +3927,13 @@
             <meta_box_cb>
                 <callback></callback>
             </meta_box_cb>
-            <_toolset_edit_last>1456129602</_toolset_edit_last>
+            <_toolset_edit_last>1458030929</_toolset_edit_last>
             <_wpcf_author_id>1</_wpcf_author_id>
             <name></name>
             <id>categoria_projecte</id>
             <__types_id>categoria_projecte</__types_id>
             <__types_title>Categories projectes</__types_title>
-            <checksum>74fffa86cb38f1de899cce94769f7319</checksum>
+            <checksum>636cdebfbaeca340094ebe45e096c452</checksum>
         </taxonomy>
         <taxonomy>
             <wpcf-tax>sistema_operatiu_aparell</wpcf-tax>
