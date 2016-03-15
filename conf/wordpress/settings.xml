@@ -133,12 +133,12 @@
             <meta>
                 <_wp_types_group_fields>,projecte,</_wp_types_group_fields>
                 <_wp_types_group_post_types>,,page,</_wp_types_group_post_types>
-                <_wp_types_group_templates>,,,,,,,,,,,,,subpagina-programa.php,,</_wp_types_group_templates>
+                <_wp_types_group_templates>,,,,,,,,,,,,,,,subpagina-programa.php,,,</_wp_types_group_templates>
                 <_wp_types_group_terms>all</_wp_types_group_terms>
-                <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
+                <_wp_types_group_filters_association>all</_wp_types_group_filters_association>
             </meta>
-            <hash>aa2ebfc1ecbeb370c2c5bce1a94fc69e</hash>
-            <checksum>aa2ebfc1ecbeb370c2c5bce1a94fc69e</checksum>
+            <hash>479daf72b78212eb2a42f49cf847a4a1</hash>
+            <checksum>479daf72b78212eb2a42f49cf847a4a1</checksum>
             <__types_id>subpagines-projectes</__types_id>
             <__types_title>Subpàgines projectes</__types_title>
         </group>
