@@ -23,11 +23,11 @@
         "xavivars/types-timber-integration":"^0.4",
         "wpackagist-plugin/wp-nested-pages": "^1.5",
         "wpackagist-plugin/mce-table-buttons":"^3.2.0",
-        "softcatala/sc-footnotes":"^0.0.1",
+        "softcatala/sc-footnotes":"^0.0.2",
         "softcatala/wp-theme-mover":"^0.1.0",
         "softcatala/mce-table-buttons-class":"^0.0.1",
         "softcatala/sc-normalize-upload-dir":"^0.2",
-        "softcatala/wp-softcatala":"^0.1.3",
+        "softcatala/wp-softcatala":"^0.1.4",
         "softcatala/sc-importer":"^0.4.1",
         "softcatala/sc-shortcodes":"^1.0.2"
     },
