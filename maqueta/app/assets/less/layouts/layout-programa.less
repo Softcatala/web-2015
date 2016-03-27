@@ -145,11 +145,17 @@ LAYOUT - programa
 				width: 100%;
 			}
 			.bt-download-invers{
-				width: 95%;
+				width: 105%;
 				padding-right: 0px;
 				margin:10px 0px;
 				i{
 					margin-top: 2px;
+					@media (max-width: @screen-tablet) {
+						font-size: 22px;
+					}
+					@media (max-width: @screen-desktop) {
+						font-size: 12px;
+					}
 				}
 				img{
 						margin-right: 10px;
@@ -158,6 +164,12 @@ LAYOUT - programa
 					font-size: 14px;
 					letter-spacing: normal;
 					em{
+						font-size: 12px;
+					}
+					@media (max-width: @screen-tablet) {
+						font-size: 12px;
+					}
+					@media (max-width: @screen-desktop) {
 						font-size: 12px;
 					}
 				}
