@@ -9,6 +9,18 @@
         {
             "type": "composer",
             "url": "https://languages.koodimonni.fi"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "advanced-custom-fields/advanced-custom-fields-pro",
+                "version": "5.0",
+                "type": "wordpress-plugin",
+                "dist": {
+                    "type": "zip",
+                    "url": "http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=%%license%%"
+                }
+            }
         }
     ],
     "require": {

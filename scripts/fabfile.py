@@ -81,14 +81,18 @@ def update_environment():
     with cd('%s' % env.dir):
         sudo('mkdir -p ../../.composer && chown www-data:www-data -R ../../.composer')
 
-    ##Update composer.json
-    with cd('%s' % env.confdir):
-        sudo('git pull', user='www-data')
-
     ##In local environments, it might be necessary to update the web-privat repository as well (not mandatory if it doesn't exist)
     if env.confprivatedir != '':
         with cd('%s' % env.confprivatedir):
             sudo('git pull', user='www-data')
+
+    ##Update composer.json
+    with cd('%s' % env.confdir):
+        sudo('git pull', user='www-data')
+        if env.confprivatedir != '':
+            sudo('source %s/licences/license' % env.confprivatedir, user='www-data')
+            sudo('rm ../htdocs/composer.json', user='www-data')
+            sudo('cat composer.json | sed -e "s/%%license%%/$ACF_LICENSE/g > ../htdocs.composer.json')
 
     ##Run the environment update and set the permissions back to apache
     with cd('%s' % env.dir):
