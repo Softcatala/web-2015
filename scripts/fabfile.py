@@ -76,19 +76,27 @@ def update_environment():
     """
     ##Backup DB and files
     with cd('%s' % env.backupdir):
-        sudo('mkdir -p $(date \'+%Y%b%d\') && cd $_ && mysqldump '+env.db_name+' > '+env.db_name+'.sql')
+        sudo('mkdir -p $(date \'+%Y%b%d\') && cd $_ && mysqldump '+env.db_name+' > '+env.db_name+'.sql && mkdir files && rsync -av ' + env.dir + '/ files/')
 
     with cd('%s' % env.dir):
         sudo('mkdir -p ../../.composer && chown www-data:www-data -R ../../.composer')
 
-    ##Update composer.json
-    with cd('%s' % env.confdir):
-        sudo('git pull', user='www-data')
-
     ##In local environments, it might be necessary to update the web-privat repository as well (not mandatory if it doesn't exist)
     if env.confprivatedir != '':
         with cd('%s' % env.confprivatedir):
-            sudo('git pull', user='www-data')
+            sudo('chown '+env.user +':' + env.user + ' -R ' + env.confprivatedir)
+            run('git pull')
+            sudo('chown www-data:www-data -R ' + env.confprivatedir)
+
+    ##Update composer.json
+    with cd('%s' % env.confdir):
+        sudo('chown www-data:www-data -R ' + env.confdir)
+        sudo('git pull', user='www-data')
+        if env.confprivatedir != '':
+            sudo('chown -h www-data:www-data ../ -R')
+            sudo('rm -rf ../htdocs/composer.json')
+            sudo('source ' + env.confprivatedir + '/licenses/licenses && cat composer.json | sed -e "s/%%license%%/$ACF_LICENSE/g" > ../htdocs/composer.json')
+            sudo('chown -h www-data:www-data ../htdocs/composer.json')
 
     ##Run the environment update and set the permissions back to apache
     with cd('%s' % env.dir):

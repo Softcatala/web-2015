@@ -9,6 +9,18 @@
         {
             "type": "composer",
             "url": "https://languages.koodimonni.fi"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "advanced-custom-fields/advanced-custom-fields-pro",
+                "version": "5.0",
+                "type": "wordpress-plugin",
+                "dist": {
+                    "type": "zip",
+                    "url": "http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=%%license%%"
+                }
+            }
         }
     ],
     "require": {
@@ -29,7 +41,8 @@
         "softcatala/sc-normalize-upload-dir":"^0.2",
         "softcatala/wp-softcatala":"^0.2.9",
         "softcatala/sc-importer":"^0.5.4",
-        "softcatala/sc-shortcodes":"^1.0.2"
+        "softcatala/sc-shortcodes":"^1.0.2",
+        "advanced-custom-fields/advanced-custom-fields-pro":"^5.0"
     },
     "extra": {
         "wordpress-install-dir": "wp",
@@ -54,5 +67,8 @@
             "cd wp && wp core update-db && wp theme delete twentyten && wp theme delete twentyeleven && wp theme delete twentytwelve && wp theme delete twentythirteen && wp theme delete twentyfourteen",
             "cd wp && wp plugin activate --all && wp rewrite flush"
         ]
+    },
+    "config": {
+        "secure-http": false
     }
 }
