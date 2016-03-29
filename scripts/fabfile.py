@@ -75,8 +75,8 @@ def update_environment():
     updates the application on server side using composer
     """
     ##Backup DB and files
-    #with cd('%s' % env.backupdir):
-    #    sudo('mkdir -p $(date \'+%Y%b%d\') && cd $_ && mysqldump '+env.db_name+' > '+env.db_name+'.sql')
+    with cd('%s' % env.backupdir):
+        sudo('mkdir -p $(date \'+%Y%b%d\') && cd $_ && mysqldump '+env.db_name+' > '+env.db_name+'.sql && mkdir files && rsync -av ' + env.dir + '/ files/')
 
     with cd('%s' % env.dir):
         sudo('mkdir -p ../../.composer && chown www-data:www-data -R ../../.composer')
