@@ -44,7 +44,7 @@ def staging(username=''):
     env.wordpressdir = "/var/www/web2015.softcatala.org/htdocs/wp"
     env.confdir = "/var/www/web2015.softcatala.org/web-2015"
     env.backupdir = "/var/www/web2015.softcatala.org/backup"
-    env.confprivatedir = ""
+    env.confprivatedir = "/var/www/web2015.softcatala.org/web-privat"
     env.tmp_path = "/tmp/"
     env.db_name = "web2015_softcatala_org"
 
@@ -59,7 +59,7 @@ def prod(username=''):
     env.wordpressdir = "/var/www/web2016.softcatala.org/htdocs/wp"
     env.confdir = "/var/www/web2016.softcatala.org/web-2015"
     env.backupdir = "/var/www/web2016.softcatala.org/backup"
-    env.confprivatedir = ""
+    env.confprivatedir = "/var/www/web2016.softcatala.org/web-privat"
     env.tmp_path = "/tmp/"
     env.db_name = "web2016_softcatala_org"
 
@@ -76,7 +76,7 @@ def update_environment():
     """
     ##Backup DB and files
     with cd('%s' % env.backupdir):
-        sudo('mkdir -p $(date \'+%Y%b%d\') && cd $_ && mysqldump '+env.db_name+' > '+env.db_name+'.sql && mkdir files && rsync -av ' + env.dir + '/ files/')
+        sudo('mkdir -p $(date \'+%Y%b%d\') && cd $_ && mysqldump '+env.db_name+' > '+env.db_name+'.sql && mkdir -p files && rsync -av ' + env.dir + '/ files/')
 
     with cd('%s' % env.dir):
         sudo('mkdir -p ../../.composer && chown www-data:www-data -R ../../.composer')
