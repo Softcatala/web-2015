@@ -4,13 +4,7 @@
  * Important: this script has to be placed in the WordPress base directory (where index.php is)
  */
 
-require "wp-config.php";
-require_once('../plugins/types/wpcf.php');
-require_once('../plugins/types/admin.php');
-require_once('../plugins/types/embedded/admin.php');
-
-require_once WPCF_INC_ABSPATH . '/fields.php';
-require_once WPCF_INC_ABSPATH . '/import-export.php';
+require( dirname( __FILE__ ) . '/wp-blog-header.php' );
 
 /**
  * WordPress Shell Functions for Softcatalà project
@@ -46,12 +40,6 @@ class WordPress_Shell_SC_Functions
         $this->init();
         if ($action = $this->getArg('action')) {
             switch ($action) {
-                case 'export_fields':
-                    $this->export_fields();
-                    break;
-                case 'import_fields':
-                    $this->import_fields();
-                    break;
                 case 'remove_orphan_images':
                     $this->remove_orphan_images();
                     break;
@@ -63,32 +51,37 @@ class WordPress_Shell_SC_Functions
             echo $this->usageHelp();
         }
     }
-    
-    private function export_fields()
+
+    /**
+     * Removes images with a parent post id which doesn't exist anymore
+     */
+    protected function remove_orphan_images()
     {
-        $fieldsxml = wpcf_admin_export_selected_data( array(), 'all', 'xml' );
-        echo $fieldsxml;
-    }
-    
-    private function import_fields()
-    {
-        $_POST['overwrite-settings'] = true;
-        $_POST['overwrite-groups'] = true;
-        $_POST['overwrite-fields'] = true;
-        $_POST['overwrite-types'] = true;
-        $_POST['overwrite-tax'] = true;
-        $_POST['delete-groups'] = true;
-        $_POST['delete-fields'] = true;
-        $_POST['delete-types'] = true;
-        $_POST['delete-tax'] = true;
-        
-        if( ! $this->getArg('file') ) {
-            echo $this->usageHelp();
-        } else {
-            $source_file = $this->getArg('file');
-            $data = file_get_contents($source_file);
-            //This function has to be used this way only when installed from scratch
-            //wpcf_admin_import_data_from_xmlstring( $data );
+        global $wpdb;
+
+        $imagesquery = "SELECT * FROM $wpdb->posts
+                WHERE $wpdb->posts.post_type = 'attachment'
+                AND $wpdb->posts.post_mime_type LIKE 'image%'
+                ";
+
+        $result = $wpdb->get_results($imagesquery);
+        foreach ($result as $post) {
+            setup_postdata($post);
+            $attachmentid = $post->ID;
+            $parentid = $post->post_parent;
+
+            $idquery = "SELECT ID FROM $wpdb->posts WHERE ID = $parentid";
+            $result2 = $wpdb->get_results($idquery);
+
+            if( ! isset( $result2[0]->ID ) && $parentid == '0') {
+                $delete_result = wp_delete_attachment( $attachmentid, true );
+
+                if(! is_wp_error($delete_result)) {
+                    echo 'Removed Attachment ID: '. $attachmentid. ' || Post ID: ' . $parentid . " || Existeix: " . $result2[0]->ID ."\n";
+                } else {
+                    echo 'Couldn\'t removed attachment ID: '. $attachmentid."\n";
+                }
+            }
         }
     }
     
@@ -144,39 +137,6 @@ USAGE;
             }
         }
         return $this;
-    }
-
-    /**
-     * Removes images with a parent post id which doesn't exist anymore
-     */
-    protected function remove_orphan_images()
-    {
-        global $wpdb;
-        
-        $imagesquery = "SELECT * FROM $wpdb->posts
-                WHERE $wpdb->posts.post_type = 'attachment'
-                AND $wpdb->posts.post_mime_type LIKE 'image%'
-                ";
-
-        $result = $wpdb->get_results($imagesquery);
-        foreach ($result as $post) {
-            setup_postdata($post);
-            $attachmentid = $post->ID;
-            $parentid = $post->post_parent;
-
-            $idquery = "SELECT ID FROM $wpdb->posts WHERE ID = $parentid";
-            $result2 = $wpdb->get_results($idquery);
-
-            if( ! isset( $result2[0]->ID ) && $parentid == '0') {
-                $delete_result = wp_delete_attachment( $attachmentid, true );
-
-                if(! is_wp_error($delete_result)) {
-                    echo 'Removed Attachment ID: '. $attachmentid. ' || Post ID: ' . $parentid . " || Existeix: " . $result2[0]->ID ."\n";
-                } else {
-                    echo 'Couldn\'t removed attachment ID: '. $attachmentid."\n";
-                }
-            }
-        }
     }
 }
 
