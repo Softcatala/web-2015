@@ -52,6 +52,9 @@ class WordPress_Shell_SC_Functions
                 case 'import_fields':
                     $this->import_fields();
                     break;
+                case 'remove_orphan_images':
+                    $this->remove_orphan_images();
+                    break;
                 default:
                     echo $this->usageHelp();
                     break;
@@ -141,6 +144,39 @@ USAGE;
             }
         }
         return $this;
+    }
+
+    /**
+     * Removes images with a parent post id which doesn't exist anymore
+     */
+    protected function remove_orphan_images()
+    {
+        global $wpdb;
+        
+        $imagesquery = "SELECT * FROM $wpdb->posts
+                WHERE $wpdb->posts.post_type = 'attachment'
+                AND $wpdb->posts.post_mime_type LIKE 'image%'
+                ";
+
+        $result = $wpdb->get_results($imagesquery);
+        foreach ($result as $post) {
+            setup_postdata($post);
+            $attachmentid = $post->ID;
+            $parentid = $post->post_parent;
+
+            $idquery = "SELECT ID FROM $wpdb->posts WHERE ID = $parentid";
+            $result2 = $wpdb->get_results($idquery);
+
+            if( ! isset( $result2[0]->ID ) && $parentid == '0') {
+                $delete_result = wp_delete_attachment( $attachmentid, true );
+
+                if(! is_wp_error($delete_result)) {
+                    echo 'Removed Attachment ID: '. $attachmentid. ' || Post ID: ' . $parentid . " || Existeix: " . $result2[0]->ID ."\n";
+                } else {
+                    echo 'Couldn\'t removed attachment ID: '. $attachmentid."\n";
+                }
+            }
+        }
     }
 }
 
