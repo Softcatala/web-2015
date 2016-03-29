@@ -97,12 +97,11 @@ LAYOUT - programa
 		font-size:13px;
 		color:#797979;
 		margin-bottom: 0px;
-		max-width: 300px;
+		max-width: 70%;
 		a{
 			font-size:13px;
 			color:#797979;
 			margin-bottom: 0px;
-			display: block;
 			&:hover,
 			&:focus{
 				color:@link-hover-color;
@@ -146,11 +145,17 @@ LAYOUT - programa
 				width: 100%;
 			}
 			.bt-download-invers{
-				width: 95%;
+				width: 105%;
 				padding-right: 0px;
 				margin:10px 0px;
 				i{
 					margin-top: 2px;
+					@media (max-width: @screen-tablet) {
+						font-size: 12px;
+					}
+					@media (max-width: @screen-desktop) {
+						font-size: 22px;
+					}
 				}
 				img{
 						margin-right: 10px;
@@ -159,6 +164,12 @@ LAYOUT - programa
 					font-size: 14px;
 					letter-spacing: normal;
 					em{
+						font-size: 12px;
+					}
+					@media (max-width: @screen-tablet) {
+						font-size: 12px;
+					}
+					@media (max-width: @screen-desktop) {
 						font-size: 12px;
 					}
 				}
