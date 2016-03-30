@@ -115,7 +115,7 @@ class WordPress_Shell_SC_Functions
 
             $valoracio = get_post_meta( $parent_id, 'wpcf-vots', true );
             if (strpos($valoracio, ',') !== false) {
-                update_post_meta($parent_id, 'wpcf-vots', str_replace(',', '', $valoracio));
+                update_post_meta($parent_id, 'wpcf-vots', str_replace(',', '.', $valoracio));
             }
 
             //Get original values
