@@ -44,6 +44,11 @@
         "softcatala/sc-shortcodes":"^1.0.2",
         "advanced-custom-fields/advanced-custom-fields-pro":"^5.0"
     },
+    "require-dev": {
+        "wpackagist-plugin/monkeyman-rewrite-analyzer":"^1.0",
+        "johnbillion/query-monitor":"dev-master"
+
+    },
     "extra": {
         "wordpress-install-dir": "wp",
         "installer-paths": {
@@ -58,12 +63,12 @@
     },
     "scripts": {
         "pre-update-cmd": [
-            "cd wp && wp plugin deactivate --all"
         ],
         "post-update-cmd": [
             "cd wp && rm -rf wp-config.php && ln -s ../../web-2015/conf/wordpress/wp-config.php",
             "cd wp/wp-content && wget -N https://raw.githubusercontent.com/ericmann/Redis-Object-Cache/master/object-cache.php",
             "testca=\"$(php -r 'include \"wp/wp-includes/version.php\"; if(isset($wp_local_package)) echo $wp_local_package; else echo \"-\";')\" && if [ \"$testca\" != \"ca\" ]; then printf \"\n\\$wp_local_package = 'ca';\" >> ./wp/wp-includes/version.php; fi",
+            "cd wp && wp plugin deactivate --all",
             "cd wp && wp core update-db && wp theme delete twentyten && wp theme delete twentyeleven && wp theme delete twentytwelve && wp theme delete twentythirteen && wp theme delete twentyfourteen",
             "cd wp && wp plugin activate --all && wp rewrite flush"
         ]

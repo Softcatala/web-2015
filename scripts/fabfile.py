@@ -19,12 +19,14 @@ import re
 lxc_server = "softcatala.local"
 staging_server = "pirineus.softcatala.org:4222"
 production_server = "pirineus.softcatala.org:4422"
+private_repo_git = "ssh://git@softcatala.org:3332/web-privat"
 
 def lxc(username=''):
     """
     setup for local development environment
     """
     env.hosts = [lxc_server]
+    env.id = 'lxc'
     env.user = username
     env.dir = "/var/www/softcatala.local/htdocs/"
     env.wordpressdir = "/var/www/softcatala.local/htdocs/wp"
@@ -32,6 +34,7 @@ def lxc(username=''):
     env.confprivatedir = "/var/www/softcatala.local/web-privat"
     env.backupdir = "/var/www/softcatala.local/backup"
     env.tmp_path = "/tmp/"
+    env.require_dev = ""
 
 def staging(username=''):
     """
@@ -47,6 +50,7 @@ def staging(username=''):
     env.confprivatedir = "/var/www/web2015.softcatala.org/web-privat"
     env.tmp_path = "/tmp/"
     env.db_name = "web2015_softcatala_org"
+    env.require_dev = "--no-dev"
 
 def prod(username=''):
     """
@@ -62,6 +66,7 @@ def prod(username=''):
     env.confprivatedir = "/var/www/web2016.softcatala.org/web-privat"
     env.tmp_path = "/tmp/"
     env.db_name = "web2016_softcatala_org"
+    env.require_dev = "--no-dev"
 
 def check_connection():
     """
@@ -74,9 +79,10 @@ def update_environment():
     """
     updates the application on server side using composer
     """
-    ##Backup DB and files
-    with cd('%s' % env.backupdir):
-        sudo('mkdir -p $(date \'+%Y%b%d\') && cd $_ && mysqldump '+env.db_name+' > '+env.db_name+'.sql && mkdir -p files && rsync -av ' + env.dir + '/ files/')
+    ##Backup DB and files (not for lxc)
+    if env.id != 'lxc':
+        with cd('%s' % env.backupdir):
+            sudo('mkdir -p $(date \'+%Y%b%d\') && cd $_ && mysqldump '+env.db_name+' > '+env.db_name+'.sql && mkdir -p files && rsync -av ' + env.dir + '/ files/')
 
     with cd('%s' % env.dir):
         sudo('mkdir -p ../../.composer && chown www-data:www-data -R ../../.composer')
@@ -100,7 +106,7 @@ def update_environment():
 
     ##Run the environment update and set the permissions back to apache
     with cd('%s' % env.dir):
-        sudo('php composer.phar self-update && php composer.phar update', user='www-data')
+        sudo('php composer.phar self-update && php composer.phar update ' + env.require_dev, user='www-data')
         sudo('service nginx restart && service redis-server restart && redis-cli flushall')
 
 def deploy():
@@ -120,7 +126,7 @@ def initialize_site(base_path='',base_url='',db_name='',db_user='',db_pass=''):
             run('sudo chown $USER:$USER -R .')
             run('mkdir -p conf/wordpress')
             run('git clone https://github.com/Softcatala/web-2015.git')
-            run('git clone ssh://git@softcatala.org:3332/web-privat web-privat')
+            run('git clone ' + private_repo_git + ' web-privat')
             if not db_user:
                 run('cp web-privat/conf/wordpress/db_%s.php conf/wordpress/db.php' % env.id)
             else:
