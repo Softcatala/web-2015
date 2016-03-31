@@ -260,7 +260,7 @@ class SC_Cron
         foreach($product['os'] as $os_wp => $oses) {
             foreach( $oses as $arch_wp => $os ) {
                 if( $arch_wp == 'android' or $arch_wp == 'ios' or $arch_wp == 'multiplataforma') {
-                    $arch_wp == 'x86';
+                    $arch_wp = 'x86';
                     $download_url = $os;
                     ($arch_wp == 'multiplataforma') ? $version = '' : '';
                 } else {
