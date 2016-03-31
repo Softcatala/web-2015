@@ -71,6 +71,108 @@ class SC_Cron
         }
     }
 
+    /**
+     * Updates LibreOffice program
+     */
+    private function update_libreoffice()
+    {
+        $libreoffice_posts = array (
+            'libreoffice'  => 'libreoffice',
+            'ajuda'         => 'paquet-dajuda-en-catala-del-libreoffice',
+            'ajuda_val'     => 'paquet-dajuda-en-catala-valencia-del-libreoffice',
+            'langpack'      => 'paquet-catala-per-al-libreoffice',
+            'langpack_val'  => 'paquet-dajuda-en-catala-valencia-del-libreoffice'
+        );
+
+        $info_url = 'https://gent.softcatala.org/jmontane/libo/latest_files.txt';
+        $downloads_info_csv = do_json_api_call( $info_url );
+        $downloads_info = explode( PHP_EOL, $downloads_info_csv );
+
+        //Posts initialization
+        foreach ( $libreoffice_posts as $post_key => $post_slug ) {
+            $post[$post_key] = get_page_by_path( $post_slug , OBJECT, 'programa' );
+        }
+
+        foreach ($downloads_info as $key => $download_info) {
+            $download = explode(' ', $download_info);
+            $os = $this->get_libreoffice_donwload_os_from_url( $download[2] );
+            if( $os != '' ) {
+                if(strpos($download[2], 'helppack_ca-valencia') !== false) {
+                    $version_info['ajuda_val'][] = $this->process_libreoffice_info($download, $os);
+                } else if(strpos($download[2], 'helppack_ca') !== false) {
+                    $version_info['ajuda'][] = $this->process_libreoffice_info($download, $os);
+                } else if(strpos($download[2], 'langpack_ca-valencia') !== false) {
+                    $version_info['langpack_val'][] = $this->process_libreoffice_info($download, $os);
+                } else if(strpos($download[2], 'langpack_ca') !== false) {
+                    $version_info['langpack'][] = $this->process_libreoffice_info($download, $os);
+                } else {
+                    $version_info['libreoffice'][] = $this->process_libreoffice_info($download, $os);
+                }
+            }
+        }
+
+        //Linux downloads and fields update
+        foreach ( $libreoffice_posts as $post_key => $post_slug ) {
+            $version_info[$post_key][] = $this->process_libreoffice_info($download, 'linux');
+
+            $field_key = $this->acf_get_field_key( "baixada", $post[$post_key]->ID );
+            update_field($field_key, $version_info[$post_key], $post[$post_key]->ID);
+        }
+    }
+
+    /**
+     * Processes the LibreOffice unsorted info
+     */
+    private function process_libreoffice_info($download, $os)
+    {
+        $version_info = array();
+
+        $version_info['download_version'] = $download[1];
+        $version_info['download_size'] = $this->from_bytes_to_kb( floatval($download[0]) );
+        $version_info['download_os'] = $os;
+
+        if ($os == 'linux' ) {
+            $version_info['download_url'] = 'http://ca.libreoffice.org/baixada/?nodetect';
+            $version_info['arquitectura'] = 'x86_64';
+        } else {
+            $version_info['download_url'] = $download[2];
+            $version_info['arquitectura'] = (strpos($download[2], 'x86-64') !== false) ? 'x86_64' : 'x86';
+        }
+
+        return $version_info;
+    }
+
+    /**
+     * Returns the os related to a libreoffice download
+     */
+    private function get_libreoffice_donwload_os_from_url( $url )
+    {
+        if (strpos($url, '/win/') !== false) {
+            $os = 'windows';
+        } elseif (strpos($url, '/mac/') !== false) {
+            $os = 'osx';
+        } else {
+            $os = false;
+        }
+
+        return $os;
+    }
+
+    /**
+     * Returns the Bytes size value in KB
+     */
+    private function from_bytes_to_kb($size, $precision = 2)
+    {
+        $base = log($size, 1024);
+        $suffixes = array('', 'K', 'MB', 'G', 'T');
+
+        return round(pow(1024, $base - floor($base)), $precision) .' '. $suffixes[floor($base)];
+    }
+
+
+    /**
+     * Updates Mozilla programs
+     */
     private function update_mozilla()
     {
         $products_list = array(
@@ -137,7 +239,7 @@ class SC_Cron
 
         foreach ($products_list as $product) {
             if ( $post = get_page_by_path( $product['slug'] , OBJECT, 'programa' ) ) {
-                $version_info = $this->process_json_info($product);
+                $version_info = $this->process_mozilla_json_info($product);
                 $field_key = $this->acf_get_field_key("baixada", $post->ID);
 
                 update_field( $field_key, $version_info, $post->ID );
@@ -148,7 +250,7 @@ class SC_Cron
     /**
      * Process the json information coming from an url
      */
-    private function process_json_info($product)
+    private function process_mozilla_json_info($product)
     {
         $json = json_decode( do_json_api_call( $product['json_url'] ));
         $version = $json->{$product['stable']};
