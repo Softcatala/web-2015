@@ -82,10 +82,54 @@ class SC_Cron
                 'stable' => 'LATEST_FIREFOX_VERSION',
             ),
             array(
+                'slug' => 'paquet-catala-per-al-firefox',
+                'type' => 'json',
+                'json_url' => 'http://viewvc.svn.mozilla.org/vc/libs/product-details/json/firefox_versions.json?view=co&revision=150465&content-type=text%2Fplain',
+                'os' => $this->get_moz_os( 'paquet-catala-per-al-firefox' ),
+                'stable' => 'LATEST_FIREFOX_VERSION',
+            ),
+            array(
+                'slug' => 'paquet-catala-valencia-per-al-firefox',
+                'type' => 'json',
+                'json_url' => 'http://viewvc.svn.mozilla.org/vc/libs/product-details/json/firefox_versions.json?view=co&revision=150465&content-type=text%2Fplain',
+                'os' => $this->get_moz_os( 'paquet-catala-valencia-per-al-firefox' ),
+                'stable' => 'LATEST_FIREFOX_VERSION',
+            ),
+            array(
+                'slug' => 'diccionari-catala-firefox',
+                'type' => 'json',
+                'json_url' => 'http://viewvc.svn.mozilla.org/vc/libs/product-details/json/firefox_versions.json?view=co&revision=150465&content-type=text%2Fplain',
+                'os' => $this->get_moz_os( 'diccionari-catala-firefox' ),
+                'stable' => 'LATEST_FIREFOX_VERSION',
+            ),
+            array(
+                'slug' => 'diccionari-valencia-firefox',
+                'type' => 'json',
+                'json_url' => 'http://viewvc.svn.mozilla.org/vc/libs/product-details/json/firefox_versions.json?view=co&revision=150465&content-type=text%2Fplain',
+                'os' => $this->get_moz_os( 'diccionari-valencia-firefox' ),
+                'stable' => 'LATEST_FIREFOX_VERSION',
+            ),
+            array(
                 'slug' => 'thunderbird',
                 'type' => 'json',
                 'json_url' => 'http://viewvc.svn.mozilla.org/vc/libs/product-details/json/thunderbird_versions.json?view=co&revision=150514&content-type=text%2Fplain',
                 'os' => $this->get_moz_os( 'thunderbird' ),
+                'stable' => 'LATEST_THUNDERBIRD_VERSION',
+                'arquitectura' => array ( 'x86' => '', 'x86_64' => '64')
+            ),
+            array(
+                'slug' => 'paquet-catala-per-al-thunderbird',
+                'type' => 'json',
+                'json_url' => 'http://viewvc.svn.mozilla.org/vc/libs/product-details/json/thunderbird_versions.json?view=co&revision=150514&content-type=text%2Fplain',
+                'os' => $this->get_moz_os( 'paquet-catala-per-al-thunderbird' ),
+                'stable' => 'LATEST_THUNDERBIRD_VERSION',
+                'arquitectura' => array ( 'x86' => '', 'x86_64' => '64')
+            ),
+            array(
+                'slug' => 'paquet-catala-valencia-per-al-thunderbird',
+                'type' => 'json',
+                'json_url' => 'http://viewvc.svn.mozilla.org/vc/libs/product-details/json/thunderbird_versions.json?view=co&revision=150514&content-type=text%2Fplain',
+                'os' => $this->get_moz_os( 'paquet-catala-valencia-per-al-thunderbird' ),
                 'stable' => 'LATEST_THUNDERBIRD_VERSION',
                 'arquitectura' => array ( 'x86' => '', 'x86_64' => '64')
             )
@@ -111,9 +155,10 @@ class SC_Cron
 
         foreach($product['os'] as $os_wp => $oses) {
             foreach( $oses as $arch_wp => $os ) {
-                if( $arch_wp == 'android' or $arch_wp == 'ios') {
+                if( $arch_wp == 'android' or $arch_wp == 'ios' or $arch_wp == 'multiplataforma') {
                     $arch_wp == 'x86';
                     $download_url = $os;
+                    ($arch_wp == 'multiplataforma') ? $version = '' : '';
                 } else {
                     $download_url = 'https://download.mozilla.org/?product='.$product['slug'].'-'.$version.'-SSL&os='.$os.'&lang=ca';
                 }
@@ -203,6 +248,49 @@ class SC_Cron
                     )
                 );
                 break;
+            case 'paquet-catala-per-al-firefox':
+                $moz_os = array(
+                    'multiplataforma' => array (
+                        'multiplataforma' => 'https://addons.mozilla.org/firefox/downloads/latest/5019/addon-5019-latest.xpi'
+                    )
+                );
+                break;
+            case 'paquet-catala-valencia-per-al-firefox':
+                $moz_os = array(
+                    'multiplataforma' => array (
+                        'multiplataforma' => 'https://addons.mozilla.org/firefox/downloads/latest/9702/addon-9702-latest.xpi'
+                    )
+                );
+                break;
+            case 'diccionari-valencia-firefox':
+                $moz_os = array(
+                    'multiplataforma' => array (
+                        'multiplataforma' => 'https://addons.mozilla.org/firefox/downloads/latest/9192/addon-9192-latest.xpi'
+                    )
+                );
+                break;
+            case 'diccionari-catala-firefox':
+                $moz_os = array(
+                    'multiplataforma' => array (
+                        'multiplataforma' => 'https://addons.mozilla.org/firefox/downloads/latest/3369/addon-3369-latest.xpi'
+                    )
+                );
+                break;
+            case 'paquet-catala-per-al-thunderbird':
+                $moz_os = array(
+                    'multiplataforma' => array (
+                        'multiplataforma' => 'https://addons.mozilla.org/thunderbird/downloads/latest/640732/addon-640732-latest.xpi'
+                    )
+                );
+                break;
+            case 'paquet-catala-valencia-per-al-thunderbird':
+                $moz_os = array(
+                    'multiplataforma' => array (
+                        'multiplataforma' => 'https://addons.mozilla.org/thunderbird/downloads/latest/9730/addon-9730-latest.xpi'
+                    )
+                );
+                break;
+
         }
 
         return $moz_os;
