@@ -73,21 +73,20 @@ class SC_Cron
 
     private function update_mozilla()
     {
-        $moz_os = $this->get_moz_os();
         $products_list = array(
             array(
                 'slug' => 'firefox',
                 'type' => 'json',
                 'json_url' => 'http://viewvc.svn.mozilla.org/vc/libs/product-details/json/firefox_versions.json?view=co&revision=150465&content-type=text%2Fplain',
-                'os' => $moz_os,
+                'os' => $this->get_moz_os( 'firefox' ),
                 'stable' => 'LATEST_FIREFOX_VERSION',
             ),
             array(
                 'slug' => 'thunderbird',
                 'type' => 'json',
                 'json_url' => 'http://viewvc.svn.mozilla.org/vc/libs/product-details/json/thunderbird_versions.json?view=co&revision=150514&content-type=text%2Fplain',
-                'os' => $moz_os,
-                'stable' => 'LATEST_FIREFOX_VERSION',
+                'os' => $this->get_moz_os( 'thunderbird' ),
+                'stable' => 'LATEST_THUNDERBIRD_VERSION',
                 'arquitectura' => array ( 'x86' => '', 'x86_64' => '64')
             )
         );
@@ -166,27 +165,45 @@ class SC_Cron
      *
      * @return array
      */
-    private function get_moz_os()
+    private function get_moz_os( $program )
     {
-        $moz_os = array(
-            'windows' => array(
-                'x86' => 'win',
-                'x86_64' => 'win64'
-            ),
-            'osx' => array (
-                'x86' => 'osx',
-            ),
-            'linux' => array(
-                'x86' => 'linux',
-                'x86_64' => 'linux64'
-            ),
-            'android' => array (
-                'android' => 'https://play.google.com/store/apps/details?id=org.mozilla.firefox'
-            ),
-            'ios' => array (
-                'ios' => 'https://itunes.apple.com/app/apple-store/id989804926'
-            )
-        );
+        switch( $program ) {
+            case 'firefox':
+                $moz_os = array(
+                    'windows' => array(
+                        'x86' => 'win',
+                        'x86_64' => 'win64'
+                    ),
+                    'osx' => array (
+                        'x86' => 'osx',
+                    ),
+                    'linux' => array(
+                        'x86' => 'linux',
+                        'x86_64' => 'linux64'
+                    ),
+                    'android' => array (
+                        'android' => 'https://play.google.com/store/apps/details?id=org.mozilla.firefox'
+                    ),
+                    'ios' => array (
+                        'ios' => 'https://itunes.apple.com/app/apple-store/id989804926'
+                    )
+                );
+                break;
+            case 'thunderbird':
+                $moz_os = array(
+                    'windows' => array(
+                        'x86' => 'win',
+                    ),
+                    'osx' => array (
+                        'x86' => 'osx',
+                    ),
+                    'linux' => array(
+                        'x86' => 'linux',
+                        'x86_64' => 'linux64'
+                    )
+                );
+                break;
+        }
 
         return $moz_os;
     }
