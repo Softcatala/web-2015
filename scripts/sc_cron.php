@@ -113,7 +113,7 @@ class SC_Cron
 
         //Linux downloads and fields update
         foreach ( $libreoffice_posts as $post_key => $post_slug ) {
-            $version_info[$post_key][] = $this->process_libreoffice_info($download, 'linux');
+            $version_info[$post_key][] = $this->process_libreoffice_info($version_info[$post_key][0]['download_version'], 'linux');
 
             $field_key = $this->acf_get_field_key( "baixada", $post[$post_key]->ID );
             update_field($field_key, $version_info[$post_key], $post[$post_key]->ID);
@@ -127,15 +127,17 @@ class SC_Cron
     {
         $version_info = array();
 
-        $version_info['download_version'] = $download[1];
-        $version_info['download_size'] = $this->from_bytes_to_kb( floatval($download[0]) );
         $version_info['download_os'] = $os;
 
         if ($os == 'linux' ) {
+            $version_info['download_version'] = $download;
             $version_info['download_url'] = 'http://ca.libreoffice.org/baixada/?nodetect';
             $version_info['arquitectura'] = 'x86_64';
+            $version_info['download_size'] = '';
         } else {
+            $version_info['download_version'] = $download[1];
             $version_info['download_url'] = $download[2];
+            $version_info['download_size'] = $this->from_bytes_to_kb( floatval($download[0]) );
             $version_info['arquitectura'] = (strpos($download[2], 'x86-64') !== false) ? 'x86_64' : 'x86';
         }
 
