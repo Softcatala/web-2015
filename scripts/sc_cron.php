@@ -65,6 +65,9 @@ class SC_Cron
                 case 'libreoffice':
                     $this->update_libreoffice();
                     break;
+                case 'osmand':
+                    $this->update_osmad();
+                    break;
             }
         } else {
             echo $this->usageHelp();
@@ -72,7 +75,42 @@ class SC_Cron
     }
 
     /**
-     * Updates LibreOffice program
+     * Updates OSMAnd maps
+     */
+    private function update_osmad()
+    {
+        $info_url = 'https://gent.softcatala.org/albert/mapa/';
+        $downloads_info_text = do_json_api_call( $info_url );
+
+        //General download info
+        $regexp = "/href='' class='name'>(.*).obf</siU";
+        if( preg_match_all($regexp, $downloads_info_text, $matches )) {
+            $downloads = array_unique ($matches[1] );
+            foreach ($downloads as $key => $download) {
+                $version_info[$key]['download_url'] = $info_url.$download. '.obf';
+                $version_info[$key]['arquitectura'] = 'x86';
+                $version_info[$key]['download_os'] = 'multiplataforma';
+                $version_info[$key]['download_version'] = str_replace('Territori-catala-', '', $download);
+            }
+        }
+
+        //Download size
+        $regexp = "/>(.* MB)</siU";
+        if( preg_match_all($regexp, $downloads_info_text, $matches1 )) {
+            $sizes = array_unique ($matches1[1] );
+
+            foreach ($sizes as $key => $size) {
+                $version_info[$key]['download_size'] = substr($size, -8);
+            }
+        }
+        
+        $post = get_page_by_path( 'mapa-catala-per-a-losmand' , OBJECT, 'programa' );
+        $field_key = $this->acf_get_field_key( "baixada", $post->ID );
+        update_field($field_key, $version_info, $post->ID);
+    }
+
+    /**
+     * Updates LibreOffice programs
      */
     private function update_libreoffice()
     {
