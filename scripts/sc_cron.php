@@ -68,6 +68,11 @@ class SC_Cron
                 case 'osmand':
                     $this->update_osmad();
                     break;
+                case 'all':
+                    $this->update_mozilla();
+                    $this->update_libreoffice();
+                    $this->update_osmad();
+                    break;
             }
         } else {
             echo $this->usageHelp();
