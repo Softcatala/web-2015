@@ -103,7 +103,7 @@ class SC_Cron
                 $version_info[$key]['download_size'] = substr($size, -8);
             }
         }
-        
+
         $post = get_page_by_path( 'mapa-catala-per-a-losmand' , OBJECT, 'programa' );
         $field_key = $this->acf_get_field_key( "baixada", $post->ID );
         update_field($field_key, $version_info, $post->ID);
