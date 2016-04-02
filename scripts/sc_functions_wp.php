@@ -4,7 +4,7 @@
  * Important: this script has to be placed in the WordPress base directory (where index.php is)
  */
 
-require( 'wp-blog-header.php' );
+require( 'wp/wp-blog-header.php' );
 
 /**
  * WordPress Shell Functions for Softcatalà project
