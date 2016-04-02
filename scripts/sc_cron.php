@@ -43,6 +43,9 @@ class SC_Cron
                 case 'update_program_download_info':
                     $this->update_program_download_info();
                     break;
+                case 'generate_aparells_stats':
+                    $this->generate_aparells_stats();
+                    break;
                 default:
                     echo $this->usageHelp();
                     break;
@@ -50,6 +53,33 @@ class SC_Cron
         } else {
             echo $this->usageHelp();
         }
+    }
+
+    /**
+     * Generates a json file with the stats of aparells
+     */
+    private function generate_aparells_stats()
+    {
+        $args = array( 'post_type' => 'aparell', 'posts_per_page' => -1 );
+
+        $posts = Timber::get_posts( $args );
+
+        $aparells_data['total'] = 0;
+        $aparells_data['conf_cat'] = 0;
+        $aparells_data['correccio_cat'] = 0;
+        foreach ($posts as $post) {
+            if($post->conf_cat) {
+                $aparells_data['conf_cat'] = $aparells_data['conf_cat'] + 1;
+            }
+
+            if($post->correccio_cat) {
+                $aparells_data['correccio_cat'] = $aparells_data['correccio_cat'] + 1;
+            }
+
+            $aparells_data['total'] = $aparells_data['total'] + 1;
+        }
+
+        echo json_encode($aparells_data);
     }
 
     /**
