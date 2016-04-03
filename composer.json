@@ -18,7 +18,7 @@
                 "type": "wordpress-plugin",
                 "dist": {
                     "type": "zip",
-                    "url": "http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=%%license%%"
+                    "url": "http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9MzQwMzh8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE0LTA3LTA5IDEyOjU4OjA4"
                 }
             }
         }
@@ -28,7 +28,7 @@
         "johnpbloch/wordpress": "4.4.*",
         "koodimonni-language/ca": "4.4.*",
         "wpackagist-plugin/wordpress-seo":"^3.1.2",
-        "wpackagist-plugin/akismet":"3.1.9",
+        "wpackagist-plugin/akismet":"3.1.10",
         "wpackagist-plugin/timber-library":"^0.22",
         "wpackagist-plugin/types":"^1.9",
         "wpackagist-plugin/woosidebars":"^1.4",
@@ -39,7 +39,7 @@
         "softcatala/wp-theme-mover":"^0.1.0",
         "softcatala/mce-table-buttons-class":"^0.0.1",
         "softcatala/sc-normalize-upload-dir":"^0.2",
-        "softcatala/wp-softcatala":"^0.3.3",
+        "softcatala/wp-softcatala":"^0.3.4",
         "softcatala/sc-importer":"^0.5.4",
         "softcatala/sc-shortcodes":"^1.0.2",
         "advanced-custom-fields/advanced-custom-fields-pro":"^5.0"
