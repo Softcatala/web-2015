@@ -22,6 +22,16 @@ if(isset($_SERVER['HTTP_HOST'])) {
 define( 'UPLOADS', '../uploads' );
 define( 'PLUGINDIR', ABSPATH . '../../htdocs/plugins' );
 
+/* Reverse proxy + stuff */
+if ($_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') {
+    $_SERVER['HTTPS']='on';
+}
+
+if (isset($_SERVER["HTTP_X_FORWARDED_FOR"])) {
+    $_SERVER['REMOTE_ADDR'] = $_SERVER["HTTP_X_FORWARDED_FOR"];
+}
+
+
 /** Location of your WordPress configuration. */
 
 require_once(ABSPATH . 'wp-settings.php');
