@@ -46,6 +46,9 @@ class WordPress_Shell_SC_Functions
                 case 'convert_downloads_to_acf':
                     $this->convert_downloads_to_acf();
                     break;
+                case 'get_redirections_rebost':
+                    $this->get_redirections_rebost();
+                    break;
                 default:
                     echo $this->usageHelp();
                     break;
@@ -53,6 +56,39 @@ class WordPress_Shell_SC_Functions
         } else {
             echo $this->usageHelp();
         }
+    }
+
+    /**
+     * Generates a file with all the redirections
+     */
+    protected function get_redirections_rebost()
+    {
+        global $wpdb;
+
+        $redirects_file = "# rebost\n\n";
+        $sc_prod_url = 'https://www.softcatala.org';
+
+        $programsquery = "SELECT * FROM $wpdb->posts
+                WHERE $wpdb->posts.post_type = 'programa'
+                ";
+
+        $result = $wpdb->get_results($programsquery);
+        foreach ($result as $post) {
+
+            $rebost_sc_url = get_post_meta( $post->ID, 'wpcf-url_rebost', true );
+            if($rebost_sc_url) {
+                $rebost_uri = str_replace( $sc_prod_url, '^', $rebost_sc_url );
+
+                $post_local_uri = get_permalink($post);
+                $post_sc_url = str_replace(get_home_url(), '', $post_local_uri);
+
+                $redirection = $rebost_uri . ' ' . $post_sc_url;
+
+                $redirects_file .= "rewrite $redirection permanent;\n";
+            }
+        }
+
+        echo $redirects_file;
     }
 
     /**
