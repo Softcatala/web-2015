@@ -46,8 +46,8 @@ class WordPress_Shell_SC_Functions
                 case 'convert_downloads_to_acf':
                     $this->convert_downloads_to_acf();
                     break;
-                case 'get_redirections_rebost':
-                    $this->get_redirections_rebost();
+                case 'get_redirections':
+                    $this->get_redirections();
                     break;
                 default:
                     echo $this->usageHelp();
@@ -61,28 +61,53 @@ class WordPress_Shell_SC_Functions
     /**
      * Generates a file with all the redirections
      */
-    protected function get_redirections_rebost()
+    protected function get_redirections()
+    {
+        if ($section = $this->getArg('section')) {
+
+            switch($section) {
+                case 'rebost':
+                    $section_data['post_type'] = 'programa';
+                    $section_data['title'] = 'rebost';
+                    $section_data['wpcf_field_name'] = 'wpcf-url_rebost';
+                    break;
+                case 'projectes':
+                    $section_data['post_type'] = 'projecte';
+                    $section_data['title'] = 'projectes';
+                    $section_data['wpcf_field_name'] = 'wpcf-url_rebost_pr';
+                    break;
+            }
+
+            $this->get_section_redirection($section_data);
+        } else {
+            echo $this->usageHelp();
+        }
+    }
+
+    /**
+     * Generates a file with all the redirections
+     */
+    protected function get_section_redirection( $section_data )
     {
         global $wpdb;
 
-        $redirects_file = "# rebost\n\n";
+        $redirects_file = '# '. $section_data['title'] . "\n\n";
         $sc_prod_url = 'https://www.softcatala.org';
 
-        $programsquery = "SELECT * FROM $wpdb->posts
-                WHERE $wpdb->posts.post_type = 'programa'
+        $posts_query = "SELECT * FROM $wpdb->posts
+                WHERE $wpdb->posts.post_type = '" . $section_data['post_type'] . "'
                 ";
 
-        $result = $wpdb->get_results($programsquery);
+        $result = $wpdb->get_results($posts_query);
         foreach ($result as $post) {
-
-            $rebost_sc_url = get_post_meta( $post->ID, 'wpcf-url_rebost', true );
-            if($rebost_sc_url) {
-                $rebost_uri = str_replace( $sc_prod_url, '^', $rebost_sc_url );
+            $section_sc_url = get_post_meta( $post->ID, $section_data['wpcf_field_name'], true );
+            if($section_sc_url) {
+                $sc_uri = str_replace( $sc_prod_url, '^', $section_sc_url );
 
                 $post_local_uri = get_permalink($post);
                 $post_sc_url = str_replace(get_home_url(), '', $post_local_uri);
 
-                $redirection = $rebost_uri . ' ' . $post_sc_url;
+                $redirection = $sc_uri . ' ' . $post_sc_url;
 
                 $redirects_file .= "rewrite $redirection permanent;\n";
             }
