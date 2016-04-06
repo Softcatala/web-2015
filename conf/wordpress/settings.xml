@@ -3274,7 +3274,7 @@
         </type>
         <type>
             <_builtin></_builtin>
-            <_toolset_edit_last>1459917287</_toolset_edit_last>
+            <_toolset_edit_last>1459932897</_toolset_edit_last>
             <_wpcf_author_id>2</_wpcf_author_id>
             <__types_id>projecte</__types_id>
             <__types_title>Projectes</__types_title>
@@ -3302,6 +3302,7 @@
             <taxonomies>
                 <categoria_projecte>1</categoria_projecte>
                 <ajuda-projectea>1</ajuda-projectea>
+                <ajuda-projecte>1</ajuda-projecte>
             </taxonomies>
             <custom-field-group>
                 <projectes>1864</projectes>
@@ -3337,8 +3338,8 @@
                 </has>
             </post_relationship>
             <id>projecte</id>
-            <hash>2034e2d92b3c410e4e6c1107d55237ce</hash>
-            <checksum>2034e2d92b3c410e4e6c1107d55237ce</checksum>
+            <hash>7d3c31670acc78cccdfc836c7b862e89</hash>
+            <checksum>7d3c31670acc78cccdfc836c7b862e89</checksum>
         </type>
         <type>
             <_builtin></_builtin>
@@ -3950,6 +3951,7 @@
             <checksum>099fb63eb8a379d36c432152e1feb46d</checksum>
         </taxonomy>
         <taxonomy>
+            <wpcf-tax>ajuda-projectea</wpcf-tax>
             <icon>admin-post</icon>
             <labels>
                 <name>Ajuda projectes</name>
@@ -3968,7 +3970,7 @@
                 <choose_from_most_used>Choose from the most used %s</choose_from_most_used>
                 <menu_name>%s</menu_name>
             </labels>
-            <slug>ajuda-projectea</slug>
+            <slug>ajuda-projecte</slug>
             <description></description>
             <public>public</public>
             <hierarchical>hierarchical</hierarchical>
@@ -3986,13 +3988,13 @@
             <meta_box_cb>
                 <callback></callback>
             </meta_box_cb>
-            <_toolset_edit_last>1459917287</_toolset_edit_last>
-            <_wpcf_author_id>2</_wpcf_author_id>
+            <_toolset_edit_last>1459932897</_toolset_edit_last>
+            <_wpcf_author_id>1</_wpcf_author_id>
             <name></name>
-            <id>ajuda-projectea</id>
-            <__types_id>ajuda-projectea</__types_id>
+            <id>ajuda-projecte</id>
+            <__types_id>ajuda-projecte</__types_id>
             <__types_title>Ajuda projectes</__types_title>
-            <checksum>2a35167e424a27b83aede449672cbdd5</checksum>
+            <checksum>9494341b280377930ab0adb6dfd7c850</checksum>
         </taxonomy>
     </taxonomies>
 </types>
