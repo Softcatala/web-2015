@@ -20,7 +20,7 @@ class WordPress_Shell_SC_Functions
      * @var array
      */
     protected $_args        = array();
-    
+
     /**
      * Initialize application and parse input parameters
      *
@@ -29,7 +29,7 @@ class WordPress_Shell_SC_Functions
     {
         $this->_parseArgs();
     }
-    
+
     /**
      * Run main function
      *
@@ -75,7 +75,7 @@ class WordPress_Shell_SC_Functions
         foreach ($result as $post) {
             $post_id = $post->ID;
 
-            //Append new values
+            //Append new project values
             $values = array(
                 "subtitle_projecte" => get_post_meta( $post_id, 'wpcf-subtitle_projecte', true ),
                 "responsable" => get_post_meta( $post_id, 'wpcf-responsable', true ),
@@ -84,23 +84,26 @@ class WordPress_Shell_SC_Functions
                 "llista_de_correu" => get_post_meta( $post_id, 'wpcf-llista_de_correu', true ),
                 "url_rebost_pr" => get_post_meta( $post_id, 'wpcf-url_rebost_pr', true )
             );
-
-            $step_values = array (
-                "steps" =>
-                array(
-                    array(
-                        'step_title' => 'Lectures recomanades',
-                        'step_content' => get_post_meta( $post_id, 'wpcf-lectures_recomanades', true )
-                    ),
-                    array(
-                        'step_title' => 'Requeriments del projecte',
-                        'step_content' => get_post_meta( $post_id, 'wpcf-project_requirements', true )
-                    )
-                )
-            );
-
-            $this->save_values_acf( $step_values, $post_id );
             $this->save_values_acf( $values, $post_id );
+
+            //Values for steps
+            if( get_post_meta( $post_id, 'wpcf-lectures_recomanades', true ) && get_post_meta( $post_id, 'wpcf-project_requirements', true )) {
+                $step_values = array (
+                    "steps" =>
+                    array(
+                        array(
+                            'step_title' => 'Lectures recomanades',
+                            'step_content' => get_post_meta( $post_id, 'wpcf-lectures_recomanades', true )
+                        ),
+                        array(
+                            'step_title' => 'Requeriments del projecte',
+                            'step_content' => get_post_meta( $post_id, 'wpcf-project_requirements', true )
+                        )
+                    )
+                );
+
+                $this->save_values_acf( $step_values, $post_id );
+            }
 
             //Arxivat
             $arxivat = get_post_meta( $post_id, 'wpcf-arxivat_pr', true );
@@ -315,7 +318,7 @@ class WordPress_Shell_SC_Functions
         }
         return false;
     }
-    
+
     /**
      * Retrieve Usage Help Message
      *
@@ -331,7 +334,7 @@ Usage:  php sc_functions.php -- [options]
 
 USAGE;
     }
-    
+
     /**
      * Retrieve argument value by name or false
      *
@@ -345,7 +348,7 @@ USAGE;
         }
         return false;
     }
-    
+
     /**
      * Parse input arguments
      *
