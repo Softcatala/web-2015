@@ -171,12 +171,12 @@
             <meta>
                 <_wp_types_group_fields>,projecte,</_wp_types_group_fields>
                 <_wp_types_group_post_types>,,page,</_wp_types_group_post_types>
-                <_wp_types_group_templates>,,,,,,,,,,,,,,,subpagina-programa.php,,,</_wp_types_group_templates>
+                <_wp_types_group_templates>,,,,,,,,,,,,,,,,,,,subpagina-projecte.php,,</_wp_types_group_templates>
                 <_wp_types_group_terms>all</_wp_types_group_terms>
                 <_wp_types_group_filters_association>all</_wp_types_group_filters_association>
             </meta>
-            <hash>479daf72b78212eb2a42f49cf847a4a1</hash>
-            <checksum>479daf72b78212eb2a42f49cf847a4a1</checksum>
+            <hash>461830d002ad8b7fcf555e251a96e823</hash>
+            <checksum>461830d002ad8b7fcf555e251a96e823</checksum>
             <__types_id>subpagines-projectes</__types_id>
             <__types_title>Subpàgines projectes</__types_title>
         </group>
@@ -227,30 +227,6 @@
             <checksum>2bd7d0dd8ccf291a8e831fa7341c8660</checksum>
             <__types_id>credits</__types_id>
             <__types_title>Crédits</__types_title>
-        </group>
-        <group>
-            <ID>1867</ID>
-            <post_content></post_content>
-            <post_title>Baixades programa</post_title>
-            <post_excerpt></post_excerpt>
-            <post_type>wp-types-group</post_type>
-            <post_status>publish</post_status>
-            <meta>
-                <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
-                <_wp_types_group_fields>,url_baixada,versio_baixada,mida_baixada,versio_estesa_baixada,arquitectura_baixada,</_wp_types_group_fields>
-                <_wp_types_group_post_types>,,baixada,</_wp_types_group_post_types>
-                <_wp_types_group_terms>all</_wp_types_group_terms>
-                <_wp_types_group_templates>,,,,,,,,,,,,,,,,,,,,</_wp_types_group_templates>
-                <_wpcf_conditional_display>
-                    <custom_use>0</custom_use>
-                    <relation>AND</relation>
-                    <custom></custom>
-                </_wpcf_conditional_display>
-            </meta>
-            <hash>04d7c1e9515d1e431379c3e50b5193b2</hash>
-            <checksum>04d7c1e9515d1e431379c3e50b5193b2</checksum>
-            <__types_id>baixades-programa</__types_id>
-            <__types_title>Baixades programa</__types_title>
         </group>
         <group>
             <ID>1868</ID>
@@ -1787,10 +1763,6 @@
             <checksum>8d1747795ac792152c874a2d55c709a9</checksum>
         </field>
         <field>
-            <id>url_baixada</id>
-            <slug>url_baixada</slug>
-            <type>url</type>
-            <name>URL baixada</name>
             <description></description>
             <data>
                 <placeholder></placeholder>
@@ -1811,6 +1783,10 @@
                 <submit-key>url_baixada</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
+            <id>url_baixada</id>
+            <name>URL baixada</name>
+            <type>url</type>
+            <slug>url_baixada</slug>
             <meta_key>wpcf-url_baixada</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>url_baixada</__types_id>
@@ -1819,10 +1795,6 @@
             <checksum>442742aba718921bbd563ff722ca81f3</checksum>
         </field>
         <field>
-            <id>versio_baixada</id>
-            <slug>versio_baixada</slug>
-            <type>textfield</type>
-            <name>Versió baixada</name>
             <description></description>
             <data>
                 <placeholder></placeholder>
@@ -1837,6 +1809,10 @@
                 <submit-key>versio_baixada</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
+            <id>versio_baixada</id>
+            <name>Versió baixada</name>
+            <type>textfield</type>
+            <slug>versio_baixada</slug>
             <meta_key>wpcf-versio_baixada</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>versio_baixada</__types_id>
@@ -1845,10 +1821,6 @@
             <checksum>bbfd47f6c4066e24a5fd925ad07d259d</checksum>
         </field>
         <field>
-            <id>subtitle_programa</id>
-            <slug>subtitle_programa</slug>
-            <type>textfield</type>
-            <name>Subtítol</name>
             <description></description>
             <data>
                 <placeholder>Subtítol del programa que es mostra sota el títol</placeholder>
@@ -1863,6 +1835,10 @@
                 <submit-key>subtitle_programa</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
+            <id>subtitle_programa</id>
+            <name>Subtítol</name>
+            <type>textfield</type>
+            <slug>subtitle_programa</slug>
             <meta_key>wpcf-subtitle_programa</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>subtitle_programa</__types_id>
@@ -1871,10 +1847,6 @@
             <checksum>63afce61b62bc6dbdcbb35ac43ab0443</checksum>
         </field>
         <field>
-            <id>autor_programa</id>
-            <slug>autor_programa</slug>
-            <type>textfield</type>
-            <name>Autor</name>
             <description></description>
             <data>
                 <placeholder>Autor del programa</placeholder>
@@ -1889,6 +1861,10 @@
                 <submit-key>autor_programa</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
+            <id>autor_programa</id>
+            <name>Autor</name>
+            <type>textfield</type>
+            <slug>autor_programa</slug>
             <meta_key>wpcf-autor_programa</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>autor_programa</__types_id>
@@ -1897,10 +1873,6 @@
             <checksum>67c9e95ea32e76d62fce26b6930cfafb</checksum>
         </field>
         <field>
-            <id>lloc_web_programa</id>
-            <slug>lloc_web_programa</slug>
-            <type>url</type>
-            <name>Lloc web</name>
             <description></description>
             <data>
                 <placeholder></placeholder>
@@ -1921,6 +1893,10 @@
                 <submit-key>lloc_web_programa</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
+            <id>lloc_web_programa</id>
+            <name>Lloc web</name>
+            <type>url</type>
+            <slug>lloc_web_programa</slug>
             <meta_key>wpcf-lloc_web_programa</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>lloc_web_programa</__types_id>
@@ -1960,10 +1936,6 @@
             <checksum>5a606534f72c3fc2878358fb616a577b</checksum>
         </field>
         <field>
-            <id>logotip_programa</id>
-            <slug>logotip_programa</slug>
-            <type>image</type>
-            <name>Logotip</name>
             <description></description>
             <data>
                 <placeholder></placeholder>
@@ -1985,6 +1957,10 @@
                 <submit-key>logotip_programa</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
+            <id>logotip_programa</id>
+            <name>Logotip</name>
+            <type>image</type>
+            <slug>logotip_programa</slug>
             <meta_key>wpcf-logotip_programa</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>logotip_programa</__types_id>
@@ -1993,10 +1969,6 @@
             <checksum>4bde8753d92a1effad1bb6c100b8fd4e</checksum>
         </field>
         <field>
-            <id>imatge_destacada_1</id>
-            <slug>imatge_destacada_1</slug>
-            <type>image</type>
-            <name>Imatge destacada 1</name>
             <description></description>
             <data>
                 <placeholder></placeholder>
@@ -2011,6 +1983,10 @@
                 <submit-key>imatge_destacada_1</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
+            <id>imatge_destacada_1</id>
+            <name>Imatge destacada 1</name>
+            <type>image</type>
+            <slug>imatge_destacada_1</slug>
             <meta_key>wpcf-imatge_destacada_1</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>imatge_destacada_1</__types_id>
@@ -2019,10 +1995,6 @@
             <checksum>e8bc1a48ca182aafae7d885d7bc40435</checksum>
         </field>
         <field>
-            <id>imatge_destacada_2</id>
-            <slug>imatge_destacada_2</slug>
-            <type>image</type>
-            <name>Imatge destacada 2</name>
             <description></description>
             <data>
                 <placeholder></placeholder>
@@ -2037,6 +2009,10 @@
                 <submit-key>imatge_destacada_2</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
+            <id>imatge_destacada_2</id>
+            <name>Imatge destacada 2</name>
+            <type>image</type>
+            <slug>imatge_destacada_2</slug>
             <meta_key>wpcf-imatge_destacada_2</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>imatge_destacada_2</__types_id>
@@ -2045,10 +2021,6 @@
             <checksum>0b7f11cc7c898374423c1966906aae85</checksum>
         </field>
         <field>
-            <id>imatge_destacada_3</id>
-            <slug>imatge_destacada_3</slug>
-            <type>image</type>
-            <name>Imatge destacada 3</name>
             <description></description>
             <data>
                 <placeholder></placeholder>
@@ -2063,6 +2035,10 @@
                 <submit-key>imatge_destacada_3</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
+            <id>imatge_destacada_3</id>
+            <name>Imatge destacada 3</name>
+            <type>image</type>
+            <slug>imatge_destacada_3</slug>
             <meta_key>wpcf-imatge_destacada_3</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>imatge_destacada_3</__types_id>
@@ -2071,10 +2047,6 @@
             <checksum>c418a38f877b6c19a0bbc56eeea4a5a5</checksum>
         </field>
         <field>
-            <id>mida_baixada</id>
-            <slug>mida_baixada</slug>
-            <type>textfield</type>
-            <name>Mida baixada (en MB)</name>
             <description></description>
             <data>
                 <placeholder></placeholder>
@@ -2089,6 +2061,10 @@
                 <submit-key>mida_baixada</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
+            <id>mida_baixada</id>
+            <name>Mida baixada (en MB)</name>
+            <type>textfield</type>
+            <slug>mida_baixada</slug>
             <meta_key>wpcf-mida_baixada</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>mida_baixada</__types_id>
@@ -2097,10 +2073,6 @@
             <checksum>5a1038d9457f0c85d03b82d1b7e6caf5</checksum>
         </field>
         <field>
-            <id>versio_estesa_baixada</id>
-            <slug>versio_estesa_baixada</slug>
-            <type>textfield</type>
-            <name>Descripció estesa de la versió</name>
             <description></description>
             <data>
                 <placeholder></placeholder>
@@ -2115,6 +2087,10 @@
                 <submit-key>versio_estesa_baixada</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
+            <id>versio_estesa_baixada</id>
+            <name>Descripció estesa de la versió</name>
+            <type>textfield</type>
+            <slug>versio_estesa_baixada</slug>
             <meta_key>wpcf-versio_estesa_baixada</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>versio_estesa_baixada</__types_id>
@@ -2156,10 +2132,6 @@
             <checksum>f9832f2396b40f374db4f7ac4685cfad</checksum>
         </field>
         <field>
-            <id>arquitectura_baixada</id>
-            <slug>arquitectura_baixada</slug>
-            <type>select</type>
-            <name>Arquitectura</name>
             <description></description>
             <data>
                 <options>
@@ -2182,6 +2154,10 @@
                 <submit-key>arquitectura_baixada</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
+            <id>arquitectura_baixada</id>
+            <name>Arquitectura</name>
+            <type>select</type>
+            <slug>arquitectura_baixada</slug>
             <meta_key>wpcf-arquitectura_baixada</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>arquitectura_baixada</__types_id>
@@ -2247,10 +2223,6 @@
             <checksum>9292fe97d4115977230dd3a10c86e94e</checksum>
         </field>
         <field>
-            <id>arxivat</id>
-            <slug>arxivat</slug>
-            <type>radio</type>
-            <name>Arxivat</name>
             <description></description>
             <data>
                 <options>
@@ -2276,18 +2248,18 @@
                 <submit-key>arxivat</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
+            <id>arxivat</id>
+            <name>Arxivat</name>
+            <type>radio</type>
+            <slug>arxivat</slug>
             <meta_key>wpcf-arxivat</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>arxivat</__types_id>
             <__types_title>Arxivat</__types_title>
-            <hash>f6c35800781889ffab1a0c438e3d7f54</hash>
-            <checksum>f6c35800781889ffab1a0c438e3d7f54</checksum>
+            <hash>70a7b97b03e3ab8e6f62d1b65907c21e</hash>
+            <checksum>70a7b97b03e3ab8e6f62d1b65907c21e</checksum>
         </field>
         <field>
-            <id>valoracio</id>
-            <slug>valoracio</slug>
-            <type>numeric</type>
-            <name>Valoració</name>
             <description></description>
             <data>
                 <placeholder></placeholder>
@@ -2308,6 +2280,10 @@
                 <submit-key>valoracio</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
+            <id>valoracio</id>
+            <name>Valoració</name>
+            <type>numeric</type>
+            <slug>valoracio</slug>
             <meta_key>wpcf-valoracio</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>valoracio</__types_id>
@@ -2316,10 +2292,6 @@
             <checksum>0d83c3f622ebbb156f3f45463fa7399e</checksum>
         </field>
         <field>
-            <id>vots</id>
-            <slug>vots</slug>
-            <type>numeric</type>
-            <name>Nombre de vots</name>
             <description></description>
             <data>
                 <placeholder></placeholder>
@@ -2340,6 +2312,10 @@
                 <submit-key>vots</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
+            <id>vots</id>
+            <name>Nombre de vots</name>
+            <type>numeric</type>
+            <slug>vots</slug>
             <meta_key>wpcf-vots</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>vots</__types_id>
@@ -2441,10 +2417,6 @@
             <checksum>be32d39789947b7c93392ec30c7cd8b7</checksum>
         </field>
         <field>
-            <id>idrebost</id>
-            <slug>idrebost</slug>
-            <type>numeric</type>
-            <name>ID Rebost</name>
             <description></description>
             <data>
                 <placeholder></placeholder>
@@ -2465,6 +2437,10 @@
                 <submit-key>idrebost</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
+            <id>idrebost</id>
+            <name>ID Rebost</name>
+            <type>numeric</type>
+            <slug>idrebost</slug>
             <meta_key>wpcf-idrebost</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>idrebost</__types_id>
@@ -2473,10 +2449,6 @@
             <checksum>951e8eeaa4d78b79247e6eb9290e04da</checksum>
         </field>
         <field>
-            <id>preu</id>
-            <slug>preu</slug>
-            <type>textfield</type>
-            <name>Preu</name>
             <description></description>
             <data>
                 <placeholder></placeholder>
@@ -2491,6 +2463,10 @@
                 <submit-key>preu</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
+            <id>preu</id>
+            <name>Preu</name>
+            <type>textfield</type>
+            <slug>preu</slug>
             <meta_key>wpcf-preu</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>preu</__types_id>
@@ -2499,10 +2475,6 @@
             <checksum>728e4000faa0459c0dfbf9fe24f7c71e</checksum>
         </field>
         <field>
-            <id>hosted_in_sc</id>
-            <slug>hosted_in_sc</slug>
-            <type>select</type>
-            <name>Hosted in SC</name>
             <description></description>
             <data>
                 <options>
@@ -2525,18 +2497,18 @@
                 <submit-key>hosted_in_sc</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
+            <id>hosted_in_sc</id>
+            <name>Hosted in SC</name>
+            <type>select</type>
+            <slug>hosted_in_sc</slug>
             <meta_key>wpcf-hosted_in_sc</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>hosted_in_sc</__types_id>
             <__types_title>Hosted in SC</__types_title>
-            <hash>056f4e2eec940e3d3ad8d8073489685c</hash>
-            <checksum>056f4e2eec940e3d3ad8d8073489685c</checksum>
+            <hash>8e828210d9e8a6f022636ad52fa218bb</hash>
+            <checksum>8e828210d9e8a6f022636ad52fa218bb</checksum>
         </field>
         <field>
-            <id>url_rebost</id>
-            <slug>url_rebost</slug>
-            <type>url</type>
-            <name>URL Rebost</name>
             <description></description>
             <data>
                 <placeholder></placeholder>
@@ -2551,6 +2523,10 @@
                 <submit-key>url_rebost</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
+            <id>url_rebost</id>
+            <name>URL Rebost</name>
+            <type>url</type>
+            <slug>url_rebost</slug>
             <meta_key>wpcf-url_rebost</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>url_rebost</__types_id>
@@ -2843,6 +2819,10 @@
             <checksum>21badebc23805ab1475374cf33a520a5</checksum>
         </field>
         <field>
+            <id>projecte</id>
+            <slug>projecte</slug>
+            <type>select</type>
+            <name>Projecte</name>
             <description></description>
             <data>
                 <options>
@@ -2856,10 +2836,6 @@
                 <submit-key>projecte</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
-            <id>projecte</id>
-            <name>Projecte</name>
-            <type>select</type>
-            <slug>projecte</slug>
             <meta_key>wpcf-projecte</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>projecte</__types_id>
@@ -2888,10 +2864,6 @@
             <checksum>969965eccf9809454947f62b6111fa73</checksum>
         </field>
         <field>
-            <id>autor_traduccio</id>
-            <slug>autor_traduccio</slug>
-            <type>textfield</type>
-            <name>Autor de la traducció</name>
             <description></description>
             <data>
                 <placeholder></placeholder>
@@ -2901,6 +2873,10 @@
                 <submit-key>autor_traduccio</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
+            <id>autor_traduccio</id>
+            <name>Autor de la traducció</name>
+            <type>textfield</type>
+            <slug>autor_traduccio</slug>
             <meta_key>wpcf-autor_traduccio</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>autor_traduccio</__types_id>
@@ -3091,9 +3067,12 @@
         </type>
         <type>
             <_builtin></_builtin>
-            <_toolset_edit_last>1457529388</_toolset_edit_last>
-            <_wpcf_author_id>1</_wpcf_author_id>
+            <_toolset_edit_last>1459897392</_toolset_edit_last>
+            <_wpcf_author_id>2</_wpcf_author_id>
+            <__types_id>aparell</__types_id>
+            <__types_title>Aparells</__types_title>
             <wpcf-post-type>aparell</wpcf-post-type>
+            <icon>art</icon>
             <labels>
                 <name>Aparells</name>
                 <singular_name>Aparell</singular_name>
@@ -3107,18 +3086,19 @@
                 <not_found_in_trash>No s\&#039;ha trobat cap %s a la paperera</not_found_in_trash>
                 <parent_item_colon>Text del pare</parent_item_colon>
                 <all_items>Tots els elements</all_items>
+                <enter_title_here>Enter title here</enter_title_here>
             </labels>
             <slug>aparell</slug>
             <description>Llistat d\&#039;aparells</description>
-            <icon>art</icon>
             <public>public</public>
             <menu_position></menu_position>
-            <menu_icon></menu_icon>
             <taxonomies>
-                <sistema_operatiu_aparell>1</sistema_operatiu_aparell>
                 <tipus_aparell>1</tipus_aparell>
                 <so_aparell>1</so_aparell>
             </taxonomies>
+            <custom-field-group>
+                <aparells>227</aparells>
+            </custom-field-group>
             <custom_fields>
                 <wpcf-versio>1</wpcf-versio>
                 <wpcf-conf_cat>1</wpcf-conf_cat>
@@ -3128,6 +3108,7 @@
             <supports>
                 <title>1</title>
                 <comments>1</comments>
+                <revisions>1</revisions>
                 <thumbnail>1</thumbnail>
             </supports>
             <rewrite>
@@ -3148,16 +3129,15 @@
             <query_var_enabled>1</query_var_enabled>
             <query_var></query_var>
             <permalink_epmask>EP_PERMALINK</permalink_epmask>
+            <rest_base></rest_base>
             <id>aparell</id>
-            <__types_id>aparell</__types_id>
-            <__types_title>Aparells</__types_title>
-            <hash>4f2ee1e37aad3b7f54273b1cfdf1f068</hash>
-            <checksum>4f2ee1e37aad3b7f54273b1cfdf1f068</checksum>
+            <hash>fa93c343348b12f9ce3971078779ff62</hash>
+            <checksum>fa93c343348b12f9ce3971078779ff62</checksum>
         </type>
         <type>
             <_builtin></_builtin>
-            <_toolset_edit_last>1457679967</_toolset_edit_last>
-            <_wpcf_author_id>1</_wpcf_author_id>
+            <_toolset_edit_last>1459897458</_toolset_edit_last>
+            <_wpcf_author_id>2</_wpcf_author_id>
             <__types_id>programa</__types_id>
             <__types_title>Programes</__types_title>
             <wpcf-post-type>programa</wpcf-post-type>
@@ -3183,12 +3163,23 @@
             <menu_position></menu_position>
             <taxonomies>
                 <llicencia>1</llicencia>
+                <sistema-operatiu-programa>1</sistema-operatiu-programa>
                 <categoria-programa>1</categoria-programa>
             </taxonomies>
+            <custom-field-group>
+                <programes>1868</programes>
+            </custom-field-group>
+            <custom_fields>
+                <wpcf-arxivat>1</wpcf-arxivat>
+                <wpcf-logotip_programa>1</wpcf-logotip_programa>
+                <wpcf-lloc_web_programa>1</wpcf-lloc_web_programa>
+                <wpcf-url_rebost>1</wpcf-url_rebost>
+            </custom_fields>
             <supports>
                 <title>1</title>
                 <editor>1</editor>
                 <comments>1</comments>
+                <revisions>1</revisions>
                 <excerpt>1</excerpt>
                 <thumbnail>1</thumbnail>
             </supports>
@@ -3216,77 +3207,12 @@
                     <projecte>1</projecte>
                 </belongs>
                 <has>
-                    <baixada>1</baixada>
                     <credit>1</credit>
                 </has>
             </post_relationship>
             <id>programa</id>
-            <hash>5ff02c172864d0a545172bb56c881866</hash>
-            <checksum>5ff02c172864d0a545172bb56c881866</checksum>
-        </type>
-        <type>
-            <_builtin></_builtin>
-            <_toolset_edit_last>1457708325</_toolset_edit_last>
-            <_wpcf_author_id>1</_wpcf_author_id>
-            <__types_id>baixada</__types_id>
-            <__types_title>Baixades</__types_title>
-            <wpcf-post-type>baixada</wpcf-post-type>
-            <icon>building</icon>
-            <labels>
-                <name>Baixades</name>
-                <singular_name>Baixada</singular_name>
-                <add_new>Add New</add_new>
-                <add_new_item>Add New %s</add_new_item>
-                <edit_item>Edit %s</edit_item>
-                <new_item>New %s</new_item>
-                <view_item>View %s</view_item>
-                <search_items>Search %s</search_items>
-                <not_found>No %s found</not_found>
-                <not_found_in_trash>No %s found in Trash</not_found_in_trash>
-                <parent_item_colon>Parent text</parent_item_colon>
-                <all_items>All items</all_items>
-                <enter_title_here>Enter title here</enter_title_here>
-            </labels>
-            <slug>baixada</slug>
-            <description></description>
-            <public>public</public>
-            <menu_position></menu_position>
-            <taxonomies>
-                <sistema-operatiu-programa>1</sistema-operatiu-programa>
-            </taxonomies>
-            <custom_fields>
-                <wpcf-url_baixada>1</wpcf-url_baixada>
-                <wpcf-versio_baixada>1</wpcf-versio_baixada>
-                <wpcf-mida_baixada>1</wpcf-mida_baixada>
-                <wpcf-versio_estesa_baixada>1</wpcf-versio_estesa_baixada>
-            </custom_fields>
-            <rewrite>
-                <custom>normal</custom>
-                <slug></slug>
-                <with_front>1</with_front>
-                <feeds>1</feeds>
-                <pages>1</pages>
-            </rewrite>
-            <has_archive>1</has_archive>
-            <has_archive_slug></has_archive_slug>
-            <show_in_menu>1</show_in_menu>
-            <show_in_menu_page></show_in_menu_page>
-            <show_ui>1</show_ui>
-            <publicly_queryable>1</publicly_queryable>
-            <can_export>1</can_export>
-            <show_in_nav_menus>1</show_in_nav_menus>
-            <query_var_enabled>1</query_var_enabled>
-            <query_var></query_var>
-            <permalink_epmask>EP_PERMALINK</permalink_epmask>
-            <rest_base></rest_base>
-            <post_relationship>
-                <belongs>
-                    <programa>1</programa>
-                </belongs>
-            </post_relationship>
-            <id>baixada</id>
-            <hash>0d36b8a1d714821a058fe084f995ceed</hash>
-            <checksum>0d36b8a1d714821a058fe084f995ceed</checksum>
+            <hash>ea1356b6438aa7d9620dd7266b23d735</hash>
+            <checksum>ea1356b6438aa7d9620dd7266b23d735</checksum>
         </type>
         <type>
             <_builtin></_builtin>
@@ -3348,8 +3274,10 @@
         </type>
         <type>
             <_builtin></_builtin>
-            <_toolset_edit_last>1458031145</_toolset_edit_last>
-            <_wpcf_author_id>1</_wpcf_author_id>
+            <_toolset_edit_last>1459917287</_toolset_edit_last>
+            <_wpcf_author_id>2</_wpcf_author_id>
+            <__types_id>projecte</__types_id>
+            <__types_title>Projectes</__types_title>
             <wpcf-post-type>projecte</wpcf-post-type>
             <icon>media-default</icon>
             <labels>
@@ -3373,10 +3301,15 @@
             <menu_position></menu_position>
             <taxonomies>
                 <categoria_projecte>1</categoria_projecte>
+                <ajuda-projectea>1</ajuda-projectea>
             </taxonomies>
+            <custom-field-group>
+                <projectes>1864</projectes>
+            </custom-field-group>
             <supports>
                 <title>1</title>
                 <editor>1</editor>
+                <revisions>1</revisions>
                 <excerpt>1</excerpt>
             </supports>
             <rewrite>
@@ -3404,15 +3337,15 @@
                 </has>
             </post_relationship>
             <id>projecte</id>
-            <__types_id>projecte</__types_id>
-            <__types_title>Projectes</__types_title>
-            <hash>d1dded8e619760964a98c8c362b2aef4</hash>
-            <checksum>d1dded8e619760964a98c8c362b2aef4</checksum>
+            <hash>2034e2d92b3c410e4e6c1107d55237ce</hash>
+            <checksum>2034e2d92b3c410e4e6c1107d55237ce</checksum>
         </type>
         <type>
             <_builtin></_builtin>
-            <_toolset_edit_last>1457857338</_toolset_edit_last>
-            <_wpcf_author_id>1</_wpcf_author_id>
+            <_toolset_edit_last>1459897429</_toolset_edit_last>
+            <_wpcf_author_id>2</_wpcf_author_id>
+            <__types_id>llista</__types_id>
+            <__types_title>Llistes de correu</__types_title>
             <wpcf-post-type>llista</wpcf-post-type>
             <icon>admin-post</icon>
             <labels>
@@ -3434,8 +3367,12 @@
             <description></description>
             <public>public</public>
             <menu_position></menu_position>
+            <custom-field-group>
+                <llista-de-correu>3099</llista-de-correu>
+            </custom-field-group>
             <supports>
                 <title>1</title>
+                <revisions>1</revisions>
             </supports>
             <rewrite>
                 <enabled>1</enabled>
@@ -3457,14 +3394,12 @@
             <permalink_epmask>EP_PERMALINK</permalink_epmask>
             <rest_base></rest_base>
             <id>llista</id>
-            <__types_id>llista</__types_id>
-            <__types_title>Llistes de correu</__types_title>
-            <hash>a3c02b88b208c3e6aae46a5ae34ca3bf</hash>
-            <checksum>a3c02b88b208c3e6aae46a5ae34ca3bf</checksum>
+            <hash>d81ff94cc35610122c830f202fff0232</hash>
+            <checksum>d81ff94cc35610122c830f202fff0232</checksum>
         </type>
     </types>
     <post_relationships>
-        <data>{&quot;post&quot;:[],&quot;page&quot;:{&quot;link&quot;:[],&quot;credit&quot;:[]},&quot;esdeveniment&quot;:{&quot;link&quot;:[]},&quot;programa&quot;:{&quot;baixada&quot;:[],&quot;credit&quot;:[]},&quot;projecte&quot;:{&quot;programa&quot;:[]}}</data>
+        <data>{&quot;post&quot;:[],&quot;page&quot;:{&quot;link&quot;:[],&quot;credit&quot;:[]},&quot;esdeveniment&quot;:{&quot;link&quot;:[]},&quot;programa&quot;:{&quot;credit&quot;:[]},&quot;projecte&quot;:{&quot;programa&quot;:[]}}</data>
     </post_relationships>
     <taxonomies>
         <taxonomy>
@@ -3652,7 +3587,7 @@
             <id>tipus_aparell</id>
             <__types_id>tipus_aparell</__types_id>
             <__types_title>Tipus Aparells</__types_title>
-            <checksum>586d4470df8c41764d2342a983370e10</checksum>
+            <checksum>f24307a31d0589c3ed52ec97e196ba81</checksum>
             <name></name>
         </taxonomy>
         <taxonomy>
@@ -3822,7 +3757,7 @@
             <id>llicencia</id>
             <__types_id>llicencia</__types_id>
             <__types_title>Llicències</__types_title>
-            <checksum>fb912fc35dc5b55010cec89ad96663a8</checksum>
+            <checksum>aae65f347a81fefe1e01792cb247071b</checksum>
         </taxonomy>
         <taxonomy>
             <wpcf-tax>sistema-operatiu-programa</wpcf-tax>
@@ -3850,6 +3785,7 @@
             <hierarchical>hierarchical</hierarchical>
             <supports>
                 <__types_cpt_supports_baixada>1</__types_cpt_supports_baixada>
+                <__types_cpt_supports_programa>1</__types_cpt_supports_programa>
             </supports>
             <rewrite>
                 <slug></slug>
@@ -3865,13 +3801,13 @@
             <meta_box_cb>
                 <callback></callback>
             </meta_box_cb>
-            <_toolset_edit_last>1457708252</_toolset_edit_last>
+            <_toolset_edit_last>1459586469</_toolset_edit_last>
             <_wpcf_author_id>1</_wpcf_author_id>
             <name></name>
             <id>sistema-operatiu-programa</id>
             <__types_id>sistema-operatiu-programa</__types_id>
             <__types_title>Sistemes Operatius (rebost)</__types_title>
-            <checksum>2d71ac284efb130ab20a4a8ead667a51</checksum>
+            <checksum>a1f2a5fbb0e94a98bc1c048932d55ef6</checksum>
         </taxonomy>
         <taxonomy>
             <wpcf-tax>categoria-programa</wpcf-tax>
@@ -3919,7 +3855,7 @@
             <id>categoria-programa</id>
             <__types_id>categoria-programa</__types_id>
             <__types_title>Categories programes</__types_title>
-            <checksum>01ec76c6d5e41eb628d049d0d2da7f1a</checksum>
+            <checksum>a20f42422f0088516f9f92e04511697c</checksum>
         </taxonomy>
         <taxonomy>
             <wpcf-tax>categoria_projecte</wpcf-tax>
@@ -3966,7 +3902,7 @@
             <id>categoria_projecte</id>
             <__types_id>categoria_projecte</__types_id>
             <__types_title>Categories projectes</__types_title>
-            <checksum>7448db325bc43b8d24bacf0c559e1798</checksum>
+            <checksum>98fd74a8d0461f22a464d063621b028b</checksum>
         </taxonomy>
         <taxonomy>
             <wpcf-tax>sistema_operatiu_aparell</wpcf-tax>
@@ -4011,7 +3947,52 @@
             <id>so_aparell</id>
             <__types_id>so_aparell</__types_id>
             <__types_title>Sistemes Operatius (aparells)</__types_title>
-            <checksum>c529e67ffbf3e8a1a2379989cee0dd73</checksum>
+            <checksum>099fb63eb8a379d36c432152e1feb46d</checksum>
+        </taxonomy>
+        <taxonomy>
+            <icon>admin-post</icon>
+            <labels>
+                <name>Ajuda projectes</name>
+                <singular_name>Ajuda projecte</singular_name>
+                <search_items>Search %s</search_items>
+                <popular_items>Popular %s</popular_items>
+                <all_items>All %s</all_items>
+                <parent_item>Parent %s</parent_item>
+                <parent_item_colon>Parent %s:</parent_item_colon>
+                <edit_item>Edit %s</edit_item>
+                <update_item>Update %s</update_item>
+                <add_new_item>Add New %s</add_new_item>
+                <new_item_name>New %s Name</new_item_name>
+                <separate_items_with_commas>Separate %s with commas</separate_items_with_commas>
+                <add_or_remove_items>Add or remove %s</add_or_remove_items>
+                <choose_from_most_used>Choose from the most used %s</choose_from_most_used>
+                <menu_name>%s</menu_name>
+            </labels>
+            <slug>ajuda-projectea</slug>
+            <description></description>
+            <public>public</public>
+            <hierarchical>hierarchical</hierarchical>
+            <supports>
+                <__types_cpt_supports_projecte>1</__types_cpt_supports_projecte>
+            </supports>
+            <rewrite>
+                <slug></slug>
+            </rewrite>
+            <show_ui>1</show_ui>
+            <show_in_nav_menus>1</show_in_nav_menus>
+            <query_var_enabled>1</query_var_enabled>
+            <query_var></query_var>
+            <update_count_callback></update_count_callback>
+            <meta_box_cb>
+                <callback></callback>
+            </meta_box_cb>
+            <_toolset_edit_last>1459917287</_toolset_edit_last>
+            <_wpcf_author_id>2</_wpcf_author_id>
+            <name></name>
+            <id>ajuda-projectea</id>
+            <__types_id>ajuda-projectea</__types_id>
+            <__types_title>Ajuda projectes</__types_title>
+            <checksum>2a35167e424a27b83aede449672cbdd5</checksum>
         </taxonomy>
     </taxonomies>
 </types>
