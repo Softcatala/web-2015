@@ -300,7 +300,7 @@
                     "class": "",
                     "id": ""
                 },
-                "return_format": "url",
+                "return_format": "id",
                 "preview_size": "thumbnail",
                 "library": "uploadedTo",
                 "min_width": 145,
