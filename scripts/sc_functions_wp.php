@@ -46,6 +46,9 @@ class WordPress_Shell_SC_Functions
                 case 'convert_downloads_to_acf':
                     $this->convert_downloads_to_acf();
                     break;
+                case 'convert_projects_to_acf':
+                    $this->convert_projects_to_acf();
+                    break;
                 case 'get_redirections':
                     $this->get_redirections();
                     break;
@@ -55,6 +58,68 @@ class WordPress_Shell_SC_Functions
             }
         } else {
             echo $this->usageHelp();
+        }
+    }
+
+    /**
+     * Converts wp-fields into acf fields in projects
+     */
+    protected function convert_projects_to_acf() {
+        global $wpdb;
+
+        $posts_query = "SELECT * FROM $wpdb->posts
+                WHERE $wpdb->posts.post_type = 'projecte'
+                ";
+
+        $result = $wpdb->get_results($posts_query);
+        foreach ($result as $post) {
+            $post_id = $post->ID;
+
+            //Append new values
+            $values = array(
+                "subtitle_projecte" => get_post_meta( $post_id, 'wpcf-subtitle_projecte', true ),
+                "responsable" => get_post_meta( $post_id, 'wpcf-responsable', true ),
+                "logotip" => $this->get_caption_from_media_url( get_post_meta( $post_id, 'wpcf-logotip', true ), true ),
+                "lloc_web_projecte" => get_post_meta( $post_id, 'wpcf-lloc_web_projecte', true ),
+                "llista_de_correu" => get_post_meta( $post_id, 'wpcf-llista_de_correu', true ),
+                "url_rebost_pr" => get_post_meta( $post_id, 'wpcf-url_rebost_pr', true )
+            );
+
+            $step_values = array (
+                "steps" =>
+                array(
+                    array(
+                        'step_title' => 'Lectures recomanades',
+                        'step_content' => get_post_meta( $post_id, 'wpcf-lectures_recomanades', true )
+                    ),
+                    array(
+                        'step_title' => 'Requeriments del projecte',
+                        'step_content' => get_post_meta( $post_id, 'wpcf-project_requirements', true )
+                    )
+                )
+            );
+
+            $this->save_values_acf( $step_values, $post_id );
+            $this->save_values_acf( $values, $post_id );
+
+            //Arxivat
+            $arxivat = get_post_meta( $post_id, 'wpcf-arxivat_pr', true );
+            if($arxivat == '1') {
+                //Set the operating system taxonomy for program
+                $terms = array( $this->get_taxonomy_id( 'arxivat', 'classificacio' ) );
+                $terms = array_map( 'intval', $terms );
+                wp_set_object_terms( $post_id, $terms, 'classificacio', true );
+            }
+        }
+    }
+
+    /**
+     * Saves a list of values in ACF
+     */
+    protected function save_values_acf( $values, $post_id ) {
+        foreach ($values as $field_key => $value) {
+            $field_key = $this->acf_get_field_key( $field_key, $post_id );
+            update_field($field_key, $value, $post_id);
         }
     }
 
@@ -303,6 +368,52 @@ USAGE;
             }
         }
         return $this;
+    }
+
+    /**
+     * This function retrieves the media caption from
+     * a given url. It is used because the «secondary image»
+     * created from Types doesn't return the media caption
+     * Author: https://philipnewcomer.net/2012/11/get-the-attachment-id-from-an-image-url-in-wordpress/
+     *
+     * @param string $url
+     * @return string $caption
+     */
+    protected function get_caption_from_media_url( $attachment_url = '', $return_id = false ) {
+
+        global $wpdb;
+        $attachment_id = false;
+
+        // If there is no url, return.
+        if ( '' == $attachment_url )
+            return;
+
+        // Get the upload directory paths and clean the attachment url
+        $upload_dir_paths = wp_upload_dir();
+        $attachment_url = str_replace( 'wp/../', '', $attachment_url );
+
+        // Make sure the upload path base directory exists in the attachment URL, to verify that we're working with a media library image
+        if ( false !== strpos( $attachment_url, $upload_dir_paths['baseurl'] ) ) {
+
+            // If this is the URL of an auto-generated thumbnail, get the URL of the original image
+            $attachment_url = preg_replace( '/-\d+x\d+(?=\.(jpg|jpeg|png|gif)$)/i', '', $attachment_url );
+
+            // Remove the upload path base directory from the attachment URL
+            $attachment_url = str_replace( $upload_dir_paths['baseurl'] . '/', '', $attachment_url );
+
+            // Finally, run a custom database query to get the attachment ID from the modified attachment URL
+            $attachment_id = $wpdb->get_var( $wpdb->prepare( "SELECT wposts.ID FROM $wpdb->posts wposts, $wpdb->postmeta wpostmeta WHERE wposts.ID = wpostmeta.post_id AND wpostmeta.meta_key = '_wp_attached_file' AND wpostmeta.meta_value = '%s' AND wposts.post_type = 'attachment'", $attachment_url ) );
+
+        }
+
+        //Not in the original function from the author
+        $attachment_meta = get_post_field('post_excerpt', $attachment_id);
+
+        if( $return_id ) {
+            return $attachment_id;
+        }
+
+        return $attachment_meta;
     }
 }
 
