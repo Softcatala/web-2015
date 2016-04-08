@@ -210,21 +210,17 @@
     jQuery(function() {
         if(window.location.pathname != '/') {
             var element = 'nav a[href^="' + window.location.pathname + '"]';
-
-            if(jQuery(element).parentsUntil('.navbar').parent('#recursos').length) {
-                var elements = jQuery("body").find("[aria-controls='recursos']");
-                elements.trigger('click');
+            if (element.indexOf('page') !=-1) {
+                element = element.substring(0, element.indexOf('page'));
             }
+            var top_menus = ['recursos', 'coneixeu', 'collaboreu'];
 
-            if(jQuery(element).parentsUntil('.navbar').parent('#coneixeu').length) {
-                var elements = jQuery("body").find("[aria-controls='coneixeu']");
-                elements.trigger('click');
-            }
-
-            if(jQuery(element).parentsUntil('.navbar').parent('#collaboreu').length) {
-                var elements = jQuery("body").find("[aria-controls='collaboreu']");
-                elements.trigger('click');
-            }
+            top_menus.forEach(function(menuelement) {
+                if(jQuery(element).parentsUntil('.navbar').parent('#'+menuelement+'').length) {
+                    var elements = jQuery("body").find("[aria-controls='"+menuelement+"']");
+                    elements.trigger('click');
+                }
+            });
 
             if(jQuery(element).parentsUntil('.nav-tabs').siblings('.dropdown-toggle').length) {
                 jQuery(element).parentsUntil('.nav-tabs').siblings('.dropdown-toggle').addClass('active');
