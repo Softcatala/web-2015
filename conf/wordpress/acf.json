@@ -163,6 +163,60 @@
         "description": ""
     },
     {
+        "key": "group_570499c58228a",
+        "title": "Col\u00b7laboraci\u00f3 en projectes",
+        "fields": [
+            {
+                "key": "field_570499e3ce33a",
+                "label": "perfil",
+                "name": "perfil",
+                "type": "select",
+                "instructions": "Quin perfil representa aquesta p\u00e0gina de col\u00b7laboraci\u00f3?",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "disseny": "Disseny",
+                    "traduccio-i-correccio": "Traducci\u00f3 i correcci\u00f3"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "ajax": 0,
+                "placeholder": "",
+                "disabled": 0,
+                "readonly": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "page"
+                },
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "plantilla-steps.php"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
         "key": "group_5704dffab0598",
         "title": "Passos",
         "fields": [
@@ -302,7 +356,7 @@
                 },
                 "return_format": "id",
                 "preview_size": "thumbnail",
-                "library": "uploadedTo",
+                "library": "all",
                 "min_width": 145,
                 "min_height": 145,
                 "min_size": "",
