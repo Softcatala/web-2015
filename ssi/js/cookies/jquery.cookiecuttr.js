@@ -254,14 +254,11 @@
                     path: '/'
                 });
             }
-            /* 
-             * we don't disable any cookie by default, so let's comment out this 
             $(".cc-cookies").fadeOut(function () {
+             	// we (Softcatalà) don't disable any cookie by default, so let's comment out this 
                 // reload page to activate cookies
-                location.reload();
+                // location.reload();
             });
-            * 
-            */ 
         });
         //reset cookies
         $('a.cc-cookie-reset').click(function (f) {
