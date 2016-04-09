@@ -254,10 +254,14 @@
                     path: '/'
                 });
             }
+            /* 
+             * we don't disable any cookie by default, so let's comment out this 
             $(".cc-cookies").fadeOut(function () {
                 // reload page to activate cookies
                 location.reload();
             });
+            * 
+            */ 
         });
         //reset cookies
         $('a.cc-cookie-reset').click(function (f) {

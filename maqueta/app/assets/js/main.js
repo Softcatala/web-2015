@@ -230,5 +230,19 @@
         }
     });
 
-
 })(jQuery, document, window, ResponsiveBootstrapToolkit);
+
+(function($) {
+	/** Cookie messages **/
+	$(document).ready(function () {	
+		if (typeof $.cookieCuttr == 'function') { 
+			$.cookieCuttr({
+				cookieAnalyticsMessage: 'Aquest web utilitza galetes pròpies i de tercers per optimitzar i adaptar-se a la vostra navegació i preferències, entre altres tasques. Si continueu navegant entendrem que accepteu la nostra Política de privadesa.',
+				cookieWhatAreTheyLink: '/avis-legal/',
+				cookieAcceptButtonText: 'Accepta',
+				cookieWhatAreLinkText: 'Més informació...',
+				cookieNotificationLocationBottom: true,
+			});
+		}
+	});	
+})(jQuery);
