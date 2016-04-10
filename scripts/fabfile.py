@@ -100,7 +100,7 @@ def update_environment():
         sudo('git pull', user='www-data')
         if env.confprivatedir != '':
             sudo('chown -h www-data:www-data ../ -R')
-            sudo('rm -rf ../htdocs/composer.json')
+            sudo('rm -f ../htdocs/composer.json')
             sudo('source ' + env.confprivatedir + '/licenses/licenses && cat composer.json | sed -e "s/%%license%%/$ACF_LICENSE/g" > ../htdocs/composer.json')
             sudo('chown -h www-data:www-data ../htdocs/composer.json')
 
@@ -114,7 +114,7 @@ def deploy():
     usage: fab [lxc|staging|production] deploy
     clones the repo in a separate folder, packs it in a tar.gz, makes a remote backup, and enables it
     """
-    
+
 
 
 def initialize_site(base_path='',base_url='',db_name='',db_user='',db_pass=''):
@@ -156,7 +156,7 @@ def initialize_site(base_path='',base_url='',db_name='',db_user='',db_pass=''):
             fd = StringIO()
             get(config_path, fd)
             content = fd.getvalue()
-            
+
             db_name_ar = re.findall(r'DB_NAME\', \'(\w+)', content)
             db_name = db_name_ar[0]
 
