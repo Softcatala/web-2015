@@ -4549,7 +4549,7 @@ if ( typeof define === 'function' && define.amd ) {
 	$(document).ready(function () {	
 		if (typeof $.cookieCuttr == 'function') { 
 			$.cookieCuttr({
-				cookieAnalyticsMessage: 'Aquest web utilitza galetes pròpies i de tercers per optimitzar i adaptar-se a la vostra navegació i preferències, entre altres tasques. Si continueu navegant entendrem que accepteu la nostra Política de privadesa.',
+				cookieAnalyticsMessage: 'Aquest web utilitza galetes pròpies i de tercers per optimitzar i adaptar-se a la vostra navegació i les vostres preferències, entre altres tasques. Si continueu navegant, entendrem que accepteu la nostra política de privacitat.',
 				cookieWhatAreTheyLink: '/avis-legal/',
 				cookieAcceptButtonText: 'Accepta',
 				cookieWhatAreLinkText: 'Més informació...',
