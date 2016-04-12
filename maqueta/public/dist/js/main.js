@@ -4546,15 +4546,15 @@ if ( typeof define === 'function' && define.amd ) {
 
 (function($) {
 	/** Cookie messages **/
-	$(document).ready(function () {	
-		if (typeof $.cookieCuttr == 'function') { 
+	$(document).ready(function () {
+		if (typeof $.cookieCuttr == 'function') {
 			$.cookieCuttr({
-				cookieAnalyticsMessage: 'Aquest web utilitza galetes pròpies i de tercers per optimitzar i adaptar-se a la vostra navegació i les vostres preferències, entre altres tasques. Si continueu navegant, entendrem que accepteu la nostra política de privacitat.',
+				cookieAnalyticsMessage: 'Aquest web utilitza galetes pròpies i de tercers per optimitzar i adaptar-se a la vostra navegació i les vostres preferències, entre altres tasques. Si continueu navegant, entendrem que accepteu la nostra política de privacitat.<br/>',
 				cookieWhatAreTheyLink: '/avis-legal/',
 				cookieAcceptButtonText: 'Accepta',
-				cookieWhatAreLinkText: 'Més informació...',
+				cookieWhatAreLinkText: '<br/>Més informació...',
 				cookieNotificationLocationBottom: true,
 			});
 		}
-	});	
+	});
 })(jQuery);
