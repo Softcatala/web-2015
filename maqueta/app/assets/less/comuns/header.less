@@ -239,6 +239,9 @@ HEADER
 		height: 90px;
 		font-size: 13px;
 		margin-right: 75px;
+		.menu-ajuda-index {
+			z-index: 1000;
+		}
 		.nav {
 			position: relative;
   			top: 50%;
@@ -276,10 +279,7 @@ HEADER
 				> a{
 					border: 1px #ffffff solid;
 					padding: 5px 15px;
-					&:hover{
-						color:@gray-dark;
-						background-color: #ffffff;
-					}
+					&:hover,
 					&:focus,
 					&:active{
 						background-color: #ffffff;
@@ -289,6 +289,12 @@ HEADER
 					i{
 						padding-right: 0px;
 					}
+
+				}
+				> a.active {
+					background-color: #ffffff;
+					border: 1px #888888 solid;
+					color:@gray-dark;
 				}
 			}
 		}

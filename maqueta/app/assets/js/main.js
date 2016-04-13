@@ -79,10 +79,12 @@
       /* Animacio rollover dropdown menu */
       $('ul.nav li.dropdown').hover(function() {
         $(this).find('.dropdown-hover').stop(true, true).delay(100).fadeIn(200);
-        $(this).find('.dropdown-toggle').addClass("seleccionat");
+        $(this).find('.dropdown-toggle').addClass("seleccionat active");
+        $(this).addClass("open");
       }, function() {
         $(this).find('.dropdown-hover').stop(true, true).delay(100).fadeOut(200);
-        $(this).find('.dropdown-toggle').removeClass("seleccionat");
+        $(this).find('.dropdown-toggle').removeClass("seleccionat active");
+        $(this).removeClass("open");
       });
 
     }
