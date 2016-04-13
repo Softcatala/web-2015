@@ -275,12 +275,24 @@ THUMBNAILS
 			}
 		}
 
-		@media (max-width:850px) {
+		@media (max-width:@screen-md) and (min-width:@screen-sm) {
 			img{
 				width:120px;
+				float: left;
+				display: inline-block;
 			}
-			.bt-aneu{
-				left:120px;
+			.caption{
+				min-height: 220px;
+				width: 66%;
+				float: right;
+			}
+		}
+
+		@media (max-width: @screen-xs) {
+			img{
+				width:120px;
+				float: left;
+				display: inline-block;
 			}
 		}
 
