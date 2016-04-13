@@ -4521,7 +4521,8 @@ if ( typeof define === 'function' && define.amd ) {
     //Top menu
     jQuery(function() {
         if(window.location.pathname != '/') {
-            var element = 'nav a[href^="' + window.location.pathname + '"]';
+            var element = decodeURIComponent('nav a[href^="' + window.location.pathname + '"]');
+            alert(element);
             if (element.indexOf('page') !=-1) {
                 element = element.substring(0, element.indexOf('page'));
             }
