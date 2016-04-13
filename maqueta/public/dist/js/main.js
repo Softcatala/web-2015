@@ -4539,6 +4539,7 @@ if ( typeof define === 'function' && define.amd ) {
             } else {
                 jQuery(element).addClass('active');
             }
+            jQuery("#navbar-usuari-mobile").removeClass('active');
         }
     });
 
