@@ -1,4 +1,4 @@
-/* -------------------------------- 
+/* --------------------------------
 
 Primary style
 
@@ -368,7 +368,7 @@ Main components
   background: #2e3233;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-  z-index: 1;
+  z-index: 1000;
   /* Force Hardware Acceleration in WebKit */
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
@@ -1037,9 +1037,9 @@ Main components
   }
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-support for no js 
+support for no js
 
 -------------------------------- */
 .no-js .cd-primary-nav {
