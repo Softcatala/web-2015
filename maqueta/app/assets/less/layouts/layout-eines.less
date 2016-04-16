@@ -337,35 +337,25 @@ LAYOUT - eines
 		}
 
 		.traductor-checkbox{
+                        background-color: @fons-menu;
 			margin-top:15px;
 			margin-bottom: 15px;
-			.checkbox{
-				background-color: #f8f8f8;
-				padding:8px 8px 14px 8px;
-				float: left;
-				min-width: 100%;
-				a{
-					color: @brand-primary;
-					text-decoration: underline;
-					font-size: 13px;
-					padding:6px 8px 6px 15px;
-					float: left;
-					cursor: pointer;
-				}
-				.checkbox-inline{
-					font-weight: 600;
-					font-size: 13px;
-					float: right;
-					margin-right: 40px;
-					@media (max-width: @screen-sm-max) {
-						float: left;
-						margin-left: 6px;
-					}
-				}
-				.text-disabled{
-					color: #AAA;
-				}
-			}
+                        margin-left: 0px;
+                        margin-right: 0px;
+                        font-weight: 600;
+                        font-size: 13px;
+                        a{
+                            cursor: pointer
+                        }
+                        
+                        .text-disabled{
+                            color: #AAA;
+                        }
+                        
+                        .checkbox-inline{
+                            font-weight: 600;
+                            font-size: 13px;
+                        }
 		}
 	}
 }
