@@ -74,6 +74,32 @@ div.contingut section.contingut-section ul{
     }
 }
 
+div.container-fluid {
+	.breadcrumbs ul {
+		margin-top: 10px;
+	    list-style: outside none none;
+	    li {
+			display: inline;
+	    	font-size: 14px;
+			a {
+				color: #797979;
+			}
+	    }
+		li:first-child:before {
+			content: "";
+			margin: 0 0 0 15px;
+		}
+	    li:before {
+	        font-family: 'FontAwesome';
+	        content: '\f105';
+	        color: #797979;
+	        font-size: 14px;
+			margin-left: 3px;
+			margin-right: 7px;
+	    }
+	}
+}
+
 
 /*  Llista check
 	20-plantilla-membre
