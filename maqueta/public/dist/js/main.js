@@ -4009,7 +4009,7 @@ var ResponsiveBootstrapToolkit=function($){var internal={detectionDivs:{bootstra
 	//mobile - open lateral menu clicking on the menu icon
 	$('.cd-nav-trigger').on('click', function(event){
 		event.preventDefault();
-		if( $('.cd-main-content').hasClass('nav-is-visible') ) {
+		if( $('.cd-overlay').hasClass('is-visible') ) {
 			closeNav();
 			$('.cd-overlay').removeClass('is-visible');
 		} else {
@@ -4097,7 +4097,8 @@ var ResponsiveBootstrapToolkit=function($){var internal={detectionDivs:{bootstra
 		}
 	}
 
-});;/**
+});
+;/**
  * uisearch.js v1.0.0
  * http://www.codrops.com
  *
