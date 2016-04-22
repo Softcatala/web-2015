@@ -4546,10 +4546,10 @@ if ( typeof define === 'function' && define.amd ) {
         } else {
             var OSName="Unknown OS";
             if (navigator.userAgent.indexOf("Win") != -1) OSName="windows";
+            else if (navigator.userAgent.indexOf("iPad") != -1 || navigator.userAgent.indexOf("iPhone") != -1 || navigator.userAgent.indexOf("iPod") != -1) OSName="ios";
             else if (navigator.userAgent.indexOf("Mac") != -1) OSName="osx";
             else if (navigator.userAgent.indexOf("Android") != -1) OSName="android";
             else if (navigator.userAgent.indexOf("Linux") != -1) OSName="linux";
-            else if (navigator.userAgent.indexOf("iPad") != -1 || navigator.userAgent.indexOf("iPhone") != -1 || navigator.userAgent.indexOf("iPod") != -1) OSName="ios";
 
             jQuery(".tab-"+OSName+" > a").trigger('click');
         }
