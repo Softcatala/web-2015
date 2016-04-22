@@ -132,6 +132,7 @@ LAYOUT - eines
 			background-color: #f8f8f8;
 			float: left;
 			padding:7px 25px 7px 15px;
+			font-size: 14px;
 			p{
 				float: left;
 				font-weight: bold;
@@ -337,32 +338,62 @@ LAYOUT - eines
 		}
 
 		.traductor-checkbox{
-                        background-color: @fons-menu;
+            background-color: @fons-menu;
 			margin-top:15px;
 			margin-bottom: 15px;
-                        margin-left: 0px;
-                        margin-right: 0px;
-                        font-weight: 600;
-                        font-size: 13px;
-                        a{
-                            cursor: pointer
-                        }
-                        
-                        .text-disabled{
-                            color: #AAA;
-                        }
-                        
-                        .checkbox-inline{
-                            font-weight: 600;
-                            font-size: 13px;
-                        }
-                        
-                        .icon-inline {
-                            padding-top: 7px;
-                            display: inline-block;
-                            padding-bottom: 7px;
-                            cursor: pointer;
-                        }
+            margin-left: 0px;
+            margin-right: 0px;
+            font-weight: 600;
+            font-size: 13px;
+            a{
+                cursor: pointer
+            }
+
+            .text-disabled{
+                color: #AAA;
+            }
+
+            .checkbox-inline{
+                font-weight: 600;
+                font-size: 13px;
+            }
+
+            .icon-inline {
+                padding-top: 7px;
+                display: inline-block;
+                padding-bottom: 7px;
+                cursor: pointer;
+            }
+
+			.checkbox {
+			    background-color: #f8f8f8;
+			    float: left;
+			    min-width: 100%;
+			    padding: 8px 8px 14px;
+				min-height: 27px;
+				a {
+				    color: #c43434;
+				    float: left;
+				    font-size: 13px;
+				    padding: 6px 8px 6px 0px;
+				    text-decoration: underline;
+					font-weight: normal;
+				}
+				.checkbox-inline {
+				    float: right;
+				    font-size: 13px;
+				    font-weight: 600;
+				    margin-right: 10px;
+				}
+				@media (max-width: @screen-sm) {
+					float: none;
+					text-align: center;
+					margin: 0 auto;
+					a, .checkbox-inline {
+						float: none;
+					}
+				}
+			}
 		}
 	}
 }
@@ -370,10 +401,10 @@ LAYOUT - eines
 p.fons-gris{
 	background-color: @gray-light;
 	display: block;
-	font-size: 14px;
-	line-height: 1.5;
+	font-size: 14px !important;
+	line-height: 1.5 !important;
 	padding:20px;
-	margin-top: 50px;
-	margin-bottom: 60px;
-	font-weight: normal;
+	margin-top: 25px !important;
+	margin-bottom: 10px;
+	font-weight: normal !important;
 }
