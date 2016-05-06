@@ -27,7 +27,7 @@
         "composer-plugin-api":"^1.0",
         "johnpbloch/wordpress": "4.5.*",
         "koodimonni-language/ca": "4.5.*",
-        "wpackagist-plugin/wordpress-seo":"^3.2.1",
+        "wpackagist-plugin/wordpress-seo":"3.2.*",
         "wpackagist-plugin/akismet":"3.1.10",
         "wpackagist-plugin/timber-library":"^1.0.1",
         "wpackagist-plugin/types":"^2.0.1",
