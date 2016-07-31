@@ -89,6 +89,9 @@ class SC_Cron
     {
         if ($program = $this->getArg('program')) {
             switch($program) {
+                case 'ubuntu':
+                    $this->update_ubuntu();
+                    break;
                 case 'mozilla':
                     $this->update_mozilla();
                     break;
@@ -102,6 +105,7 @@ class SC_Cron
                     $this->update_mozilla();
                     $this->update_libreoffice();
                     $this->update_osmad();
+                    $this->update_ubuntu();
                     break;
             }
         } else {
@@ -142,6 +146,46 @@ class SC_Cron
         $post = get_page_by_path( 'mapa-catala-per-a-losmand' , OBJECT, 'programa' );
         $field_key = $this->acf_get_field_key( "baixada", $post->ID );
         update_field($field_key, $version_info, $post->ID);
+    }
+
+    private function update_ubuntu() {
+        $ubuntu_flavours = array('ubuntu-mate', 'ubuntu-gnome', 'xubuntu', 'ubuntu', 'kubuntu');
+
+        $info_url = 'https://gent.softcatala.org/jmontane/check-version/ubuntu/latest_files.txt';
+        $downloads_info_csv = do_json_api_call( $info_url );
+        $downloads_info = explode( PHP_EOL, $downloads_info_csv );
+
+        $ubuntu_downloads = array();
+
+        foreach ($downloads_info as $key => $download_info) {
+            $download = explode('|', $download_info);
+
+            if (  in_array( $download[0], $ubuntu_flavours, true)) {
+
+                $offset = ( $download[0] === 'ubuntu' ) ? 1 : 0;
+
+                $ubuntu_version = $this->get_ubuntu_version($download[1], $download[2+$offset], $download[3+$offset*2], $download[4+$offset*2]);
+                $ubuntu_downloads[$download[0]][] = $ubuntu_version;
+            }
+        }
+
+        foreach ( $ubuntu_flavours as $post_slug ) {
+            $ubuntu_post = get_page_by_path( $post_slug , OBJECT, 'programa' );
+
+            update_field('baixada', $ubuntu_downloads[$post_slug], $ubuntu_post->ID);
+        }
+    }
+
+    private function get_ubuntu_version($arch, $version, $size, $url) {
+
+        $version_info = array();
+
+        $version_info['download_version'] = $version;
+        $version_info['download_url'] = $url;
+        $version_info['download_size'] = $this->from_bytes_to_kb( floatval($size) );
+        $version_info['arquitectura'] = (strpos($arch, 'amd64') !== false) ? 'x86_64' : 'x86';
+
+        return $version_info;
     }
 
     /**
