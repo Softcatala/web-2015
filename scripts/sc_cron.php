@@ -255,10 +255,14 @@ class SC_Cron
             $version_info['download_version'] = $download[1];
             $version_info['download_url'] = $download[2];
             $version_info['download_size'] = $this->from_bytes_to_kb( floatval($download[0]) );
-            $version_info['arquitectura'] = (strpos($download[2], 'x86-64') !== false) ? 'x86_64' : 'x86';
+            $version_info['arquitectura'] = $this->is_libo_64bits($download[2]) ? 'x86_64' : 'x86';
         }
 
         return $version_info;
+    }
+
+    private function is_libo_64bits($arch) {
+        return (strpos($arch, 'x86-64') !== false) || (strpos($arch, 'x64') !== false);
     }
 
     /**
