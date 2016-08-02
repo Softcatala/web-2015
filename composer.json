@@ -27,7 +27,7 @@
         "composer-plugin-api":"^1.0",
         "johnpbloch/wordpress": "4.5.*",
         "koodimonni-language/ca": "4.5.*",
-        "wpackagist-plugin/wordpress-seo":"3.3.*",
+        "wpackagist-plugin/wordpress-seo":"3.4.*",
         "wpackagist-plugin/akismet":"3.1.*",
         "wpackagist-plugin/timber-library":"^1.1.1",
         "wpackagist-plugin/types":"^2.0.1",
@@ -40,10 +40,10 @@
         "softcatala/wp-theme-mover":"^0.1.0",
         "softcatala/mce-table-buttons-class":"^0.0.1",
         "softcatala/sc-normalize-upload-dir":"^0.2",
-        "softcatala/wp-softcatala":"^0.7.9",
+        "softcatala/wp-softcatala":"^0.8.0",
         "softcatala/sc-importer":"^0.5.4",
         "softcatala/sc-shortcodes":"^1.2.0",
-        "advanced-custom-fields/advanced-custom-fields-pro":"^5.3",
+        "advanced-custom-fields/advanced-custom-fields-pro":"^5.3.10",
         "rtcamp/nginx-helper":"^1.9.6"
     },
     "require-dev": {
