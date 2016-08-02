@@ -29,7 +29,7 @@
         "koodimonni-language/ca": "4.5.*",
         "wpackagist-plugin/wordpress-seo":"3.3.*",
         "wpackagist-plugin/akismet":"3.1.*",
-        "wpackagist-plugin/timber-library":"^1.1.0",
+        "wpackagist-plugin/timber-library":"^1.1.1",
         "wpackagist-plugin/types":"^2.0.1",
         "wpackagist-plugin/woosidebars":"^1.4",
         "xavivars/types-timber-integration":"^1.0",
