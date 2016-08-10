@@ -302,42 +302,42 @@ class SC_Cron
             array(
                 'slug' => 'firefox',
                 'type' => 'json',
-                'json_url' => 'http://viewvc.svn.mozilla.org/vc/libs/product-details/json/firefox_versions.json?view=co&revision=150465&content-type=text%2Fplain',
+                'json_url' => 'http://viewvc.svn.mozilla.org/vc/libs/product-details/json/firefox_versions.json?view=co&content-type=text%2Fplain',
                 'os' => $this->get_moz_os( 'firefox' ),
                 'stable' => 'LATEST_FIREFOX_VERSION',
             ),
             array(
                 'slug' => 'paquet-catala-per-al-firefox',
                 'type' => 'json',
-                'json_url' => 'http://viewvc.svn.mozilla.org/vc/libs/product-details/json/firefox_versions.json?view=co&revision=150465&content-type=text%2Fplain',
+                'json_url' => 'http://viewvc.svn.mozilla.org/vc/libs/product-details/json/firefox_versions.json?view=co&content-type=text%2Fplain',
                 'os' => $this->get_moz_os( 'paquet-catala-per-al-firefox' ),
                 'stable' => 'LATEST_FIREFOX_VERSION',
             ),
             array(
                 'slug' => 'paquet-catala-valencia-per-al-firefox',
                 'type' => 'json',
-                'json_url' => 'http://viewvc.svn.mozilla.org/vc/libs/product-details/json/firefox_versions.json?view=co&revision=150465&content-type=text%2Fplain',
+                'json_url' => 'http://viewvc.svn.mozilla.org/vc/libs/product-details/json/firefox_versions.json?view=co&content-type=text%2Fplain',
                 'os' => $this->get_moz_os( 'paquet-catala-valencia-per-al-firefox' ),
                 'stable' => 'LATEST_FIREFOX_VERSION',
             ),
             array(
                 'slug' => 'diccionari-catala-firefox',
                 'type' => 'json',
-                'json_url' => 'http://viewvc.svn.mozilla.org/vc/libs/product-details/json/firefox_versions.json?view=co&revision=150465&content-type=text%2Fplain',
+                'json_url' => 'http://viewvc.svn.mozilla.org/vc/libs/product-details/json/firefox_versions.json?view=co&content-type=text%2Fplain',
                 'os' => $this->get_moz_os( 'diccionari-catala-firefox' ),
                 'stable' => 'LATEST_FIREFOX_VERSION',
             ),
             array(
                 'slug' => 'diccionari-valencia-firefox',
                 'type' => 'json',
-                'json_url' => 'http://viewvc.svn.mozilla.org/vc/libs/product-details/json/firefox_versions.json?view=co&revision=150465&content-type=text%2Fplain',
+                'json_url' => 'http://viewvc.svn.mozilla.org/vc/libs/product-details/json/firefox_versions.json?view=co&content-type=text%2Fplain',
                 'os' => $this->get_moz_os( 'diccionari-valencia-firefox' ),
                 'stable' => 'LATEST_FIREFOX_VERSION',
             ),
             array(
                 'slug' => 'thunderbird',
                 'type' => 'json',
-                'json_url' => 'http://viewvc.svn.mozilla.org/vc/libs/product-details/json/thunderbird_versions.json?view=co&revision=150514&content-type=text%2Fplain',
+                'json_url' => 'http://viewvc.svn.mozilla.org/vc/libs/product-details/json/thunderbird_versions.json?view=co&content-type=text%2Fplain',
                 'os' => $this->get_moz_os( 'thunderbird' ),
                 'stable' => 'LATEST_THUNDERBIRD_VERSION',
                 'arquitectura' => array ( 'x86' => '', 'x86_64' => '64')
@@ -345,7 +345,7 @@ class SC_Cron
             array(
                 'slug' => 'paquet-catala-per-al-thunderbird',
                 'type' => 'json',
-                'json_url' => 'http://viewvc.svn.mozilla.org/vc/libs/product-details/json/thunderbird_versions.json?view=co&revision=150514&content-type=text%2Fplain',
+                'json_url' => 'http://viewvc.svn.mozilla.org/vc/libs/product-details/json/thunderbird_versions.json?view=co&content-type=text%2Fplain',
                 'os' => $this->get_moz_os( 'paquet-catala-per-al-thunderbird' ),
                 'stable' => 'LATEST_THUNDERBIRD_VERSION',
                 'arquitectura' => array ( 'x86' => '', 'x86_64' => '64')
@@ -353,7 +353,7 @@ class SC_Cron
             array(
                 'slug' => 'paquet-catala-valencia-per-al-thunderbird',
                 'type' => 'json',
-                'json_url' => 'http://viewvc.svn.mozilla.org/vc/libs/product-details/json/thunderbird_versions.json?view=co&revision=150514&content-type=text%2Fplain',
+                'json_url' => 'http://viewvc.svn.mozilla.org/vc/libs/product-details/json/thunderbird_versions.json?view=co&content-type=text%2Fplain',
                 'os' => $this->get_moz_os( 'paquet-catala-valencia-per-al-thunderbird' ),
                 'stable' => 'LATEST_THUNDERBIRD_VERSION',
                 'arquitectura' => array ( 'x86' => '', 'x86_64' => '64')
