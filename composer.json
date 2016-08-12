@@ -14,7 +14,7 @@
             "type": "package",
             "package": {
                 "name": "advanced-custom-fields/advanced-custom-fields-pro",
-                "version": "5.3.11",
+                "version": "5.4.1",
                 "type": "wordpress-plugin",
                 "dist": {
                     "type": "zip",
@@ -43,7 +43,7 @@
         "softcatala/wp-softcatala":"^0.8.2",
         "softcatala/sc-importer":"^0.5.4",
         "softcatala/sc-shortcodes":"^1.2.0",
-        "advanced-custom-fields/advanced-custom-fields-pro":"^5.3",
+        "advanced-custom-fields/advanced-custom-fields-pro":"^5.4",
         "rtcamp/nginx-helper":"^1.9.6"
     },
     "require-dev": {
