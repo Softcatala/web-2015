@@ -49,6 +49,9 @@ class WordPress_Shell_SC_Functions
                 case 'convert_projects_to_acf':
                     $this->convert_projects_to_acf();
                     break;
+                case 'convert_aparells_to_acf':
+                    $this->convert_aparells_to_acf();
+                    break;
                 case 'get_redirections':
                     $this->get_redirections();
                     break;
@@ -113,6 +116,32 @@ class WordPress_Shell_SC_Functions
                 $terms = array_map( 'intval', $terms );
                 wp_set_object_terms( $post_id, $terms, 'classificacio', true );
             }
+        }
+    }
+
+    /**
+     * Converts wp-fields into acf fields in projects
+     */
+    protected function convert_aparells_to_acf() {
+        global $wpdb;
+
+        $posts_query = "SELECT * FROM $wpdb->posts
+                WHERE $wpdb->posts.post_type = 'aparell'
+                ";
+
+        $result = $wpdb->get_results($posts_query);
+        foreach ($result as $post) {
+            $post_id = $post->ID;
+
+            //Append new project values
+            $values = array(
+                "versio" => get_post_meta( $post_id, 'wpcf-versio', true ),
+                "conf_catala" => get_post_meta( $post_id, 'wpcf-conf_catala', true ),
+                "correccio_cat" => get_post_meta( $post_id, 'wpcf-correccio_cat', true )            );
+            $this->save_values_acf( $values, $post_id );
+
+            $fabricant = get_post_meta( $post_id, 'wpcf-fabricant', true );
+            wp_set_object_terms( $post_id, $fabricant, 'fabricant', true );
         }
     }
 
