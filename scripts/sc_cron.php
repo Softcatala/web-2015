@@ -134,18 +134,30 @@ class SC_Cron
         }
 
         //Download size
-        $regexp = "/>(.* MB)</siU";
+        $regexp = "/>([^<]* MB)</";
         if( preg_match_all($regexp, $downloads_info_text, $matches1 )) {
             $sizes = array_unique ($matches1[1] );
 
             foreach ($sizes as $key => $size) {
-                $version_info[$key]['download_size'] = substr($size, -8);
+                $version_info[$key]['download_size'] = $size;
             }
         }
+
+        uasort($version_info, array($this, 'osmand_sort'));
 
         $post = get_page_by_path( 'mapa-catala-per-a-losmand' , OBJECT, 'programa' );
         $field_key = $this->acf_get_field_key( "baixada", $post->ID );
         update_field($field_key, $version_info, $post->ID);
+    }
+
+    private function osmand_sort($a, $b) {
+        $sizeA = $a['download_version'];
+        $sizeB = $b['download_version'];
+
+        if ($sizeA == $sizeB) {
+            return 0;
+        }
+        return ($sizeA > $sizeB) ? -1 : 1;
     }
 
     private function update_ubuntu() {
