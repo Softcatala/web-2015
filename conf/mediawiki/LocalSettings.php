@@ -121,3 +121,5 @@ wfLoadSkin( "Softcatala" );
 
 # End of automatically generated settings.
 # Add more configuration options below.
+
+wfLoadExtension( 'SyntaxHighlight_GeSHi' );
