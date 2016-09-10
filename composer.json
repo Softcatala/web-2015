@@ -32,6 +32,7 @@
         "wpackagist-plugin/timber-library":"~1.1.5",
         "wpackagist-plugin/types":"^2.2.1",
         "wpackagist-plugin/woosidebars":"^1.4",
+        "wpackagist-plugin/simple-lightbox": "^2.5.0",
         "xavivars/types-timber-integration":"^1.0",
         "xavivars/xv-planeta":"^1.0",
         "wpackagist-plugin/wp-nested-pages": "^1.5",
