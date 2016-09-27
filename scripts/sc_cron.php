@@ -210,7 +210,7 @@ class SC_Cron
             'ajuda'         => 'paquet-dajuda-en-catala-del-libreoffice',
             'ajuda_val'     => 'paquet-dajuda-en-catala-valencia-del-libreoffice',
             'langpack'      => 'paquet-catala-per-al-libreoffice',
-            'langpack_val'  => 'paquet-dajuda-en-catala-valencia-del-libreoffice'
+            'langpack_val'  => 'paquet-catala-valencia-per-al-libreoffice'
         );
 
         $info_url = 'https://gent.softcatala.org/jmontane/libo/latest_files.txt';
