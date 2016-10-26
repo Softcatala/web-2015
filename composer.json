@@ -14,11 +14,11 @@
             "type": "package",
             "package": {
                 "name": "advanced-custom-fields/advanced-custom-fields-pro",
-                "version": "5.4.7",
+                "version": "5.4.8",
                 "type": "wordpress-plugin",
                 "dist": {
                     "type": "zip",
-                    "url": "http://connect.advancedcustomfields.com/index.php?t=5.4.7&p=pro&a=download&k=%%license%%"
+                    "url": "http://connect.advancedcustomfields.com/index.php?t=5.4.8&p=pro&a=download&k=%%license%%"
                 }
             }
         }
@@ -29,19 +29,19 @@
         "koodimonni-language/ca": "4.6.*",
         "wpackagist-plugin/wordpress-seo":"^3.7",
         "wpackagist-plugin/akismet":"^3.2",
-        "wpackagist-plugin/timber-library":"~1.1.7",
+        "wpackagist-plugin/timber-library":"~1.1.8",
         "wpackagist-plugin/types":"^2.2.2",
         "wpackagist-plugin/woosidebars":"^1.4",
         "wpackagist-plugin/simple-lightbox": "^2.5.0",
         "xavivars/types-timber-integration":"^1.0",
         "xavivars/xv-planeta":"^1.0",
-        "wpackagist-plugin/wp-nested-pages": "^1.5",
+        "wpackagist-plugin/wp-nested-pages": "^1.6",
         "wpackagist-plugin/mce-table-buttons":"^3.2.0",
         "softcatala/sc-footnotes":"^0.0.2",
         "softcatala/wp-theme-mover":"^0.1.0",
         "softcatala/mce-table-buttons-class":"^0.0.1",
         "softcatala/sc-normalize-upload-dir":"^0.2",
-        "softcatala/wp-softcatala":"0.9.0",
+        "softcatala/wp-softcatala":"0.9.1",
         "softcatala/sc-importer":"^0.5.4",
         "softcatala/sc-shortcodes":"^1.2.0",
         "advanced-custom-fields/advanced-custom-fields-pro":"^5.4",
