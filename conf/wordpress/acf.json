@@ -551,7 +551,7 @@
                 "key": "field_5832a9ccffa26",
                 "label": "Projecte destacat",
                 "name": "projecte_destacat",
-                "type": "checkbox",
+                "type": "true_false",
                 "instructions": "Des de Softcatal\u00e0, sempre hem considerat alguns projectes (LibreOffice, Mozilla) com a destacats: s\u00f3n aquells \"importants\" a nivell estrat\u00e8gic. Si aquest projecte ho \u00e9s, marqueu aquesta casella de sel\u00b7lecci\u00f3.",
                 "required": 0,
                 "conditional_logic": 0,
@@ -560,11 +560,8 @@
                     "class": "",
                     "id": ""
                 },
-                "choices": [],
-                "default_value": [],
-                "layout": "vertical",
-                "toggle": 0,
-                "return_format": "value"
+                "message": "Projecte destacat",
+                "default_value": 0
             }
         ],
         "location": [
@@ -585,4 +582,4 @@
         "active": 1,
         "description": ""
     }
-]
+]   
