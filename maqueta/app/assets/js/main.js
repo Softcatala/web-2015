@@ -91,14 +91,21 @@
 
    } // end var breakpointDetect
 
-
-
    // Executes once whole document has been loaded
    $(document).ready(function() {
 
       /* Detectar Breakpoint queries */
       breakpointDetect();
       // console.log('Current breakpoint:', viewport.current());
+
+
+      /**
+       * Afegeix classe 'touch' al body per a elements touch
+       */
+      document.addEventListener('touchstart', function addtouchclass(e){ // first time user touches the screen
+          $('body').addClass('touch');
+          document.removeEventListener('touchstart', addtouchclass, false) // de-register touchstart event
+      }, false)
 
       /**
       /* Passar els select a dropdown menu
