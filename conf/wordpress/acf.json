@@ -601,6 +601,30 @@
         "title": "Usuaris",
         "fields": [
             {
+                "return_format": "array",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "key": "field_588a802620a3b",
+                "label": "Avatar",
+                "name": "avatar",
+                "type": "image",
+                "instructions": "Imatge per a substituir a la predeterminada (Gravatar)",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
                 "default_value": 1,
                 "message": "",
                 "ui": 1,
@@ -610,6 +634,109 @@
                 "label": "Estat de l'usuari",
                 "name": "status_member",
                 "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "default_value": "",
+                "new_lines": "",
+                "maxlength": "",
+                "placeholder": "",
+                "rows": "",
+                "key": "field_588a78bffabb4",
+                "label": "Ubicaci\u00f3",
+                "name": "ubicacio",
+                "type": "textarea",
+                "instructions": "Introdu\u00efu ac\u00ed el codi embed del mapa",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "default_value": "",
+                "delay": 0,
+                "key": "field_588a7919fabb5",
+                "label": "Descripci\u00f3 de l'activitat",
+                "name": "descripcio_activitat",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "sub_fields": [
+                    {
+                        "default_value": "",
+                        "placeholder": "",
+                        "key": "field_588a7991fabb7",
+                        "label": "Lloc web",
+                        "name": "lloc_web",
+                        "type": "url",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        }
+                    }
+                ],
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "",
+                "collapsed": "",
+                "key": "field_588a795ffabb6",
+                "label": "Llocs web",
+                "name": "llocs_web",
+                "type": "repeater",
+                "instructions": "Llocs web de l'usuari",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "post_type": [
+                    "projecte"
+                ],
+                "taxonomy": [],
+                "min": "",
+                "max": "",
+                "filters": [
+                    "search",
+                    "taxonomy"
+                ],
+                "elements": [
+                    "featured_image"
+                ],
+                "return_format": "id",
+                "key": "field_588a80abfc3fa",
+                "label": "Projectes associats",
+                "name": "projectes",
+                "type": "relationship",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
