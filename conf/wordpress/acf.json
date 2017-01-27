@@ -4,6 +4,11 @@
         "title": "Aparells",
         "fields": [
             {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
                 "key": "field_57c3b91b0caf4",
                 "label": "Versi\u00f3",
                 "name": "versio",
@@ -16,15 +21,23 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": "",
                 "readonly": 0,
                 "disabled": 0
             },
             {
+                "multiple": 0,
+                "allow_null": 0,
+                "choices": {
+                    "1": "S\u00ed",
+                    "0": "No"
+                },
+                "default_value": [
+                    0
+                ],
+                "ui": 0,
+                "ajax": 0,
+                "placeholder": "",
+                "return_format": "value",
                 "key": "field_57c3b9360caf5",
                 "label": "Configuraci\u00f3 en catal\u00e0",
                 "name": "conf_cat",
@@ -37,22 +50,25 @@
                     "class": "",
                     "id": ""
                 },
-                "choices": {
-                    "1": "S\u00ed",
-                    "0": "No"
-                },
-                "default_value": [
-                    0
-                ],
-                "allow_null": 0,
-                "multiple": 0,
-                "ui": 0,
-                "ajax": 0,
-                "placeholder": "",
                 "disabled": 0,
                 "readonly": 0
             },
             {
+                "multiple": 0,
+                "allow_null": 0,
+                "choices": {
+                    "1": "S\u00ed",
+                    "0": "No",
+                    "2": "N\/A",
+                    "3": "Desconegut"
+                },
+                "default_value": [
+                    3
+                ],
+                "ui": 0,
+                "ajax": 0,
+                "placeholder": "",
+                "return_format": "value",
                 "key": "field_57c3b9970caf6",
                 "label": "Correcci\u00f3 ortogr\u00e0fica en catal\u00e0",
                 "name": "correccio_cat",
@@ -65,20 +81,6 @@
                     "class": "",
                     "id": ""
                 },
-                "choices": {
-                    "1": "S\u00ed",
-                    "0": "No",
-                    "2": "N\/A",
-                    "3": "Desconegut"
-                },
-                "default_value": [
-                    3
-                ],
-                "allow_null": 0,
-                "multiple": 0,
-                "ui": 0,
-                "ajax": 0,
-                "placeholder": "",
                 "disabled": 0,
                 "readonly": 0
             }
@@ -111,32 +113,18 @@
             "send-trackbacks"
         ],
         "active": 1,
-        "description": ""
+        "description": "",
+        "local": "php"
     },
     {
         "key": "group_56faaeda641d3",
         "title": "Baixades",
         "fields": [
             {
-                "key": "field_56faaef47f3fe",
-                "label": "Baixada",
-                "name": "baixada",
-                "type": "repeater",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "collapsed": "",
-                "min": "",
-                "max": "",
-                "layout": "table",
-                "button_label": "Afegeix una baixada",
                 "sub_fields": [
                     {
+                        "default_value": "",
+                        "placeholder": "",
                         "key": "field_56fab11eb8f26",
                         "label": "URL de la baixada",
                         "name": "download_url",
@@ -148,11 +136,14 @@
                             "width": 40,
                             "class": "",
                             "id": ""
-                        },
-                        "default_value": "",
-                        "placeholder": ""
+                        }
                     },
                     {
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
                         "key": "field_56fab134b8f27",
                         "label": "Versi\u00f3 de la baixada",
                         "name": "download_version",
@@ -165,15 +156,15 @@
                             "class": "",
                             "id": ""
                         },
-                        "default_value": "",
-                        "placeholder": "",
-                        "prepend": "",
-                        "append": "",
-                        "maxlength": "",
                         "readonly": 0,
                         "disabled": 0
                     },
                     {
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
                         "key": "field_56fba64b835ab",
                         "label": "Mida de la baixada",
                         "name": "download_size",
@@ -186,15 +177,24 @@
                             "class": "",
                             "id": ""
                         },
-                        "default_value": "",
-                        "placeholder": "",
-                        "prepend": "",
-                        "append": "",
-                        "maxlength": "",
                         "readonly": 0,
                         "disabled": 0
                     },
                     {
+                        "multiple": 0,
+                        "allow_null": 0,
+                        "choices": {
+                            "generic": "N\/A",
+                            "x86": "32 bits",
+                            "x86_64": "64 bits"
+                        },
+                        "default_value": [
+                            "x86"
+                        ],
+                        "ui": 0,
+                        "ajax": 0,
+                        "placeholder": "",
+                        "return_format": "value",
                         "key": "field_56fab14eb8f28",
                         "label": "Arquitectura",
                         "name": "arquitectura",
@@ -207,23 +207,27 @@
                             "class": "",
                             "id": ""
                         },
-                        "choices": {
-                            "generic": "N\/A",
-                            "x86": "32 bits",
-                            "x86_64": "64 bits"
-                        },
-                        "default_value": [
-                            "x86"
-                        ],
-                        "allow_null": 0,
-                        "multiple": 0,
-                        "ui": 0,
-                        "ajax": 0,
-                        "placeholder": "",
                         "disabled": 0,
                         "readonly": 0
                     },
                     {
+                        "multiple": 0,
+                        "allow_null": 0,
+                        "choices": {
+                            "windows": "Windows",
+                            "osx": "OSX",
+                            "linux": "Linux",
+                            "ios": "iOS",
+                            "android": "Android",
+                            "windows_phone": "Windows Phone",
+                            "multiplataforma": "Multiplataforma",
+                            "web": "Web"
+                        },
+                        "default_value": [],
+                        "ui": 0,
+                        "ajax": 0,
+                        "placeholder": "",
+                        "return_format": "value",
                         "key": "field_56fab180b8f29",
                         "label": "Sistema operatiu",
                         "name": "download_os",
@@ -236,26 +240,27 @@
                             "class": "",
                             "id": ""
                         },
-                        "choices": {
-                            "windows": "Windows",
-                            "osx": "OSX",
-                            "linux": "Linux",
-                            "ios": "iOS",
-                            "android": "Android",
-                            "windows_phone": "Windows Phone",
-                            "multiplataforma": "Multiplataforma",
-                            "web": "Web"
-                        },
-                        "default_value": [],
-                        "allow_null": 0,
-                        "multiple": 0,
-                        "ui": 0,
-                        "ajax": 0,
-                        "placeholder": "",
                         "disabled": 0,
                         "readonly": 0
                     }
-                ]
+                ],
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "Afegeix una baixada",
+                "collapsed": "",
+                "key": "field_56faaef47f3fe",
+                "label": "Baixada",
+                "name": "baixada",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
             }
         ],
         "location": [
@@ -274,13 +279,28 @@
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": 1,
-        "description": ""
+        "description": "",
+        "local": "php"
     },
     {
         "key": "group_570499c58228a",
         "title": "Col\u00b7laboraci\u00f3 en projectes",
         "fields": [
             {
+                "multiple": 0,
+                "allow_null": 0,
+                "choices": {
+                    "coordinacio-desdeveniments": "Coordinaci\u00f3 d'esdeveniments",
+                    "desenvolupament": "Desenvolupament",
+                    "disseny": "Disseny",
+                    "gestio-de-continguts": "Gesti\u00f3 de continguts",
+                    "traduccio-i-correccio": "Traducci\u00f3 i correcci\u00f3"
+                },
+                "default_value": [],
+                "ui": 0,
+                "ajax": 0,
+                "placeholder": "",
+                "return_format": "value",
                 "key": "field_570499e3ce33a",
                 "label": "perfil",
                 "name": "perfil",
@@ -293,19 +313,6 @@
                     "class": "",
                     "id": ""
                 },
-                "choices": {
-                    "coordinacio-desdeveniments": "Coordinaci\u00f3 d'esdeveniments",
-                    "desenvolupament": "Desenvolupament",
-                    "disseny": "Disseny",
-                    "gestio-de-continguts": "Gesti\u00f3 de continguts",
-                    "traduccio-i-correccio": "Traducci\u00f3 i correcci\u00f3"
-                },
-                "default_value": [],
-                "allow_null": 0,
-                "multiple": 0,
-                "ui": 0,
-                "ajax": 0,
-                "placeholder": "",
                 "disabled": 0,
                 "readonly": 0
             }
@@ -331,32 +338,21 @@
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": 1,
-        "description": ""
+        "description": "",
+        "local": "php"
     },
     {
         "key": "group_5704dffab0598",
         "title": "Passos",
         "fields": [
             {
-                "key": "field_5704e003ae9ed",
-                "label": "Passos",
-                "name": "steps",
-                "type": "repeater",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "collapsed": "",
-                "min": "",
-                "max": "",
-                "layout": "table",
-                "button_label": "Add Row",
                 "sub_fields": [
                     {
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
                         "key": "field_5704e01fae9ee",
                         "label": "T\u00edtol",
                         "name": "step_title",
@@ -369,15 +365,15 @@
                             "class": "",
                             "id": ""
                         },
-                        "default_value": "",
-                        "placeholder": "",
-                        "prepend": "",
-                        "append": "",
-                        "maxlength": "",
                         "readonly": 0,
                         "disabled": 0
                     },
                     {
+                        "tabs": "all",
+                        "toolbar": "full",
+                        "media_upload": 1,
+                        "default_value": "",
+                        "delay": 0,
                         "key": "field_5704e05cae9ef",
                         "label": "Contingut",
                         "name": "step_content",
@@ -389,13 +385,26 @@
                             "width": 80,
                             "class": "",
                             "id": ""
-                        },
-                        "default_value": "",
-                        "tabs": "all",
-                        "toolbar": "full",
-                        "media_upload": 1
+                        }
                     }
-                ]
+                ],
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "Add Row",
+                "collapsed": "",
+                "key": "field_5704e003ae9ed",
+                "label": "Passos",
+                "name": "steps",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
             }
         ],
         "location": [
@@ -426,13 +435,19 @@
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": 1,
-        "description": ""
+        "description": "",
+        "local": "php"
     },
     {
         "key": "group_5704d9998207b",
         "title": "Projectes",
         "fields": [
             {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
                 "key": "field_5704dba021c72",
                 "label": "Subt\u00edtol",
                 "name": "subtitle_projecte",
@@ -445,15 +460,13 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": "",
                 "readonly": 0,
                 "disabled": 0
             },
             {
+                "role": "",
+                "multiple": 1,
+                "allow_null": 1,
                 "key": "field_5704dbb821c73",
                 "label": "Responsable",
                 "name": "responsable",
@@ -465,12 +478,19 @@
                     "width": 50,
                     "class": "",
                     "id": ""
-                },
-                "role": "",
-                "allow_null": 1,
-                "multiple": 1
+                }
             },
             {
+                "return_format": "id",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": 145,
+                "min_height": 145,
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
                 "key": "field_5704da4f21c70",
                 "label": "Logotip",
                 "name": "logotip",
@@ -482,19 +502,11 @@
                     "width": 50,
                     "class": "",
                     "id": ""
-                },
-                "return_format": "id",
-                "preview_size": "thumbnail",
-                "library": "all",
-                "min_width": 145,
-                "min_height": 145,
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": ""
+                }
             },
             {
+                "default_value": "",
+                "placeholder": "",
                 "key": "field_5704dc0a21c74",
                 "label": "Lloc web",
                 "name": "lloc_web_projecte",
@@ -506,11 +518,11 @@
                     "width": 33,
                     "class": "",
                     "id": ""
-                },
-                "default_value": "",
-                "placeholder": ""
+                }
             },
             {
+                "default_value": "",
+                "placeholder": "",
                 "key": "field_5704db1a21c71",
                 "label": "Llista de correu",
                 "name": "llista_de_correu",
@@ -522,11 +534,14 @@
                     "width": 33,
                     "class": "",
                     "id": ""
-                },
-                "default_value": "",
-                "placeholder": ""
+                }
             },
             {
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
                 "key": "field_5704dc2021c75",
                 "label": "URL Rebost",
                 "name": "url_rebost_pr",
@@ -539,15 +554,15 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": "",
                 "readonly": 0,
                 "disabled": 0
             },
             {
+                "default_value": 0,
+                "message": "Projecte destacat",
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": "",
                 "key": "field_5832a9ccffa26",
                 "label": "Projecte destacat",
                 "name": "projecte_destacat",
@@ -559,9 +574,7 @@
                     "width": "",
                     "class": "",
                     "id": ""
-                },
-                "message": "Projecte destacat",
-                "default_value": 0
+                }
             }
         ],
         "location": [
@@ -580,6 +593,49 @@
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": 1,
+        "description": "",
+        "local": "php"
+    },
+    {
+        "key": "group_588a70c16eb71",
+        "title": "Usuaris",
+        "fields": [
+            {
+                "default_value": 1,
+                "message": "",
+                "ui": 1,
+                "ui_on_text": "Membre en actiu",
+                "ui_off_text": "Col\u00b7laborador\/Membre no actiu",
+                "key": "field_588a713d1c658",
+                "label": "Estat de l'usuari",
+                "name": "status_member",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "user_form",
+                    "operator": "==",
+                    "value": "edit"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
         "description": ""
     }
-]   
+]
