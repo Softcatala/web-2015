@@ -682,43 +682,6 @@
                 }
             },
             {
-                "sub_fields": [
-                    {
-                        "default_value": "",
-                        "placeholder": "",
-                        "key": "field_588a7991fabb7",
-                        "label": "Lloc web",
-                        "name": "lloc_web",
-                        "type": "url",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        }
-                    }
-                ],
-                "min": 0,
-                "max": 0,
-                "layout": "table",
-                "button_label": "",
-                "collapsed": "",
-                "key": "field_588a795ffabb6",
-                "label": "Llocs web",
-                "name": "llocs_web",
-                "type": "repeater",
-                "instructions": "Llocs web de l'usuari",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                }
-            },
-            {
                 "post_type": [
                     "projecte"
                 ],
