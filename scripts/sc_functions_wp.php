@@ -136,7 +136,7 @@ class WordPress_Shell_SC_Functions
             //Append new project values
             $values = array(
                 "versio" => get_post_meta( $post_id, 'wpcf-versio', true ),
-                "conf_catala" => get_post_meta( $post_id, 'wpcf-conf_catala', true ),
+                "conf_cat" => get_post_meta( $post_id, 'wpcf-conf_cat', true ),
                 "correccio_cat" => get_post_meta( $post_id, 'wpcf-correccio_cat', true )            );
             $this->save_values_acf( $values, $post_id );
 
