@@ -4,16 +4,11 @@
         "title": "Aparells",
         "fields": [
             {
-                "default_value": "",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
                 "key": "field_57c3b91b0caf4",
-                "label": "Versi\u00f3",
+                "label": "Versió",
                 "name": "versio",
                 "type": "text",
-                "instructions": "Versi\u00f3 del sistema operatiu",
+                "instructions": "Versió del sistema operatiu",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -21,25 +16,17 @@
                     "class": "",
                     "id": ""
                 },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
                 "readonly": 0,
                 "disabled": 0
             },
             {
-                "multiple": 0,
-                "allow_null": 0,
-                "choices": {
-                    "1": "S\u00ed",
-                    "0": "No"
-                },
-                "default_value": [
-                    0
-                ],
-                "ui": 0,
-                "ajax": 0,
-                "placeholder": "",
-                "return_format": "value",
                 "key": "field_57c3b9360caf5",
-                "label": "Configuraci\u00f3 en catal\u00e0",
+                "label": "Configuració en català",
                 "name": "conf_cat",
                 "type": "select",
                 "instructions": "",
@@ -50,14 +37,39 @@
                     "class": "",
                     "id": ""
                 },
+                "multiple": 0,
+                "allow_null": 0,
+                "choices": {
+                    "1": "Sí",
+                    "0": "No"
+                },
+                "default_value": [
+                    0
+                ],
+                "ui": 0,
+                "ajax": 0,
+                "placeholder": "",
+                "return_format": "value",
                 "disabled": 0,
                 "readonly": 0
             },
             {
+                "key": "field_57c3b9970caf6",
+                "label": "Correcció ortogràfica en català",
+                "name": "correccio_cat",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
                 "multiple": 0,
                 "allow_null": 0,
                 "choices": {
-                    "1": "S\u00ed",
+                    "1": "Sí",
                     "0": "No",
                     "2": "N\/A",
                     "3": "Desconegut"
@@ -69,18 +81,6 @@
                 "ajax": 0,
                 "placeholder": "",
                 "return_format": "value",
-                "key": "field_57c3b9970caf6",
-                "label": "Correcci\u00f3 ortogr\u00e0fica en catal\u00e0",
-                "name": "correccio_cat",
-                "type": "select",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
                 "disabled": 0,
                 "readonly": 0
             }
@@ -113,18 +113,32 @@
             "send-trackbacks"
         ],
         "active": 1,
-        "description": "",
-        "local": "php"
+        "description": ""
     },
     {
         "key": "group_56faaeda641d3",
         "title": "Baixades",
         "fields": [
             {
+                "key": "field_56faaef47f3fe",
+                "label": "Baixada",
+                "name": "baixada",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "Afegeix una baixada",
+                "collapsed": "",
                 "sub_fields": [
                     {
-                        "default_value": "",
-                        "placeholder": "",
                         "key": "field_56fab11eb8f26",
                         "label": "URL de la baixada",
                         "name": "download_url",
@@ -136,16 +150,13 @@
                             "width": 40,
                             "class": "",
                             "id": ""
-                        }
+                        },
+                        "default_value": "",
+                        "placeholder": ""
                     },
                     {
-                        "default_value": "",
-                        "maxlength": "",
-                        "placeholder": "",
-                        "prepend": "",
-                        "append": "",
                         "key": "field_56fab134b8f27",
-                        "label": "Versi\u00f3 de la baixada",
+                        "label": "Versió de la baixada",
                         "name": "download_version",
                         "type": "text",
                         "instructions": "",
@@ -156,15 +167,15 @@
                             "class": "",
                             "id": ""
                         },
-                        "readonly": 0,
-                        "disabled": 0
-                    },
-                    {
                         "default_value": "",
                         "maxlength": "",
                         "placeholder": "",
                         "prepend": "",
                         "append": "",
+                        "readonly": 0,
+                        "disabled": 0
+                    },
+                    {
                         "key": "field_56fba64b835ab",
                         "label": "Mida de la baixada",
                         "name": "download_size",
@@ -177,10 +188,27 @@
                             "class": "",
                             "id": ""
                         },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
                         "readonly": 0,
                         "disabled": 0
                     },
                     {
+                        "key": "field_56fab14eb8f28",
+                        "label": "Arquitectura",
+                        "name": "arquitectura",
+                        "type": "select",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": 20,
+                            "class": "",
+                            "id": ""
+                        },
                         "multiple": 0,
                         "allow_null": 0,
                         "choices": {
@@ -195,9 +223,13 @@
                         "ajax": 0,
                         "placeholder": "",
                         "return_format": "value",
-                        "key": "field_56fab14eb8f28",
-                        "label": "Arquitectura",
-                        "name": "arquitectura",
+                        "disabled": 0,
+                        "readonly": 0
+                    },
+                    {
+                        "key": "field_56fab180b8f29",
+                        "label": "Sistema operatiu",
+                        "name": "download_os",
                         "type": "select",
                         "instructions": "",
                         "required": 0,
@@ -207,10 +239,6 @@
                             "class": "",
                             "id": ""
                         },
-                        "disabled": 0,
-                        "readonly": 0
-                    },
-                    {
                         "multiple": 0,
                         "allow_null": 0,
                         "choices": {
@@ -228,39 +256,10 @@
                         "ajax": 0,
                         "placeholder": "",
                         "return_format": "value",
-                        "key": "field_56fab180b8f29",
-                        "label": "Sistema operatiu",
-                        "name": "download_os",
-                        "type": "select",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": 20,
-                            "class": "",
-                            "id": ""
-                        },
                         "disabled": 0,
                         "readonly": 0
                     }
-                ],
-                "min": 0,
-                "max": 0,
-                "layout": "table",
-                "button_label": "Afegeix una baixada",
-                "collapsed": "",
-                "key": "field_56faaef47f3fe",
-                "label": "Baixada",
-                "name": "baixada",
-                "type": "repeater",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                }
+                ]
             }
         ],
         "location": [
@@ -279,33 +278,18 @@
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": 1,
-        "description": "",
-        "local": "php"
+        "description": ""
     },
     {
         "key": "group_570499c58228a",
-        "title": "Col\u00b7laboraci\u00f3 en projectes",
+        "title": "Col·laboració en projectes",
         "fields": [
             {
-                "multiple": 0,
-                "allow_null": 0,
-                "choices": {
-                    "coordinacio-desdeveniments": "Coordinaci\u00f3 d'esdeveniments",
-                    "desenvolupament": "Desenvolupament",
-                    "disseny": "Disseny",
-                    "gestio-de-continguts": "Gesti\u00f3 de continguts",
-                    "traduccio-i-correccio": "Traducci\u00f3 i correcci\u00f3"
-                },
-                "default_value": [],
-                "ui": 0,
-                "ajax": 0,
-                "placeholder": "",
-                "return_format": "value",
                 "key": "field_570499e3ce33a",
                 "label": "perfil",
                 "name": "perfil",
                 "type": "select",
-                "instructions": "Quin perfil representa aquesta p\u00e0gina de col\u00b7laboraci\u00f3?",
+                "instructions": "Quin perfil representa aquesta pàgina de col·laboració?",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -313,6 +297,20 @@
                     "class": "",
                     "id": ""
                 },
+                "multiple": 0,
+                "allow_null": 0,
+                "choices": {
+                    "coordinacio-desdeveniments": "Coordinació d'esdeveniments",
+                    "desenvolupament": "Desenvolupament",
+                    "disseny": "Disseny",
+                    "gestio-de-continguts": "Gestió de continguts",
+                    "traduccio-i-correccio": "Traducció i correcció"
+                },
+                "default_value": [],
+                "ui": 0,
+                "ajax": 0,
+                "placeholder": "",
+                "return_format": "value",
                 "disabled": 0,
                 "readonly": 0
             }
@@ -338,61 +336,62 @@
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": 1,
-        "description": "",
-        "local": "php"
+        "description": ""
+    },
+    {
+        "key": "group_58c58656d04de",
+        "title": "Distribuidora amb capçalera",
+        "fields": [
+            {
+                "key": "field_58c58667ab1b3",
+                "label": "Icona a mostrar",
+                "name": "icona_a_mostrar",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_template",
+                    "operator": "==",
+                    "value": "plantilla-distribuidora-02-auto.php"
+                }
+            ],
+            [
+                {
+                    "param": "post_template",
+                    "operator": "==",
+                    "value": "plantilla-distribuidora-02.php"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
     },
     {
         "key": "group_5704dffab0598",
         "title": "Passos",
         "fields": [
             {
-                "sub_fields": [
-                    {
-                        "default_value": "",
-                        "maxlength": "",
-                        "placeholder": "",
-                        "prepend": "",
-                        "append": "",
-                        "key": "field_5704e01fae9ee",
-                        "label": "T\u00edtol",
-                        "name": "step_title",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 1,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": 20,
-                            "class": "",
-                            "id": ""
-                        },
-                        "readonly": 0,
-                        "disabled": 0
-                    },
-                    {
-                        "tabs": "all",
-                        "toolbar": "full",
-                        "media_upload": 1,
-                        "default_value": "",
-                        "delay": 0,
-                        "key": "field_5704e05cae9ef",
-                        "label": "Contingut",
-                        "name": "step_content",
-                        "type": "wysiwyg",
-                        "instructions": "",
-                        "required": 1,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": 80,
-                            "class": "",
-                            "id": ""
-                        }
-                    }
-                ],
-                "min": 0,
-                "max": 0,
-                "layout": "table",
-                "button_label": "Add Row",
-                "collapsed": "",
                 "key": "field_5704e003ae9ed",
                 "label": "Passos",
                 "name": "steps",
@@ -404,7 +403,54 @@
                     "width": "",
                     "class": "",
                     "id": ""
-                }
+                },
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "Add Row",
+                "collapsed": "",
+                "sub_fields": [
+                    {
+                        "key": "field_5704e01fae9ee",
+                        "label": "Títol",
+                        "name": "step_title",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": 20,
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "readonly": 0,
+                        "disabled": 0
+                    },
+                    {
+                        "key": "field_5704e05cae9ef",
+                        "label": "Contingut",
+                        "name": "step_content",
+                        "type": "wysiwyg",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": 80,
+                            "class": "",
+                            "id": ""
+                        },
+                        "tabs": "all",
+                        "toolbar": "full",
+                        "media_upload": 1,
+                        "default_value": "",
+                        "delay": 0
+                    }
+                ]
             }
         ],
         "location": [
@@ -435,21 +481,15 @@
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": 1,
-        "description": "",
-        "local": "php"
+        "description": ""
     },
     {
         "key": "group_5704d9998207b",
         "title": "Projectes",
         "fields": [
             {
-                "default_value": "",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
                 "key": "field_5704dba021c72",
-                "label": "Subt\u00edtol",
+                "label": "Subtítol",
                 "name": "subtitle_projecte",
                 "type": "text",
                 "instructions": "",
@@ -460,13 +500,15 @@
                     "class": "",
                     "id": ""
                 },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
                 "readonly": 0,
                 "disabled": 0
             },
             {
-                "role": "",
-                "multiple": 1,
-                "allow_null": 1,
                 "key": "field_5704dbb821c73",
                 "label": "Responsable",
                 "name": "responsable",
@@ -478,19 +520,12 @@
                     "width": 50,
                     "class": "",
                     "id": ""
-                }
+                },
+                "role": "",
+                "multiple": 1,
+                "allow_null": 1
             },
             {
-                "return_format": "id",
-                "preview_size": "thumbnail",
-                "library": "all",
-                "min_width": 145,
-                "min_height": 145,
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": "",
                 "key": "field_5704da4f21c70",
                 "label": "Logotip",
                 "name": "logotip",
@@ -502,11 +537,19 @@
                     "width": 50,
                     "class": "",
                     "id": ""
-                }
+                },
+                "return_format": "id",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": 145,
+                "min_height": 145,
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
             },
             {
-                "default_value": "",
-                "placeholder": "",
                 "key": "field_5704dc0a21c74",
                 "label": "Lloc web",
                 "name": "lloc_web_projecte",
@@ -518,11 +561,11 @@
                     "width": 33,
                     "class": "",
                     "id": ""
-                }
+                },
+                "default_value": "",
+                "placeholder": ""
             },
             {
-                "default_value": "",
-                "placeholder": "",
                 "key": "field_5704db1a21c71",
                 "label": "Llista de correu",
                 "name": "llista_de_correu",
@@ -534,14 +577,11 @@
                     "width": 33,
                     "class": "",
                     "id": ""
-                }
+                },
+                "default_value": "",
+                "placeholder": ""
             },
             {
-                "default_value": "",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
                 "key": "field_5704dc2021c75",
                 "label": "URL Rebost",
                 "name": "url_rebost_pr",
@@ -554,27 +594,32 @@
                     "class": "",
                     "id": ""
                 },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
                 "readonly": 0,
                 "disabled": 0
             },
             {
-                "default_value": 0,
-                "message": "Projecte destacat",
-                "ui": 0,
-                "ui_on_text": "",
-                "ui_off_text": "",
                 "key": "field_5832a9ccffa26",
                 "label": "Projecte destacat",
                 "name": "projecte_destacat",
                 "type": "true_false",
-                "instructions": "Des de Softcatal\u00e0, sempre hem considerat alguns projectes (LibreOffice, Mozilla) com a destacats: s\u00f3n aquells \"importants\" a nivell estrat\u00e8gic. Si aquest projecte ho \u00e9s, marqueu aquesta casella de sel\u00b7lecci\u00f3.",
+                "instructions": "Des de Softcatalà, sempre hem considerat alguns projectes (LibreOffice, Mozilla) com a destacats: són aquells \"importants\" a nivell estratègic. Si aquest projecte ho és, marqueu aquesta casella de sel·lecció.",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
                     "width": "",
                     "class": "",
                     "id": ""
-                }
+                },
+                "default_value": 0,
+                "message": "Projecte destacat",
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
             }
         ],
         "location": [
@@ -593,47 +638,17 @@
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": 1,
-        "description": "",
-        "local": "php"
+        "description": ""
     },
     {
-        "key": "group_588a70c16eb71",
-        "title": "Usuaris",
+        "key": "group_58970c4114f78",
+        "title": "Sliders",
         "fields": [
             {
-                "return_format": "array",
-                "preview_size": "thumbnail",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": "",
-                "key": "field_588a802620a3b",
-                "label": "Avatar",
-                "name": "avatar",
-                "type": "image",
-                "instructions": "Imatge per a substituir a la predeterminada (Gravatar)",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                }
-            },
-            {
-                "default_value": 1,
-                "message": "",
-                "ui": 1,
-                "ui_on_text": "Membre en actiu",
-                "ui_off_text": "Col\u00b7laborador\/Membre no actiu",
-                "key": "field_588a713d1c658",
-                "label": "Estat de l'usuari",
-                "name": "status_member",
-                "type": "true_false",
+                "key": "field_58970c63c873d",
+                "label": "Text del botó",
+                "name": "button_title",
+                "type": "text",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -641,65 +656,37 @@
                     "width": "",
                     "class": "",
                     "id": ""
-                }
-            },
-            {
+                },
                 "default_value": "",
-                "new_lines": "",
                 "maxlength": "",
                 "placeholder": "",
-                "rows": "",
-                "key": "field_588a78bffabb4",
-                "label": "Ubicaci\u00f3",
-                "name": "ubicacio",
-                "type": "textarea",
-                "instructions": "Introdu\u00efu ac\u00ed el codi embed del mapa",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_58970c86c873e",
+                "label": "Crèdits de la imatge",
+                "name": "image_credits",
+                "type": "text",
+                "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
                     "width": "",
                     "class": "",
                     "id": ""
-                }
-            },
-            {
-                "tabs": "all",
-                "toolbar": "full",
-                "media_upload": 1,
+                },
                 "default_value": "",
-                "delay": 0,
-                "key": "field_588a7919fabb5",
-                "label": "Descripci\u00f3 de l'activitat",
-                "name": "descripcio_activitat",
-                "type": "wysiwyg",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                }
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
             },
             {
-                "post_type": [
-                    "projecte"
-                ],
-                "taxonomy": [],
-                "min": "",
-                "max": "",
-                "filters": [
-                    "search",
-                    "taxonomy"
-                ],
-                "elements": [
-                    "featured_image"
-                ],
-                "return_format": "id",
-                "key": "field_588a80abfc3fa",
-                "label": "Projectes associats",
-                "name": "projectes",
-                "type": "relationship",
+                "key": "field_58970ca7c873f",
+                "label": "Enllaç del destacat",
+                "name": "slide_link",
+                "type": "url",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -707,15 +694,17 @@
                     "width": "",
                     "class": "",
                     "id": ""
-                }
+                },
+                "default_value": "",
+                "placeholder": ""
             }
         ],
         "location": [
             [
                 {
-                    "param": "user_form",
+                    "param": "post_type",
                     "operator": "==",
-                    "value": "edit"
+                    "value": "slider"
                 }
             ]
         ],
@@ -729,70 +718,167 @@
         "description": ""
     },
     {
-        "key": "group_58970c4114f78",
-        "title": "Sliders",
+        "key": "group_58c5827a7fbad",
+        "title": "Text amb menú esquerre - Opcions de visualització",
         "fields": [
             {
-                "default_value": "",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "key": "field_58970c63c873d",
-                "label": "Text del bot\u00f3",
-                "name": "button_title",
-                "type": "text",
-                "instructions": "",
+                "key": "field_58c5828d145f7",
+                "label": "Amaga la imatge destacada de la capçalera",
+                "name": "hide_featured_image_in_header",
+                "type": "true_false",
+                "instructions": "Voleu que la imatge destacada s'amague a la part superior de la pàgina?",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
                     "width": "",
                     "class": "",
                     "id": ""
-                }
-            },
-            {
-                "default_value": "",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "key": "field_58970c86c873e",
-                "label": "Cr\u00e8dits de la imatge",
-                "name": "image_credits",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                }
-            },
-            {
-                "default_value": "",
-                "placeholder": "",
-                "key": "field_58970ca7c873f",
-                "label": "Enlla\u00e7 del destacat",
-                "name": "slide_link",
-                "type": "url",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                }
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
             }
         ],
         "location": [
             [
                 {
-                    "param": "post_type",
+                    "param": "post_template",
                     "operator": "==",
-                    "value": "slider"
+                    "value": "plantilla-text-menuleft.php"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_588a70c16eb71",
+        "title": "Usuaris",
+        "fields": [
+            {
+                "key": "field_588a802620a3b",
+                "label": "Avatar",
+                "name": "avatar",
+                "type": "image",
+                "instructions": "Imatge per a substituir a la predeterminada (Gravatar)",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_588a713d1c658",
+                "label": "Estat de l'usuari",
+                "name": "status_member",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": 1,
+                "message": "",
+                "ui": 1,
+                "ui_on_text": "Membre en actiu",
+                "ui_off_text": "Col·laborador\/Membre no actiu"
+            },
+            {
+                "key": "field_588a78bffabb4",
+                "label": "Ubicació",
+                "name": "ubicacio",
+                "type": "textarea",
+                "instructions": "Introduïu ací el codi embed del mapa",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "new_lines": "",
+                "maxlength": "",
+                "placeholder": "",
+                "rows": ""
+            },
+            {
+                "key": "field_588a7919fabb5",
+                "label": "Descripció de l'activitat",
+                "name": "descripcio_activitat",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "default_value": "",
+                "delay": 0
+            },
+            {
+                "key": "field_588a80abfc3fa",
+                "label": "Projectes associats",
+                "name": "projectes",
+                "type": "relationship",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "post_type": [
+                    "projecte"
+                ],
+                "taxonomy": [],
+                "min": "",
+                "max": "",
+                "filters": [
+                    "search",
+                    "taxonomy"
+                ],
+                "elements": [
+                    "featured_image"
+                ],
+                "return_format": "id"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "user_form",
+                    "operator": "==",
+                    "value": "edit"
                 }
             ]
         ],
