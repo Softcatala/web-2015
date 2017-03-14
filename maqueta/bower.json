@@ -2,7 +2,7 @@
   "name": "Softcatala",
   "dependencies": {
     "bootstrap": "~3.3.5",
-    "fontawesome": "~4.3.0",
+    "fontawesome": "~4.7.0",
     "ubuntu-font": "*",
     "open-sans-fontface": "~1.4.2",
     "responsive-toolkit": "~2.5.0",
