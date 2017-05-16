@@ -14,11 +14,11 @@
             "type": "package",
             "package": {
                 "name": "advanced-custom-fields/advanced-custom-fields-pro",
-                "version": "5.5.11",
+                "version": "5.5.14",
                 "type": "wordpress-plugin",
                 "dist": {
                     "type": "zip",
-                    "url": "http://connect.advancedcustomfields.com/index.php?t=5.5.11&p=pro&a=download&k=%%license%%"
+                    "url": "http://connect.advancedcustomfields.com/index.php?t=5.5.14&p=pro&a=download&k=%%license%%"
                 }
             }
         }
@@ -27,17 +27,17 @@
         "composer-plugin-api":"^1.0",
         "johnpbloch/wordpress": "4.7.*",
         "koodimonni-language/ca": "4.7.*",
-        "wpackagist-plugin/wordpress-seo":"4.6",
-        "wpackagist-plugin/akismet":"^3.3",
+        "wpackagist-plugin/wordpress-seo":"4.7.1",
+        "wpackagist-plugin/akismet":"3.3.2",
         "wpackagist-plugin/timber-library":"1.2.4",
         "wpackagist-plugin/types":"2.2.9",
         "wpackagist-plugin/woosidebars":"^1.4",
         "wpackagist-plugin/simple-lightbox": "^2.6.0",
         "wpackagist-plugin/enable-media-replace": "3.0.6",
-        "wpackagist-plugin/nelio-content": "1.2.9",
+        "wpackagist-plugin/nelio-content": "1.2.12",
         "xavivars/types-timber-integration":"^1.0",
         "xavivars/xv-planeta":"^1.0",
-        "wpackagist-plugin/wp-nested-pages": "1.6.3",
+        "wpackagist-plugin/wp-nested-pages": "1.7.1",
         "wpackagist-plugin/mce-table-buttons":"^3.2.0",
         "softcatala/sc-footnotes":"^0.0.2",
         "softcatala/wp-theme-mover":"^0.1.0",
@@ -46,7 +46,7 @@
         "softcatala/wp-softcatala":"0.9.25",
         "softcatala/sc-importer":"^0.5.4",
         "softcatala/sc-shortcodes":"^1.2.0",
-        "advanced-custom-fields/advanced-custom-fields-pro":"5.5.11",
+        "advanced-custom-fields/advanced-custom-fields-pro":"5.5.14",
         "rtcamp/nginx-helper":"^1.9.9"
     },
     "require-dev": {
