@@ -82,7 +82,7 @@ def update_environment():
     ##Backup DB and files (not for lxc)
     if env.id != 'lxc':
         with cd('%s' % env.backupdir):
-            sudo('mkdir -p $(date \'+%Y%b%d\') && cd $_ && mysqldump '+env.db_name+' > '+env.db_name+'.sql && mkdir -p files && rsync -av ' + env.dir + '/ files/')
+            sudo('mkdir -p $(date \'+%Y%b%d\') && cd $_ && mysqldump '+env.db_name+' > '+env.db_name+'-$(date \'+%H%M%S\').sql && mkdir -p files && rsync -av ' + env.dir + '/ files/')
 
     with cd('%s' % env.dir):
         sudo('mkdir -p ../../.composer && chown www-data:www-data -R ../../.composer')
