@@ -77,7 +77,15 @@ module.exports = function(grunt) {
             livereload: true //reloads the browser
           }
         }
-      }
+      },
+        copy: {
+            ssi: {
+                files: [
+                    {expand: true, cwd: 'public/dist/js/', src: '**', dest: '../ssi/js/'},
+                    {expand: true, cwd: 'public/dist/css/', src: '**', dest: '../ssi/css/'},
+                ],
+            },
+        }
     });
 
   // Plugin loading
@@ -85,8 +93,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Task definition
-  grunt.registerTask('default', ['less', 'concat', 'uglify']);
+    grunt.registerTask('ssi', ['copy:ssi']);
+    grunt.registerTask('default', ['less', 'concat', 'uglify', 'ssi']);
+
+
 
 };

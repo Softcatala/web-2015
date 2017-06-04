@@ -4505,27 +4505,31 @@ if ( typeof define === 'function' && define.amd ) {
       })
    );// end executes on resize window
 
-    //Top search
-    var $cerca_top_form = jQuery('#searchform_top_2');
+    $(document).ready(function() {
 
-    $cerca_top_form.on('submit', function(ev){
-        ev.preventDefault();
+        //Top search
+        var $cerca_top_form = jQuery('#searchform_top_2');
 
-        var cerca = jQuery('#cerca_top_2').val();
-        window.location.href = '/cerca/'+cerca+'/';
+        $cerca_top_form.on('submit', function (ev) {
+            ev.preventDefault();
 
-        return true;
-    });
+            var cerca = jQuery('#cerca_top_2').val();
+            window.location.href = '/cerca/' + cerca + '/';
 
-    var $cerca_top_form = jQuery('#searchform_top_1');
+            return true;
+        });
 
-    $cerca_top_form.on('submit', function(ev){
-        ev.preventDefault();
+        var $cerca_top_form = jQuery('#searchform_top_1');
 
-        var cerca = jQuery('#cerca_top_1').val();
-        window.location.href = '/cerca/'+cerca+'/';
+        $cerca_top_form.on('submit', function (ev) {
+            ev.preventDefault();
 
-        return true;
+            var cerca = jQuery('#cerca_top_1').val();
+            window.location.href = '/cerca/' + cerca + '/';
+
+            return true;
+        });
+
     });
 
     //Top menu
