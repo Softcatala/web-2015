@@ -388,6 +388,196 @@
         "description": ""
     },
     {
+        "key": "group_593728cd5f7b2",
+        "title": "Esdeveniments",
+        "fields": [
+            {
+                "key": "field_593728f933c07",
+                "label": "Data d'inici",
+                "name": "data_inici",
+                "type": "date_picker",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "display_format": "d\/m\/Y",
+                "return_format": "d\/m\/Y",
+                "first_day": 1
+            },
+            {
+                "key": "field_5937293133c08",
+                "label": "Data de finalització",
+                "name": "data_fi",
+                "type": "date_picker",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "display_format": "d\/m\/Y",
+                "return_format": "d\/m\/Y",
+                "first_day": 1
+            },
+            {
+                "key": "field_5937297233c09",
+                "label": "Horari",
+                "name": "horari",
+                "type": "text",
+                "instructions": "Hora d'inici de l'esdeveniment (o rang d'hores)",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5937298933c0a",
+                "label": "Ciutat",
+                "name": "ciutat",
+                "type": "text",
+                "instructions": "Ciutat",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_593729b733c0b",
+                "label": "Lloc",
+                "name": "lloc",
+                "type": "textarea",
+                "instructions": "Lloc on es desenvolupa l'esdeveniment. Podeu posar múltiples línies per facilitar la lectura.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": "",
+                "new_lines": "wpautop"
+            },
+            {
+                "key": "field_59372a2233c0c",
+                "label": "Cost",
+                "name": "cost",
+                "type": "text",
+                "instructions": "Cost en € (deixeu buit o '0' si és gratuït)",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_59372a4733c0d",
+                "label": "Inscripcions",
+                "name": "inscripcions",
+                "type": "true_false",
+                "instructions": "Requereix inscripció",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 1,
+                "ui_on_text": "Amb inscripció",
+                "ui_off_text": "Accés lliure"
+            },
+            {
+                "key": "field_59372a9033c0e",
+                "label": "Mapa",
+                "name": "mapa",
+                "type": "textarea",
+                "instructions": "Visiteu https:\/\/www.openstreetmap.org i cerqueu l'adreça. Feu clic a la dreta al botó de compartir i copieu el codi html. Enganxeu el codi aquí (assegureu-vos que l'iframe té width=\"100%\" height=\"375\")",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": "",
+                "new_lines": ""
+            },
+            {
+                "key": "field_59372ac833c0f",
+                "label": "Destacat a portada",
+                "name": "destacat",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 1,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "esdeveniment"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
         "key": "group_5704dffab0598",
         "title": "Passos",
         "fields": [

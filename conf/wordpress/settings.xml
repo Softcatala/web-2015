@@ -11,24 +11,6 @@
         <usermeta_unfiltered_html>on</usermeta_unfiltered_html>
         <toolset_messages>0</toolset_messages>
     </settings>
-    <user_groups>
-        <group>
-            <ID>3101</ID>
-            <post_content></post_content>
-            <post_title>Informació del membre</post_title>
-            <post_excerpt></post_excerpt>
-            <post_type>wp-types-user-group</post_type>
-            <post_status>publish</post_status>
-            <meta>
-                <_wp_types_group_fields>,status_membre,ubicacio,descripcio_activitat,llocs_web,</_wp_types_group_fields>
-                <_wp_types_group_showfor>all</_wp_types_group_showfor>
-            </meta>
-            <hash>40cd750bba9870f18aada2478b24840a</hash>
-            <checksum>40cd750bba9870f18aada2478b24840a</checksum>
-            <__types_id>informacio-del-membre</__types_id>
-            <__types_title>Informació del membre</__types_title>
-        </group>
-    </user_groups>
     <user_fields>
         <field>
             <id>status_membre</id>
@@ -253,30 +235,6 @@
             <__types_title>Page specific</__types_title>
         </group>
         <group>
-            <ID>123</ID>
-            <post_content>Custom fields for events</post_content>
-            <post_title>Esdeveniments</post_title>
-            <post_excerpt></post_excerpt>
-            <post_type>wp-types-group</post_type>
-            <post_status>publish</post_status>
-            <meta>
-                <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
-                <_wp_types_group_fields>,data_inici,data_fi,horari,ciutat,lloc,cost,inscripcions,mapa,destacat,</_wp_types_group_fields>
-                <_wp_types_group_post_types>,esdeveniment,</_wp_types_group_post_types>
-                <_wp_types_group_terms>all</_wp_types_group_terms>
-                <_wp_types_group_templates>all</_wp_types_group_templates>
-                <_wpcf_conditional_display>
-                    <custom_use>0</custom_use>
-                    <relation>AND</relation>
-                    <custom></custom>
-                </_wpcf_conditional_display>
-            </meta>
-            <hash>859e3e66f1d1d6f7b40f112e2b855007</hash>
-            <checksum>859e3e66f1d1d6f7b40f112e2b855007</checksum>
-            <__types_id>esdeveniments</__types_id>
-            <__types_title>Esdeveniments</__types_title>
-        </group>
-        <group>
             <ID>98</ID>
             <post_content>Links related to post and pages</post_content>
             <post_title>Links</post_title>
@@ -324,30 +282,6 @@
             <__types_id>post</__types_id>
             <__types_title>Post</__types_title>
         </group>
-        <group>
-            <ID>33</ID>
-            <post_content>Custom fields for Slides</post_content>
-            <post_title>Slide</post_title>
-            <post_excerpt></post_excerpt>
-            <post_type>wp-types-group</post_type>
-            <post_status>publish</post_status>
-            <meta>
-                <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
-                <_wp_types_group_fields>,slide_image,button_title,image_credits,slide_link,</_wp_types_group_fields>
-                <_wp_types_group_post_types>,slide,</_wp_types_group_post_types>
-                <_wp_types_group_terms>all</_wp_types_group_terms>
-                <_wp_types_group_templates>all</_wp_types_group_templates>
-                <_wpcf_conditional_display>
-                    <custom_use>0</custom_use>
-                    <relation>AND</relation>
-                    <custom></custom>
-                </_wpcf_conditional_display>
-            </meta>
-            <hash>054da6d0d73ec4618e3bd8833bcccf63</hash>
-            <checksum>054da6d0d73ec4618e3bd8833bcccf63</checksum>
-            <__types_id>slide</__types_id>
-            <__types_title>Slide</__types_title>
-        </group>
     </groups>
     <fields>
         <field>
@@ -362,6 +296,11 @@
                         <value>true</value>
                         <message>This field is required.</message>
                     </required>
+                    <url2>
+                        <active>1</active>
+                        <message>Please enter a valid URL address pointing to the image file.</message>
+                        <suppress_for_cred>1</suppress_for_cred>
+                    </url2>
                 </validate>
                 <conditional_display>
                     <custom_use>0</custom_use>
@@ -379,8 +318,8 @@
             <meta_type>postmeta</meta_type>
             <__types_id>slide_image</__types_id>
             <__types_title>Image</__types_title>
-            <hash>331a66573cad199f5e3576d8eb8ccf6f</hash>
-            <checksum>331a66573cad199f5e3576d8eb8ccf6f</checksum>
+            <hash>18b0cf094b2778a9767fa61748bc1f60</hash>
+            <checksum>18b0cf094b2778a9767fa61748bc1f60</checksum>
         </field>
         <field>
             <description>Slide Link</description>
@@ -470,6 +409,13 @@
                 </conditional_display>
                 <submit-key>main_image_post</submit-key>
                 <disabled_by_type>0</disabled_by_type>
+                <validate>
+                    <url2>
+                        <active>1</active>
+                        <message>Please enter a valid URL address pointing to the image file.</message>
+                        <suppress_for_cred>1</suppress_for_cred>
+                    </url2>
+                </validate>
             </data>
             <id>main_image_post</id>
             <name>main_image_post</name>
@@ -479,8 +425,8 @@
             <meta_type>postmeta</meta_type>
             <__types_id>main_image_post</__types_id>
             <__types_title>main_image_post</__types_title>
-            <hash>2bc26b22db16d4c9a87d96f71cbe59d4</hash>
-            <checksum>2bc26b22db16d4c9a87d96f71cbe59d4</checksum>
+            <hash>c4ef1dcd5ee942ea3196d8f4ae17d10c</hash>
+            <checksum>c4ef1dcd5ee942ea3196d8f4ae17d10c</checksum>
         </field>
         <field>
             <description>Baixades relacionades amb la notícia.</description>
@@ -495,6 +441,13 @@
                 </conditional_display>
                 <submit-key>baixades_relacionades_noticia</submit-key>
                 <disabled_by_type>0</disabled_by_type>
+                <validate>
+                    <url2>
+                        <active>1</active>
+                        <message>Please enter a valid URL address pointing to the file.</message>
+                        <suppress_for_cred>1</suppress_for_cred>
+                    </url2>
+                </validate>
             </data>
             <id>baixades_relacionades_noticia</id>
             <name>Baixades relacionades</name>
@@ -504,8 +457,8 @@
             <meta_type>postmeta</meta_type>
             <__types_id>baixades_relacionades_noticia</__types_id>
             <__types_title>Baixades relacionades</__types_title>
-            <hash>51a26d77adae65dcae62e0330afc7494</hash>
-            <checksum>51a26d77adae65dcae62e0330afc7494</checksum>
+            <hash>58879f4b4fc16c7daef70309dbb9246d</hash>
+            <checksum>58879f4b4fc16c7daef70309dbb9246d</checksum>
         </field>
         <field>
             <description>URL de l\&#039;acció superior dreta de la notícia</description>
@@ -1411,6 +1364,11 @@
                         <value>true</value>
                         <message>This field is required.</message>
                     </required>
+                    <url2>
+                        <active>1</active>
+                        <message>Please enter a valid URL address pointing to the image file.</message>
+                        <suppress_for_cred>1</suppress_for_cred>
+                    </url2>
                 </validate>
                 <custom_use></custom_use>
                 <submit-key>logotip</submit-key>
@@ -1424,8 +1382,8 @@
             <meta_type>postmeta</meta_type>
             <__types_id>logotip</__types_id>
             <__types_title>Logotip</__types_title>
-            <hash>a68ca13ce04d83cca3a2f9256d9718e7</hash>
-            <checksum>a68ca13ce04d83cca3a2f9256d9718e7</checksum>
+            <hash>47aa90cf7444cbf3c2dd8640ea6015cf</hash>
+            <checksum>47aa90cf7444cbf3c2dd8640ea6015cf</checksum>
         </field>
         <field>
             <description></description>
@@ -1442,6 +1400,13 @@
                 <submit-key>video-1889007634</submit-key>
                 <disabled_by_type>0</disabled_by_type>
                 <removed_from_history>1</removed_from_history>
+                <validate>
+                    <url2>
+                        <active>1</active>
+                        <message>Please enter a valid URL address pointing to the video file.</message>
+                        <suppress_for_cred>1</suppress_for_cred>
+                    </url2>
+                </validate>
             </data>
             <id>video</id>
             <name>Vídeo</name>
@@ -1451,8 +1416,8 @@
             <meta_type>postmeta</meta_type>
             <__types_id>video</__types_id>
             <__types_title>Vídeo</__types_title>
-            <hash>6d85cc4760e6b05549af0f2f441fd392</hash>
-            <checksum>6d85cc4760e6b05549af0f2f441fd392</checksum>
+            <hash>18e8dfc1ff117bc731a7a70a92329c2b</hash>
+            <checksum>18e8dfc1ff117bc731a7a70a92329c2b</checksum>
         </field>
         <field>
             <description></description>
@@ -1596,6 +1561,13 @@
                 </conditional_display>
                 <submit-key>test-video</submit-key>
                 <disabled_by_type>0</disabled_by_type>
+                <validate>
+                    <url2>
+                        <active>1</active>
+                        <message>Please enter a valid URL address pointing to the video file.</message>
+                        <suppress_for_cred>1</suppress_for_cred>
+                    </url2>
+                </validate>
             </data>
             <id>test-video</id>
             <name>Test video</name>
@@ -1605,8 +1577,8 @@
             <meta_type>postmeta</meta_type>
             <__types_id>test-video</__types_id>
             <__types_title>Test video</__types_title>
-            <hash>06911f8d9f97d2c1234565ec279f2172</hash>
-            <checksum>06911f8d9f97d2c1234565ec279f2172</checksum>
+            <hash>a71d188d44ac704081ecabc5d21c8874</hash>
+            <checksum>a71d188d44ac704081ecabc5d21c8874</checksum>
         </field>
         <field>
             <description></description>
@@ -1899,6 +1871,11 @@
                         <value>true</value>
                         <message>This field is required.</message>
                     </required>
+                    <url2>
+                        <active>1</active>
+                        <message>Please enter a valid URL address pointing to the image file.</message>
+                        <suppress_for_cred>1</suppress_for_cred>
+                    </url2>
                 </validate>
                 <custom_use></custom_use>
                 <conditional_display>
@@ -1917,8 +1894,8 @@
             <meta_type>postmeta</meta_type>
             <__types_id>logotip_programa</__types_id>
             <__types_title>Logotip</__types_title>
-            <hash>4bde8753d92a1effad1bb6c100b8fd4e</hash>
-            <checksum>4bde8753d92a1effad1bb6c100b8fd4e</checksum>
+            <hash>3d04e2465c063e110a030d534458c32a</hash>
+            <checksum>3d04e2465c063e110a030d534458c32a</checksum>
         </field>
         <field>
             <description></description>
@@ -1934,6 +1911,13 @@
                 </conditional_display>
                 <submit-key>imatge_destacada_1</submit-key>
                 <disabled_by_type>0</disabled_by_type>
+                <validate>
+                    <url2>
+                        <active>1</active>
+                        <message>Please enter a valid URL address pointing to the image file.</message>
+                        <suppress_for_cred>1</suppress_for_cred>
+                    </url2>
+                </validate>
             </data>
             <id>imatge_destacada_1</id>
             <name>Imatge destacada 1</name>
@@ -1943,8 +1927,8 @@
             <meta_type>postmeta</meta_type>
             <__types_id>imatge_destacada_1</__types_id>
             <__types_title>Imatge destacada 1</__types_title>
-            <hash>e8bc1a48ca182aafae7d885d7bc40435</hash>
-            <checksum>e8bc1a48ca182aafae7d885d7bc40435</checksum>
+            <hash>638d12491ee33f6b57a980f444951e99</hash>
+            <checksum>638d12491ee33f6b57a980f444951e99</checksum>
         </field>
         <field>
             <description></description>
@@ -1960,6 +1944,13 @@
                 </conditional_display>
                 <submit-key>imatge_destacada_2</submit-key>
                 <disabled_by_type>0</disabled_by_type>
+                <validate>
+                    <url2>
+                        <active>1</active>
+                        <message>Please enter a valid URL address pointing to the image file.</message>
+                        <suppress_for_cred>1</suppress_for_cred>
+                    </url2>
+                </validate>
             </data>
             <id>imatge_destacada_2</id>
             <name>Imatge destacada 2</name>
@@ -1969,8 +1960,8 @@
             <meta_type>postmeta</meta_type>
             <__types_id>imatge_destacada_2</__types_id>
             <__types_title>Imatge destacada 2</__types_title>
-            <hash>0b7f11cc7c898374423c1966906aae85</hash>
-            <checksum>0b7f11cc7c898374423c1966906aae85</checksum>
+            <hash>52c5faf124d8fd4ae34af3a1fbe35683</hash>
+            <checksum>52c5faf124d8fd4ae34af3a1fbe35683</checksum>
         </field>
         <field>
             <description></description>
@@ -1986,6 +1977,13 @@
                 </conditional_display>
                 <submit-key>imatge_destacada_3</submit-key>
                 <disabled_by_type>0</disabled_by_type>
+                <validate>
+                    <url2>
+                        <active>1</active>
+                        <message>Please enter a valid URL address pointing to the image file.</message>
+                        <suppress_for_cred>1</suppress_for_cred>
+                    </url2>
+                </validate>
             </data>
             <id>imatge_destacada_3</id>
             <name>Imatge destacada 3</name>
@@ -1995,8 +1993,8 @@
             <meta_type>postmeta</meta_type>
             <__types_id>imatge_destacada_3</__types_id>
             <__types_title>Imatge destacada 3</__types_title>
-            <hash>c418a38f877b6c19a0bbc56eeea4a5a5</hash>
-            <checksum>c418a38f877b6c19a0bbc56eeea4a5a5</checksum>
+            <hash>9ca529e0c740fc8a2c230f8b8316b594</hash>
+            <checksum>9ca529e0c740fc8a2c230f8b8316b594</checksum>
         </field>
         <field>
             <description></description>
@@ -2129,6 +2127,11 @@
                         <value>true</value>
                         <message>This field is required.</message>
                     </required>
+                    <url2>
+                        <active>1</active>
+                        <message>Please enter a valid URL address pointing to the image file.</message>
+                        <suppress_for_cred>1</suppress_for_cred>
+                    </url2>
                 </validate>
                 <conditional_display>
                     <custom_use>0</custom_use>
@@ -2146,8 +2149,8 @@
             <meta_type>postmeta</meta_type>
             <__types_id>imatge_credit</__types_id>
             <__types_title>Imatge relacionada del crèdit</__types_title>
-            <hash>eda2bc8a91e196f736aa33578031cf97</hash>
-            <checksum>eda2bc8a91e196f736aa33578031cf97</checksum>
+            <hash>d84c58e729dacbd86d35d97c7e17f0ca</hash>
+            <checksum>d84c58e729dacbd86d35d97c7e17f0ca</checksum>
         </field>
         <field>
             <description></description>
@@ -2543,6 +2546,13 @@
                 <custom_use></custom_use>
                 <submit-key>imatge_destacada_1_p</submit-key>
                 <disabled_by_type>0</disabled_by_type>
+                <validate>
+                    <url2>
+                        <active>1</active>
+                        <message>Please enter a valid URL address pointing to the image file.</message>
+                        <suppress_for_cred>1</suppress_for_cred>
+                    </url2>
+                </validate>
             </data>
             <id>imatge_destacada_1_p</id>
             <name>Imatge destacada 1</name>
@@ -2552,8 +2562,8 @@
             <meta_type>postmeta</meta_type>
             <__types_id>imatge_destacada_1_p</__types_id>
             <__types_title>Imatge destacada 1</__types_title>
-            <hash>06cf78d9e1308fe6d3e31001c85f1c4e</hash>
-            <checksum>06cf78d9e1308fe6d3e31001c85f1c4e</checksum>
+            <hash>f6eede485114340f86c7168b4bce4f61</hash>
+            <checksum>f6eede485114340f86c7168b4bce4f61</checksum>
         </field>
         <field>
             <description></description>
@@ -2564,6 +2574,13 @@
                 <custom_use></custom_use>
                 <submit-key>imatge_destacada_2_p</submit-key>
                 <disabled_by_type>0</disabled_by_type>
+                <validate>
+                    <url2>
+                        <active>1</active>
+                        <message>Please enter a valid URL address pointing to the image file.</message>
+                        <suppress_for_cred>1</suppress_for_cred>
+                    </url2>
+                </validate>
             </data>
             <id>imatge_destacada_2_p</id>
             <name>Imatge destacada 2</name>
@@ -2573,8 +2590,8 @@
             <meta_type>postmeta</meta_type>
             <__types_id>imatge_destacada_2_p</__types_id>
             <__types_title>Imatge destacada 2</__types_title>
-            <hash>543bef911066aba47a3ce598537eaf4c</hash>
-            <checksum>543bef911066aba47a3ce598537eaf4c</checksum>
+            <hash>f7e74eac1cfd980641a725975fb18c5d</hash>
+            <checksum>f7e74eac1cfd980641a725975fb18c5d</checksum>
         </field>
         <field>
             <description></description>
@@ -2585,6 +2602,13 @@
                 <custom_use></custom_use>
                 <submit-key>imatge_destacada_3_p</submit-key>
                 <disabled_by_type>0</disabled_by_type>
+                <validate>
+                    <url2>
+                        <active>1</active>
+                        <message>Please enter a valid URL address pointing to the image file.</message>
+                        <suppress_for_cred>1</suppress_for_cred>
+                    </url2>
+                </validate>
             </data>
             <id>imatge_destacada_3_p</id>
             <name>Imatge destacada 3</name>
@@ -2594,8 +2618,8 @@
             <meta_type>postmeta</meta_type>
             <__types_id>imatge_destacada_3_p</__types_id>
             <__types_title>Imatge destacada 3</__types_title>
-            <hash>a00ea85baa08a2e89ab7a04086a2eb60</hash>
-            <checksum>a00ea85baa08a2e89ab7a04086a2eb60</checksum>
+            <hash>3a09174781da5abb83d659151605efdf</hash>
+            <checksum>3a09174781da5abb83d659151605efdf</checksum>
         </field>
         <field>
             <description></description>
@@ -2803,6 +2827,13 @@
                 <repetitive>0</repetitive>
                 <submit-key>image-1081388008</submit-key>
                 <disabled_by_type>0</disabled_by_type>
+                <validate>
+                    <url2>
+                        <active>1</active>
+                        <message>Please enter a valid URL address pointing to the image file.</message>
+                        <suppress_for_cred>1</suppress_for_cred>
+                    </url2>
+                </validate>
             </data>
             <id>link_image</id>
             <name>Link image</name>
@@ -2812,8 +2843,8 @@
             <meta_type>postmeta</meta_type>
             <__types_id>link_image</__types_id>
             <__types_title>Link image</__types_title>
-            <hash>969965eccf9809454947f62b6111fa73</hash>
-            <checksum>969965eccf9809454947f62b6111fa73</checksum>
+            <hash>0810d87c6481b4e648ad00b231d61a0a</hash>
+            <checksum>0810d87c6481b4e648ad00b231d61a0a</checksum>
         </field>
         <field>
             <description></description>
@@ -2865,59 +2896,6 @@
         </field>
     </fields>
     <types>
-        <type>
-            <_builtin></_builtin>
-            <_toolset_edit_last>1459952102</_toolset_edit_last>
-            <_wpcf_author_id>1</_wpcf_author_id>
-            <__types_id>slide</__types_id>
-            <__types_title>Sliders</__types_title>
-            <wpcf-post-type>slide</wpcf-post-type>
-            <icon>admin-media</icon>
-            <labels>
-                <name>Sliders</name>
-                <singular_name>Slider</singular_name>
-                <add_new>Add New</add_new>
-                <add_new_item>Add New %s</add_new_item>
-                <edit_item>Edit %s</edit_item>
-                <new_item>New %s</new_item>
-                <view_item>View %s</view_item>
-                <search_items>Search %s</search_items>
-                <not_found>No %s found</not_found>
-                <not_found_in_trash>No %s found in Trash</not_found_in_trash>
-                <parent_item_colon>Parent text</parent_item_colon>
-                <all_items>All items</all_items>
-                <enter_title_here>Enter title here</enter_title_here>
-            </labels>
-            <slug>slide</slug>
-            <description>Sliders</description>
-            <public>public</public>
-            <menu_position></menu_position>
-            <custom_fields>
-                <wpcf-slide_image>1</wpcf-slide_image>
-                <wpcf-slide_link>1</wpcf-slide_link>
-            </custom_fields>
-            <supports>
-                <title>1</title>
-                <excerpt>1</excerpt>
-            </supports>
-            <rewrite>
-                <custom>normal</custom>
-                <slug></slug>
-            </rewrite>
-            <has_archive_slug></has_archive_slug>
-            <show_in_menu>1</show_in_menu>
-            <show_in_menu_page></show_in_menu_page>
-            <show_ui>1</show_ui>
-            <publicly_queryable>1</publicly_queryable>
-            <can_export>1</can_export>
-            <query_var_enabled>1</query_var_enabled>
-            <query_var></query_var>
-            <permalink_epmask>EP_PERMALINK</permalink_epmask>
-            <rest_base></rest_base>
-            <id>slide</id>
-            <hash>914cbd553786cb7eb8e8dbff77b3fc22</hash>
-            <checksum>914cbd553786cb7eb8e8dbff77b3fc22</checksum>
-        </type>
         <type>
             <_builtin></_builtin>
             <_toolset_edit_last>1453814091</_toolset_edit_last>
@@ -2976,7 +2954,7 @@
         </type>
         <type>
             <_builtin></_builtin>
-            <_toolset_edit_last>1450884250</_toolset_edit_last>
+            <_toolset_edit_last>1496862911</_toolset_edit_last>
             <_wpcf_author_id>1</_wpcf_author_id>
             <wpcf-post-type>esdeveniment</wpcf-post-type>
             <labels>
@@ -2999,10 +2977,6 @@
             <public>public</public>
             <menu_position></menu_position>
             <menu_icon></menu_icon>
-            <taxonomies>
-                <esdeveniment_cat>1</esdeveniment_cat>
-                <esdeveniment_tag>1</esdeveniment_tag>
-            </taxonomies>
             <custom_fields>
                 <wpcf-data_inici>1</wpcf-data_inici>
                 <wpcf-data_fi>1</wpcf-data_fi>
@@ -3039,13 +3013,14 @@
             <id>esdeveniment</id>
             <__types_id>esdeveniment</__types_id>
             <__types_title>Esdeveniments</__types_title>
-            <hash>2e368825a28900bbee1e19877832d35f</hash>
-            <checksum>2e368825a28900bbee1e19877832d35f</checksum>
+            <hash>9b97ab174924e1554366bc4283cc6345</hash>
+            <checksum>9b97ab174924e1554366bc4283cc6345</checksum>
+            <disabled>1</disabled>
         </type>
         <type>
             <_builtin></_builtin>
-            <_toolset_edit_last>1472443664</_toolset_edit_last>
-            <_wpcf_author_id>2</_wpcf_author_id>
+            <_toolset_edit_last>1487164083</_toolset_edit_last>
+            <_wpcf_author_id>3</_wpcf_author_id>
             <__types_id>aparell</__types_id>
             <__types_title>Aparells</__types_title>
             <wpcf-post-type>aparell</wpcf-post-type>
@@ -3074,12 +3049,6 @@
                 <so_aparell>1</so_aparell>
                 <fabricant>1</fabricant>
             </taxonomies>
-            <custom_fields>
-                <wpcf-versio>1</wpcf-versio>
-                <wpcf-conf_cat>1</wpcf-conf_cat>
-                <wpcf-correccio_cat>1</wpcf-correccio_cat>
-                <wpcf-fabricant>1</wpcf-fabricant>
-            </custom_fields>
             <supports>
                 <title>1</title>
                 <comments>1</comments>
@@ -3106,8 +3075,8 @@
             <permalink_epmask>EP_PERMALINK</permalink_epmask>
             <rest_base></rest_base>
             <id>aparell</id>
-            <hash>49591d346f1d37b48b50858778533f2d</hash>
-            <checksum>49591d346f1d37b48b50858778533f2d</checksum>
+            <hash>bffb7cd11345b07db0fabb78941b103d</hash>
+            <checksum>bffb7cd11345b07db0fabb78941b103d</checksum>
         </type>
         <type>
             <_builtin></_builtin>
@@ -3178,8 +3147,8 @@
                 </has>
             </post_relationship>
             <id>programa</id>
-            <hash>0ab0172a684a343088a480be8117c81d</hash>
-            <checksum>0ab0172a684a343088a480be8117c81d</checksum>
+            <hash>114e4df6ca85a9c02f964bbcc1213e67</hash>
+            <checksum>114e4df6ca85a9c02f964bbcc1213e67</checksum>
         </type>
         <type>
             <_builtin></_builtin>
@@ -3365,101 +3334,6 @@
         <data>{&quot;post&quot;:[],&quot;page&quot;:{&quot;link&quot;:[],&quot;credit&quot;:[]},&quot;esdeveniment&quot;:{&quot;link&quot;:[]},&quot;programa&quot;:{&quot;credit&quot;:[]},&quot;projecte&quot;:{&quot;programa&quot;:[]}}</data>
     </post_relationships>
     <taxonomies>
-        <taxonomy>
-            <wpcf-tax>esdeveniment_cat</wpcf-tax>
-            <icon>admin-post</icon>
-            <labels>
-                <name>Categories Esdeveniments</name>
-                <singular_name>Categoria esdeveniment</singular_name>
-                <search_items>Search %s</search_items>
-                <popular_items>Popular %s</popular_items>
-                <all_items>All %s</all_items>
-                <parent_item>Parent %s</parent_item>
-                <parent_item_colon>Parent %s:</parent_item_colon>
-                <edit_item>Edit %s</edit_item>
-                <update_item>Update %s</update_item>
-                <add_new_item>Add New %s</add_new_item>
-                <new_item_name>New %s Name</new_item_name>
-                <separate_items_with_commas>Separate %s with commas</separate_items_with_commas>
-                <add_or_remove_items>Add or remove %s</add_or_remove_items>
-                <choose_from_most_used>Choose from the most used %s</choose_from_most_used>
-                <menu_name>%s</menu_name>
-            </labels>
-            <slug>esdeveniment_cat</slug>
-            <description></description>
-            <public>public</public>
-            <hierarchical>hierarchical</hierarchical>
-            <supports>
-                <__types_cpt_supports_esdeveniment>1</__types_cpt_supports_esdeveniment>
-            </supports>
-            <rewrite>
-                <slug>esdeveniments/categoria</slug>
-                <hierarchical>1</hierarchical>
-            </rewrite>
-            <show_ui>1</show_ui>
-            <show_in_nav_menus>1</show_in_nav_menus>
-            <show_tagcloud>1</show_tagcloud>
-            <query_var_enabled>1</query_var_enabled>
-            <query_var></query_var>
-            <update_count_callback></update_count_callback>
-            <meta_box_cb>
-                <callback></callback>
-            </meta_box_cb>
-            <_toolset_edit_last>1460203001</_toolset_edit_last>
-            <_wpcf_author_id>1</_wpcf_author_id>
-            <name></name>
-            <id>esdeveniment_cat</id>
-            <__types_id>esdeveniment_cat</__types_id>
-            <__types_title>Categories Esdeveniments</__types_title>
-            <checksum>076c4d1a5abab5a40378654d198541b7</checksum>
-        </taxonomy>
-        <taxonomy>
-            <labels>
-                <name>Etiquetes esdeveniments</name>
-                <singular_name>Etiqueta esdeveniment</singular_name>
-                <search_items>Search %s</search_items>
-                <popular_items>Popular %s</popular_items>
-                <all_items>All %s</all_items>
-                <parent_item>Parent %s</parent_item>
-                <parent_item_colon>Parent %s:</parent_item_colon>
-                <edit_item>Edit %s</edit_item>
-                <update_item>Update %s</update_item>
-                <add_new_item>Add New %s</add_new_item>
-                <new_item_name>New %s Name</new_item_name>
-                <separate_items_with_commas>Separate %s with commas</separate_items_with_commas>
-                <add_or_remove_items>Add or remove %s</add_or_remove_items>
-                <choose_from_most_used>Choose from the most used %s</choose_from_most_used>
-                <menu_name>%s</menu_name>
-            </labels>
-            <slug>esdeveniment_tag</slug>
-            <description></description>
-            <public>public</public>
-            <supports>
-                <__types_cpt_supports_esdeveniment>1</__types_cpt_supports_esdeveniment>
-            </supports>
-            <hierarchical>flat</hierarchical>
-            <rewrite>
-                <enabled>1</enabled>
-                <slug>esdeveniments/etiqueta</slug>
-                <hierarchical>1</hierarchical>
-            </rewrite>
-            <show_ui>1</show_ui>
-            <show_in_nav_menus>1</show_in_nav_menus>
-            <show_tagcloud>1</show_tagcloud>
-            <query_var_enabled>1</query_var_enabled>
-            <query_var></query_var>
-            <update_count_callback></update_count_callback>
-            <meta_box_cb>
-                <callback></callback>
-            </meta_box_cb>
-            <_toolset_edit_last>1445964711</_toolset_edit_last>
-            <_wpcf_author_id>1</_wpcf_author_id>
-            <id>esdeveniment_tag</id>
-            <__types_id>esdeveniment_tag</__types_id>
-            <__types_title>Etiquetes esdeveniments</__types_title>
-            <checksum>748c40664ef67823b6ea82188a53244e</checksum>
-            <name></name>
-        </taxonomy>
         <taxonomy>
             <wpcf-tax>tipus-aparell</wpcf-tax>
             <labels>
@@ -4001,7 +3875,7 @@
             <id>fabricant</id>
             <__types_id>fabricant</__types_id>
             <__types_title>Fabricants</__types_title>
-            <checksum>c46cbcbaac7a895261700e9f8289a446</checksum>
+            <checksum>0c3aae4461dcf7758727c42036480f4d</checksum>
         </taxonomy>
     </taxonomies>
 </types>
