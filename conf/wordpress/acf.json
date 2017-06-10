@@ -388,6 +388,154 @@
         "description": ""
     },
     {
+        "key": "group_59385b50467ae",
+        "title": "Enllaços de la distribuidora",
+        "fields": [
+            {
+                "key": "field_59385b5937ad2",
+                "label": "Enllaços de la distribuidora",
+                "name": "distribuidora",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "field_59385ba337ad3",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_59385ba337ad3",
+                        "label": "Títol",
+                        "name": "titol",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_59385bc037ad4",
+                        "label": "Descripcio",
+                        "name": "descripcio",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_59385be637ad5",
+                        "label": "Enllaç intern",
+                        "name": "internal_link",
+                        "type": "page_link",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "post_type": [],
+                        "taxonomy": [],
+                        "allow_null": 0,
+                        "allow_archives": 1,
+                        "multiple": 0
+                    },
+                    {
+                        "key": "field_59385ca837ad6",
+                        "label": "Enllaç extern",
+                        "name": "external_link",
+                        "type": "url",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": ""
+                    },
+                    {
+                        "key": "field_59385d6037ad8",
+                        "label": "Imatge",
+                        "name": "imatge",
+                        "type": "image",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url",
+                        "preview_size": "full",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": ""
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_template",
+                    "operator": "==",
+                    "value": "plantilla-distribuidora-01.php"
+                }
+            ],
+            [
+                {
+                    "param": "post_template",
+                    "operator": "==",
+                    "value": "plantilla-distribuidora-02.php"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
         "key": "group_593728cd5f7b2",
         "title": "Esdeveniments",
         "fields": [
