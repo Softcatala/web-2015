@@ -25,8 +25,8 @@
     ],
     "require": {
         "composer-plugin-api":"^1.0",
-        "johnpbloch/wordpress": "4.7.*",
-        "koodimonni-language/ca": "4.7.*",
+        "johnpbloch/wordpress": "4.8.*",
+        "koodimonni-language/ca": "4.8.*",
         "wpackagist-plugin/wordpress-seo":"4.9",
         "wpackagist-plugin/akismet":"3.3.2",
         "wpackagist-plugin/timber-library":"1.2.4",
