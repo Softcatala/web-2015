@@ -2874,71 +2874,6 @@
     <types>
         <type>
             <_builtin></_builtin>
-            <_toolset_edit_last>1496862911</_toolset_edit_last>
-            <_wpcf_author_id>1</_wpcf_author_id>
-            <wpcf-post-type>esdeveniment</wpcf-post-type>
-            <labels>
-                <name>Esdeveniments</name>
-                <singular_name>Esdeveniment</singular_name>
-                <add_new>Add New</add_new>
-                <add_new_item>Add New %s</add_new_item>
-                <edit_item>Edit %s</edit_item>
-                <new_item>New %s</new_item>
-                <view_item>View %s</view_item>
-                <search_items>Search %s</search_items>
-                <not_found>No %s found</not_found>
-                <not_found_in_trash>No %s found in Trash</not_found_in_trash>
-                <parent_item_colon>Parent text</parent_item_colon>
-                <all_items>All items</all_items>
-            </labels>
-            <slug>esdeveniment</slug>
-            <description>Esdeveniments</description>
-            <icon>clock</icon>
-            <public>public</public>
-            <menu_position></menu_position>
-            <menu_icon></menu_icon>
-            <custom_fields>
-                <wpcf-data_inici>1</wpcf-data_inici>
-                <wpcf-data_fi>1</wpcf-data_fi>
-                <wpcf-destacat>1</wpcf-destacat>
-            </custom_fields>
-            <supports>
-                <title>1</title>
-                <editor>1</editor>
-                <thumbnail>1</thumbnail>
-            </supports>
-            <rewrite>
-                <enabled>1</enabled>
-                <custom>custom</custom>
-                <slug>esdeveniments</slug>
-                <feeds>1</feeds>
-                <pages>1</pages>
-            </rewrite>
-            <has_archive>1</has_archive>
-            <has_archive_slug></has_archive_slug>
-            <show_in_menu>1</show_in_menu>
-            <show_in_menu_page></show_in_menu_page>
-            <show_ui>1</show_ui>
-            <publicly_queryable>1</publicly_queryable>
-            <can_export>1</can_export>
-            <show_in_nav_menus>1</show_in_nav_menus>
-            <query_var_enabled>1</query_var_enabled>
-            <query_var></query_var>
-            <permalink_epmask>EP_PERMALINK</permalink_epmask>
-            <post_relationship>
-                <has>
-                    <link>1</link>
-                </has>
-            </post_relationship>
-            <id>esdeveniment</id>
-            <__types_id>esdeveniment</__types_id>
-            <__types_title>Esdeveniments</__types_title>
-            <hash>9b97ab174924e1554366bc4283cc6345</hash>
-            <checksum>9b97ab174924e1554366bc4283cc6345</checksum>
-            <disabled>1</disabled>
-        </type>
-        <type>
-            <_builtin></_builtin>
             <_toolset_edit_last>1487164083</_toolset_edit_last>
             <_wpcf_author_id>3</_wpcf_author_id>
             <__types_id>aparell</__types_id>
@@ -3069,64 +3004,6 @@
             <id>programa</id>
             <hash>114e4df6ca85a9c02f964bbcc1213e67</hash>
             <checksum>114e4df6ca85a9c02f964bbcc1213e67</checksum>
-        </type>
-        <type>
-            <_builtin></_builtin>
-            <_toolset_edit_last>1453455498</_toolset_edit_last>
-            <_wpcf_author_id>1</_wpcf_author_id>
-            <wpcf-post-type>credit</wpcf-post-type>
-            <labels>
-                <name>Crèdits</name>
-                <singular_name>Crèdit</singular_name>
-                <add_new>Add New</add_new>
-                <add_new_item>Add New %s</add_new_item>
-                <edit_item>Edit %s</edit_item>
-                <new_item>New %s</new_item>
-                <view_item>View %s</view_item>
-                <search_items>Search %s</search_items>
-                <not_found>No %s found</not_found>
-                <not_found_in_trash>No %s found in Trash</not_found_in_trash>
-                <parent_item_colon>Parent text</parent_item_colon>
-                <all_items>All items</all_items>
-            </labels>
-            <slug>credit</slug>
-            <description></description>
-            <icon>index-card</icon>
-            <public>public</public>
-            <menu_position></menu_position>
-            <menu_icon></menu_icon>
-            <supports>
-                <title>1</title>
-            </supports>
-            <rewrite>
-                <custom>normal</custom>
-                <slug></slug>
-                <with_front>1</with_front>
-                <feeds>1</feeds>
-                <pages>1</pages>
-            </rewrite>
-            <has_archive>1</has_archive>
-            <has_archive_slug></has_archive_slug>
-            <show_in_menu>1</show_in_menu>
-            <show_in_menu_page></show_in_menu_page>
-            <show_ui>1</show_ui>
-            <publicly_queryable>1</publicly_queryable>
-            <can_export>1</can_export>
-            <show_in_nav_menus>1</show_in_nav_menus>
-            <query_var_enabled>1</query_var_enabled>
-            <query_var></query_var>
-            <permalink_epmask>EP_PERMALINK</permalink_epmask>
-            <post_relationship>
-                <belongs>
-                    <page>1</page>
-                    <programa>1</programa>
-                </belongs>
-            </post_relationship>
-            <id>credit</id>
-            <__types_id>credit</__types_id>
-            <__types_title>Crèdits</__types_title>
-            <hash>ee39fe88a5daf19b703f3dfa511aee34</hash>
-            <checksum>ee39fe88a5daf19b703f3dfa511aee34</checksum>
         </type>
         <type>
             <_builtin></_builtin>
