@@ -3072,60 +3072,6 @@
             <hash>558881dec60eb2ad62711f80de410283</hash>
             <checksum>558881dec60eb2ad62711f80de410283</checksum>
         </type>
-        <type>
-            <_builtin></_builtin>
-            <_toolset_edit_last>1459897429</_toolset_edit_last>
-            <_wpcf_author_id>2</_wpcf_author_id>
-            <__types_id>llista</__types_id>
-            <__types_title>Llistes de correu</__types_title>
-            <wpcf-post-type>llista</wpcf-post-type>
-            <icon>admin-post</icon>
-            <labels>
-                <name>Llistes de correu</name>
-                <singular_name>Llista de correu</singular_name>
-                <add_new>Add New</add_new>
-                <add_new_item>Add New %s</add_new_item>
-                <edit_item>Edit %s</edit_item>
-                <new_item>New %s</new_item>
-                <view_item>View %s</view_item>
-                <search_items>Search %s</search_items>
-                <not_found>No %s found</not_found>
-                <not_found_in_trash>No %s found in Trash</not_found_in_trash>
-                <parent_item_colon>Parent text</parent_item_colon>
-                <all_items>All items</all_items>
-                <enter_title_here>Enter title here</enter_title_here>
-            </labels>
-            <slug>llista</slug>
-            <description></description>
-            <public>public</public>
-            <menu_position></menu_position>
-            <supports>
-                <title>1</title>
-                <revisions>1</revisions>
-            </supports>
-            <rewrite>
-                <enabled>1</enabled>
-                <custom>custom</custom>
-                <slug>llistes-de-correu</slug>
-                <feeds>1</feeds>
-                <pages>1</pages>
-            </rewrite>
-            <has_archive>1</has_archive>
-            <has_archive_slug></has_archive_slug>
-            <show_in_menu>1</show_in_menu>
-            <show_in_menu_page></show_in_menu_page>
-            <show_ui>1</show_ui>
-            <publicly_queryable>1</publicly_queryable>
-            <can_export>1</can_export>
-            <show_in_nav_menus>1</show_in_nav_menus>
-            <query_var_enabled>1</query_var_enabled>
-            <query_var></query_var>
-            <permalink_epmask>EP_PERMALINK</permalink_epmask>
-            <rest_base></rest_base>
-            <id>llista</id>
-            <hash>cbef986a7af8cbe59d942ca81ee528c6</hash>
-            <checksum>cbef986a7af8cbe59d942ca81ee528c6</checksum>
-        </type>
     </types>
     <post_relationships>
         <data>{&quot;post&quot;:[],&quot;page&quot;:{&quot;link&quot;:[],&quot;credit&quot;:[]},&quot;esdeveniment&quot;:{&quot;link&quot;:[]},&quot;programa&quot;:{&quot;credit&quot;:[]},&quot;projecte&quot;:{&quot;programa&quot;:[]}}</data>
@@ -3481,13 +3427,13 @@
             <meta_box_cb>
                 <callback></callback>
             </meta_box_cb>
-            <_toolset_edit_last>1458030929</_toolset_edit_last>
+            <_toolset_edit_last>1497295163</_toolset_edit_last>
             <_wpcf_author_id>1</_wpcf_author_id>
             <name></name>
             <id>categoria_projecte</id>
             <__types_id>categoria_projecte</__types_id>
             <__types_title>Categories projectes</__types_title>
-            <checksum>98fd74a8d0461f22a464d063621b028b</checksum>
+            <checksum>9927075e4428319c26cb7cb772adc9c6</checksum>
         </taxonomy>
         <taxonomy>
             <wpcf-tax>sistema_operatiu_aparell</wpcf-tax>
@@ -3572,13 +3518,13 @@
             <meta_box_cb>
                 <callback></callback>
             </meta_box_cb>
-            <_toolset_edit_last>1459932897</_toolset_edit_last>
+            <_toolset_edit_last>1497295163</_toolset_edit_last>
             <_wpcf_author_id>1</_wpcf_author_id>
             <name></name>
             <id>ajuda-projecte</id>
             <__types_id>ajuda-projecte</__types_id>
             <__types_title>Ajuda projectes</__types_title>
-            <checksum>41ed345c596ccc08a880d7232838f567</checksum>
+            <checksum>dceb20d8ae82511576858210cacb1938</checksum>
         </taxonomy>
         <taxonomy>
             <icon>admin-post</icon>
@@ -3619,13 +3565,13 @@
             <meta_box_cb>
                 <callback></callback>
             </meta_box_cb>
-            <_toolset_edit_last>1459951969</_toolset_edit_last>
+            <_toolset_edit_last>1497295163</_toolset_edit_last>
             <_wpcf_author_id>1</_wpcf_author_id>
             <name></name>
             <id>classificacio</id>
             <__types_id>classificacio</__types_id>
             <__types_title>Classificació</__types_title>
-            <checksum>5c005f34c56cf3e986d3fe8c947739d1</checksum>
+            <checksum>a7f63efe811280cc9da641f04e87b35f</checksum>
         </taxonomy>
         <taxonomy>
             <wpcf-tax>fabricant</wpcf-tax>
