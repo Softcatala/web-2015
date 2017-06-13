@@ -850,6 +850,67 @@
         "description": ""
     },
     {
+        "key": "group_593f846a796ab",
+        "title": "Pàgines",
+        "fields": [
+            {
+                "key": "field_593f846f7b368",
+                "label": "Text de la baixada",
+                "name": "text_baixada_principal",
+                "type": "text",
+                "instructions": "Text que es mostra dins del botó de baixada associada a la pàgina.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_593f84897b369",
+                "label": "Baixada principal",
+                "name": "baixada_principal",
+                "type": "file",
+                "instructions": "Url de baixada associada a la pàgina.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "library": "all",
+                "min_size": "",
+                "max_size": "",
+                "mime_types": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "page"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
         "key": "group_5704dffab0598",
         "title": "Passos",
         "fields": [
