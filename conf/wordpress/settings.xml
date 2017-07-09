@@ -176,61 +176,35 @@
             <post_status>publish</post_status>
             <meta>
                 <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
-                <_wp_types_group_fields>,main_image_post,baixades_relacionades_noticia,call_to_action_top_url,call_to_action_top_text,call_to_action_bottom_url,call_to_action_bottom_text,call_to_action_bottom_button_text,</_wp_types_group_fields>
-                <_wp_types_group_post_types>,post,page,esdeveniment,</_wp_types_group_post_types>
+                <_wp_types_group_fields>,baixades_relacionades_noticia,</_wp_types_group_fields>
+                <_wp_types_group_post_types>,post,page,,esdeveniment,</_wp_types_group_post_types>
                 <_wp_types_group_terms>all</_wp_types_group_terms>
-                <_wp_types_group_templates>all</_wp_types_group_templates>
+                <_wp_types_group_templates>,,,,,,,,,,,,,,,,,,,,,,</_wp_types_group_templates>
                 <_wpcf_conditional_display>
                     <custom_use>0</custom_use>
                     <relation>AND</relation>
                     <custom></custom>
                 </_wpcf_conditional_display>
             </meta>
-            <hash>27b1564aaf2f290e9cfd32a176837eb5</hash>
-            <checksum>27b1564aaf2f290e9cfd32a176837eb5</checksum>
+            <hash>8537274588d709273aac7d973afe342d</hash>
+            <checksum>8537274588d709273aac7d973afe342d</checksum>
             <__types_id>post</__types_id>
             <__types_title>Post</__types_title>
         </group>
     </groups>
     <fields>
         <field>
-            <description>Post main image</description>
-            <data>
-                <placeholder></placeholder>
-                <user_default_value></user_default_value>
-                <repetitive>0</repetitive>
-                <conditional_display>
-                    <custom_use>0</custom_use>
-                    <relation>AND</relation>
-                    <custom></custom>
-                </conditional_display>
-                <submit-key>main_image_post</submit-key>
-                <disabled_by_type>0</disabled_by_type>
-                <validate>
-                    <url2>
-                        <active>1</active>
-                        <message>Please enter a valid URL address pointing to the image file.</message>
-                        <suppress_for_cred>1</suppress_for_cred>
-                    </url2>
-                </validate>
-            </data>
-            <id>main_image_post</id>
-            <name>main_image_post</name>
-            <type>image</type>
-            <slug>main_image_post</slug>
-            <meta_key>wpcf-main_image_post</meta_key>
-            <meta_type>postmeta</meta_type>
-            <__types_id>main_image_post</__types_id>
-            <__types_title>main_image_post</__types_title>
-            <hash>0f86adb9e6bc1f28182a6e00ac030c6e</hash>
-            <checksum>0f86adb9e6bc1f28182a6e00ac030c6e</checksum>
-        </field>
-        <field>
+            <id>baixades_relacionades_noticia</id>
+            <slug>baixades_relacionades_noticia</slug>
+            <type>file</type>
+            <name>Baixades relacionades</name>
             <description>Baixades relacionades amb la notícia.</description>
             <data>
+                <slug-pre-save>baixades_relacionades_noticia</slug-pre-save>
                 <placeholder>Test</placeholder>
                 <user_default_value></user_default_value>
                 <repetitive>1</repetitive>
+                <custom_use></custom_use>
                 <conditional_display>
                     <custom_use>0</custom_use>
                     <relation>AND</relation>
@@ -246,147 +220,12 @@
                     </url2>
                 </validate>
             </data>
-            <id>baixades_relacionades_noticia</id>
-            <name>Baixades relacionades</name>
-            <type>file</type>
-            <slug>baixades_relacionades_noticia</slug>
             <meta_key>wpcf-baixades_relacionades_noticia</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>baixades_relacionades_noticia</__types_id>
             <__types_title>Baixades relacionades</__types_title>
-            <hash>6e44a600775e1d7f448330eb5a07b507</hash>
-            <checksum>6e44a600775e1d7f448330eb5a07b507</checksum>
-        </field>
-        <field>
-            <description>URL de l\&#039;acció superior dreta de la notícia</description>
-            <data>
-                <placeholder></placeholder>
-                <user_default_value></user_default_value>
-                <repetitive>0</repetitive>
-                <validate>
-                    <url>
-                        <active>1</active>
-                        <message>Please enter a valid URL address.</message>
-                    </url>
-                </validate>
-                <conditional_display>
-                    <custom_use>0</custom_use>
-                    <relation>AND</relation>
-                    <custom></custom>
-                </conditional_display>
-                <submit-key>call_to_action_top_url</submit-key>
-                <disabled_by_type>0</disabled_by_type>
-            </data>
-            <id>call_to_action_top_url</id>
-            <name>Call to action [Top][URL]</name>
-            <type>url</type>
-            <slug>call_to_action_top_url</slug>
-            <meta_key>wpcf-call_to_action_top_url</meta_key>
-            <meta_type>postmeta</meta_type>
-            <__types_id>call_to_action_top_url</__types_id>
-            <__types_title>Call to action [Top][URL]</__types_title>
-            <hash>2fd23c43f00b88495d6f8e6f1d923791</hash>
-            <checksum>2fd23c43f00b88495d6f8e6f1d923791</checksum>
-        </field>
-        <field>
-            <description>Text de l\&#039;acció superior dreta de la notícia</description>
-            <data>
-                <placeholder></placeholder>
-                <user_default_value></user_default_value>
-                <repetitive>0</repetitive>
-                <conditional_display>
-                    <custom_use>0</custom_use>
-                    <relation>AND</relation>
-                    <custom></custom>
-                </conditional_display>
-                <submit-key>call_to_action_top_text</submit-key>
-                <disabled_by_type>0</disabled_by_type>
-            </data>
-            <id>call_to_action_top_text</id>
-            <name>Call to action [Top][Text]</name>
-            <type>textfield</type>
-            <slug>call_to_action_top_text</slug>
-            <meta_key>wpcf-call_to_action_top_text</meta_key>
-            <meta_type>postmeta</meta_type>
-            <__types_id>call_to_action_top_text</__types_id>
-            <__types_title>Call to action [Top][Text]</__types_title>
-            <hash>337d026c2c8221ef02b6d3dbc9efb562</hash>
-            <checksum>337d026c2c8221ef02b6d3dbc9efb562</checksum>
-        </field>
-        <field>
-            <description>URL de l\&#039;acció inferior de la notícia</description>
-            <data>
-                <placeholder></placeholder>
-                <user_default_value></user_default_value>
-                <repetitive>0</repetitive>
-                <conditional_display>
-                    <custom_use>0</custom_use>
-                    <relation>AND</relation>
-                    <custom></custom>
-                </conditional_display>
-                <submit-key>call_to_action_bottom_url</submit-key>
-                <disabled_by_type>0</disabled_by_type>
-            </data>
-            <id>call_to_action_bottom_url</id>
-            <name>Call to action [Bottom][URL]</name>
-            <type>url</type>
-            <slug>call_to_action_bottom_url</slug>
-            <meta_key>wpcf-call_to_action_bottom_url</meta_key>
-            <meta_type>postmeta</meta_type>
-            <__types_id>call_to_action_bottom_url</__types_id>
-            <__types_title>Call to action [Bottom][URL]</__types_title>
-            <hash>e049e82a8de594515fa97b936b88403b</hash>
-            <checksum>e049e82a8de594515fa97b936b88403b</checksum>
-        </field>
-        <field>
-            <description>Text de l\&#039;acció inferior dreta de la notícia</description>
-            <data>
-                <placeholder></placeholder>
-                <user_default_value></user_default_value>
-                <repetitive>0</repetitive>
-                <conditional_display>
-                    <custom_use>0</custom_use>
-                    <relation>AND</relation>
-                    <custom></custom>
-                </conditional_display>
-                <submit-key>call_to_action_bottom_text</submit-key>
-                <disabled_by_type>0</disabled_by_type>
-            </data>
-            <id>call_to_action_bottom_text</id>
-            <name>Call to action [Bottom][Text]</name>
-            <type>textarea</type>
-            <slug>call_to_action_bottom_text</slug>
-            <meta_key>wpcf-call_to_action_bottom_text</meta_key>
-            <meta_type>postmeta</meta_type>
-            <__types_id>call_to_action_bottom_text</__types_id>
-            <__types_title>Call to action [Bottom][Text]</__types_title>
-            <hash>be02428b196009d3103438a765aa6abf</hash>
-            <checksum>be02428b196009d3103438a765aa6abf</checksum>
-        </field>
-        <field>
-            <description>Text del botó de l\&#039;acció inferior de la notícia</description>
-            <data>
-                <placeholder></placeholder>
-                <user_default_value></user_default_value>
-                <repetitive>0</repetitive>
-                <conditional_display>
-                    <custom_use>0</custom_use>
-                    <relation>AND</relation>
-                    <custom></custom>
-                </conditional_display>
-                <submit-key>call_to_action_bottom_button_text</submit-key>
-                <disabled_by_type>0</disabled_by_type>
-            </data>
-            <id>call_to_action_bottom_button_text</id>
-            <name>Call to action [Bottom][Button][Text]</name>
-            <type>textfield</type>
-            <slug>call_to_action_bottom_button_text</slug>
-            <meta_key>wpcf-call_to_action_bottom_button_text</meta_key>
-            <meta_type>postmeta</meta_type>
-            <__types_id>call_to_action_bottom_button_text</__types_id>
-            <__types_title>Call to action [Bottom][Button][Text]</__types_title>
-            <hash>11b8d8f06bbecebce987e4df27be459f</hash>
-            <checksum>11b8d8f06bbecebce987e4df27be459f</checksum>
+            <hash>dcdc2ba017d14681eeb69738d2dcdf90</hash>
+            <checksum>dcdc2ba017d14681eeb69738d2dcdf90</checksum>
         </field>
         <field>
             <description></description>

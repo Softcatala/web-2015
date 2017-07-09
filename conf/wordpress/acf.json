@@ -463,6 +463,132 @@
         "description": ""
     },
     {
+        "key": "group_5962439c4408f",
+        "title": "Crides a l'acció",
+        "fields": [
+            {
+                "key": "field_596243ae7128e",
+                "label": "Crida a l'acció superior: enllaç",
+                "name": "call_to_action_top_url",
+                "type": "url",
+                "instructions": "URL del boto d'acció superior dret",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": ""
+            },
+            {
+                "key": "field_596243de7128f",
+                "label": "Crida a l'acció superior: text",
+                "name": "call_to_action_top_text",
+                "type": "text",
+                "instructions": "Text del botó d'acció superior dret",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5962440c71290",
+                "label": "Crida a l'acció inferior: enllaç",
+                "name": "call_to_action_bottom_url",
+                "type": "url",
+                "instructions": "URL del boto d'acció inferior",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": ""
+            },
+            {
+                "key": "field_5962442b71291",
+                "label": "Crida a l'acció inferior: text acompanyant",
+                "name": "call_to_action_bottom_text",
+                "type": "text",
+                "instructions": "Text acompayant del botó inferior",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5962445571292",
+                "label": "Crida a l'acció inferior: text del botó",
+                "name": "call_to_action_bottom_button_text",
+                "type": "text",
+                "instructions": "Text del botó de l'acció inferior",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ],
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "esdeveniment"
+                }
+            ],
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "page"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
         "key": "group_58c58656d04de",
         "title": "Distribuidora amb capçalera",
         "fields": [
@@ -837,6 +963,53 @@
                     "param": "post_type",
                     "operator": "==",
                     "value": "esdeveniment"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5962488594b0a",
+        "title": "Miniatura al llistat de notícies",
+        "fields": [
+            {
+                "key": "field_596248934a00e",
+                "label": "Imatge de la miniatura",
+                "name": "main_image_post",
+                "type": "image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "id",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
                 }
             ]
         ],
