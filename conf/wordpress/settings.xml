@@ -107,8 +107,8 @@
     <types>
         <type>
             <_builtin></_builtin>
-            <_toolset_edit_last>1460909766</_toolset_edit_last>
-            <_wpcf_author_id>1</_wpcf_author_id>
+            <_toolset_edit_last>1499724132</_toolset_edit_last>
+            <_wpcf_author_id>2</_wpcf_author_id>
             <__types_id>programa</__types_id>
             <__types_title>Programes</__types_title>
             <wpcf-post-type>programa</wpcf-post-type>
@@ -165,17 +165,9 @@
             <query_var></query_var>
             <permalink_epmask>EP_PERMALINK</permalink_epmask>
             <rest_base></rest_base>
-            <post_relationship>
-                <belongs>
-                    <projecte>1</projecte>
-                </belongs>
-                <has>
-                    <credit>1</credit>
-                </has>
-            </post_relationship>
             <id>programa</id>
-            <hash>114e4df6ca85a9c02f964bbcc1213e67</hash>
-            <checksum>114e4df6ca85a9c02f964bbcc1213e67</checksum>
+            <hash>c4b04c9738bb0623c09e980c91521673</hash>
+            <checksum>c4b04c9738bb0623c09e980c91521673</checksum>
         </type>
         <type>
             <_builtin></_builtin>
@@ -246,7 +238,7 @@
         </type>
     </types>
     <post_relationships>
-        <data>{&quot;post&quot;:[],&quot;page&quot;:{&quot;link&quot;:[],&quot;credit&quot;:[]},&quot;esdeveniment&quot;:{&quot;link&quot;:[]},&quot;programa&quot;:{&quot;credit&quot;:[]},&quot;projecte&quot;:{&quot;programa&quot;:[]}}</data>
+        <data>{&quot;post&quot;:[],&quot;page&quot;:[],&quot;esdeveniment&quot;:[],&quot;programa&quot;:[],&quot;projecte&quot;:[]}</data>
     </post_relationships>
     <taxonomies>
         <taxonomy>
