@@ -167,66 +167,8 @@
             <__types_id>programes</__types_id>
             <__types_title>Programes</__types_title>
         </group>
-        <group>
-            <ID>78</ID>
-            <post_content>Custom fields for &#039;post&#039; type</post_content>
-            <post_title>Post</post_title>
-            <post_excerpt></post_excerpt>
-            <post_type>wp-types-group</post_type>
-            <post_status>publish</post_status>
-            <meta>
-                <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
-                <_wp_types_group_fields>,baixades_relacionades_noticia,</_wp_types_group_fields>
-                <_wp_types_group_post_types>,post,page,,esdeveniment,</_wp_types_group_post_types>
-                <_wp_types_group_terms>all</_wp_types_group_terms>
-                <_wp_types_group_templates>,,,,,,,,,,,,,,,,,,,,,,</_wp_types_group_templates>
-                <_wpcf_conditional_display>
-                    <custom_use>0</custom_use>
-                    <relation>AND</relation>
-                    <custom></custom>
-                </_wpcf_conditional_display>
-            </meta>
-            <hash>8537274588d709273aac7d973afe342d</hash>
-            <checksum>8537274588d709273aac7d973afe342d</checksum>
-            <__types_id>post</__types_id>
-            <__types_title>Post</__types_title>
-        </group>
     </groups>
     <fields>
-        <field>
-            <id>baixades_relacionades_noticia</id>
-            <slug>baixades_relacionades_noticia</slug>
-            <type>file</type>
-            <name>Baixades relacionades</name>
-            <description>Baixades relacionades amb la notícia.</description>
-            <data>
-                <slug-pre-save>baixades_relacionades_noticia</slug-pre-save>
-                <placeholder>Test</placeholder>
-                <user_default_value></user_default_value>
-                <repetitive>1</repetitive>
-                <custom_use></custom_use>
-                <conditional_display>
-                    <custom_use>0</custom_use>
-                    <relation>AND</relation>
-                    <custom></custom>
-                </conditional_display>
-                <submit-key>baixades_relacionades_noticia</submit-key>
-                <disabled_by_type>0</disabled_by_type>
-                <validate>
-                    <url2>
-                        <active>1</active>
-                        <message>Please enter a valid URL address pointing to the file.</message>
-                        <suppress_for_cred>1</suppress_for_cred>
-                    </url2>
-                </validate>
-            </data>
-            <meta_key>wpcf-baixades_relacionades_noticia</meta_key>
-            <meta_type>postmeta</meta_type>
-            <__types_id>baixades_relacionades_noticia</__types_id>
-            <__types_title>Baixades relacionades</__types_title>
-            <hash>dcdc2ba017d14681eeb69738d2dcdf90</hash>
-            <checksum>dcdc2ba017d14681eeb69738d2dcdf90</checksum>
-        </field>
         <field>
             <description></description>
             <data>
@@ -1191,7 +1133,7 @@
             <id>categoria_projecte</id>
             <__types_id>categoria_projecte</__types_id>
             <__types_title>Categories projectes</__types_title>
-            <checksum>7a7dfc5b38337e63cd5fc6589213adb5</checksum>
+            <checksum>bd78e55cd62a063cf84dd3e6e18b1596</checksum>
         </taxonomy>
         <taxonomy>
             <wpcf-tax>ajuda-projectea</wpcf-tax>
@@ -1237,7 +1179,7 @@
             <id>ajuda-projecte</id>
             <__types_id>ajuda-projecte</__types_id>
             <__types_title>Ajuda projectes</__types_title>
-            <checksum>a3ddc6104ad4136fbd57c6df97e95371</checksum>
+            <checksum>fc913794ae018680b2a7da0044f35f40</checksum>
         </taxonomy>
         <taxonomy>
             <icon>admin-post</icon>
@@ -1284,7 +1226,7 @@
             <id>classificacio</id>
             <__types_id>classificacio</__types_id>
             <__types_title>Classificació</__types_title>
-            <checksum>8848c20f94df97c3bbb54e9fff6ffc9d</checksum>
+            <checksum>35d8b6d31c78337be557a3da0c85fa02</checksum>
         </taxonomy>
     </taxonomies>
 </types>
