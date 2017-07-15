@@ -1527,6 +1527,27 @@
                 "min": "",
                 "max": "",
                 "step": ""
+            },
+            {
+                "key": "field_596a4db6425e6",
+                "label": "ID de l'antic rebost",
+                "name": "idrebost",
+                "type": "number",
+                "instructions": "No omplir-lo. Només existeix per a mantenir compatibilitat amb l'antic Rebost i enllaços.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "min": "",
+                "max": "",
+                "step": ""
             }
         ],
         "location": [
