@@ -14,11 +14,11 @@
             "type": "package",
             "package": {
                 "name": "advanced-custom-fields/advanced-custom-fields-pro",
-                "version": "5.5.14",
+                "version": "5.6.0",
                 "type": "wordpress-plugin",
                 "dist": {
                     "type": "zip",
-                    "url": "http://connect.advancedcustomfields.com/index.php?t=5.5.14&p=pro&a=download&k=%%license%%"
+                    "url": "http://connect.advancedcustomfields.com/index.php?t=5.6.0&p=pro&a=download&k=%%license%%"
                 }
             }
         }
@@ -27,12 +27,12 @@
         "composer-plugin-api":"^1.0",
         "johnpbloch/wordpress": "4.8.*",
         "koodimonni-language/ca": "4.8.*",
-        "wpackagist-plugin/wordpress-seo":"5.0.2",
+        "wpackagist-plugin/wordpress-seo":"^5.1",
         "wpackagist-plugin/akismet":"3.3.3",
         "wpackagist-plugin/woosidebars":"^1.4",
         "wpackagist-plugin/simple-lightbox": "^2.6.0",
         "wpackagist-plugin/enable-media-replace": "^3.1",
-        "wpackagist-plugin/nelio-content": "1.3.0",
+        "wpackagist-plugin/nelio-content": "^1.3",
         "xavivars/xv-planeta":"^1.0",
         "wpackagist-plugin/wp-nested-pages": "1.7.1",
         "wpackagist-plugin/mce-table-buttons":"^3.2.0",
@@ -43,7 +43,7 @@
         "softcatala/wp-softcatala":"0.9.55",
         "softcatala/sc-importer":"^0.5.4",
         "softcatala/sc-shortcodes":"^1.2.0",
-        "advanced-custom-fields/advanced-custom-fields-pro":"5.5.14",
+        "advanced-custom-fields/advanced-custom-fields-pro":"5.6.0",
         "rtcamp/nginx-helper":"^1.9.9"
     },
     "require-dev": {
