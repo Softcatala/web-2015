@@ -1548,6 +1548,25 @@
                 "min": "",
                 "max": "",
                 "step": ""
+            },
+            {
+                "key": "field_5978022b93340",
+                "label": "Programa destacat",
+                "name": "programa_destacat",
+                "type": "true_false",
+                "instructions": "Des de Softcatalà, sempre hem considerat alguns programes (LibreOffice, Firefox) com a destacats: són aquells \"importants\" a nivell estratègic. Si aquest programa ho és, marqueu aquesta casella de sel·lecció.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
             }
         ],
         "location": [
