@@ -4566,7 +4566,10 @@ if ( typeof define === 'function' && define.amd ) {
         }
     });
 
-
+    jQuery('#btn-home-programes').click(function() {
+        platform = jQuery('.programari .tab-content .active').attr('id');
+        jQuery(this).attr('href', '/programes/so/' + platform + '/');
+    })
 
 })(jQuery, document, window, ResponsiveBootstrapToolkit);
 
