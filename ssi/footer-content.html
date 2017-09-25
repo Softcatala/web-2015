@@ -238,6 +238,8 @@
 
   if (document.body.classList.contains('error404')) {
     ga('send', 'pageview', '404/' + document.location.pathname);
+  } else if (typeof sc_analytics_page !== "undefined") {
+    ga('send', 'pageview', sc_analytics_page);
   } else {
     ga('send', 'pageview');
   }

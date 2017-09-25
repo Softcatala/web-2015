@@ -1140,6 +1140,25 @@
                 "min_size": "",
                 "max_size": "",
                 "mime_types": ""
+            },
+            {
+                "key": "field_59c94ce3a92d9",
+                "label": "Seguiment personalitzat",
+                "name": "custom_analytics",
+                "type": "text",
+                "instructions": "En alguns casos, podem voler modificar l'URL amb el qual es fa seguiment de la pàgina al Google Analytics. En eixos casos, cal omplir aquest camp.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
             }
         ],
         "location": [
