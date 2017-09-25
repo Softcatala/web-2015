@@ -15,6 +15,8 @@ from fabric.colors import green
 from StringIO import StringIO
 import os.path
 import re
+import logging
+logging.basicConfig()
 
 lxc_server = "softcatala.local"
 staging_server = "pirineus.softcatala.org:4222"
