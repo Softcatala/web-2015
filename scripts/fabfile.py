@@ -12,7 +12,10 @@ from __future__ import with_statement
 from fabric.api import *
 from fabric.contrib.console import confirm
 from fabric.colors import green
-from StringIO import StringIO
+try:
+        from StringIO import StringIO
+except ImportError:
+        from io import StringIO
 import os.path
 import re
 import logging
