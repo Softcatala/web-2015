@@ -45,7 +45,7 @@
         "softcatala/sc-importer":"^0.5.4",
         "softcatala/sc-shortcodes":"^1.2.0",
         "advanced-custom-fields/advanced-custom-fields-pro":"5.6.10",
-        "rtcamp/nginx-helper":"^1.9.12"
+        "rtcamp/nginx-helper":"^1.9"
     },
     "require-dev": {
         "wpackagist-plugin/monkeyman-rewrite-analyzer":"^1.0",
