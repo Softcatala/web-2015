@@ -1,3 +1,6 @@
 node_modules
 *.pyc
 .idea/
+
+scripts/venv
+scripts/fabric3
