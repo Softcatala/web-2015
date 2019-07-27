@@ -33,6 +33,7 @@
         "wpackagist-plugin/simple-lightbox": "^2.7.0",
         "wpackagist-plugin/enable-media-replace": "^3.3",
         "wpackagist-plugin/nelio-content": "^1.6",
+        "wpackagist-plugin/redirection": "^4.3",
         "wpackagist-plugin/classic-editor":"1.5",
         "xavivars/xv-planeta":"^1.0",
         "wpackagist-plugin/wp-nested-pages": "^3.0",
