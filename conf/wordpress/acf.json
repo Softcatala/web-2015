@@ -715,6 +715,48 @@
         "description": ""
     },
     {
+        "key": "group_5e178a85556c8",
+        "title": "En què cal ajuda",
+        "fields": [
+            {
+                "key": "field_5e178aad0f0f3",
+                "label": "Grup de telegram",
+                "name": "telegram",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "https:\/\/t.me\/",
+                "append": "",
+                "maxlength": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "taxonomy",
+                    "operator": "==",
+                    "value": "ajuda-projecte"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    },
+    {
         "key": "group_59385b50467ae",
         "title": "Enllaços de la distribuidora",
         "fields": [
