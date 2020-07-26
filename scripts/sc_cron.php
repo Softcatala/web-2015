@@ -475,6 +475,7 @@ class SC_Cron
                 $moz_os = array(
                     'windows' => array(
                         'x86' => 'win',
+                        'x86_64' => 'win64'
                     ),
                     'osx' => array (
                         'x86' => 'osx',
