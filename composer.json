@@ -14,11 +14,11 @@
             "type": "package",
             "package": {
                 "name": "advanced-custom-fields/advanced-custom-fields-pro",
-                "version": "5.8.11",
+                "version": "5.9.0",
                 "type": "wordpress-plugin",
                 "dist": {
                     "type": "zip",
-                    "url": "http://connect.advancedcustomfields.com/index.php?t=5.8.11&p=pro&a=download&k=%%license%%"
+                    "url": "http://connect.advancedcustomfields.com/index.php?t=5.9.0&p=pro&a=download&k=%%license%%"
                 }
             }
         }
@@ -35,7 +35,7 @@
         "wpackagist-plugin/nelio-content": "^1.6",
         "wpackagist-plugin/insert-pages": "^3.5",
         "wpackagist-plugin/redirection": "^4.3",
-        "wpackagist-plugin/classic-editor":"1.5",
+        "wpackagist-plugin/classic-editor":"1.6",
         "wpackagist-plugin/powerpress": "^8.3",
         "xavivars/xv-planeta":"^1.0",
         "wpackagist-plugin/wp-nested-pages": "^3.0",
@@ -47,7 +47,7 @@
         "softcatala/wp-softcatala":"1.0.48",
         "softcatala/sc-importer":"^0.5.4",
         "softcatala/sc-shortcodes":"^1.2.0",
-        "advanced-custom-fields/advanced-custom-fields-pro":"5.8.11",
+        "advanced-custom-fields/advanced-custom-fields-pro":"5.9.0",
         "rtcamp/nginx-helper":"^2.0"
     },
     "require-dev": {
