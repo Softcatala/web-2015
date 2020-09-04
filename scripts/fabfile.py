@@ -96,7 +96,7 @@ def update_environment():
     if env.confprivatedir != '':
         with cd('%s' % env.confprivatedir):
             sudo('chown '+env.user +':' + env.user + ' -R ' + env.confprivatedir)
-            run('git pull')
+            #run('git pull')
             sudo('chown www-data:www-data -R ' + env.confprivatedir)
 
     ##Update composer.json
@@ -112,7 +112,7 @@ def update_environment():
     ##Run the environment update and set the permissions back to apache
     with cd('%s' % env.dir):
         sudo('php composer.phar self-update && php composer.phar update ' + env.require_dev, user='www-data')
-        sudo('service nginx restart && service redis-server restart && wp cache flush --allow-root && sleep 1 && redis-cli flushall')
+        sudo('service nginx restart && sleep 2 && service redis-server restart && wp cache flush --allow-root && sleep 1 && redis-cli flushall')
 
 def deploy():
     """
