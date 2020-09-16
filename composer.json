@@ -46,7 +46,7 @@
         "softcatala/wp-softcatala":"1.0.49",
         "softcatala/sc-importer":"^0.5.4",
         "softcatala/sc-shortcodes":"^1.2.0",
-	"xavivars/xv-podcasts":"^0.3",
+	"xavivars/xv-podcasts":"^0.4",
         "advanced-custom-fields/advanced-custom-fields-pro":"5.9.1",
         "rtcamp/nginx-helper":"^2.0"
     },
