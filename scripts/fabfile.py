@@ -112,7 +112,7 @@ def update_environment():
     ##Run the environment update and set the permissions back to apache
     with cd('%s' % env.dir):
         sudo('php composer.phar self-update && php composer.phar update ' + env.require_dev, user='www-data')
-        sudo('service nginx restart && sleep 2 && service redis-server restart && wp cache flush --allow-root && sleep 1 && redis-cli flushall')
+        sudo('service nginx restart && sleep 2 && service redis-server restart && sleep 2 && wp cache flush --allow-root && sleep 1 && redis-cli flushall')
 
 def deploy():
     """
