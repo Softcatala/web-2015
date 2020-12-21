@@ -43,9 +43,7 @@
                     "1": "Sí",
                     "0": "No"
                 },
-                "default_value": [
-                    0
-                ],
+                "default_value": 0,
                 "ui": 0,
                 "ajax": 0,
                 "placeholder": "",
@@ -74,9 +72,7 @@
                     "2": "N\/A",
                     "3": "Desconegut"
                 },
-                "default_value": [
-                    3
-                ],
+                "default_value": 3,
                 "ui": 0,
                 "ajax": 0,
                 "placeholder": "",
@@ -216,9 +212,7 @@
                             "x86": "32 bits",
                             "x86_64": "64 bits"
                         },
-                        "default_value": [
-                            "x86"
-                        ],
+                        "default_value": "x86",
                         "ui": 0,
                         "ajax": 0,
                         "placeholder": "",
@@ -251,7 +245,7 @@
                             "multiplataforma": "Multiplataforma",
                             "web": "Web"
                         },
-                        "default_value": [],
+                        "default_value": false,
                         "ui": 0,
                         "ajax": 0,
                         "placeholder": "",
@@ -338,6 +332,11 @@
                     "param": "post_type",
                     "operator": "==",
                     "value": "page"
+                },
+                {
+                    "param": "page_type",
+                    "operator": "!=",
+                    "value": "front_page"
                 }
             ],
             [
@@ -383,7 +382,7 @@
                     "gestio-de-continguts": "Gestió de continguts",
                     "traduccio-i-correccio": "Traducció i correcció"
                 },
-                "default_value": [],
+                "default_value": false,
                 "ui": 0,
                 "ajax": 0,
                 "placeholder": "",
@@ -506,6 +505,11 @@
                     "param": "post_type",
                     "operator": "==",
                     "value": "page"
+                },
+                {
+                    "param": "page_type",
+                    "operator": "!=",
+                    "value": "front_page"
                 }
             ],
             [
@@ -653,6 +657,11 @@
                     "param": "post_type",
                     "operator": "==",
                     "value": "page"
+                },
+                {
+                    "param": "page_type",
+                    "operator": "!=",
+                    "value": "front_page"
                 }
             ]
         ],
@@ -692,6 +701,11 @@
                     "param": "post_type",
                     "operator": "==",
                     "value": "page"
+                },
+                {
+                    "param": "page_type",
+                    "operator": "!=",
+                    "value": "front_page"
                 }
             ]
         ],
@@ -1181,6 +1195,132 @@
         "description": ""
     },
     {
+        "key": "group_5fe0eeb5e6437",
+        "title": "Pàgina principal",
+        "fields": [
+            {
+                "key": "field_5fe0ef0316e8e",
+                "label": "Recursos i serveis",
+                "name": "recursos",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 4,
+                "max": 4,
+                "layout": "table",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_5fe0ef5416e8f",
+                        "label": "Títol",
+                        "name": "title",
+                        "type": "textarea",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "maxlength": "",
+                        "rows": 2,
+                        "new_lines": "br"
+                    },
+                    {
+                        "key": "field_5fe0ef7f16e90",
+                        "label": "Enllaç",
+                        "name": "link",
+                        "type": "link",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url"
+                    },
+                    {
+                        "key": "field_5fe0ef9916e91",
+                        "label": "Descripció",
+                        "name": "description",
+                        "type": "textarea",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "maxlength": "",
+                        "rows": 3,
+                        "new_lines": "br"
+                    },
+                    {
+                        "key": "field_5fe0efc916e92",
+                        "label": "Imatge",
+                        "name": "image",
+                        "type": "image",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url",
+                        "preview_size": "medium",
+                        "library": "all",
+                        "min_width": 370,
+                        "min_height": 150,
+                        "min_size": "",
+                        "max_width": 370,
+                        "max_height": 150,
+                        "max_size": "",
+                        "mime_types": ""
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_type",
+                    "operator": "==",
+                    "value": "front_page"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "the_content",
+            "excerpt",
+            "slug",
+            "featured_image"
+        ],
+        "active": true,
+        "description": ""
+    },
+    {
         "key": "group_593f846a796ab",
         "title": "Pàgines",
         "fields": [
@@ -1248,6 +1388,11 @@
                     "param": "post_type",
                     "operator": "==",
                     "value": "page"
+                },
+                {
+                    "param": "page_type",
+                    "operator": "!=",
+                    "value": "front_page"
                 }
             ]
         ],
