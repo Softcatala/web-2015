@@ -319,6 +319,13 @@ class SC_Cron
                 'stable' => 'LATEST_FIREFOX_VERSION',
             ),
             array(
+                'slug' => 'firefox-en-valencia',
+                'type' => 'json',
+                'json_url' => 'https://product-details.mozilla.org/1.0/firefox_versions.json',
+                'os' => $this->get_moz_os( 'firefox' ),
+                'stable' => 'LATEST_FIREFOX_VERSION',
+            ),
+            array(
                 'slug' => 'paquet-catala-per-al-firefox',
                 'type' => 'json',
                 'json_url' => 'https://product-details.mozilla.org/1.0/firefox_versions.json',
