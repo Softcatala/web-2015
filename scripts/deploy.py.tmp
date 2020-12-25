@@ -1,0 +1,250 @@
+# Fabfile to:
+#    - initialize site based on a new WordPress installation (git, svn, curl need to be installed)
+#    - IMPORTANT: before starting, make a copy of the wp directory and database, the script move files and directories and doesn't put them back if something fails
+#    - this scripts requires:
+#      - set up website with nginx (use easyengine for the creation)
+#      - root access to the server (so the permissions can be changed according to the operation)
+#      - a database which has been already set up
+#      - more information on the internal wiki
+
+import logging
+logging.basicConfig()
+
+import getpass
+import datetime
+
+from fabric.config import Config
+from fabric.connection import Connection
+
+from invocations.console import confirm
+from invoke.exceptions import Failure
+
+local_private_repo_git = "ssh://git@softcatala.org:3332/web-privat"
+remote_private_repo_git = "ssh://git@softcatala.org:3332/web-privat"
+
+environments = {
+    'local' : {
+        'host': 'localhost',
+        'path': 'softcatala.local',
+        'db'  : 'local'
+    },
+    'lxc' : {
+        'host': 'softcatala.local',
+        'path': 'softcatala.local',
+        'db'  : 'local'
+    },
+    'staging' : {
+        'host': 'pirineus.softcatala.org:4222',
+        'path': 'web2015.softcatala.org',
+        'db'  : 'web2015'
+    },
+    'prod' : {
+        'host': 'pirineus.softcatala.org:4422',
+        'path': 'web2016.softcatala.org',
+        'db'  : 'web2015'
+    }
+}
+
+
+class Environment:
+
+    def __init__(self, env):
+        
+        global environments
+
+        if env not in ['local', 'lxc', 'staging', 'prod']:
+            raise Failure('Invalid environment: {}'.format(env))
+
+        self.password = getpass.getpass("What's your sudo password?")
+
+        self.env   = env
+        self.local = env in ['local', 'lxc']
+        self.data  = environments[env]
+
+    def dirs(self):
+
+        path = self.data['path']
+
+        return {
+            'dir'           : "/var/www/{}/htdocs/".format(path),
+            'wordpressdir'  : "/var/www/{}/htdocs/wp".format(path),
+            'confdir'       : "/var/www/{}/web-2015".format(path),
+            'confprivatedir': "/var/www/{}/web-privat".format(path),
+            'backupdir'     : "/var/www/{}/backup".format(path),
+            'db_name'       : "{}_softcatala_org".format(self.data['db']),
+            'tmp_path'      : "/tmp/"
+        }
+
+    def connection(self, user):
+
+        cfg = Config()
+
+        cfg.load_collection(self.dirs())
+
+        cfg.require_dev = "--no-dev" if self.local else ''
+        cfg.password = self.password
+
+        return Connection(
+            self.data['host'], 
+            user = user, 
+            config = cfg,
+            connect_kwargs = { 'passphrase' : self.password }
+        )
+
+def _cd(dir):
+    return 'ls > /dev/null && cd {0}'.format(dir)
+
+def backup(c):
+    date = datetime.datetime.now().strftime('%Y%m%d')
+
+    backup      = _cd(c.backupdir)
+    backup_date = _cd(c.backupdir+'/'+date)
+
+    print("\nCreate backup folder...")
+    cmd = "{0} && sudo mkdir -p {1} && sudo chmod a+xw $_"
+    c.sudo(cmd.format(backup, date), password = c.password)
+
+    print("\nMysql dump...")
+    cmd = "{0} && sudo mysqldump {1} > {1}-$(date '+%H%M%S').sql"
+    c.sudo(cmd.format(backup_date, c.db_name), password = c.password)
+    
+    print("\nRsync...")
+    cmd = "{0} && sudo mkdir -p files && sudo rsync -a {1} files/"
+    c.sudo(cmd.format(backup_date, c.dir), password = c.password)
+
+
+def create_composer_cache(c):
+    print("\nCreate composer cache if does not exist")
+    cmd = "{0} && sudo mkdir -p ../../.composer && sudo chown www-data:www-data -R ../../.composer"
+    c.sudo(cmd.format(_cd(c.dir)), password = c.password)
+
+def update_private_repo(c):
+    if c.confprivatedir != '':
+        privatedir = _cd(c.confprivatedir)
+        
+        cmd = "{privatedir} && sudo chown {user}:{user} -R {confprivatedir}"
+        c.sudo(cmd.format(privatedir=privatedir,user=c.user,confprivatedir=c.confprivatedir), password=c.password)
+
+        cmd = "{privatedir} && git pull"
+        c.run(cmd.format(privatedir=privatedir))
+        
+        cmd = "{privatedir} && sudo chown www-data:www-data -R {confprivatedir}"
+        c.sudo(cmd.format(privatedir=privatedir,confprivatedir=c.confprivatedir), password=c.password)
+
+def deploy(env, user):
+
+    environment = Environment(env)
+
+    with environment.connection(user) as c:
+        if not environment.local:
+            backup(c)
+
+        create_composer_cache(c)
+
+        update_private_repo(c)
+
+        update_composer_json(c)
+
+        update_environment(c)
+    return
+
+
+def update_environment(c):
+    cmd = "{0} && sudo -u www-data php composer.phar self-update && sudo -u www-data php composer.phar update {1}"
+    c.sudo(cmd.format(_cd(c.dir), c.require_dev), password=c.password)
+
+    cmd = "{0} && sudo service nginx restart && sudo service redis-server restart && sleep 1 && sudo redis-cli flushall"
+    c.sudo(cmd.format(_cd(c.dir)), password=c.password)
+
+def update_composer_json(c):
+
+    cmd = "{0} && sudo git pull && sudo chown www-data:www-data -R {1}"
+    c.sudo(cmd.format(_cd(c.confdir), c.confdir), password=c.password)
+
+    if c.confprivatedir != '':
+        cmd = "{0} && sudo chown www-data:www-data -R ../ "
+        c.sudo(cmd.format(_cd(c.confdir)), password=c.password)
+
+        cmd = "{0} && sudo rm -f ../htdocs/composer.json "
+        c.sudo(cmd.format(_cd(c.confdir)), password=c.password)
+
+        cmd = "{0} && source {1}/licenses/licenses && cat composer.json | sed -e \"s/%%license%%/$ACF_LICENSE/g\" | sudo tee ../htdocs/composer.json > /dev/null"
+        c.sudo(cmd.format(_cd(c.confdir), c.confprivatedir), password=c.password)
+
+        cmd = "{0} && sudo chown www-data:www-data -h ../htdocs/composer.json "
+        c.sudo(cmd.format(_cd(c.confdir)), password=c.password)
+
+
+# TODO: Migrate to fabric 2
+def initialize_site(base_path='',base_url='',db_name='',db_user='',db_pass=''):
+    if base_path and base_url:
+        print('Starting SC website initizalization...')
+
+        ##Change directory permissions to current user and create directory structure
+        with cd('%s' % base_path):
+            run('sudo chown $USER:$USER -R .')
+            run('mkdir -p conf/wordpress')
+            run('git clone https://github.com/Softcatala/web-2015.git')
+            run('git clone ' + private_repo_git + ' web-privat')
+            if not db_user:
+                run('cp web-privat/conf/wordpress/db_%s.php conf/wordpress/db.php' % env.id)
+            else:
+                run('cp web-2015/conf/wordpress/db.php conf/wordpress/db.php')
+
+        ##Download WordPress and plugins/theme
+        with cd('%s/htdocs' % base_path):
+            run('curl -sS https://getcomposer.org/installer | php')
+            run('ln -s ../web-2015/composer.json')
+            run('./composer.phar install')
+            run('ln -s ../web-2015/ssi')
+            run('cp ../web-2015/index.php .')
+            run('mkdir uploads')
+
+        with cd('%s/htdocs/wp' % base_path):
+            run('ln -s ../../web-2015/conf/wordpress/wp-config.php')
+
+        ##Set the user/pass/db for wordpress with the provided parameters
+        if db_name and db_user and db_pass:
+            with cd('%s/conf/wordpress' % base_path):
+                run('sed -i -- \'s/db_name/%s/g\' db.php' % db_name)
+                run('sed -i -- \'s/db_user/%s/g\' db.php' % db_user)
+                run('sed -i -- \'s/db_pass/%s/g\' db.php' % db_pass)
+        else:
+            #Store database parameters
+            config_path = '%s/conf/wordpress/db.php' % base_path
+            fd = StringIO()
+            get(config_path, fd)
+            content = fd.getvalue()
+
+            db_name_ar = re.findall(r'DB_NAME\', \'(\w+)', content)
+            db_name = db_name_ar[0]
+
+            db_user_ar = re.findall(r'DB_USER\', \'(\w+)', content)
+            db_user = db_user_ar[0]
+
+            db_pass_ar = re.findall(r'DB_PASSWORD\', \'(\w+)', content)
+            db_pass = db_pass_ar[0]
+
+
+        ##Import Database
+        with cd('%s' % base_path):
+            sc_database_path = 'web-privat/bd/softcatala_base.sql'
+            run("mysql -u "+db_user+" -p"+db_pass+" --silent --skip-column-names -e \"SHOW TABLES\" "+db_name+" | xargs -L1 -I% echo 'SET FOREIGN_KEY_CHECKS = 0; DROP TABLE %;' | mysql -u "+db_user+" -p"+db_pass+" -v "+db_name)
+            run("mysql -u "+db_user+" -p"+db_pass+" "+db_name+" < "+sc_database_path)
+            run("mysql -u "+db_user+" -p"+db_pass+" "+db_name+" -e 'SET FOREIGN_KEY_CHECKS = 1; UPDATE wp_options SET option_value=\"%s/wp\" where option_name=\"siteurl\"'" % base_url)
+            run("mysql -u "+db_user+" -p"+db_pass+" "+db_name+" -e 'UPDATE wp_options SET option_value=\"%s\" where option_name=\"home\"'" % base_url)
+
+        ##Remove unused themes and update database if necessary. To avoid initial with Softcatala theme, we deactivate and reactivate it
+        with cd('%s/htdocs/wp' % base_path):
+            run('wp core update-db && wp theme delete twentyten && wp theme delete twentyeleven && wp theme delete twentytwelve && wp theme delete twentythirteen && wp theme delete twentyfourteen')
+            run('wp theme activate twentyfifteen && wp theme activate wp-softcatala')
+
+        ##Restore apache permissions
+        with cd('%s' % base_path):
+            run('sudo chown www-data:www-data -R .')
+
+    else:
+        print("Please provide an absolute path to the website root directory and url")
+
+
+deploy('staging', 'xavivars')
