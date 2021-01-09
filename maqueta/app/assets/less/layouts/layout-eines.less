@@ -310,12 +310,18 @@ LAYOUT - eines
 			@media (max-width: @screen-xs-max) {
 				.textarea-origen {
 					.primer-textarea {
-						height: 100px;
+						min-height: 100px;
+						height: auto;
+						max-height: 355px;
+						overflow: scroll;
 					}
 				}
 				.textarea-desti{
 					.second-textarea {
-						height: 100px;
+						min-height: 100px;
+						height: auto;
+						max-height: 355px;
+						overflow: scroll;
 					}
 				}
 			}
