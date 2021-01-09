@@ -84,6 +84,12 @@ module.exports = function(grunt) {
                     {expand: true, cwd: 'public/dist/css/', src: '**', dest: '../ssi/css/'},
                 ],
             },
+            wordpress: {
+                files: [
+                    {expand: true, cwd: 'public/dist/js/', src: '**', dest: '../../wp-softcatala/static/js/'},
+                    {expand: true, cwd: 'public/dist/css/', src: '**', dest: '../../wp-softcatala/static/css/'},
+                ]
+            }
         }
     });
 
@@ -97,7 +103,7 @@ module.exports = function(grunt) {
   // Task definition
     grunt.registerTask('ssi', ['copy:ssi']);
     grunt.registerTask('default', ['less', 'concat', 'uglify', 'ssi']);
-
+    grunt.registerTask('wordpress', ['copy:wordpress'])
 
 
 };
