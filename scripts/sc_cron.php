@@ -403,8 +403,15 @@ class SC_Cron
                     $arch_wp = 'x86';
                     $download_url = $os;
                     ($arch_wp == 'multiplataforma') ? $version = '' : '';
-                } else {
-                    $download_url = 'https://download.mozilla.org/?product='.$product['slug'].'-'.$version.'-SSL&os='.$os.'&lang=ca';
+		} else {
+		    if ( $product['slug'] == 'firefox-en-valencia' ) {
+			$lng = 'ca-valencia';
+			$prd = 'firefox';
+		    } else {
+			$lng = 'ca';
+			$prd = $product['slug'];
+		    }
+                    $download_url = 'https://download.mozilla.org/?product='.$prd.'-'.$version.'-SSL&os='.$os.'&lang='.$lng;
                 }
 
                 $version_info[$os_wp.$arch_wp]['download_url'] = $download_url;
