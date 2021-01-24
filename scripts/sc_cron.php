@@ -101,11 +101,15 @@ class SC_Cron
                 case 'osmand':
                     $this->update_osmad();
                     break;
+                case 'calibre':
+                    $this->update_calibre();
+                    break;
                 case 'all':
                     $this->update_mozilla();
                     $this->update_libreoffice();
                     $this->update_osmad();
                     $this->update_ubuntu();
+                    $this->update_calibre();
                     break;
             }
         } else {
@@ -304,6 +308,29 @@ class SC_Cron
         return round(pow(1024, $base - floor($base)), $precision) .' '. $suffixes[floor($base)];
     }
 
+    /**
+     * Updates Calibre
+     */
+    private function update_calibre() {
+        $rss = 'https://calibre-ebook.com/changelog.rss';
+        $feed = fetch_feed ( $rss );
+        $items = $feed->get_items();
+        $item = $items[0];
+        $guid = $item->get_id();
+        $parts = explode('-', $guid );
+        $version = $parts[1];
+
+        if ( $post = get_page_by_path( 'calibre' , OBJECT, 'programa' ) ) {
+            $field_key = $this->acf_get_field_key("baixada", $post->ID);
+            $version_info = get_field( 'baixada', $post->ID );
+            var_dump($version_info);
+            foreach ($version_info as $k=>$v) {
+                $version_info[$k]['download_version'] = $version;
+            }
+            var_dump($version_info);
+            update_field( $field_key, $version_info, $post->ID );
+        }
+    }
 
     /**
      * Updates Mozilla programs
