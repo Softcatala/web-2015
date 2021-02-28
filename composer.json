@@ -14,11 +14,11 @@
             "type": "package",
             "package": {
                 "name": "advanced-custom-fields/advanced-custom-fields-pro",
-                "version": "5.9.3",
+                "version": "5.9.5",
                 "type": "wordpress-plugin",
                 "dist": {
                     "type": "zip",
-                    "url": "http://connect.advancedcustomfields.com/index.php?t=5.9.3&p=pro&a=download&k=%%license%%"
+                    "url": "http://connect.advancedcustomfields.com/index.php?t=5.9.5&p=pro&a=download&k=%%license%%"
                 }
             }
         }
@@ -34,7 +34,7 @@
         "wpackagist-plugin/enable-media-replace": "^3.3",
         "wpackagist-plugin/nelio-content": "^2.0",
         "wpackagist-plugin/insert-pages": "^3.5",
-        "wpackagist-plugin/redirection": "^4.3",
+        "wpackagist-plugin/redirection": "^5.0",
         "wpackagist-plugin/classic-editor":"1.6",
         "xavivars/xv-planeta":"^1.0",
         "wpackagist-plugin/wp-nested-pages": "^3.0",
@@ -43,11 +43,11 @@
         "softcatala/wp-theme-mover":"^0.1.0",
         "softcatala/mce-table-buttons-class":"^0.0.1",
         "softcatala/sc-normalize-upload-dir":"^0.2",
-        "softcatala/wp-softcatala":"1.0.71",
+        "softcatala/wp-softcatala":"1.0.72",
         "softcatala/sc-importer":"^0.5.4",
         "softcatala/sc-shortcodes":"^1.2.0",
 	"xavivars/xv-podcasts":"^0.6",
-        "advanced-custom-fields/advanced-custom-fields-pro":"5.9.3",
+        "advanced-custom-fields/advanced-custom-fields-pro":"5.9.5",
         "rtcamp/nginx-helper":"^2.0"
     },
     "require-dev": {
