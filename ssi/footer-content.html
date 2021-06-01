@@ -237,6 +237,7 @@
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-150131-4', 'auto');
+  ga('set', 'anonymizeIp', true);
 
   if (document.body.classList.contains('error404')) {
     ga('send', 'pageview', '404/' + document.location.pathname);
