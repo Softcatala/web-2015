@@ -14,11 +14,11 @@
             "type": "package",
             "package": {
                 "name": "advanced-custom-fields/advanced-custom-fields-pro",
-                "version": "5.9.5",
+                "version": "5.9.8",
                 "type": "wordpress-plugin",
                 "dist": {
                     "type": "zip",
-                    "url": "http://connect.advancedcustomfields.com/index.php?t=5.9.5&p=pro&a=download&k=%%license%%"
+                    "url": "http://connect.advancedcustomfields.com/index.php?t=5.9.8&p=pro&a=download&k=%%license%%"
                 }
             }
         }
@@ -47,7 +47,7 @@
         "softcatala/sc-importer":"^0.5.4",
         "softcatala/sc-shortcodes":"^1.2.0",
 	"xavivars/xv-podcasts":"^0.6",
-        "advanced-custom-fields/advanced-custom-fields-pro":"5.9.5",
+        "advanced-custom-fields/advanced-custom-fields-pro":"5.9.8",
         "rtcamp/nginx-helper":"^2.0"
     },
     "require-dev": {
