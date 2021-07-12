@@ -74,8 +74,8 @@
             "cd wp && rm -rf wp-config.php && ln -s ../../web-2015/conf/wordpress/wp-config.php",
             "cd wp/wp-content && wget -N https://raw.githubusercontent.com/ericmann/Redis-Object-Cache/master/object-cache.php",
             "testca=\"$(php -r 'include \"wp/wp-includes/version.php\"; if(isset($wp_local_package)) echo $wp_local_package; else echo \"-\";')\" && if [ \"$testca\" != \"ca\" ]; then printf \"\n\\$wp_local_package = 'ca';\" >> ./wp/wp-includes/version.php; fi",
-            "cd wp && wp core update-db && wp theme delete twentyten && wp theme delete twentyeleven && wp theme delete twentytwelve && wp theme delete twentythirteen && wp theme delete twentyfourteen && wp theme delete twentyfifteen && wp theme delete twentysixteen && wp theme delete twentyseventeen",
-            "cd wp && wp rewrite flush"
+            "cd wp && wp core update-db --allow-root && wp theme delete twentyten --allow-root && wp theme delete twentyeleven --allow-root && wp theme delete twentytwelve --allow-root && wp theme delete twentythirteen --allow-root && wp theme delete twentyfourteen --allow-root && wp theme delete twentyfifteen --allow-root && wp theme delete twentysixteen --allow-root && wp theme delete twentyseventeen --allow-root && wp theme delete twentyeighteen --allow-root && wp theme delete twentynineteen --allow-root && wp theme delete twentytwenty --allow-root",
+            "cd wp && wp rewrite flush --allow-root"
         ]
     },
     "config": {
