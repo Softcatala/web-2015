@@ -12,7 +12,13 @@ define('DB_USER', 'db_user');
 define('DB_PASSWORD', 'db_pass');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+if(isset($_ENV['LOCAL_DOCKER']) && $_ENV['LOCAL_DOCKER']) {
+    define('WP_DEBUG', true);
+    define('WP_DEBUG_DISPLAY', true);
+    define('DB_HOST', 'mysql');
+} else {
+    define('DB_HOST', 'localhost');
+}
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
