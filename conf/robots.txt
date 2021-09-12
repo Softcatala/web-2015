@@ -8,10 +8,5 @@ Disallow: /wiki/Especial:Browse
 Disallow: /wiki/Special:Search
 Disallow: /wiki/Especial:Cerca
 Disallow: /wiki/Especial:P%C3%A0gines_especials
-# Dev and prod recursos env
-Disallow: /recursos-dev/
-Disallow: /recursos-preprod/
-# Catalanitzador
-Disallow: /dev-catalanitzador/
 # Programes FTP
 Disallow: /pub/
