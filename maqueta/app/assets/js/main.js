@@ -147,6 +147,13 @@
 
       $(".btns-llengues-desti .bt").click(function (e) {
         e.preventDefault();
+        if ( $(this).prop("tagName").toLowerCase() === 'div' ) {
+            if ( $(this).find('button').length === 1 ) {
+                if ( $($(this).find('button')[0]).is(':disabled') ) {
+                    return
+                }
+            }
+        }
         $('.btns-llengues-desti .bt').removeClass('select');
         $(this).addClass('select');
       });
