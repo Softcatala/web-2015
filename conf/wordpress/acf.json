@@ -241,7 +241,6 @@
                             "linux": "Linux",
                             "ios": "iOS",
                             "android": "Android",
-                            "windows_phone": "Windows Phone",
                             "multiplataforma": "Multiplataforma",
                             "web": "Web"
                         },
