@@ -107,6 +107,9 @@ class SC_Cron
                 case 'gimp':
                     $this->update_gimp();
                     break;
+                case 'inkscape':
+                    $this->update_inkscape();
+                    break;
                 case 'all':
                     $this->update_mozilla();
                     $this->update_libreoffice();
@@ -335,6 +338,62 @@ class SC_Cron
         }
     }
 
+
+    /**
+     * Updates Inkscape
+     */
+    private function update_inkscape() {
+        $scoop_url = 'https://raw.githubusercontent.com/ScoopInstaller/Extras/master/bucket/inkscape.json';
+
+        $result = do_json_api_call( $scoop_url );
+
+        if ( $result == 'error' ) {
+            return;
+        }
+
+        $json = json_decode( $result );
+        $version = $json->version;
+
+        $inkscape_post = get_page_by_path( 'inkscape' , OBJECT, 'programa' );
+        $field_key = $this->acf_get_field_key( "baixada", $inkscape_post->ID );
+
+        $versions = [
+            [
+                'download_os' => 'linux',
+                'download_version' => $version,
+                'download_url' => "https://inkscape.org/release/$version/gnulinux/",
+                'arquitectura' => 'generic',
+                'download_size' => ''
+            ],
+            [
+                'download_os' => 'osx',
+                'download_version' => $version,
+                'download_url' => "https://inkscape.org/release/inkscape-$version/mac-os-x/dmg/dl/",
+                'arquitectura' => 'generic',
+                'download_size' => ''
+            ],
+            [
+                'download_os' => 'windows',
+                'download_version' => $version,
+                'download_url' => "https://inkscape.org/release/inkscape-$version/windows/64-bit/exe/dl/",
+                'arquitectura' => 'x86_64',
+                'download_size' => ''
+            ],
+            [
+                'download_os' => 'windows',
+                'download_version' => $version,
+                'download_url' => "https://inkscape.org/release/inkscape-$version/windows/32-bit/exe/dl/",
+                'arquitectura' => 'x86',
+                'download_size' => ''
+            ]
+        ];
+
+        update_field($field_key, $versions, $inkscape_post->ID);
+    }
+
+    /**
+     * Updates GIMP
+     */
     private function update_gimp() {
         $scoop_url = 'https://raw.githubusercontent.com/ScoopInstaller/Extras/master/bucket/gimp.json';
 
