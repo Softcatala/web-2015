@@ -104,6 +104,9 @@ class SC_Cron
                 case 'calibre':
                     $this->update_calibre();
                     break;
+                case 'gimp':
+                    $this->update_gimp();
+                    break;
                 case 'all':
                     $this->update_mozilla();
                     $this->update_libreoffice();
@@ -330,6 +333,48 @@ class SC_Cron
             var_dump($version_info);
             update_field( $field_key, $version_info, $post->ID );
         }
+    }
+
+    private function update_gimp() {
+        $scoop_url = 'https://raw.githubusercontent.com/ScoopInstaller/Extras/master/bucket/gimp.json';
+
+        $result = do_json_api_call( $scoop_url );
+
+        if ( $result == 'error' ) {
+            return;
+        }
+
+        $json = json_decode( $result );
+        $version = $json->version;
+
+        $gimp_post = get_page_by_path( 'gimp' , OBJECT, 'programa' );
+        $field_key = $this->acf_get_field_key( "baixada", $gimp_post->ID );
+
+        $versions = [
+            [
+                'download_os' => 'linux',
+                'download_version' => $version,
+                'download_url' => 'https://www.gimp.org/downloads/',
+                'arquitectura' => 'generic',
+                'download_size' => ''
+            ],
+            [
+                'download_os' => 'osx',
+                'download_version' => $version,
+                'download_url' => "https://download.gimp.org/mirror/pub/gimp/v2.10/osx/gimp-$version-x86_64.dmg",
+                'arquitectura' => 'generic',
+                'download_size' => ''
+            ],
+            [
+                'download_os' => 'windows',
+                'download_version' => $version,
+                'download_url' => "https://download.gimp.org/mirror/pub/gimp/v2.10/windows/gimp-$version-setup.exe",
+                'arquitectura' => 'generic',
+                'download_size' => ''
+            ]
+        ];
+
+        update_field($field_key, $versions, $gimp_post->ID);
     }
 
     /**
