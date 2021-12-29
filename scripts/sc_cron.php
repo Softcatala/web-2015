@@ -171,7 +171,7 @@ class SC_Cron
     }
 
     private function update_ubuntu() {
-        $ubuntu_flavours = array('ubuntu-mate', 'ubuntu-gnome', 'xubuntu', 'ubuntu', 'kubuntu');
+        $ubuntu_flavours = array('ubuntu-mate', 'xubuntu', 'ubuntu', 'kubuntu');
 
         $info_url = 'https://gent.softcatala.org/jmontane/check-version/ubuntu/latest_files.txt';
         $downloads_info_csv = do_json_api_call( $info_url );
@@ -179,14 +179,18 @@ class SC_Cron
 
         $ubuntu_downloads = array();
 
+        $ubuntu_downloads['ubuntu'] = $this->get_main_ubuntu_flavour_data();
+
         foreach ($downloads_info as $key => $download_info) {
             $download = explode('|', $download_info);
 
             if (  in_array( $download[0], $ubuntu_flavours, true)) {
 
-                $offset = ( $download[0] === 'ubuntu' ) ? 1 : 0;
+                if ( $download[0] == "ubuntu") {
+                    continue;
+                }
 
-                $ubuntu_version = $this->get_ubuntu_version($download[1], $download[2+$offset], $download[3+$offset*2], $download[4+$offset*2]);
+                $ubuntu_version = $this->get_ubuntu_version($download[1], $download[2], $download[3], $download[4]);
                 $ubuntu_downloads[$download[0]][] = $ubuntu_version;
             }
         }
@@ -195,6 +199,8 @@ class SC_Cron
             $ubuntu_post = get_page_by_path( $post_slug , OBJECT, 'programa' );
 
             update_field('baixada', $ubuntu_downloads[$post_slug], $ubuntu_post->ID);
+
+            var_dump($post_slug, $ubuntu_downloads[$post_slug]);
         }
     }
 
@@ -208,6 +214,35 @@ class SC_Cron
         $version_info['arquitectura'] = (strpos($arch, 'amd64') !== false) ? 'x86_64' : 'x86';
 
         return $version_info;
+    }
+
+    private function get_main_ubuntu_flavour_data() {
+
+        $result = do_json_api_call( 'https://api.launchpad.net/devel/ubuntu/series' );
+        if ( $result == 'error' ) {
+            return;
+        }
+
+        $json = json_decode( $result );
+
+        foreach ($json->entries as $entry) {
+            if ($entry->status == "Current Stable Release") {
+                $name = $entry->name;
+                $version = $entry->version;
+                break;
+            }
+        }
+
+        $ubuntu_url = "https://releases.ubuntu.com/$name/ubuntu-$version-desktop-amd64.iso";
+
+        $ubuntu_response = Requests::head($ubuntu_url);
+
+        return [
+            'download_version' => $version,
+            'download_url' => "https://releases.ubuntu.com/$name/ubuntu-$version-desktop-amd64.iso",
+            'download_size' => $this->from_bytes_to_kb( floatval( $ubuntu_response->headers->getValues('content-length')[0] ) ),
+            'arquitectura' => 'x86_64'
+        ];
     }
 
     /**
