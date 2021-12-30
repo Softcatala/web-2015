@@ -116,6 +116,8 @@ class SC_Cron
                     $this->update_osmad();
                     $this->update_ubuntu();
                     $this->update_calibre();
+                    $this->update_gimp();
+                    $this->update_inkscape();
                     break;
             }
         } else {
@@ -173,76 +175,24 @@ class SC_Cron
     private function update_ubuntu() {
         $ubuntu_flavours = array('ubuntu-mate', 'xubuntu', 'ubuntu', 'kubuntu');
 
-        $info_url = 'https://gent.softcatala.org/jmontane/check-version/ubuntu/latest_files.txt';
-        $downloads_info_csv = do_json_api_call( $info_url );
-        $downloads_info = explode( PHP_EOL, $downloads_info_csv );
-
-        $ubuntu_downloads = array();
-
-        $ubuntu_downloads['ubuntu'] = $this->get_main_ubuntu_flavour_data();
-
-        foreach ($downloads_info as $key => $download_info) {
-            $download = explode('|', $download_info);
-
-            if (  in_array( $download[0], $ubuntu_flavours, true)) {
-
-                if ( $download[0] == "ubuntu") {
-                    continue;
-                }
-
-                $ubuntu_version = $this->get_ubuntu_version($download[1], $download[2], $download[3], $download[4]);
-                $ubuntu_downloads[$download[0]][] = $ubuntu_version;
-            }
-        }
-
+        $base_url = 'https://api.softcatala.org/rebost-releases/v1/ubuntu';
         foreach ( $ubuntu_flavours as $post_slug ) {
-            $ubuntu_post = get_page_by_path( $post_slug , OBJECT, 'programa' );
-
-            update_field('baixada', $ubuntu_downloads[$post_slug], $ubuntu_post->ID);
-
-            var_dump($post_slug, $ubuntu_downloads[$post_slug]);
+            $this->generic_update($post_slug, $base_url . '/' . $post_slug);
         }
     }
 
-    private function get_ubuntu_version($arch, $version, $size, $url) {
-
-        $version_info = array();
-
-        $version_info['download_version'] = $version;
-        $version_info['download_url'] = $url;
-        $version_info['download_size'] = $this->from_bytes_to_kb( floatval($size) );
-        $version_info['arquitectura'] = (strpos($arch, 'amd64') !== false) ? 'x86_64' : 'x86';
-
-        return $version_info;
-    }
-
-    private function get_main_ubuntu_flavour_data() {
-
-        $result = do_json_api_call( 'https://api.launchpad.net/devel/ubuntu/series' );
+    private function generic_update($slug, $url) {
+        $result = do_json_api_call( $url );
         if ( $result == 'error' ) {
             return;
         }
 
-        $json = json_decode( $result );
+        $versions = json_decode( $result, true);
 
-        foreach ($json->entries as $entry) {
-            if ($entry->status == "Current Stable Release") {
-                $name = $entry->name;
-                $version = $entry->version;
-                break;
-            }
-        }
+        $post = get_page_by_path( $slug , OBJECT, 'programa' );
 
-        $ubuntu_url = "https://releases.ubuntu.com/$name/ubuntu-$version-desktop-amd64.iso";
-
-        $ubuntu_response = Requests::head($ubuntu_url);
-
-        return [
-            'download_version' => $version,
-            'download_url' => "https://releases.ubuntu.com/$name/ubuntu-$version-desktop-amd64.iso",
-            'download_size' => $this->from_bytes_to_kb( floatval( $ubuntu_response->headers->getValues('content-length')[0] ) ),
-            'arquitectura' => 'x86_64'
-        ];
+        $field_key = $this->acf_get_field_key("baixada", $post->ID);
+        update_field($field_key, $versions, $post->ID);
     }
 
     /**
@@ -353,122 +303,25 @@ class SC_Cron
      * Updates Calibre
      */
     private function update_calibre() {
-        $rss = 'https://calibre-ebook.com/changelog.rss';
-        $feed = fetch_feed ( $rss );
-        $items = $feed->get_items();
-        $item = $items[0];
-        $guid = $item->get_id();
-        $parts = explode('-', $guid );
-        $version = $parts[1];
-
-        if ( $post = get_page_by_path( 'calibre' , OBJECT, 'programa' ) ) {
-            $field_key = $this->acf_get_field_key("baixada", $post->ID);
-            $version_info = get_field( 'baixada', $post->ID );
-            var_dump($version_info);
-            foreach ($version_info as $k=>$v) {
-                $version_info[$k]['download_version'] = $version;
-            }
-            var_dump($version_info);
-            update_field( $field_key, $version_info, $post->ID );
-        }
+        $url = 'https://api.softcatala.org/rebost-releases/v1/calibre';
+        $this->generic_update('calibre', $url);
     }
-
 
     /**
      * Updates Inkscape
      */
     private function update_inkscape() {
-        $scoop_url = 'https://raw.githubusercontent.com/ScoopInstaller/Extras/master/bucket/inkscape.json';
-
-        $result = do_json_api_call( $scoop_url );
-
-        if ( $result == 'error' ) {
-            return;
-        }
-
-        $json = json_decode( $result );
-        $version = $json->version;
-
-        $inkscape_post = get_page_by_path( 'inkscape' , OBJECT, 'programa' );
-        $field_key = $this->acf_get_field_key( "baixada", $inkscape_post->ID );
-
-        $versions = [
-            [
-                'download_os' => 'linux',
-                'download_version' => $version,
-                'download_url' => "https://inkscape.org/release/$version/gnulinux/",
-                'arquitectura' => 'generic',
-                'download_size' => ''
-            ],
-            [
-                'download_os' => 'osx',
-                'download_version' => $version,
-                'download_url' => "https://inkscape.org/release/inkscape-$version/mac-os-x/dmg/dl/",
-                'arquitectura' => 'generic',
-                'download_size' => ''
-            ],
-            [
-                'download_os' => 'windows',
-                'download_version' => $version,
-                'download_url' => "https://inkscape.org/release/inkscape-$version/windows/64-bit/exe/dl/",
-                'arquitectura' => 'x86_64',
-                'download_size' => ''
-            ],
-            [
-                'download_os' => 'windows',
-                'download_version' => $version,
-                'download_url' => "https://inkscape.org/release/inkscape-$version/windows/32-bit/exe/dl/",
-                'arquitectura' => 'x86',
-                'download_size' => ''
-            ]
-        ];
-
-        update_field($field_key, $versions, $inkscape_post->ID);
+        $url = 'https://api.softcatala.org/rebost-releases/v1/inkscape';
+        $this->generic_update('inkscape', $url);
     }
 
     /**
      * Updates GIMP
      */
-    private function update_gimp() {
-        $scoop_url = 'https://raw.githubusercontent.com/ScoopInstaller/Extras/master/bucket/gimp.json';
-
-        $result = do_json_api_call( $scoop_url );
-
-        if ( $result == 'error' ) {
-            return;
-        }
-
-        $json = json_decode( $result );
-        $version = $json->version;
-
-        $gimp_post = get_page_by_path( 'gimp' , OBJECT, 'programa' );
-        $field_key = $this->acf_get_field_key( "baixada", $gimp_post->ID );
-
-        $versions = [
-            [
-                'download_os' => 'linux',
-                'download_version' => $version,
-                'download_url' => 'https://www.gimp.org/downloads/',
-                'arquitectura' => 'generic',
-                'download_size' => ''
-            ],
-            [
-                'download_os' => 'osx',
-                'download_version' => $version,
-                'download_url' => "https://download.gimp.org/mirror/pub/gimp/v2.10/osx/gimp-$version-x86_64.dmg",
-                'arquitectura' => 'generic',
-                'download_size' => ''
-            ],
-            [
-                'download_os' => 'windows',
-                'download_version' => $version,
-                'download_url' => "https://download.gimp.org/mirror/pub/gimp/v2.10/windows/gimp-$version-setup.exe",
-                'arquitectura' => 'generic',
-                'download_size' => ''
-            ]
-        ];
-
-        update_field($field_key, $versions, $gimp_post->ID);
+    private function update_gimp()
+    {
+        $url = 'https://api.softcatala.org/rebost-releases/v1/gimp';
+        $this->generic_update('inkscape', $url);
     }
 
     /**
