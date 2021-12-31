@@ -163,103 +163,18 @@ class SC_Cron
      */
     private function update_libreoffice()
     {
-        $libreoffice_posts = array (
-            'libreoffice'  => 'libreoffice',
-            'ajuda'         => 'paquet-dajuda-en-catala-del-libreoffice',
-            'ajuda_val'     => 'paquet-dajuda-en-catala-valencia-del-libreoffice',
-            'langpack'      => 'paquet-catala-per-al-libreoffice',
-            'langpack_val'  => 'paquet-catala-valencia-per-al-libreoffice'
+        $packages = array(
+            'libreoffice' => 'libreoffice',
+            'helppack-ca' => 'paquet-dajuda-en-catala-del-libreoffice',
+            'helppack-ca-valencia' => 'paquet-dajuda-en-catala-valencia-del-libreoffice',
+            'langpack-ca' => 'paquet-catala-per-al-libreoffice',
+            'langpack-ca-valencia' => 'paquet-catala-valencia-per-al-libreoffice'
         );
 
-        $info_url = 'https://gent.softcatala.org/jmontane/libo/latest_files.txt';
-        $downloads_info_csv = do_json_api_call( $info_url );
-        $downloads_info = explode( PHP_EOL, $downloads_info_csv );
-
-        //Posts initialization
-        foreach ( $libreoffice_posts as $post_key => $post_slug ) {
-            $post[$post_key] = get_page_by_path( $post_slug , OBJECT, 'programa' );
+        $base_url = 'https://api.softcatala.org/rebost-releases/v1/libreoffice';
+        foreach ( $packages as $path => $post_slug ) {
+            $this->generic_update($post_slug, $base_url . '/' . $path);
         }
-
-        foreach ($downloads_info as $key => $download_info) {
-            $download = explode(' ', $download_info);
-            $os = $this->get_libreoffice_donwload_os_from_url( $download[2] );
-            if( $os != '' ) {
-                if(strpos($download[2], 'helppack_ca-valencia') !== false) {
-                    $version_info['ajuda_val'][] = $this->process_libreoffice_info($download, $os);
-                } else if(strpos($download[2], 'helppack_ca') !== false) {
-                    $version_info['ajuda'][] = $this->process_libreoffice_info($download, $os);
-                } else if(strpos($download[2], 'langpack_ca-valencia') !== false) {
-                    $version_info['langpack_val'][] = $this->process_libreoffice_info($download, $os);
-                } else if(strpos($download[2], 'langpack_ca') !== false) {
-                    $version_info['langpack'][] = $this->process_libreoffice_info($download, $os);
-                } else {
-                    $version_info['libreoffice'][] = $this->process_libreoffice_info($download, $os);
-                }
-            }
-        }
-
-        //Linux downloads and fields update
-        foreach ( $libreoffice_posts as $post_key => $post_slug ) {
-            $version_info[$post_key][] = $this->process_libreoffice_info($version_info[$post_key][0]['download_version'], 'linux');
-
-            $field_key = $this->acf_get_field_key( "baixada", $post[$post_key]->ID );
-            update_field($field_key, $version_info[$post_key], $post[$post_key]->ID);
-        }
-    }
-
-    /**
-     * Processes the LibreOffice unsorted info
-     */
-    private function process_libreoffice_info($download, $os)
-    {
-        $version_info = array();
-
-        $version_info['download_os'] = $os;
-
-        if ($os == 'linux' ) {
-            $version_info['download_version'] = $download;
-            $version_info['download_url'] = 'http://ca.libreoffice.org/baixada/?nodetect';
-            $version_info['arquitectura'] = 'x86_64';
-            $version_info['download_size'] = '';
-        } else {
-            $version_info['download_version'] = $download[1];
-            $version_info['download_url'] = $download[2];
-            $version_info['download_size'] = $this->from_bytes_to_kb( floatval($download[0]) );
-            $version_info['arquitectura'] = $this->is_libo_64bits($download[2]) ? 'x86_64' : 'x86';
-        }
-
-        return $version_info;
-    }
-
-    private function is_libo_64bits($arch) {
-        return (strpos($arch, 'x86-64') !== false) || (strpos($arch, 'x64') !== false);
-    }
-
-    /**
-     * Returns the os related to a libreoffice download
-     */
-    private function get_libreoffice_donwload_os_from_url( $url )
-    {
-        if (strpos($url, '/win/') !== false) {
-            $os = 'windows';
-        } elseif (strpos($url, '/mac/') !== false) {
-            $os = 'osx';
-        } else {
-            $os = false;
-        }
-
-        return $os;
-    }
-
-    /**
-     * Returns the Bytes size value in KB
-     */
-    private function from_bytes_to_kb($size, $precision = 2)
-    {
-        $base = log($size, 1024);
-        $suffixes = array('', 'K', 'MB', 'G', 'T');
-
-        return round(pow(1024, $base - floor($base)), $precision) .' '. $suffixes[floor($base)];
     }
 
     /**
