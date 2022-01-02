@@ -114,6 +114,12 @@ class SC_Cron
     }
 
     private function generic_update($slug, $url) {
+        $post = get_page_by_path( $slug , OBJECT, 'programa' );
+
+        if (!$post) {
+            return;
+        }
+
         $result = do_json_api_call( $url );
         if ( $result == 'error' ) {
             return;
@@ -134,7 +140,6 @@ class SC_Cron
             echo "About to update $size versions of $slug: $names \n";
         }
 
-        $post = get_page_by_path( $slug , OBJECT, 'programa' );
 
         $field_key = $this->acf_get_field_key("baixada", $post->ID);
         update_field($field_key, $versions, $post->ID);
