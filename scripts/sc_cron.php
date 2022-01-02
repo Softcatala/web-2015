@@ -41,7 +41,7 @@ class SC_Cron
         if ($action = $this->getArg('action')) {
             switch ($action) {
                 case 'update_program_download_info':
-                    $this->update_program_download_info();
+                    $this->update_downloads();
                     break;
                 case 'generate_aparells_stats':
                     $this->generate_aparells_stats();
@@ -52,6 +52,36 @@ class SC_Cron
             }
         } else {
             echo $this->usageHelp();
+        }
+    }
+
+    private function update_downloads() {
+
+        $base_url = 'https://api.softcatala.org/rebost-releases/v1/';
+
+        $result = do_json_api_call( $base_url );
+        if ( $result == 'error' ) {
+            return;
+        }
+
+        $all_programs = json_decode( $result, true);
+
+        if ($program = $this->getArg('program')) {
+            $all_programs = array_filter( $all_programs, function($p) use($program) {
+                return $p['group'] == $program;
+            });
+        }
+
+        if ( empty( $all_programs ) ) {
+            echo "No programs to udpate\n";
+            return;
+        } else {
+            $size = sizeof($all_programs);
+            echo "About to update $size programs\n";
+        }
+
+        foreach ( $all_programs as $program ) {
+            $this->generic_update($program['wp'], $base_url . '/' . $program['api']);
         }
     }
 
@@ -82,68 +112,6 @@ class SC_Cron
         echo json_encode($aparells_data);
     }
 
-    /**
-     * Retrieves the program parameter and calls the update function
-     */
-    private function update_program_download_info()
-    {
-        if ($program = $this->getArg('program')) {
-            switch($program) {
-                case 'ubuntu':
-                    $this->update_ubuntu();
-                    break;
-                case 'mozilla':
-                    $this->update_mozilla();
-                    break;
-                case 'libreoffice':
-                    $this->update_libreoffice();
-                    break;
-                case 'osmand':
-                    $this->update_osmad();
-                    break;
-                case 'calibre':
-                    $this->update_calibre();
-                    break;
-                case 'gimp':
-                    $this->update_gimp();
-                    break;
-                case 'inkscape':
-                    $this->update_inkscape();
-                    break;
-                case 'all':
-                    $this->update_mozilla();
-                    $this->update_libreoffice();
-                    $this->update_osmad();
-                    $this->update_ubuntu();
-                    $this->update_calibre();
-                    $this->update_gimp();
-                    $this->update_inkscape();
-                    break;
-            }
-        } else {
-            echo $this->usageHelp();
-        }
-    }
-
-    /**
-     * Updates OSMAnd maps
-     */
-    private function update_osmad()
-    {
-        $url = 'https://api.softcatala.org/rebost-releases/v1/osmand';
-        $this->generic_update('mapa-catala-per-a-losmand', $url);
-    }
-
-
-    private function update_ubuntu() {
-        $ubuntu_flavours = array('ubuntu-mate', 'xubuntu', 'ubuntu', 'kubuntu');
-
-        $base_url = 'https://api.softcatala.org/rebost-releases/v1/ubuntu';
-        foreach ( $ubuntu_flavours as $post_slug ) {
-            $this->generic_update($post_slug, $base_url . '/' . $post_slug);
-        }
-    }
-
     private function generic_update($slug, $url) {
         $result = do_json_api_call( $url );
         if ( $result == 'error' ) {
@@ -152,77 +120,18 @@ class SC_Cron
 
         $versions = json_decode( $result, true);
 
+        if ( empty( $versions ) ) {
+            echo "No versions to udpate\n";
+            return;
+        } else {
+            $size = sizeof($versions);
+            echo "About to update $size version\n";
+        }
+
         $post = get_page_by_path( $slug , OBJECT, 'programa' );
 
         $field_key = $this->acf_get_field_key("baixada", $post->ID);
         update_field($field_key, $versions, $post->ID);
-    }
-
-    /**
-     * Updates LibreOffice programs
-     */
-    private function update_libreoffice()
-    {
-        $packages = array(
-            'libreoffice' => 'libreoffice',
-            'helppack-ca' => 'paquet-dajuda-en-catala-del-libreoffice',
-            'helppack-ca-valencia' => 'paquet-dajuda-en-catala-valencia-del-libreoffice',
-            'langpack-ca' => 'paquet-catala-per-al-libreoffice',
-            'langpack-ca-valencia' => 'paquet-catala-valencia-per-al-libreoffice'
-        );
-
-        $base_url = 'https://api.softcatala.org/rebost-releases/v1/libreoffice';
-        foreach ( $packages as $path => $post_slug ) {
-            $this->generic_update($post_slug, $base_url . '/' . $path);
-        }
-    }
-
-    /**
-     * Updates Calibre
-     */
-    private function update_calibre() {
-        $url = 'https://api.softcatala.org/rebost-releases/v1/calibre';
-        $this->generic_update('calibre', $url);
-    }
-
-    /**
-     * Updates Inkscape
-     */
-    private function update_inkscape() {
-        $url = 'https://api.softcatala.org/rebost-releases/v1/inkscape';
-        $this->generic_update('inkscape', $url);
-    }
-
-    /**
-     * Updates GIMP
-     */
-    private function update_gimp()
-    {
-        $url = 'https://api.softcatala.org/rebost-releases/v1/gimp';
-        $this->generic_update('inkscape', $url);
-    }
-
-    /**
-     * Updates Mozilla programs
-     */
-    private function update_mozilla()
-    {
-        $packages = array(
-            'firefox' => 'firefox',
-            'firefox-valencia' => 'firefox-en-valencia',
-            'firefox-langpack-ca' => 'paquet-catala-per-al-firefox',
-            'firefox-langpack-ca-valencia' => 'paquet-catala-valencia-per-al-firefox',
-            'dict-ca' => 'diccionari-catala-firefox',
-            'dict-ca-valencia' => 'diccionari-valencia-firefox',
-            'thunderbird' => 'thunderbird',
-            'thunderbird-langpack-ca' => 'paquet-catala-per-al-thunderbird',
-            'thunderbird-langpack-ca-valencia' => 'paquet-catala-valencia-per-al-thunderbird'
-        );
-
-        $base_url = 'https://api.softcatala.org/rebost-releases/v1/mozilla';
-        foreach ( $packages as $path => $post_slug ) {
-            $this->generic_update($post_slug, $base_url . '/' . $path);
-        }
     }
 
     /**
