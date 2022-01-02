@@ -207,119 +207,22 @@ class SC_Cron
      */
     private function update_mozilla()
     {
-        $products_list = array(
-            array(
-                'slug' => 'firefox',
-                'type' => 'json',
-                'json_url' => 'https://product-details.mozilla.org/1.0/firefox_versions.json',
-                'os' => $this->get_moz_os( 'firefox' ),
-                'stable' => 'LATEST_FIREFOX_VERSION',
-            ),
-            array(
-                'slug' => 'firefox-en-valencia',
-                'type' => 'json',
-                'json_url' => 'https://product-details.mozilla.org/1.0/firefox_versions.json',
-                'os' => $this->get_moz_os( 'firefox' ),
-                'stable' => 'LATEST_FIREFOX_VERSION',
-            ),
-            array(
-                'slug' => 'paquet-catala-per-al-firefox',
-                'type' => 'json',
-                'json_url' => 'https://product-details.mozilla.org/1.0/firefox_versions.json',
-                'os' => $this->get_moz_os( 'paquet-catala-per-al-firefox' ),
-                'stable' => 'LATEST_FIREFOX_VERSION',
-            ),
-            array(
-                'slug' => 'paquet-catala-valencia-per-al-firefox',
-                'type' => 'json',
-                'json_url' => 'https://product-details.mozilla.org/1.0/firefox_versions.json',
-                'os' => $this->get_moz_os( 'paquet-catala-valencia-per-al-firefox' ),
-                'stable' => 'LATEST_FIREFOX_VERSION',
-            ),
-            array(
-                'slug' => 'diccionari-catala-firefox',
-                'type' => 'json',
-                'json_url' => 'https://product-details.mozilla.org/1.0/firefox_versions.json',
-                'os' => $this->get_moz_os( 'diccionari-catala-firefox' ),
-                'stable' => 'LATEST_FIREFOX_VERSION',
-            ),
-            array(
-                'slug' => 'diccionari-valencia-firefox',
-                'type' => 'json',
-                'json_url' => 'https://product-details.mozilla.org/1.0/firefox_versions.json',
-                'os' => $this->get_moz_os( 'diccionari-valencia-firefox' ),
-                'stable' => 'LATEST_FIREFOX_VERSION',
-            ),
-            array(
-                'slug' => 'thunderbird',
-                'type' => 'json',
-                'json_url' => 'https://product-details.mozilla.org/1.0/thunderbird_versions.json',
-                'os' => $this->get_moz_os( 'thunderbird' ),
-                'stable' => 'LATEST_THUNDERBIRD_VERSION',
-                'arquitectura' => array ( 'x86' => '', 'x86_64' => '64')
-            ),
-            array(
-                'slug' => 'paquet-catala-per-al-thunderbird',
-                'type' => 'json',
-                'json_url' => 'https://product-details.mozilla.org/1.0/thunderbird_versions.json',
-                'os' => $this->get_moz_os( 'paquet-catala-per-al-thunderbird' ),
-                'stable' => 'LATEST_THUNDERBIRD_VERSION',
-                'arquitectura' => array ( 'x86' => '', 'x86_64' => '64')
-            ),
-            array(
-                'slug' => 'paquet-catala-valencia-per-al-thunderbird',
-                'type' => 'json',
-                'json_url' => 'https://product-details.mozilla.org/1.0/thunderbird_versions.json',
-                'os' => $this->get_moz_os( 'paquet-catala-valencia-per-al-thunderbird' ),
-                'stable' => 'LATEST_THUNDERBIRD_VERSION',
-                'arquitectura' => array ( 'x86' => '', 'x86_64' => '64')
-            )
+        $packages = array(
+            'firefox' => 'firefox',
+            'firefox-valencia' => 'firefox-en-valencia',
+            'firefox-langpack-ca' => 'paquet-catala-per-al-firefox',
+            'firefox-langpack-ca-valencia' => 'paquet-catala-valencia-per-al-firefox',
+            'dict-ca' => 'diccionari-catala-firefox',
+            'dict-ca-valencia' => 'diccionari-valencia-firefox',
+            'thunderbird' => 'thunderbird',
+            'thunderbird-langpack-ca' => 'paquet-catala-per-al-thunderbird',
+            'thunderbird-langpack-ca-valencia' => 'paquet-catala-valencia-per-al-thunderbird'
         );
 
-        foreach ($products_list as $product) {
-            if ( $post = get_page_by_path( $product['slug'] , OBJECT, 'programa' ) ) {
-                $version_info = $this->process_mozilla_json_info($product);
-                $field_key = $this->acf_get_field_key("baixada", $post->ID);
-
-                update_field( $field_key, $version_info, $post->ID );
-            }
+        $base_url = 'https://api.softcatala.org/rebost-releases/v1/mozilla';
+        foreach ( $packages as $path => $post_slug ) {
+            $this->generic_update($post_slug, $base_url . '/' . $path);
         }
-    }
-
-    /**
-     * Process the json information coming from an url
-     */
-    private function process_mozilla_json_info($product)
-    {
-        $json = json_decode( do_json_api_call( $product['json_url'] ));
-        $version = $json->{$product['stable']};
-
-        foreach($product['os'] as $os_wp => $oses) {
-            foreach( $oses as $arch_wp => $os ) {
-                if( $arch_wp == 'android' or $arch_wp == 'ios' or $arch_wp == 'multiplataforma') {
-                    $arch_wp = 'x86';
-                    $download_url = $os;
-                    ($arch_wp == 'multiplataforma') ? $version = '' : '';
-		} else {
-		    if ( $product['slug'] == 'firefox-en-valencia' ) {
-			$lng = 'ca-valencia';
-			$prd = 'firefox';
-		    } else {
-			$lng = 'ca';
-			$prd = $product['slug'];
-		    }
-                    $download_url = 'https://download.mozilla.org/?product='.$prd.'-'.$version.'-SSL&os='.$os.'&lang='.$lng;
-                }
-
-                $version_info[$os_wp.$arch_wp]['download_url'] = $download_url;
-                $version_info[$os_wp.$arch_wp]['download_version'] = $version;
-                $version_info[$os_wp.$arch_wp]['download_size'] = '';
-                $version_info[$os_wp.$arch_wp]['arquitectura'] = $arch_wp;
-                $version_info[$os_wp.$arch_wp]['download_os'] = $os_wp;
-            }
-        }
-
-        return $version_info;
     }
 
     /**
@@ -351,98 +254,6 @@ class SC_Cron
                 return $acf_fields[0]->post_name;
         }
         return false;
-    }
-
-    /**
-     * Returns the array with all the mozilla available os
-     *
-     * @return array
-     */
-    private function get_moz_os( $program )
-    {
-        switch( $program ) {
-            case 'firefox':
-                $moz_os = array(
-                    'windows' => array(
-                        'x86' => 'win',
-                        'x86_64' => 'win64'
-                    ),
-                    'osx' => array (
-                        'x86' => 'osx',
-                    ),
-                    'linux' => array(
-                        'x86' => 'linux',
-                        'x86_64' => 'linux64'
-                    ),
-                    'android' => array (
-                        'android' => 'https://play.google.com/store/apps/details?id=org.mozilla.firefox'
-                    ),
-                    'ios' => array (
-                        'ios' => 'https://itunes.apple.com/app/apple-store/id989804926'
-                    )
-                );
-                break;
-            case 'thunderbird':
-                $moz_os = array(
-                    'windows' => array(
-                        'x86' => 'win',
-                        'x86_64' => 'win64'
-                    ),
-                    'osx' => array (
-                        'x86' => 'osx',
-                    ),
-                    'linux' => array(
-                        'x86' => 'linux',
-                        'x86_64' => 'linux64'
-                    )
-                );
-                break;
-            case 'paquet-catala-per-al-firefox':
-                $moz_os = array(
-                    'multiplataforma' => array (
-                        'multiplataforma' => 'https://addons.mozilla.org/firefox/downloads/latest/5019/addon-5019-latest.xpi'
-                    )
-                );
-                break;
-            case 'paquet-catala-valencia-per-al-firefox':
-                $moz_os = array(
-                    'multiplataforma' => array (
-                        'multiplataforma' => 'https://addons.mozilla.org/firefox/downloads/latest/9702/addon-9702-latest.xpi'
-                    )
-                );
-                break;
-            case 'diccionari-valencia-firefox':
-                $moz_os = array(
-                    'multiplataforma' => array (
-                        'multiplataforma' => 'https://addons.mozilla.org/firefox/downloads/latest/9192/addon-9192-latest.xpi'
-                    )
-                );
-                break;
-            case 'diccionari-catala-firefox':
-                $moz_os = array(
-                    'multiplataforma' => array (
-                        'multiplataforma' => 'https://addons.mozilla.org/firefox/downloads/latest/3369/addon-3369-latest.xpi'
-                    )
-                );
-                break;
-            case 'paquet-catala-per-al-thunderbird':
-                $moz_os = array(
-                    'multiplataforma' => array (
-                        'multiplataforma' => 'https://addons.mozilla.org/thunderbird/downloads/latest/640732/addon-640732-latest.xpi'
-                    )
-                );
-                break;
-            case 'paquet-catala-valencia-per-al-thunderbird':
-                $moz_os = array(
-                    'multiplataforma' => array (
-                        'multiplataforma' => 'https://addons.mozilla.org/thunderbird/downloads/latest/9730/addon-9730-latest.xpi'
-                    )
-                );
-                break;
-
-        }
-
-        return $moz_os;
     }
 
     /**
