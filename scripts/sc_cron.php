@@ -77,7 +77,8 @@ class SC_Cron
             return;
         } else {
             $size = sizeof($all_programs);
-            echo "About to update $size programs\n";
+            $names = join( ' - ' , array_map(function($p) { return $p['wp']; }, $all_programs));
+            echo "About to update $size programs ($names)\n";
         }
 
         foreach ( $all_programs as $program ) {
@@ -125,7 +126,12 @@ class SC_Cron
             return;
         } else {
             $size = sizeof($versions);
-            echo "About to update $size version\n";
+            $names = join( ' - ' , array_map(
+                function($v) {
+                    return $v['download_version'].'-'.$v['download_os'].'-'.$v['arquitectura'];
+                }, $versions));
+
+            echo "About to update $size versions of $slug: $names \n";
         }
 
         $post = get_page_by_path( $slug , OBJECT, 'programa' );
