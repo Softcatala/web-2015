@@ -128,7 +128,7 @@ class SC_Cron
         $versions = json_decode( $result, true);
 
         if ( empty( $versions ) ) {
-            echo "No versions to udpate\n";
+            echo "No versions to update of $slug\n";
             return;
         } else {
             $size = sizeof($versions);
