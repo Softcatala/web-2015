@@ -738,7 +738,7 @@
                         "name": "author_type",
                         "type": "select",
                         "instructions": "",
-                        "required": 0,
+                        "required": 1,
                         "conditional_logic": 0,
                         "wrapper": {
                             "width": "",
@@ -763,7 +763,7 @@
                         "name": "creator_name",
                         "type": "text",
                         "instructions": "",
-                        "required": 0,
+                        "required": 1,
                         "conditional_logic": 0,
                         "wrapper": {
                             "width": "",
@@ -800,7 +800,7 @@
                 "name": "license",
                 "type": "group",
                 "instructions": "",
-                "required": 0,
+                "required": 1,
                 "conditional_logic": 0,
                 "wrapper": {
                     "width": "",
@@ -815,7 +815,7 @@
                         "name": "license_name",
                         "type": "text",
                         "instructions": "",
-                        "required": 0,
+                        "required": 1,
                         "conditional_logic": 0,
                         "wrapper": {
                             "width": "",
@@ -834,7 +834,7 @@
                         "name": "license_url",
                         "type": "url",
                         "instructions": "",
-                        "required": 0,
+                        "required": 1,
                         "conditional_logic": 0,
                         "wrapper": {
                             "width": "",
