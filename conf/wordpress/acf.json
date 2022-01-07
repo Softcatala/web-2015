@@ -679,11 +679,11 @@
         "title": "Dades Obertes",
         "fields": [
             {
-                "key": "field_61521a65db76a",
+                "key": "field_61d884c3c8038",
                 "label": "Nom",
-                "name": "name",
+                "name": "namedts",
                 "type": "text",
-                "instructions": "Nom llarg del tipus de dades",
+                "instructions": "",
                 "required": 1,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -701,9 +701,9 @@
                 "key": "field_61521a8fdb76b",
                 "label": "Descripció",
                 "name": "description",
-                "type": "textarea",
+                "type": "wysiwyg",
                 "instructions": "",
-                "required": 0,
+                "required": 1,
                 "conditional_logic": 0,
                 "wrapper": {
                     "width": "",
@@ -711,10 +711,10 @@
                     "id": ""
                 },
                 "default_value": "",
-                "placeholder": "",
-                "maxlength": "",
-                "rows": "",
-                "new_lines": ""
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
             },
             {
                 "key": "field_61521b15f2536",
@@ -803,7 +803,7 @@
                 "name": "license",
                 "type": "group",
                 "instructions": "",
-                "required": 0,
+                "required": 1,
                 "conditional_logic": 0,
                 "wrapper": {
                     "width": "",
