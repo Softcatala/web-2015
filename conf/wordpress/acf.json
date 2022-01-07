@@ -680,7 +680,7 @@
                 "label": "Nom",
                 "name": "namedts",
                 "type": "text",
-                "instructions": "Descripció curta que es mostra als llistats",
+                "instructions": "Nom del dataset que indexarà Google.",
                 "required": 1,
                 "conditional_logic": 0,
                 "wrapper": {
