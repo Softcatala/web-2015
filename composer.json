@@ -35,7 +35,7 @@
     "wpackagist-plugin/nelio-content": "^2.2",
     "wpackagist-plugin/insert-pages": "^3.7",
     "wpackagist-plugin/redirection": "^5.2",
-    "wpackagist-plugin/classic-editor": "1.6",
+    "wpackagist-plugin/classic-editor": "^1.6",
     "wpackagist-plugin/acf-to-rest-api": "3.3.2",
     "xavivars/xv-planeta": "^1.0",
     "wpackagist-plugin/wp-nested-pages": "^3.1",
