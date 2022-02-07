@@ -14,11 +14,11 @@
       "type": "package",
       "package": {
         "name": "advanced-custom-fields/advanced-custom-fields-pro",
-        "version": "5.10.2",
+        "version": "5.11.4",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
-          "url": "http://connect.advancedcustomfields.com/index.php?t=5.10.2&p=pro&a=download&k=%%license%%"
+          "url": "http://connect.advancedcustomfields.com/index.php?t=5.11.4&p=pro&a=download&k=%%license%%"
         }
       }
     }
@@ -27,28 +27,28 @@
     "composer-plugin-api": "^1.0",
     "johnpbloch/wordpress": "5.7.*",
     "koodimonni-language/ca": "5.7.*",
-    "wpackagist-plugin/wordpress-seo": "^17.0",
-    "wpackagist-plugin/akismet": "^4.1",
+    "wpackagist-plugin/wordpress-seo": "^18.0",
+    "wpackagist-plugin/akismet": "^4.2",
     "wpackagist-plugin/woosidebars": "^1.4",
     "wpackagist-plugin/simple-lightbox": "^2.7.0",
     "wpackagist-plugin/enable-media-replace": "^3.3",
-    "wpackagist-plugin/nelio-content": "^2.0",
-    "wpackagist-plugin/insert-pages": "^3.5",
-    "wpackagist-plugin/redirection": "^5.0",
+    "wpackagist-plugin/nelio-content": "^2.2",
+    "wpackagist-plugin/insert-pages": "^3.7",
+    "wpackagist-plugin/redirection": "^5.2",
     "wpackagist-plugin/classic-editor": "1.6",
     "wpackagist-plugin/acf-to-rest-api": "3.3.2",
     "xavivars/xv-planeta": "^1.0",
     "wpackagist-plugin/wp-nested-pages": "^3.1",
-    "wpackagist-plugin/mce-table-buttons": "^3.2.0",
+    "wpackagist-plugin/mce-table-buttons": "^3.3.0",
     "softcatala/sc-footnotes": "^0.0.4",
     "softcatala/wp-theme-mover": "^0.1.0",
     "softcatala/mce-table-buttons-class": "^0.0.1",
     "softcatala/sc-normalize-upload-dir": "^0.2",
-    "softcatala/wp-softcatala": "1.1.14",
+    "softcatala/wp-softcatala": "1.1.15",
     "softcatala/sc-importer": "^0.5.4",
     "softcatala/sc-shortcodes": "^1.2.0",
     "xavivars/xv-podcasts": "^0.6",
-    "advanced-custom-fields/advanced-custom-fields-pro": "5.10.2",
+    "advanced-custom-fields/advanced-custom-fields-pro": "5.11.4",
     "rtcamp/nginx-helper": "^2.0"
   },
   "require-dev": {
