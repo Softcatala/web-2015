@@ -13,7 +13,9 @@
   "author": "AdHoc",
   "license": "BSD",
   "scripts": {
-    "build": "grunt"
+    "build": "grunt",
+    "copy": "grunt wordpress",
+    "wordpress": "grunt wordpress"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
