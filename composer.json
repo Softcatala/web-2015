@@ -51,8 +51,7 @@
     "rtcamp/nginx-helper": "^2.0"
   },
   "require-dev": {
-    "wpackagist-plugin/monkeyman-rewrite-analyzer": "^1.0",
-    "johnbillion/query-monitor": "dev-master"
+    "wpackagist-plugin/monkeyman-rewrite-analyzer": "^1.0"
   },
   "extra": {
     "wordpress-install-dir": "wp",
