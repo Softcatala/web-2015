@@ -250,9 +250,27 @@
   } else {
     ga('send', 'pageview');
   }
+</script>
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8L2DZMHJ4K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+   if (document.body.classList.contains('error404')) {
+    gtag('config', 'G-8L2DZMHJ4K', { 'page_location': '404/' + document.location.pathname});
+  } else if (typeof sc_analytics_page !== "undefined") {
+    gtag('config', 'G-8L2DZMHJ4K', { 'page_location': sc_analytics_page });
+  } else {
+    gtag('config', 'G-8L2DZMHJ4K');
+  }
+</script>
+    
+    
   /* Piwik */
-
+<script type="text/javascript">
   var _paq = _paq || [];
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
