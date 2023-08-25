@@ -27,7 +27,7 @@
     "composer-plugin-api": "^1.0",
     "johnpbloch/wordpress": "6.1.*",
     "koodimonni-language/ca": "6.1.*",
-    "wpackagist-plugin/wordpress-seo": "~20.2",
+    "wpackagist-plugin/wordpress-seo": "20.4",
     "wpackagist-plugin/akismet": "^5",
     "wpackagist-plugin/woosidebars": "^1.4",
     "wpackagist-plugin/simple-lightbox": "^2.7.0",
