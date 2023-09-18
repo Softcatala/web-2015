@@ -15,6 +15,13 @@ if(isset($_ENV['LOCAL_DOCKER']) && $_ENV['LOCAL_DOCKER']) {
 $table_prefix = 'wp_';
 
 define( 'WP_CACHE_KEY_SALT', 'softcatala.local:' );
+define( 'WP_DEBUG', true );
+
+define( 'WP_DEBUG_LOG', true );
+
+// Disable display of errors and warnings
+define( 'WP_DEBUG_DISPLAY', false );
+@ini_set( 'display_errors', 0 );
 
 /* That's all, stop editing! Happy blogging. */
 
